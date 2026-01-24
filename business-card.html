@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Card - ABCars Samantha</title>
+    
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts - Load directly in HTML for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF1YRTLKDW');
+    </script>
+    
+    <style>
+        /* Page-specific styles */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-hidden selection:bg-[#0047FF] selection:text-white h-screen flex flex-col">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">ABCars<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Samantha</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="vehicles.html" class="hover:text-[#0047FF] transition-colors">Inventory</a>
+            <a href="business-card.html" class="text-[#0047FF]">Digital Card</a>
+            <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMobileMenu()">
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine1"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine2"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine3"></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
+        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="vehicles.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
+        <a href="business-card.html" class="text-[#0047FF] text-2xl font-display">DIGITAL CARD</a>
+        <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
+        <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
+    </div>
+
+    <main class="flex-grow flex flex-col items-center justify-center relative pt-16 md:pt-0">
+        <div class="absolute top-20 md:top-32 text-center z-10 pointer-events-none px-4">
+            <h1 class="font-display text-2xl md:text-4xl mb-2">DIGITAL CARD</h1>
+            <p class="font-mono text-[10px] md:text-xs text-gray-500 tracking-widest hidden md:block">DRAG TO ROTATE • CLICK TO FLIP</p>
+            <p class="font-mono text-[10px] text-gray-500 tracking-widest md:hidden">TOUCH TO INTERACT</p>
+        </div>
+
+        <!-- 3D Container -->
+        <div id="canvas-container" class="w-full h-full relative z-0 cursor-grab active:cursor-grabbing">
+            <div id="loading-overlay" class="absolute inset-0 flex items-center justify-center bg-[#F2F2F2] z-20">
+                <div class="font-mono text-xs animate-pulse">LOADING 3D ASSETS...</div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="absolute bottom-6 md:bottom-12 z-10 flex gap-3 md:gap-4 px-4">
+            <a href="tel:01071704513" class="bg-black text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold hover:bg-[#0047FF] transition-colors text-xs md:text-sm shadow-lg">
+                📞 CALL
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=821071704513" target="_blank" class="bg-white text-black px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold hover:bg-[#0047FF] hover:text-white transition-colors text-xs md:text-sm shadow-lg border border-gray-200">
+                💬 WHATSAPP
+            </a>
+        </div>
+    </main>
+
+    <!-- Three.js Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Custom 3D Script -->
+    <script src="js/business-card.js"></script>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('menuLine1');
+            const line2 = document.getElementById('menuLine2');
+            const line3 = document.getElementById('menuLine3');
+            
+            menu.classList.toggle('active');
+            
+            if (menu.classList.contains('active')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        }
+        
+        // Optimized Custom Cursor - Desktop only
+        if (window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            let mouseX = 0, mouseY = 0;
+            let outlineX = 0, outlineY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+            }, { passive: true });
+            
+            function animateCursor() {
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+                cursorOutline.style.left = outlineX + 'px';
+                cursorOutline.style.top = outlineY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+        }
+    </script>
+</body>
+</html>

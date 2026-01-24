@@ -1,0 +1,279 @@
+/*
+ * ABCars Samantha - Main Stylesheet
+ * Version: 2.1 (Optimized Font Loading)
+ * Last Updated: 2026-01-24
+ * 
+ * NOTE: Google Fonts (Syncopate, Space Grotesk) are loaded via <link> tags
+ * in HTML files for faster rendering and to prevent FOUT (Flash of Unstyled Text)
+ */
+
+/* ============================================
+   CSS Variables
+   ============================================ */
+:root {
+    --bg-color: #F2F2F2;
+    --text-color: #111111;
+    --accent-color: #0047FF;
+    --line-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Custom Cursor - Desktop Only (1024px+)
+   ============================================ */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    display: none; /* Hidden by default */
+}
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+/* Show cursor only on large desktop with mouse */
+@media (min-width: 1024px) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+    
+    .cursor-dot,
+    .cursor-outline {
+        display: block;
+    }
+    
+    body:hover .cursor-outline {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+.font-display {
+    font-family: 'Syncopate', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+}
+
+.font-mono {
+    font-family: 'Space Grotesk', monospace;
+}
+
+/* ============================================
+   Marquee Animation
+   ============================================ */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border: none;
+    padding: 0.5rem 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    will-change: transform;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover for accessibility */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* ============================================
+   Image Reveal Effect
+   ============================================ */
+.reveal-image-wrapper {
+    overflow: hidden;
+}
+
+.reveal-image {
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s ease;
+    transform: scale(1.1);
+}
+
+.reveal-image.active {
+    transform: scale(1);
+}
+
+/* ============================================
+   Responsive Utilities
+   ============================================ */
+
+/* Hide on mobile */
+@media (max-width: 639px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide on tablet and below */
+@media (max-width: 1023px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* Show only on mobile */
+@media (min-width: 640px) {
+    .show-mobile-only {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   Mobile Menu Styles
+   ============================================ */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #0033CC 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 71, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 71, 255, 0.4);
+}
+
+/* ============================================
+   Card Styles
+   ============================================ */
+.vehicle-card {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.vehicle-card img {
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.vehicle-card:hover img {
+    filter: grayscale(0) !important;
+    transform: scale(1.02);
+}
+
+/* ============================================
+   Loading & Animations
+   ============================================ */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25%); }
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+/* ============================================
+   Focus States for Accessibility
+   ============================================ */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Selection Styles
+   ============================================ */
+::selection {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* ============================================
+   Scrollbar Styles (Optional)
+   ============================================ */
+@media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-color);
+    }
+}

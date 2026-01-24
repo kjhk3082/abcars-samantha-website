@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCars Samantha | The Specialist</title>
+    
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts - Load directly in HTML for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Performance optimized cursor - Desktop only */
+        .cursor-dot, .cursor-outline {
+            display: none;
+        }
+        @media (min-width: 1024px) and (pointer: fine) {
+            .cursor-dot, .cursor-outline {
+                display: block;
+            }
+            body {
+                cursor: none;
+            }
+        }
+        
+        /* Reveal animations */
+        .reveal-text-up {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: revealUp 1s ease forwards;
+        }
+        .reveal-text-up.delay-100 { animation-delay: 0.1s; }
+        .reveal-text-up.delay-200 { animation-delay: 0.2s; }
+        .reveal-text-up.delay-300 { animation-delay: 0.3s; }
+        @keyframes revealUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .reveal-image {
+            transform: scale(1.1);
+            transition: transform 1s ease, filter 0.5s ease;
+        }
+        .reveal-image.active {
+            transform: scale(1);
+        }
+        
+        /* Hero Car Animation - Only on large screens */
+        .hero-car {
+            animation: carFloat 4s ease-in-out infinite;
+        }
+        @keyframes carFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .car-shadow {
+            animation: shadowPulse 4s ease-in-out infinite;
+        }
+        @keyframes shadowPulse {
+            0%, 100% { opacity: 0.08; }
+            50% { opacity: 0.04; }
+        }
+        .speed-lines line {
+            animation: speedLine 1s ease-in-out infinite;
+        }
+        .speed-lines line:nth-child(2) { animation-delay: 0.3s; }
+        .speed-lines line:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes speedLine {
+            0% { opacity: 0; transform: translateX(0); }
+            50% { opacity: 0.6; }
+            100% { opacity: 0; transform: translateX(-30px); }
+        }
+        .headlight {
+            animation: lightGlow 2s ease-in-out infinite;
+        }
+        @keyframes lightGlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .taillight {
+            animation: taillightPulse 1.5s ease-in-out infinite;
+        }
+        @keyframes taillightPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .animate-bounce-slow {
+            animation: bounceSlow 3s ease-in-out infinite;
+        }
+        @keyframes bounceSlow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Responsive Typography */
+        .hero-title {
+            font-size: clamp(2.5rem, 12vw, 8rem);
+            line-height: 0.9;
+        }
+        
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: clamp(2rem, 14vw, 4rem);
+            }
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF1YRTLKDW');
+    </script>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
+
+    <!-- Custom Cursor - Desktop only -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">ABCars<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Samantha</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="vehicles.html" class="hover:text-[#0047FF] transition-colors">Inventory</a>
+            <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
+        </div>
+        
+        <!-- Phone - Hidden on very small screens -->
+        <a href="tel:01071704513" class="hidden sm:block text-[10px] md:text-xs border border-current px-3 md:px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all font-mono">
+            +82 10 7170 4513
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMobileMenu()">
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine1"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine2"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine3"></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
+        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="vehicles.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
+        <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
+        <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 relative pt-24 md:pt-20 pb-10">
+            
+            <div class="container mx-auto relative z-10">
+                <!-- Badge - SAMANTHA added, font size increased -->
+                <div class="font-mono text-[#0047FF] mb-6 md:mb-8 text-sm md:text-base tracking-[0.15em] md:tracking-[0.2em] font-bold flex items-center gap-2 flex-wrap">
+                    <span class="w-2 h-2 md:w-3 md:h-3 bg-[#0047FF] rounded-full inline-block animate-pulse"></span>
+                    <span>SAMANTHA</span>
+                    <span class="text-black/30">|</span>
+                    <span>SOFA VEHICLE SPECIALIST</span>
+                </div>
+                
+                <!-- Main Headline - Responsive -->
+                <h1 class="font-display font-bold leading-[0.9] tracking-tight mb-6 md:mb-8 w-full select-none">
+                    <div class="overflow-hidden">
+                        <span class="block hero-title reveal-text-up">DRIVE</span>
+                    </div>
+                    <div class="overflow-hidden">
+                        <span class="block hero-title text-[#0047FF] reveal-text-up delay-100">DIFFERENT</span>
+                    </div>
+                    <div class="overflow-hidden">
+                        <span class="block hero-title reveal-text-up delay-200">IN KOREA<span class="text-[#0047FF]">.</span></span>
+                    </div>
+                </h1>
+
+                <!-- Car Illustration - Only on XL screens -->
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block z-0 opacity-80 pointer-events-none" style="right: 3%;">
+                    <svg class="hero-car w-[400px] 2xl:w-[500px]" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="200" cy="185" rx="150" ry="10" fill="rgba(0,0,0,0.08)" class="car-shadow"/>
+                        <path d="M40 125 L70 125 L95 85 L170 75 L290 75 L340 95 L365 125 L375 125 L375 145 L355 145 L355 155 L295 155 L295 145 L105 145 L105 155 L45 155 L45 145 L25 145 L25 125 Z" fill="#111" class="car-body"/>
+                        <path d="M105 85 L130 50 L270 50 L320 85 Z" fill="#1a1a1a" class="car-cabin"/>
+                        <path d="M138 55 L160 55 L152 80 L115 80 Z" fill="#0047FF" opacity="0.5" class="window"/>
+                        <path d="M170 55 L255 55 L280 80 L162 80 Z" fill="#0047FF" opacity="0.5" class="window"/>
+                        <rect x="355" y="108" width="18" height="12" rx="2" fill="#222"/>
+                        <rect x="358" y="110" width="4" height="8" rx="1" fill="#FFD700" class="headlight"/>
+                        <rect x="364" y="110" width="4" height="8" rx="1" fill="#FFD700" class="headlight"/>
+                        <rect x="30" y="108" width="12" height="12" rx="2" fill="#FF3333" class="taillight"/>
+                        <line x1="80" y1="125" x2="320" y2="125" stroke="#333" stroke-width="1"/>
+                        <line x1="120" y1="115" x2="280" y2="115" stroke="#222" stroke-width="2"/>
+                        <circle cx="85" cy="150" r="28" fill="#222"/>
+                        <circle cx="85" cy="150" r="22" fill="#444"/>
+                        <circle cx="85" cy="150" r="10" fill="#666"/>
+                        <circle cx="85" cy="150" r="5" fill="#0047FF"/>
+                        <circle cx="315" cy="150" r="28" fill="#222"/>
+                        <circle cx="315" cy="150" r="22" fill="#444"/>
+                        <circle cx="315" cy="150" r="10" fill="#666"/>
+                        <circle cx="315" cy="150" r="5" fill="#0047FF"/>
+                        <g class="speed-lines" opacity="0.4">
+                            <line x1="-20" y1="95" x2="20" y2="95" stroke="#0047FF" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="-30" y1="115" x2="15" y2="115" stroke="#0047FF" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="-15" y1="135" x2="25" y2="135" stroke="#0047FF" stroke-width="3" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                    <div class="absolute -top-2 right-0 w-12 h-12 2xl:w-14 2xl:h-14 bg-[#0047FF] rounded-full flex items-center justify-center text-white font-bold text-[9px] 2xl:text-[10px] animate-bounce-slow shadow-lg">
+                        SOFA
+                    </div>
+                </div>
+
+                <div class="max-w-xl border-l-2 border-[#0047FF] pl-4 md:pl-6 py-2 mt-4 reveal-text-up delay-300 relative z-10">
+                    <p class="font-mono text-xs md:text-sm lg:text-base text-gray-600 font-medium leading-relaxed">
+                        We provide premium US-Spec vehicles with full warranty & registration service for US Military personnel.
+                    </p>
+                </div>
+                
+                <!-- Mobile CTA Button -->
+                <a href="vehicles.html" class="lg:hidden inline-flex items-center gap-2 mt-8 bg-[#0047FF] text-white px-6 py-3 rounded-full font-bold tracking-wider text-sm">
+                    VIEW INVENTORY <span>→</span>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator - Hidden on mobile -->
+            <div class="hidden md:block absolute bottom-10 right-10 animate-bounce">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Marquee Text Strip -->
+        <section class="bg-[#0047FF] text-white py-3 md:py-4 overflow-hidden -rotate-1 scale-105 shadow-xl z-20 relative">
+            <div class="marquee-container border-none bg-transparent py-1 md:py-2">
+                <div class="marquee-content font-display text-xl md:text-3xl lg:text-4xl font-bold">
+                    SAMANTHA KIM — OUR VEHICLES AND SERVICES ARE SECOND TO NONE! — 1 MONTH WARRANTY — FREE DELIVERY — SOFA REGISTRATION — READY DRIVE CARS — 
+                    SAMANTHA KIM — OUR VEHICLES AND SERVICES ARE SECOND TO NONE! — 1 MONTH WARRANTY — FREE DELIVERY — SOFA REGISTRATION — READY DRIVE CARS —
+                </div>
+            </div>
+        </section>
+
+        <!-- Image & Text Grid -->
+        <section class="py-16 md:py-24 lg:py-32 px-4 md:px-6 bg-white">
+            <div class="container mx-auto">
+                <div class="grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+                    <!-- Text Side -->
+                    <div class="md:col-span-5 order-2 md:order-1">
+                        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8 leading-none">
+                            NO STRESS.<br>
+                            JUST <span class="text-stroke text-transparent" style="-webkit-text-stroke: 1px black;">DRIVE.</span>
+                        </h2>
+                        <p class="text-gray-600 mb-8 md:mb-10 text-base md:text-lg font-light leading-relaxed">
+                            We sell Only Ready Drive Cars with 1 month warranty for engine & transmission.
+                            Reliable vehicle maintenance, SOFA registration, and full support services.
+                            You just choose the car.
+                        </p>
+                        
+                        <div class="space-y-6 md:space-y-8 font-mono text-xs md:text-sm">
+                            <div class="group">
+                                <div class="flex items-center justify-between border-b border-gray-200 pb-4 group-hover:border-[#0047FF] transition-colors">
+                                    <span>01 / CERTIFIED INSPECTION</span>
+                                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#0047FF]">↗</span>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex items-center justify-between border-b border-gray-200 pb-4 group-hover:border-[#0047FF] transition-colors">
+                                    <span>02 / ENGINE & TRANS WARRANTY</span>
+                                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#0047FF]">↗</span>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="flex items-center justify-between border-b border-gray-200 pb-4 group-hover:border-[#0047FF] transition-colors">
+                                    <span>03 / FREE DELIVERY TO BASE</span>
+                                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#0047FF]">↗</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="vehicles.html" class="inline-flex items-center gap-2 mt-8 md:mt-12 bg-black text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-[#0047FF] transition-colors font-bold tracking-wider text-xs md:text-sm">
+                            VIEW INVENTORY <span class="text-lg">→</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Image Side -->
+                    <div class="md:col-span-7 order-1 md:order-2">
+                        <div class="reveal-image-wrapper h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] w-full relative overflow-hidden rounded-lg md:rounded-none">
+                            <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1500&auto=format&fit=crop" 
+                                 alt="White Luxury Car" 
+                                 class="w-full h-full object-cover reveal-image grayscale hover:grayscale-0 transition-all duration-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-16 md:py-24 lg:py-32 bg-[#F2F2F2]">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 md:mb-16 border-b border-black/10 pb-4 md:pb-6 gap-2">
+                    <h2 class="font-display text-2xl md:text-3xl lg:text-4xl">SERVICES</h2>
+                    <p class="font-mono text-xs text-gray-500">( FULL SUPPORT )</p>
+                </div>
+                
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 md:p-6 lg:p-8 h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex flex-col justify-between hover:bg-[#0047FF] hover:text-white transition-colors group">
+                        <span class="font-mono text-[10px] md:text-xs border border-black/10 rounded-full px-2 md:px-3 py-1 w-fit group-hover:border-white/30">01</span>
+                        <div>
+                            <div class="text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4">🔧</div>
+                            <h3 class="font-display text-sm md:text-lg lg:text-xl mb-1 md:mb-2">MAINTENANCE</h3>
+                            <p class="text-[10px] md:text-xs lg:text-sm opacity-60 font-mono hidden sm:block">Reliable vehicle maintenance and servicing.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 md:p-6 lg:p-8 h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex flex-col justify-between hover:bg-[#0047FF] hover:text-white transition-colors group">
+                        <span class="font-mono text-[10px] md:text-xs border border-black/10 rounded-full px-2 md:px-3 py-1 w-fit group-hover:border-white/30">02</span>
+                        <div>
+                            <div class="text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4">📋</div>
+                            <h3 class="font-display text-sm md:text-lg lg:text-xl mb-1 md:mb-2">REGISTRATION</h3>
+                            <p class="text-[10px] md:text-xs lg:text-sm opacity-60 font-mono hidden sm:block">Complete SOFA paperwork handling service.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-4 md:p-6 lg:p-8 h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex flex-col justify-between hover:bg-[#0047FF] hover:text-white transition-colors group">
+                        <span class="font-mono text-[10px] md:text-xs border border-black/10 rounded-full px-2 md:px-3 py-1 w-fit group-hover:border-white/30">03</span>
+                        <div>
+                            <div class="text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4">🚗</div>
+                            <h3 class="font-display text-sm md:text-lg lg:text-xl mb-1 md:mb-2">FREE RENTAL</h3>
+                            <p class="text-[10px] md:text-xs lg:text-sm opacity-60 font-mono hidden sm:block">Free car rental while fixing your vehicle.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white p-4 md:p-6 lg:p-8 h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex flex-col justify-between hover:bg-[#0047FF] hover:text-white transition-colors group">
+                        <span class="font-mono text-[10px] md:text-xs border border-black/10 rounded-full px-2 md:px-3 py-1 w-fit group-hover:border-white/30">04</span>
+                        <div>
+                            <div class="text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4">♻️</div>
+                            <h3 class="font-display text-sm md:text-lg lg:text-xl mb-1 md:mb-2">JUNK & RESALE</h3>
+                            <p class="text-[10px] md:text-xs lg:text-sm opacity-60 font-mono hidden sm:block">Free junk and resale service available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white py-12 md:py-16 lg:py-24 px-4 md:px-6">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-12 md:mb-20 gap-8">
+                    <div>
+                        <h2 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-none mb-4 md:mb-6">
+                            LET'S<br>
+                            <span class="text-[#0047FF]">DRIVE.</span>
+                        </h2>
+                    </div>
+                    <div class="md:text-right">
+                        <p class="font-mono text-gray-500 mb-2 text-xs md:text-sm">CONTACT</p>
+                        <a href="tel:01071704513" class="block text-xl md:text-2xl hover:text-[#0047FF] transition-colors">010-7170-4513</a>
+                        <a href="mailto:samanthacars707@gmail.com" class="block text-sm md:text-xl text-gray-400 hover:text-white transition-colors break-all">samanthacars707@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-white/20 pt-6 md:pt-8 flex flex-col md:flex-row justify-between font-mono text-[10px] md:text-xs text-gray-500 gap-4">
+                    <div class="flex gap-4 md:gap-6">
+                        <a href="index.html" class="hover:text-white">HOME</a>
+                        <a href="vehicles.html" class="hover:text-white">INVENTORY</a>
+                        <a href="contact.html" class="hover:text-white">CONTACT</a>
+                    </div>
+                    <p class="text-[9px] md:text-xs">© 2026 ABCARS SAMANTHA. 경기도 평택시 팽성읍 송화2길 186-1</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('menuLine1');
+            const line2 = document.getElementById('menuLine2');
+            const line3 = document.getElementById('menuLine3');
+            
+            menu.classList.toggle('active');
+            
+            if (menu.classList.contains('active')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        }
+        
+        // Optimized Custom Cursor (only on large desktop with fine pointer)
+        if (window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            let mouseX = 0, mouseY = 0;
+            let outlineX = 0, outlineY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+            }, { passive: true });
+            
+            function animateCursor() {
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+                cursorOutline.style.left = outlineX + 'px';
+                cursorOutline.style.top = outlineY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+        }
+
+        // Simple scroll reveal with IntersectionObserver
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-image').forEach(img => {
+            observer.observe(img);
+        });
+    </script>
+</body>
+</html>

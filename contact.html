@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ABCars Samantha</title>
+    
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts - Load directly in HTML for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF1YRTLKDW');
+    </script>
+
+    <style>
+        .cursor-dot, .cursor-outline {
+            display: none;
+        }
+        @media (min-width: 1024px) and (pointer: fine) {
+            .cursor-dot, .cursor-outline {
+                display: block;
+            }
+            body {
+                cursor: none;
+            }
+        }
+        .hours-table td {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+        .hours-table .day {
+            font-weight: 600;
+            width: 90px;
+        }
+        .hours-table .closed {
+            color: #ef4444;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">ABCars<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Samantha</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="vehicles.html" class="hover:text-[#0047FF] transition-colors">Inventory</a>
+            <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="contact.html" class="text-[#0047FF]">Contact</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMobileMenu()">
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine1"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine2"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine3"></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
+        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="vehicles.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
+        <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="contact.html" class="text-[#0047FF] text-2xl font-display">CONTACT</a>
+        <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
+    </div>
+
+    <main class="pt-24 md:pt-32 pb-12 md:pb-20 min-h-screen flex flex-col">
+        <div class="container mx-auto px-4 md:px-6">
+            <h1 class="font-display text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[6vw] leading-none mb-4 md:mb-8 border-b-2 border-black pb-4 md:pb-8">
+                CONTACT
+            </h1>
+            <p class="font-display text-base md:text-xl text-[#0047FF] mb-8 md:mb-16">Our vehicles and services are second to none!</p>
+            
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">
+                <!-- Info Column -->
+                <div class="space-y-6 md:space-y-10 font-mono">
+                    
+                    <!-- Quick Contact - Mobile Prominent -->
+                    <div class="lg:hidden grid grid-cols-2 gap-3">
+                        <a href="tel:01071704513" class="bg-[#0047FF] text-white p-4 rounded-xl text-center">
+                            <div class="text-2xl mb-2">📞</div>
+                            <p class="font-bold text-sm">CALL NOW</p>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=821071704513" target="_blank" class="bg-green-500 text-white p-4 rounded-xl text-center">
+                            <div class="text-2xl mb-2">💬</div>
+                            <p class="font-bold text-sm">WHATSAPP</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="group">
+                        <div class="text-2xl md:text-3xl mb-2">📞</div>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mb-1">Phone / Mobile</p>
+                        <a href="tel:01071704513" class="text-xl sm:text-2xl md:text-3xl font-bold block hover:text-[#0047FF] transition-colors">
+                            010-7170-4513
+                        </a>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1">Ask for Samantha</p>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="group">
+                        <div class="text-2xl md:text-3xl mb-2">💬</div>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mb-1">WhatsApp</p>
+                        <a href="https://api.whatsapp.com/send?phone=821071704513" target="_blank" class="text-xl sm:text-2xl md:text-3xl font-bold block hover:text-[#0047FF] transition-colors">
+                            +82 10-7170-4513
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="group">
+                        <div class="text-2xl md:text-3xl mb-2">📧</div>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mb-1">Email</p>
+                        <a href="mailto:samanthacars707@gmail.com" class="text-base sm:text-xl md:text-2xl font-bold block break-all hover:text-[#0047FF] transition-colors">
+                            samanthacars707@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="group">
+                        <div class="text-2xl md:text-3xl mb-2">📍</div>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mb-1">Address</p>
+                        <p class="text-base md:text-lg leading-relaxed font-medium">
+                            경기도 평택시 팽성읍 송화2길 186-1
+                        </p>
+                        <p class="text-xs md:text-sm text-gray-500 mt-1">
+                            186-1, Songhwa 2-gil, Paengseong-eup,<br>
+                            Pyeongtaek-si, Gyeonggi-do
+                        </p>
+                        <div class="mt-4 md:mt-6 flex flex-col sm:flex-row items-start gap-2 sm:gap-4">
+                            <a href="https://www.google.com/maps/place/Samantha+ABCars" target="_blank" class="inline-flex items-center gap-2 text-xs md:text-sm font-bold border-b border-black hover:text-[#0047FF] hover:border-[#0047FF] transition-colors pb-1">
+                                Google Maps <span>→</span>
+                            </a>
+                            <a href="https://ul.waze.com/ul?place=ChIJoXWCeoEkezURBqo_b_jeDps" target="_blank" class="inline-flex items-center gap-2 text-xs md:text-sm font-bold border-b border-black hover:text-[#0047FF] hover:border-[#0047FF] transition-colors pb-1">
+                                Waze <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="group bg-white p-4 md:p-6 rounded-xl">
+                        <div class="text-2xl md:text-3xl mb-2">🕐</div>
+                        <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mb-3 md:mb-4">Business Hours</p>
+                        <table class="hours-table w-full text-xs md:text-sm">
+                            <tbody>
+                                <tr>
+                                    <td class="day">Monday</td>
+                                    <td>AM 9:30 ~ PM 6:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">Tuesday</td>
+                                    <td>AM 9:30 ~ PM 6:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">Wednesday</td>
+                                    <td>AM 9:30 ~ PM 6:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">Thursday</td>
+                                    <td>AM 9:30 ~ PM 6:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">Friday</td>
+                                    <td>AM 9:30 ~ PM 6:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">Saturday</td>
+                                    <td>AM 9:30 ~ PM 6:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">Sunday</td>
+                                    <td class="closed font-bold">CLOSED</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Connect -->
+                    <div class="pt-4 md:pt-6 border-t border-gray-300">
+                         <h3 class="font-display text-lg md:text-xl mb-4 md:mb-6">Connect With Us</h3>
+                         <a href="https://www.facebook.com/Samanthacars/" target="_blank" class="inline-flex items-center gap-3 text-base md:text-lg font-bold hover:text-[#0047FF] transition-colors group">
+                            <span class="text-2xl md:text-3xl group-hover:scale-110 transition-transform">📘</span>
+                            Facebook
+                         </a>
+                    </div>
+
+                </div>
+
+                <!-- Map Column -->
+                <div class="space-y-4 md:space-y-6">
+                    <div class="h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] bg-gray-200 lg:sticky lg:top-32 rounded-lg overflow-hidden border border-gray-300 grayscale hover:grayscale-0 transition-all duration-700">
+                         <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.4754567890123!2d127.0432475!3d36.9445422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b25939517c021%3A0x2e7b96a120552b2a!2sSamantha+ABCars!5e0!3m2!1sen!2skr!4v1700000000000!5m2!1sen!2skr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Services Summary -->
+                    <div class="bg-black text-white p-4 md:p-6 rounded-xl">
+                        <h3 class="font-display text-base md:text-lg mb-3 md:mb-4">OUR SERVICES</h3>
+                        <ul class="space-y-2 text-xs md:text-sm font-mono">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#0047FF]">✓</span>
+                                <span>Reliable vehicle maintenance and servicing</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#0047FF]">✓</span>
+                                <span>SOFA vehicle registration service</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#0047FF]">✓</span>
+                                <span>1 month warranty for engine & transmission</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#0047FF]">✓</span>
+                                <span>Free car rental while fixing vehicles</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#0047FF]">✓</span>
+                                <span>Free junk and resale service</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#0047FF]">✓</span>
+                                <span>Pick up, towing & emergency roadside service</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-6 md:py-8 text-center font-mono text-[10px] md:text-xs px-4">
+        <p>© 2026 ABCARS SAMANTHA. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('menuLine1');
+            const line2 = document.getElementById('menuLine2');
+            const line3 = document.getElementById('menuLine3');
+            
+            menu.classList.toggle('active');
+            
+            if (menu.classList.contains('active')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        }
+        
+        // Optimized Custom Cursor
+        if (window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            let mouseX = 0, mouseY = 0;
+            let outlineX = 0, outlineY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+            }, { passive: true });
+            
+            function animateCursor() {
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+                cursorOutline.style.left = outlineX + 'px';
+                cursorOutline.style.top = outlineY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+        }
+    </script>
+</body>
+</html>

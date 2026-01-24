@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - ABCars Samantha</title>
+    
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts - Load directly in HTML for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF1YRTLKDW');
+    </script>
+    
+    <style>
+        /* Performance optimized styles */
+        .vehicle-card {
+            will-change: transform;
+            transform: translateZ(0);
+        }
+        .vehicle-card img {
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        .vehicle-card:hover img {
+            filter: grayscale(0) !important;
+            transform: scale(1.02);
+        }
+        .view-all-btn {
+            background: linear-gradient(135deg, #0047FF 0%, #0033CC 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 71, 255, 0.3);
+        }
+        .view-all-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 71, 255, 0.4);
+        }
+        /* Simplified cursor for better performance - Desktop only */
+        .cursor-dot, .cursor-outline {
+            display: none;
+        }
+        @media (min-width: 1024px) and (pointer: fine) {
+            .cursor-dot, .cursor-outline {
+                display: block;
+            }
+            body {
+                cursor: none;
+            }
+        }
+        .vehicle-badge {
+            background: rgba(0, 71, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
+
+    <!-- Custom Cursor (Desktop only) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">ABCars<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Samantha</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="vehicles.html" class="text-[#0047FF]">Inventory</a>
+            <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMobileMenu()">
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine1"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine2"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine3"></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
+        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="vehicles.html" class="text-[#0047FF] text-2xl font-display">INVENTORY</a>
+        <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
+        <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
+    </div>
+
+    <!-- Header -->
+    <header class="pt-24 md:pt-32 pb-8 md:pb-12 px-4 md:px-6">
+        <div class="container mx-auto">
+            <h1 class="font-display text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[6vw] leading-none border-b-2 border-black pb-4 md:pb-8 mb-4 md:mb-8">INVENTORY</h1>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6">
+                <div>
+                    <p class="font-mono text-xs md:text-sm max-w-md text-gray-500 mb-2">
+                        We sell Only Ready Drive Cars with 1 month warranty for engine & transmission.
+                    </p>
+                    <p class="font-display text-base md:text-lg text-[#0047FF]">Our vehicles and services are second to none!</p>
+                </div>
+                <div class="flex items-center gap-4 w-full md:w-auto">
+                    <a href="https://www.facebook.com/Samanthacars/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="view-all-btn text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full font-mono text-[10px] md:text-xs font-bold tracking-widest uppercase flex items-center gap-2 w-full md:w-auto justify-center">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        VIEW ALL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-4 md:px-6 pb-20 md:pb-40">
+        <div class="container mx-auto space-y-16 md:space-y-32">
+            
+            <!-- Vehicle 1: Sedan - Renault Samsung SM5 -->
+            <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
+                <div class="flex items-baseline justify-between mb-4 md:mb-6 border-b border-black text-black pb-3 md:pb-4">
+                    <div>
+                        <h2 class="font-display text-4xl sm:text-5xl md:text-7xl">SEDAN</h2>
+                        <p class="font-mono text-xs md:text-sm text-gray-500 mt-1 md:mt-2">Renault Samsung SM5</p>
+                    </div>
+                    <span class="font-mono text-[#0047FF] text-sm md:text-base">01</span>
+                </div>
+                <div class="relative overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] w-full rounded-lg">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=ANMYPXxABG3x%2FLajtti2uZIRmDMwJX7EAXEZq0a7sUr2ND7QsDJo3g%2BzF2gfC6H%2BJTbSdg%2FWr6NidRWPJBURGtNH66mXkqGopgBax5s4%2BzMXleIcQ5Rie8JkZ5ArfAzkwJxMf0Fw3Jz7X922ng%3D%3D&u2=pGEq%2FFZET8F9JZaL&width=2560" 
+                         alt="Renault Samsung SM5 - Silver Sedan" 
+                         class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
+                         loading="lazy">
+                    <div class="absolute top-3 left-3 md:top-4 md:left-4 vehicle-badge text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full font-mono text-[10px] md:text-xs font-bold">
+                        AVAILABLE NOW
+                    </div>
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="bg-[#0047FF] text-white px-6 md:px-10 py-3 md:py-4 rounded-full text-sm md:text-lg font-bold tracking-widest">VIEW ON FACEBOOK →</span>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
+                    <p>COMFORT & STYLE</p>
+                    <p>CLICK TO INQUIRE</p>
+                </div>
+            </a>
+
+            <!-- Vehicle 2: SUV - Chevrolet Captiva -->
+            <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
+                <div class="flex items-baseline justify-between mb-4 md:mb-6 border-b border-black text-black pb-3 md:pb-4">
+                    <div>
+                        <h2 class="font-display text-4xl sm:text-5xl md:text-7xl">SUV</h2>
+                        <p class="font-mono text-xs md:text-sm text-gray-500 mt-1 md:mt-2">Chevrolet Captiva</p>
+                    </div>
+                    <span class="font-mono text-[#0047FF] text-sm md:text-base">02</span>
+                </div>
+                <div class="relative overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] w-full rounded-lg">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=2GpwNyj0uGHCp36Ras1yHM6VKh33p9TNM891a3HyZ2hmdgOL3D5NixLucXlAoS98bUF8KwyYumaxYkGcEhdEGLooWWIzKTafseuGiO%2B5ZYHtBINSdupejjYrJzh4FFFmpxqrhUkMaGaq9ufbcZYka12AQr57YNf%2BVfa%2F%2FqhAa9cOzVXWwouPCbfyE8mPVYrgcGVWig%3D%3D&u2=%2FWUK4wO3ORqCh90x&width=2560" 
+                         alt="Chevrolet Captiva - Gray SUV" 
+                         class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
+                         loading="lazy">
+                    <div class="absolute top-3 left-3 md:top-4 md:left-4 vehicle-badge text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full font-mono text-[10px] md:text-xs font-bold">
+                        FAMILY READY
+                    </div>
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="bg-[#0047FF] text-white px-6 md:px-10 py-3 md:py-4 rounded-full text-sm md:text-lg font-bold tracking-widest">VIEW ON FACEBOOK →</span>
+                    </div>
+                </div>
+                <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
+                    <p>SPACIOUS & POWERFUL</p>
+                    <p>CLICK TO INQUIRE</p>
+                </div>
+            </a>
+
+            <!-- Grid for Compact & Sports -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <!-- Vehicle 3: Compact - Chevrolet Spark -->
+                <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
+                    <div class="flex items-baseline justify-between mb-3 md:mb-4 border-b border-black pb-3 md:pb-4">
+                        <div>
+                            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl">COMPACT</h2>
+                            <p class="font-mono text-[10px] md:text-xs text-gray-500 mt-1">Chevrolet Spark</p>
+                        </div>
+                        <span class="font-mono text-[#0047FF] text-sm md:text-base">03</span>
+                    </div>
+                    <div class="relative overflow-hidden h-[35vh] sm:h-[40vh] md:h-[50vh] w-full rounded-lg">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=M871q6tI94xswyftkoUmMOhbD79zAW2fOaKhJMn92JBSYmmHoxEFcHrNW3SBrE1zrd9fEgqFyl9JYejuUXdn%2F4v7vHCMgTlalwZKlNlrfJl9ld9SdbXDZoNjvCwaqEnfmIVUmxBp8hNqqJi%2BHdCbNAbtfT%2FGPVYhZdYPLA%3D%3D&u2=8Q9ldgZGLS8ldZUy&width=2560" 
+                             alt="Chevrolet Spark - Compact Car" 
+                             class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
+                             loading="lazy">
+                        <div class="absolute top-3 left-3 md:top-4 md:left-4 vehicle-badge text-white px-2.5 md:px-3 py-1 rounded-full font-mono text-[10px] md:text-xs font-bold">
+                            FUEL EFFICIENT
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                            <span class="bg-black text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-sm">VIEW ON FACEBOOK →</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
+                        <p>CITY FRIENDLY</p>
+                        <p>CLICK TO INQUIRE</p>
+                    </div>
+                </a>
+
+                <!-- Vehicle 4: Sports - Genesis Coupe -->
+                <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
+                    <div class="flex items-baseline justify-between mb-3 md:mb-4 border-b border-black pb-3 md:pb-4">
+                        <div>
+                            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl">SPORTS</h2>
+                            <p class="font-mono text-[10px] md:text-xs text-gray-500 mt-1">Genesis Coupe</p>
+                        </div>
+                        <span class="font-mono text-[#0047FF] text-sm md:text-base">04</span>
+                    </div>
+                    <div class="relative overflow-hidden h-[35vh] sm:h-[40vh] md:h-[50vh] w-full rounded-lg">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=6B6pW6ShSRTuemvqbn3Q%2FrD540d5Iwp0TpOo77ZVcsI%2FHaTBjEw0afHsRG4RQ20fOm7bA6k5lbUr37yZDnJzfG6gcU8WOWQ8RgnBst6GDPodXs0so7toTdPBykk0Xvn3fDjSsIoHj0M%3D&u2=Yyf52PxDokJpT3Cd&width=2560" 
+                             alt="Hyundai Genesis Coupe - Sports Car" 
+                             class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
+                             loading="lazy">
+                        <div class="absolute top-3 left-3 md:top-4 md:left-4 bg-red-600 text-white px-2.5 md:px-3 py-1 rounded-full font-mono text-[10px] md:text-xs font-bold">
+                            HOT 🔥
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
+                            <span class="bg-black text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-sm">VIEW ON FACEBOOK →</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
+                        <p>PERFORMANCE & THRILL</p>
+                        <p>CLICK TO INQUIRE</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Services Banner -->
+            <div class="bg-black text-white p-5 md:p-8 lg:p-12 rounded-xl md:rounded-2xl">
+                <h3 class="font-display text-2xl md:text-3xl lg:text-4xl mb-6 md:mb-8">WHAT WE OFFER</h3>
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                    <div class="border border-white/20 p-4 md:p-6 rounded-lg md:rounded-xl hover:border-[#0047FF] transition-colors">
+                        <div class="text-xl md:text-2xl mb-2 md:mb-3">🔧</div>
+                        <h4 class="font-bold mb-1 md:mb-2 text-sm md:text-base">Reliable Maintenance</h4>
+                        <p class="text-[10px] md:text-sm text-gray-400 font-mono hidden sm:block">Expert vehicle maintenance and servicing</p>
+                    </div>
+                    <div class="border border-white/20 p-4 md:p-6 rounded-lg md:rounded-xl hover:border-[#0047FF] transition-colors">
+                        <div class="text-xl md:text-2xl mb-2 md:mb-3">📋</div>
+                        <h4 class="font-bold mb-1 md:mb-2 text-sm md:text-base">SOFA Registration</h4>
+                        <p class="text-[10px] md:text-sm text-gray-400 font-mono hidden sm:block">Complete SOFA vehicle registration service</p>
+                    </div>
+                    <div class="border border-white/20 p-4 md:p-6 rounded-lg md:rounded-xl hover:border-[#0047FF] transition-colors">
+                        <div class="text-xl md:text-2xl mb-2 md:mb-3">✅</div>
+                        <h4 class="font-bold mb-1 md:mb-2 text-sm md:text-base">1 Month Warranty</h4>
+                        <p class="text-[10px] md:text-sm text-gray-400 font-mono hidden sm:block">Engine & Transmission warranty included</p>
+                    </div>
+                    <div class="border border-white/20 p-4 md:p-6 rounded-lg md:rounded-xl hover:border-[#0047FF] transition-colors">
+                        <div class="text-xl md:text-2xl mb-2 md:mb-3">🚗</div>
+                        <h4 class="font-bold mb-1 md:mb-2 text-sm md:text-base">Free Car Rental</h4>
+                        <p class="text-[10px] md:text-sm text-gray-400 font-mono hidden sm:block">Loaner car while we fix yours</p>
+                    </div>
+                    <div class="border border-white/20 p-4 md:p-6 rounded-lg md:rounded-xl hover:border-[#0047FF] transition-colors">
+                        <div class="text-xl md:text-2xl mb-2 md:mb-3">♻️</div>
+                        <h4 class="font-bold mb-1 md:mb-2 text-sm md:text-base">Junk & Resale</h4>
+                        <p class="text-[10px] md:text-sm text-gray-400 font-mono hidden sm:block">Free junk and resale service</p>
+                    </div>
+                    <div class="border border-white/20 p-4 md:p-6 rounded-lg md:rounded-xl hover:border-[#0047FF] transition-colors">
+                        <div class="text-xl md:text-2xl mb-2 md:mb-3">🚨</div>
+                        <h4 class="font-bold mb-1 md:mb-2 text-sm md:text-base">Emergency Service</h4>
+                        <p class="text-[10px] md:text-sm text-gray-400 font-mono hidden sm:block">Pick up, towing and roadside assistance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All CTA Section -->
+            <div class="text-center py-10 md:py-16 border-t border-black/10">
+                <p class="font-display text-xl md:text-2xl mb-3 md:mb-4">Our vehicles and services are second to none!</p>
+                <p class="font-mono text-xs md:text-sm text-gray-500 mb-6 md:mb-8 px-4">
+                    Looking for a specific vehicle? Check out our full inventory on Facebook!
+                </p>
+                <a href="https://www.facebook.com/Samanthacars/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="view-all-btn inline-flex items-center gap-2 md:gap-3 text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-mono text-xs md:text-sm font-bold tracking-widest uppercase">
+                    <svg class="w-4 md:w-5 h-4 md:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span class="hidden sm:inline">VIEW ALL VEHICLES ON FACEBOOK</span>
+                    <span class="sm:hidden">VIEW ALL ON FACEBOOK</span>
+                    <span class="text-lg">→</span>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-8 md:py-12 px-4 md:px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-center md:text-left">
+                <div>
+                    <p class="font-mono text-[10px] md:text-xs text-gray-500 mb-1">LOCATION</p>
+                    <p class="text-xs md:text-sm">경기도 평택시 팽성읍 송화2길 186-1</p>
+                </div>
+                <div>
+                    <p class="font-mono text-[10px] md:text-xs text-gray-500 mb-1">HOURS</p>
+                    <p class="text-xs md:text-sm">Mon-Sat: 9:30 AM - 6:00 PM</p>
+                </div>
+                <div>
+                    <p class="font-mono text-[10px] md:text-xs text-gray-500 mb-1">CONTACT</p>
+                    <a href="tel:01071704513" class="text-xs md:text-sm hover:text-[#0047FF] transition-colors">010-7170-4513</a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
+                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 ABCARS SAMANTHA. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('menuLine1');
+            const line2 = document.getElementById('menuLine2');
+            const line3 = document.getElementById('menuLine3');
+            
+            menu.classList.toggle('active');
+            
+            if (menu.classList.contains('active')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        }
+        
+        // Optimized Custom Cursor (only on large desktop with fine pointer)
+        if (window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            let mouseX = 0, mouseY = 0;
+            let outlineX = 0, outlineY = 0;
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+            }, { passive: true });
+            
+            function animateCursor() {
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+                cursorOutline.style.left = outlineX + 'px';
+                cursorOutline.style.top = outlineY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+        }
+
+        // Simple scroll reveal
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.vehicle-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
