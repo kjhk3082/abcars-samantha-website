@@ -133,6 +133,17 @@ Samantha Used Car is a professional car dealership website targeting US Military
 - The scraper never overwrites the inventory with an empty list, so a Gorilla Motors outage
   or redesign leaves the last good data in place.
 
+### Fully-automatic Facebook mode (optional)
+
+Facebook blocks anonymous scraping, so full automation needs an official Meta **Page Access
+Token** for the "Samantha Used car" page (one-time setup by the page admin at
+https://developers.facebook.com: create an app → Graph API → page token with
+`pages_read_engagement`). Then add it in GitHub → Settings → Secrets → Actions as
+`FB_PAGE_TOKEN` (optional `FB_PAGE_ID`). From then on the daily job reads her latest posts,
+matches them to Gorilla Motors inventory by model/price/year (`scripts/fb_update_include.py`),
+and maintains `filter.include` by itself. Without the secret, that step skips silently and the
+hand-maintained include list is used.
+
 ---
 
 ## 🚀 Technologies Used
