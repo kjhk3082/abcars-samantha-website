@@ -88,7 +88,7 @@ Samantha Used Car is a professional car dealership website targeting US Military
 
 | Info | Details |
 |------|---------|
-| **Address** | 103, Anjeong-ro, Paengseong-eup, Pyeongtaek-si (경기도 평택시 안정로 103, Gorilla Motors Main Office) |
+| **Address** | 186-3, Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si (경기도 평택시 팽성읍 송화2길 186-3 · 지번 송화리 410-1, Gorilla Motors) |
 | **Phone** | 010-7170-4513 |
 | **Email** | flowerdudtlr@gmail.com |
 | **Hours** | Mon-Fri 9:00-18:00 · Sat 9:00-17:00 · Sun 9:00-16:00 (open 7 days) |

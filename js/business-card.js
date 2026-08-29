@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Address
         ctx.fillStyle = INK_SOFT;
         ctx.font = '400 27px "Nanum Myeongjo", serif';
-        ctx.fillText('401-1, Songhwa-ri, Paengseong-eup,', LEFT, 685);
+        ctx.fillText('186-3, Songhwa 2-gil, Paengseong-eup,', LEFT, 685);
         ctx.fillText('Pyeongtaek-si, Gyeonggi-do, Republic of Korea', LEFT, 720);
 
         return canvas;
