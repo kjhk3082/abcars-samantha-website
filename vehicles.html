@@ -159,8 +159,9 @@
             </div>
 
             <!-- Photo lightbox -->
-            <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/95 flex-col items-center justify-center p-4 md:p-8">
-                <button id="lightbox-close" type="button" class="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white font-mono text-xs md:text-sm tracking-widest px-3 py-2">CLOSE ✕</button>
+            <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/95 overflow-y-auto p-4 pt-14 md:p-8 md:pt-16">
+                <button id="lightbox-close" type="button" class="fixed top-3 right-3 md:top-5 md:right-6 z-20 text-white/80 hover:text-white font-mono text-xs md:text-sm tracking-widest px-3 py-2 bg-black/50 rounded-full">CLOSE ✕</button>
+                <div class="min-h-full flex flex-col items-center justify-center">
                 <div class="relative flex items-center justify-center w-full max-w-4xl">
                     <button id="lightbox-prev" type="button" class="absolute left-0 md:-left-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">‹</button>
                     <div class="inline-block rounded-lg overflow-hidden shadow-2xl bg-[#2C4732]">
@@ -184,6 +185,7 @@
                         <a href="tel:01071704513" class="bg-white text-black px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">📞 CALL</a>
                         <a id="lightbox-wa" href="#" target="_blank" rel="noopener" class="bg-[#25D366] text-white px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">💬 WHATSAPP</a>
                     </div>
+                </div>
                 </div>
             </div>
 
@@ -491,13 +493,12 @@
                 lbWa.href = 'https://api.whatsapp.com/send?phone=821071704513&text='
                     + encodeURIComponent('Hi Samantha! I am interested in: ' + title + (car.price ? ' (' + car.price + ')' : ''));
                 lightbox.classList.remove('hidden');
-                lightbox.classList.add('flex');
+                lightbox.scrollTop = 0;
                 document.body.style.overflow = 'hidden';
                 showPhoto();
             }
             function closeLightbox() {
                 lightbox.classList.add('hidden');
-                lightbox.classList.remove('flex');
                 document.body.style.overflow = '';
             }
             grid.addEventListener('click', function(e) {
