@@ -1,0 +1,83 @@
+{
+  "updated": "2026-08-29T05:29:42+00:00",
+  "source": "https://www.gorillamotors.co.kr",
+  "vehicles": [
+    {
+      "id": 5103,
+      "title": "2015 KIA ALL NEW CARNIVAL 9 SEATER(16라7242)",
+      "url": "https://www.gorillamotors.co.kr/product/2015-kia-all-new-carnival-9-seater16라7242/5103/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/92dbe7978190209a4375b53b20b87b0f.jpg",
+      "price": "$7,500",
+      "engine": "V4",
+      "miles": "84000",
+      "transmission": "AUTO",
+      "options": "LEATHER, HEATED, COOLED SEATS, BLUETOOTH, BACK UP CAMERA, AUTO SLIDING DOORS, 9 SEATER"
+    },
+    {
+      "id": 5102,
+      "title": "LOW MILES! 2015 AUDI Q3 quattro(280누5524)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2015-audi-q3-quattro280누5524/5102/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/ab109d38f33d617f19161a113d2ae3da.jpg",
+      "price": "$7,900",
+      "engine": "4 CYLINDER",
+      "miles": "52000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats, Sunroof, 4WD"
+    },
+    {
+      "id": 5089,
+      "title": "2016 GENESIS COUPE 2.0 S (54두9728)",
+      "url": "https://www.gorillamotors.co.kr/product/2016-genesis-coupe-20-s-54두9728/5089/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/a7ee146be011646db139de2de00c448b.jpg",
+      "price": "$9,800",
+      "engine": "4 CYLINDER",
+      "miles": "58000",
+      "transmission": "AUTO",
+      "options": "BREMBO BRAKES / JBL AUDIO / SUNROOF"
+    },
+    {
+      "id": 5056,
+      "title": "2015 INFINITI QX60 AWD(24어0984)",
+      "url": "https://www.gorillamotors.co.kr/product/2015-infiniti-qx60-awd24어0984/5056/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/6f95030aea73b4679a58789425177f5d.jpg",
+      "price": "$7,700",
+      "engine": "V6",
+      "miles": "78000",
+      "transmission": "AUTO",
+      "options": ""
+    },
+    {
+      "id": 5033,
+      "title": "2014 VOLVO S60 D4 (38주5101)",
+      "url": "https://www.gorillamotors.co.kr/product/2014-volvo-s60-d4-38주5101/5033/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/26dc0fda9dcddd59dc4100ca79fd386c.jpg",
+      "price": "$5,900",
+      "engine": "4 CYLINDER",
+      "miles": "72000",
+      "transmission": "AUTO",
+      "options": "ONE OWNER / NO ACCIDENT/ PUSH BUTTON START"
+    },
+    {
+      "id": 4792,
+      "title": "2019 RENAULT SM6 2.0  (25고3839)",
+      "url": "https://www.gorillamotors.co.kr/product/2019-renault-sm6-20-25고3839/4792/category/55/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/860826761c1702b561e1b38158c51650.jpg",
+      "price": "$5,900",
+      "engine": "4 CYLINDER",
+      "miles": "38000",
+      "transmission": "AUTO",
+      "options": "LOW MILES ,BLUETOOTH,SMART KEY"
+    },
+    {
+      "id": 4757,
+      "title": "2015 HYUNDAI GENESIS 3.3 (35우6839）",
+      "url": "https://www.gorillamotors.co.kr/product/2015-hyundai-genesis-33-35우6839）/4757/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/0e2f7f6b60ddc55d23d50a1cd8a7d503.jpg",
+      "price": "$7,600",
+      "engine": "V6",
+      "miles": "90000",
+      "transmission": "AUTO",
+      "options": ""
+    }
+  ]
+}

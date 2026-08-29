@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory - ABCars Samantha</title>
+    <title>Inventory - Samantha Used Car</title>
     
     <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,8 +82,8 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
         <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
-            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">ABCars<span class="text-[#0047FF] group-hover:text-white">.</span></span>
-            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Samantha</span>
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">Samantha<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Used Car</span>
         </div>
         
         <!-- Desktop Menu -->
@@ -137,115 +137,14 @@
     <main class="px-4 md:px-6 pb-20 md:pb-40">
         <div class="container mx-auto space-y-16 md:space-y-32">
             
-            <!-- Vehicle 1: Sedan - Renault Samsung SM5 -->
-            <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
-                <div class="flex items-baseline justify-between mb-4 md:mb-6 border-b border-black text-black pb-3 md:pb-4">
-                    <div>
-                        <h2 class="font-display text-4xl sm:text-5xl md:text-7xl">SEDAN</h2>
-                        <p class="font-mono text-xs md:text-sm text-gray-500 mt-1 md:mt-2">Renault Samsung SM5</p>
-                    </div>
-                    <span class="font-mono text-[#0047FF] text-sm md:text-base">01</span>
+            <!-- Live Inventory (auto-synced daily from Gorilla Motors) -->
+            <div>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6 md:mb-10 border-b border-black/10 pb-4 gap-2">
+                    <h2 class="font-display text-2xl md:text-3xl lg:text-4xl">LIVE INVENTORY</h2>
+                    <p id="inventory-status" class="font-mono text-[10px] md:text-xs text-gray-500">LOADING LIVE INVENTORY…</p>
                 </div>
-                <div class="relative overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] w-full rounded-lg">
-                    <img src="https://sspark.genspark.ai/cfimages?u1=ANMYPXxABG3x%2FLajtti2uZIRmDMwJX7EAXEZq0a7sUr2ND7QsDJo3g%2BzF2gfC6H%2BJTbSdg%2FWr6NidRWPJBURGtNH66mXkqGopgBax5s4%2BzMXleIcQ5Rie8JkZ5ArfAzkwJxMf0Fw3Jz7X922ng%3D%3D&u2=pGEq%2FFZET8F9JZaL&width=2560" 
-                         alt="Renault Samsung SM5 - Silver Sedan" 
-                         class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
-                         loading="lazy">
-                    <div class="absolute top-3 left-3 md:top-4 md:left-4 vehicle-badge text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full font-mono text-[10px] md:text-xs font-bold">
-                        AVAILABLE NOW
-                    </div>
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span class="bg-[#0047FF] text-white px-6 md:px-10 py-3 md:py-4 rounded-full text-sm md:text-lg font-bold tracking-widest">VIEW ON FACEBOOK →</span>
-                    </div>
-                </div>
-                <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
-                    <p>COMFORT & STYLE</p>
-                    <p>CLICK TO INQUIRE</p>
-                </div>
-            </a>
-
-            <!-- Vehicle 2: SUV - Chevrolet Captiva -->
-            <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
-                <div class="flex items-baseline justify-between mb-4 md:mb-6 border-b border-black text-black pb-3 md:pb-4">
-                    <div>
-                        <h2 class="font-display text-4xl sm:text-5xl md:text-7xl">SUV</h2>
-                        <p class="font-mono text-xs md:text-sm text-gray-500 mt-1 md:mt-2">Chevrolet Captiva</p>
-                    </div>
-                    <span class="font-mono text-[#0047FF] text-sm md:text-base">02</span>
-                </div>
-                <div class="relative overflow-hidden h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] w-full rounded-lg">
-                    <img src="https://sspark.genspark.ai/cfimages?u1=2GpwNyj0uGHCp36Ras1yHM6VKh33p9TNM891a3HyZ2hmdgOL3D5NixLucXlAoS98bUF8KwyYumaxYkGcEhdEGLooWWIzKTafseuGiO%2B5ZYHtBINSdupejjYrJzh4FFFmpxqrhUkMaGaq9ufbcZYka12AQr57YNf%2BVfa%2F%2FqhAa9cOzVXWwouPCbfyE8mPVYrgcGVWig%3D%3D&u2=%2FWUK4wO3ORqCh90x&width=2560" 
-                         alt="Chevrolet Captiva - Gray SUV" 
-                         class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
-                         loading="lazy">
-                    <div class="absolute top-3 left-3 md:top-4 md:left-4 vehicle-badge text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full font-mono text-[10px] md:text-xs font-bold">
-                        FAMILY READY
-                    </div>
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span class="bg-[#0047FF] text-white px-6 md:px-10 py-3 md:py-4 rounded-full text-sm md:text-lg font-bold tracking-widest">VIEW ON FACEBOOK →</span>
-                    </div>
-                </div>
-                <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
-                    <p>SPACIOUS & POWERFUL</p>
-                    <p>CLICK TO INQUIRE</p>
-                </div>
-            </a>
-
-            <!-- Grid for Compact & Sports -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <!-- Vehicle 3: Compact - Chevrolet Spark -->
-                <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
-                    <div class="flex items-baseline justify-between mb-3 md:mb-4 border-b border-black pb-3 md:pb-4">
-                        <div>
-                            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl">COMPACT</h2>
-                            <p class="font-mono text-[10px] md:text-xs text-gray-500 mt-1">Chevrolet Spark</p>
-                        </div>
-                        <span class="font-mono text-[#0047FF] text-sm md:text-base">03</span>
-                    </div>
-                    <div class="relative overflow-hidden h-[35vh] sm:h-[40vh] md:h-[50vh] w-full rounded-lg">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=M871q6tI94xswyftkoUmMOhbD79zAW2fOaKhJMn92JBSYmmHoxEFcHrNW3SBrE1zrd9fEgqFyl9JYejuUXdn%2F4v7vHCMgTlalwZKlNlrfJl9ld9SdbXDZoNjvCwaqEnfmIVUmxBp8hNqqJi%2BHdCbNAbtfT%2FGPVYhZdYPLA%3D%3D&u2=8Q9ldgZGLS8ldZUy&width=2560" 
-                             alt="Chevrolet Spark - Compact Car" 
-                             class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
-                             loading="lazy">
-                        <div class="absolute top-3 left-3 md:top-4 md:left-4 vehicle-badge text-white px-2.5 md:px-3 py-1 rounded-full font-mono text-[10px] md:text-xs font-bold">
-                            FUEL EFFICIENT
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
-                            <span class="bg-black text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-sm">VIEW ON FACEBOOK →</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
-                        <p>CITY FRIENDLY</p>
-                        <p>CLICK TO INQUIRE</p>
-                    </div>
-                </a>
-
-                <!-- Vehicle 4: Sports - Genesis Coupe -->
-                <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener noreferrer" class="block vehicle-card group">
-                    <div class="flex items-baseline justify-between mb-3 md:mb-4 border-b border-black pb-3 md:pb-4">
-                        <div>
-                            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl">SPORTS</h2>
-                            <p class="font-mono text-[10px] md:text-xs text-gray-500 mt-1">Genesis Coupe</p>
-                        </div>
-                        <span class="font-mono text-[#0047FF] text-sm md:text-base">04</span>
-                    </div>
-                    <div class="relative overflow-hidden h-[35vh] sm:h-[40vh] md:h-[50vh] w-full rounded-lg">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=6B6pW6ShSRTuemvqbn3Q%2FrD540d5Iwp0TpOo77ZVcsI%2FHaTBjEw0afHsRG4RQ20fOm7bA6k5lbUr37yZDnJzfG6gcU8WOWQ8RgnBst6GDPodXs0so7toTdPBykk0Xvn3fDjSsIoHj0M%3D&u2=Yyf52PxDokJpT3Cd&width=2560" 
-                             alt="Hyundai Genesis Coupe - Sports Car" 
-                             class="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
-                             loading="lazy">
-                        <div class="absolute top-3 left-3 md:top-4 md:left-4 bg-red-600 text-white px-2.5 md:px-3 py-1 rounded-full font-mono text-[10px] md:text-xs font-bold">
-                            HOT 🔥
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
-                            <span class="bg-black text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-bold text-sm">VIEW ON FACEBOOK →</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between mt-3 md:mt-4 font-mono text-[10px] md:text-xs font-bold tracking-widest">
-                        <p>PERFORMANCE & THRILL</p>
-                        <p>CLICK TO INQUIRE</p>
-                    </div>
-                </a>
+                <div id="inventory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8"></div>
+                <p class="font-mono text-[10px] md:text-xs text-gray-400 mt-4 md:mt-6">Samantha's cars at Gorilla Motors · updated daily · click a car for full details & photos</p>
             </div>
 
             <!-- Services Banner -->
@@ -310,11 +209,11 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-center md:text-left">
                 <div>
                     <p class="font-mono text-[10px] md:text-xs text-gray-500 mb-1">LOCATION</p>
-                    <p class="text-xs md:text-sm">경기도 평택시 팽성읍 송화2길 186-1</p>
+                    <p class="text-xs md:text-sm">103 Anjeong-ro, Paengseong-eup, Pyeongtaek-si</p>
                 </div>
                 <div>
                     <p class="font-mono text-[10px] md:text-xs text-gray-500 mb-1">HOURS</p>
-                    <p class="text-xs md:text-sm">Mon-Sat: 9:30 AM - 6:00 PM</p>
+                    <p class="text-xs md:text-sm">Mon-Fri 9-6 · Sat 9-5 · Sun 9-4</p>
                 </div>
                 <div>
                     <p class="font-mono text-[10px] md:text-xs text-gray-500 mb-1">CONTACT</p>
@@ -322,7 +221,7 @@
                 </div>
             </div>
             <div class="border-t border-white/10 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
-                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 ABCARS SAMANTHA. ALL RIGHTS RESERVED.</p>
+                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </footer>
@@ -372,6 +271,54 @@
             }
             animateCursor();
         }
+
+        // Live inventory - rendered from data/vehicles.json, which a GitHub Action
+        // refreshes daily from Samantha's cars on gorillamotors.co.kr
+        (function() {
+            const grid = document.getElementById('inventory-grid');
+            const status = document.getElementById('inventory-status');
+            if (!grid) return;
+            const esc = function(s) {
+                return String(s == null ? '' : s).replace(/[&<>"']/g, function(c) {
+                    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+                });
+            };
+            fetch('data/vehicles.json', { cache: 'no-cache' })
+                .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+                .then(function(data) {
+                    const cars = (data && data.vehicles) || [];
+                    if (!cars.length) throw new Error('empty');
+                    grid.innerHTML = cars.map(function(car, i) {
+                        const isUsSpec = /us.?spec/i.test(car.title || '');
+                        const title = esc((car.title || '')
+                            .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
+                            .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
+                            .trim());
+                        const specs = [
+                            car.miles ? esc(car.miles) + ' MILES' : '',
+                            esc(car.engine || ''),
+                            esc(car.transmission || '')
+                        ].filter(Boolean).join(' · ');
+                        return '<a href="' + esc(car.url) + '" target="_blank" rel="noopener noreferrer" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
+                            + '<div class="relative overflow-hidden h-52 md:h-60">'
+                            + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">'
+                            + (isUsSpec ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
+                            + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS →</span></div>'
+                            + '</div>'
+                            + '<div class="p-4 md:p-5">'
+                            + '<div class="flex items-start justify-between gap-3 mb-2"><h3 class="font-display text-sm md:text-base leading-snug">' + title + '</h3><span class="font-mono text-[#0047FF] text-xs md:text-sm shrink-0">' + String(i + 1).padStart(2, '0') + '</span></div>'
+                            + (car.price ? '<p class="font-display text-lg md:text-xl mb-1">' + esc(car.price) + '</p>' : '')
+                            + (specs ? '<p class="font-mono text-[10px] md:text-xs text-gray-500">' + specs + '</p>' : '')
+                            + '</div></a>';
+                    }).join('');
+                    if (status) {
+                        status.textContent = cars.length + ' VEHICLES · UPDATED ' + (data.updated ? String(data.updated).slice(0, 10) : 'DAILY');
+                    }
+                })
+                .catch(function() {
+                    if (status) status.innerHTML = 'LIVE INVENTORY IS TEMPORARILY UNAVAILABLE — SEE ALL VEHICLES ON <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener" class="underline font-bold">FACEBOOK</a>';
+                });
+        })();
 
         // Simple scroll reveal
         const observerOptions = {

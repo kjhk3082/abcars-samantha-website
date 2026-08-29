@@ -1,10 +1,10 @@
-# ABCars Samantha - Official Website
+# Samantha Used Car - Official Website
 
 > **SOFA Vehicle Specialist** - Premium US-Spec vehicles for US Military personnel in Korea
 
 ## 🚗 Project Overview
 
-ABCars Samantha is a professional car dealership website targeting US Military personnel stationed in Korea. The site features a modern, responsive design with smooth animations and intuitive navigation.
+Samantha Used Car is a professional car dealership website targeting US Military personnel stationed in Korea. Samantha works at Gorilla Motors Main Office (Anjeong-ro, Paengseong-eup, Pyeongtaek — near Camp Humphreys). The site features a modern, responsive design with smooth animations and intuitive navigation.
 
 **Slogan:** *"Our vehicles and services are second to none!"*
 
@@ -52,9 +52,17 @@ ABCars Samantha is a professional car dealership website targeting US Military p
 │   └── style.css           # Main stylesheet (v2.0)
 │
 ├── js/
-│   └── business-card.js    # Three.js 3D card script
+│   └── business-card.js    # Three.js 3D card (faces drawn on canvas, WhatsApp QR)
 │
-└── images/                 # Image assets (if any)
+├── data/
+│   ├── sync-config.json    # Which Gorilla Motors cars to sync (categories / include / exclude)
+│   └── vehicles.json       # Auto-generated live inventory (do not edit by hand)
+│
+├── scripts/
+│   └── sync_vehicles.py    # Scraper that refreshes data/vehicles.json
+│
+└── .github/workflows/
+    └── sync-vehicles.yml   # Daily cron (06:00 KST) + manual "Run workflow" sync
 ```
 
 ---
@@ -71,7 +79,7 @@ ABCars Samantha is a professional car dealership website targeting US Military p
 ### External Links
 - **Facebook**: https://www.facebook.com/Samanthacars/
 - **WhatsApp**: https://api.whatsapp.com/send?phone=821071704513
-- **Google Maps**: Samantha ABCars location
+- **Google Maps**: Gorilla Motors, 401-1 Songhwa-ri location
 - **Waze**: Navigation link
 
 ---
@@ -80,11 +88,11 @@ ABCars Samantha is a professional car dealership website targeting US Military p
 
 | Info | Details |
 |------|---------|
-| **Address** | 경기도 평택시 팽성읍 송화2길 186-1 |
+| **Address** | 103, Anjeong-ro, Paengseong-eup, Pyeongtaek-si (경기도 평택시 안정로 103, Gorilla Motors Main Office) |
 | **Phone** | 010-7170-4513 |
-| **Email** | samanthacars707@gmail.com |
-| **Hours** | Mon-Sat: 9:30 AM - 6:00 PM |
-| **Closed** | Sunday |
+| **Email** | flowerdudtlr@gmail.com |
+| **Hours** | Mon-Fri 9:00-18:00 · Sat 9:00-17:00 · Sun 9:00-16:00 (open 7 days) |
+| **Google** | ★ 4.8 · 231 reviews — https://share.google/Qmi8x4GN4Q4EXiSHd |
 
 ---
 
@@ -112,14 +120,18 @@ ABCars Samantha is a professional car dealership website targeting US Military p
 
 ---
 
-## 🖼 Vehicle Images Used
+## 🔄 Live Inventory Sync
 
-| Category | Vehicle | Image Source |
-|----------|---------|--------------|
-| Sedan | Renault Samsung SM5 | genspark.ai (ASCfibMm) |
-| SUV | Chevrolet Captiva | genspark.ai (nwY5axIu) |
-| Compact | Chevrolet Spark | genspark.ai (vWUW0SOL) |
-| Sports | Genesis Coupe | genspark.ai (MFVTsQDR) |
+`vehicles.html` renders `data/vehicles.json`, which a GitHub Action refreshes every morning
+(06:00 KST) from Samantha's cars on the Gorilla Motors site (gorillamotors.co.kr).
+
+- **Change which cars appear**: edit `data/sync-config.json`
+  - `source_categories` — Gorilla Motors category pages to scan (default: `us-spec` / 64)
+  - `filter.mode: "include"` + `filter.include: [productIds]` — show only those exact cars
+  - `filter.exclude: [productIds]` — hide specific cars
+- **Refresh immediately**: GitHub → Actions → "Sync vehicles from Gorilla Motors" → Run workflow
+- The scraper never overwrites the inventory with an empty list, so a Gorilla Motors outage
+  or redesign leaves the last good data in place.
 
 ---
 
@@ -158,8 +170,8 @@ The following have been removed from the codebase:
 
 ## 📄 License
 
-© 2026 ABCars Samantha. All rights reserved.
+© 2026 Samantha Used Car. All rights reserved.
 
 ---
 
-*Last Updated: January 24, 2026*
+*Last Updated: August 29, 2026*
