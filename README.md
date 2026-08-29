@@ -126,8 +126,8 @@ Samantha Used Car is a professional car dealership website targeting US Military
 (06:00 KST) from Samantha's cars on the Gorilla Motors site (gorillamotors.co.kr).
 
 - **Change which cars appear**: edit `data/sync-config.json`
-  - `source_categories` — Gorilla Motors category pages to scan (default: `us-spec` / 64)
-  - `filter.mode: "include"` + `filter.include: [productIds]` — show only those exact cars
+  - `source_categories` — Gorilla Motors category pages to scan (default: all categories = full inventory)
+  - `filter.mode: "all"` — every scanned car (current default); `"include"` + `filter.include: [productIds]` — only those exact cars
   - `filter.exclude: [productIds]` — hide specific cars
 - **Refresh immediately**: GitHub → Actions → "Sync vehicles from Gorilla Motors" → Run workflow
 - The scraper never overwrites the inventory with an empty list, so a Gorilla Motors outage

@@ -13,7 +13,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -135,15 +135,13 @@
             document.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                cursorDot.style.left = mouseX + 'px';
-                cursorDot.style.top = mouseY + 'px';
+                cursorDot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%, -50%)';
             }, { passive: true });
             
             function animateCursor() {
                 outlineX += (mouseX - outlineX) * 0.15;
                 outlineY += (mouseY - outlineY) * 0.15;
-                cursorOutline.style.left = outlineX + 'px';
-                cursorOutline.style.top = outlineY + 'px';
+                cursorOutline.style.transform = 'translate3d(' + outlineX + 'px,' + outlineY + 'px,0) translate(-50%, -50%)';
                 requestAnimationFrame(animateCursor);
             }
             animateCursor();

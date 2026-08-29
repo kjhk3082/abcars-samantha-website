@@ -29,7 +29,7 @@ def fetch(url):
         return resp.read().decode("utf-8", "replace")
 
 
-def parse_listing(page_html, base):
+def parse_listing(page_html, base, category=""):
     """Parse a Cafe24 category listing page into vehicle dicts."""
     cars = []
     blocks = re.split(r'<li id="anchorBoxId_(\d+)"', page_html)
@@ -59,6 +59,7 @@ def parse_listing(page_html, base):
             "miles": specs.get("MILES", ""),
             "transmission": specs.get("Transmission", ""),
             "options": specs.get("Option", ""),
+            "category": category,
         })
     return cars
 
@@ -71,7 +72,7 @@ def main():
     for cat in cfg["source_categories"]:
         for page in range(1, 6):
             url = f"{base}/category/{cat['path']}/{cat['id']}/?page={page}"
-            found = [c for c in parse_listing(fetch(url), base) if c["id"] not in seen]
+            found = [c for c in parse_listing(fetch(url), base, cat["path"]) if c["id"] not in seen]
             if not found:
                 break
             seen.update(c["id"] for c in found)

@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Renderer Setup
         renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setSize(container.clientWidth, container.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         container.appendChild(renderer.domElement);

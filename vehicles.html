@@ -13,7 +13,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/tailwind.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -143,6 +143,17 @@
                     <h2 class="font-display text-2xl md:text-3xl lg:text-4xl">LIVE INVENTORY</h2>
                     <p id="inventory-status" class="font-mono text-[10px] md:text-xs text-gray-500">LOADING LIVE INVENTORY…</p>
                 </div>
+                <div id="inventory-controls" class="hidden flex-col lg:flex-row gap-3 lg:items-center mb-6 md:mb-8">
+                    <div id="inventory-chips" class="flex flex-wrap gap-2"></div>
+                    <div class="flex gap-2 lg:ml-auto w-full lg:w-auto">
+                        <input id="inventory-search" type="search" placeholder="SEARCH MODEL…" class="flex-1 lg:w-56 bg-white border border-black/15 focus:border-black rounded-full px-4 py-2 font-mono text-[11px] md:text-xs outline-none">
+                        <select id="inventory-sort" class="bg-white border border-black/15 rounded-full px-3 py-2 font-mono text-[11px] md:text-xs outline-none">
+                            <option value="newest">NEWEST</option>
+                            <option value="price-asc">PRICE ↑</option>
+                            <option value="price-desc">PRICE ↓</option>
+                        </select>
+                    </div>
+                </div>
                 <div id="inventory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8"></div>
                 <p class="font-mono text-[10px] md:text-xs text-gray-400 mt-4 md:mt-6">Samantha's cars at Gorilla Motors · updated daily · click a car for full details & photos</p>
             </div>
@@ -258,62 +269,146 @@
             document.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                cursorDot.style.left = mouseX + 'px';
-                cursorDot.style.top = mouseY + 'px';
+                cursorDot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%, -50%)';
             }, { passive: true });
             
             function animateCursor() {
                 outlineX += (mouseX - outlineX) * 0.15;
                 outlineY += (mouseY - outlineY) * 0.15;
-                cursorOutline.style.left = outlineX + 'px';
-                cursorOutline.style.top = outlineY + 'px';
+                cursorOutline.style.transform = 'translate3d(' + outlineX + 'px,' + outlineY + 'px,0) translate(-50%, -50%)';
                 requestAnimationFrame(animateCursor);
             }
             animateCursor();
         }
 
         // Live inventory - rendered from data/vehicles.json, which a GitHub Action
-        // refreshes daily from Samantha's cars on gorillamotors.co.kr
+        // refreshes daily from the full Gorilla Motors inventory
         (function() {
             const grid = document.getElementById('inventory-grid');
             const status = document.getElementById('inventory-status');
+            const controls = document.getElementById('inventory-controls');
+            const chipsBox = document.getElementById('inventory-chips');
+            const searchBox = document.getElementById('inventory-search');
+            const sortBox = document.getElementById('inventory-sort');
             if (!grid) return;
+
             const esc = function(s) {
                 return String(s == null ? '' : s).replace(/[&<>"']/g, function(c) {
                     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
                 });
             };
+            const isUsSpec = function(car) {
+                return /us.?spec/i.test(car.title || '') || car.category === 'us-spec';
+            };
+            const priceNum = function(car) {
+                const digits = String(car.price || '').replace(/[^0-9]/g, '');
+                return digits ? parseInt(digits, 10) : null;
+            };
+
+            const CHIPS = [
+                { key: 'all', label: 'ALL', match: function() { return true; } },
+                { key: 'us-spec', label: 'US SPEC', match: isUsSpec },
+                { key: 'hyundai', label: 'HYUNDAI', match: function(c) { return c.category === 'hyundai'; } },
+                { key: 'kia', label: 'KIA', match: function(c) { return c.category === 'kia'; } },
+                { key: 'chevrolet', label: 'CHEVROLET', match: function(c) { return c.category === 'chevrolet'; } },
+                { key: 'renault-samsung', label: 'RENAULT', match: function(c) { return c.category === 'renault-samsung'; } },
+                { key: 'ssangyong', label: 'SSANGYONG', match: function(c) { return c.category === 'ssangyong'; } },
+                { key: 'others', label: 'IMPORT & ETC', match: function(c) { return c.category === 'others' || c.category === 'us-spec'; } }
+            ];
+
+            let cars = [];
+            let updated = '';
+            const state = { chip: 'all', q: '', sort: 'newest' };
+
+            function cardHtml(car, i) {
+                const title = esc((car.title || '')
+                    .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
+                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
+                    .trim());
+                const specs = [
+                    car.miles ? esc(car.miles) + ' MILES' : '',
+                    esc(car.engine || ''),
+                    esc(car.transmission || '')
+                ].filter(Boolean).join(' · ');
+                return '<a href="' + esc(car.url) + '" target="_blank" rel="noopener noreferrer" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
+                    + '<div class="relative overflow-hidden h-52 md:h-60">'
+                    + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" decoding="async" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">'
+                    + (isUsSpec(car) ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
+                    + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS →</span></div>'
+                    + '</div>'
+                    + '<div class="p-4 md:p-5">'
+                    + '<div class="flex items-start justify-between gap-3 mb-2"><h3 class="font-display text-sm md:text-base leading-snug">' + title + '</h3><span class="font-mono text-[#0047FF] text-xs md:text-sm shrink-0">' + String(i + 1).padStart(2, '0') + '</span></div>'
+                    + (car.price ? '<p class="font-display text-lg md:text-xl mb-1">' + esc(car.price) + '</p>' : '')
+                    + (specs ? '<p class="font-mono text-[10px] md:text-xs text-gray-500">' + specs + '</p>' : '')
+                    + '</div></a>';
+            }
+
+            function currentList() {
+                const chip = CHIPS.find(function(c) { return c.key === state.chip; }) || CHIPS[0];
+                const q = state.q.trim().toLowerCase();
+                let list = cars.filter(chip.match);
+                if (q) {
+                    list = list.filter(function(c) {
+                        return ((c.title || '') + ' ' + (c.options || '')).toLowerCase().indexOf(q) !== -1;
+                    });
+                }
+                if (state.sort === 'price-asc' || state.sort === 'price-desc') {
+                    const dir = state.sort === 'price-asc' ? 1 : -1;
+                    list = list.slice().sort(function(a, b) {
+                        const pa = priceNum(a), pb = priceNum(b);
+                        if (pa == null && pb == null) return 0;
+                        if (pa == null) return 1;
+                        if (pb == null) return -1;
+                        return (pa - pb) * dir;
+                    });
+                }
+                return list;
+            }
+
+            function render() {
+                const list = currentList();
+                grid.innerHTML = list.length
+                    ? list.map(cardHtml).join('')
+                    : '<p class="font-mono text-xs text-gray-500 col-span-full py-10 text-center">NO VEHICLES MATCH — TRY ANOTHER FILTER</p>';
+                if (status) {
+                    status.textContent = 'SHOWING ' + list.length + ' / ' + cars.length + (updated ? ' · UPDATED ' + updated : '');
+                }
+                chipsBox.querySelectorAll('button').forEach(function(btn) {
+                    const active = btn.dataset.key === state.chip;
+                    btn.className = 'font-mono text-[10px] md:text-xs font-bold tracking-wider px-3 py-1.5 rounded-full border transition-colors ' +
+                        (active ? 'bg-black text-white border-black' : 'bg-white text-black border-black/15 hover:border-black');
+                });
+            }
+
+            function buildControls() {
+                CHIPS.forEach(function(chip) {
+                    const count = cars.filter(chip.match).length;
+                    if (!count) return;
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.dataset.key = chip.key;
+                    btn.textContent = chip.label + ' ' + count;
+                    btn.addEventListener('click', function() { state.chip = chip.key; render(); });
+                    chipsBox.appendChild(btn);
+                });
+                let debounce;
+                searchBox.addEventListener('input', function() {
+                    clearTimeout(debounce);
+                    debounce = setTimeout(function() { state.q = searchBox.value; render(); }, 150);
+                });
+                sortBox.addEventListener('change', function() { state.sort = sortBox.value; render(); });
+                controls.classList.remove('hidden');
+                controls.classList.add('flex');
+            }
+
             fetch('data/vehicles.json', { cache: 'no-cache' })
                 .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
                 .then(function(data) {
-                    const cars = (data && data.vehicles) || [];
+                    cars = (data && data.vehicles) || [];
                     if (!cars.length) throw new Error('empty');
-                    grid.innerHTML = cars.map(function(car, i) {
-                        const isUsSpec = /us.?spec/i.test(car.title || '');
-                        const title = esc((car.title || '')
-                            .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
-                            .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
-                            .trim());
-                        const specs = [
-                            car.miles ? esc(car.miles) + ' MILES' : '',
-                            esc(car.engine || ''),
-                            esc(car.transmission || '')
-                        ].filter(Boolean).join(' · ');
-                        return '<a href="' + esc(car.url) + '" target="_blank" rel="noopener noreferrer" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
-                            + '<div class="relative overflow-hidden h-52 md:h-60">'
-                            + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">'
-                            + (isUsSpec ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
-                            + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS →</span></div>'
-                            + '</div>'
-                            + '<div class="p-4 md:p-5">'
-                            + '<div class="flex items-start justify-between gap-3 mb-2"><h3 class="font-display text-sm md:text-base leading-snug">' + title + '</h3><span class="font-mono text-[#0047FF] text-xs md:text-sm shrink-0">' + String(i + 1).padStart(2, '0') + '</span></div>'
-                            + (car.price ? '<p class="font-display text-lg md:text-xl mb-1">' + esc(car.price) + '</p>' : '')
-                            + (specs ? '<p class="font-mono text-[10px] md:text-xs text-gray-500">' + specs + '</p>' : '')
-                            + '</div></a>';
-                    }).join('');
-                    if (status) {
-                        status.textContent = cars.length + ' VEHICLES · UPDATED ' + (data.updated ? String(data.updated).slice(0, 10) : 'DAILY');
-                    }
+                    updated = data.updated ? String(data.updated).slice(0, 10) : '';
+                    buildControls();
+                    render();
                 })
                 .catch(function() {
                     if (status) status.innerHTML = 'LIVE INVENTORY IS TEMPORARILY UNAVAILABLE — SEE ALL VEHICLES ON <a href="https://www.facebook.com/Samanthacars/" target="_blank" rel="noopener" class="underline font-bold">FACEBOOK</a>';

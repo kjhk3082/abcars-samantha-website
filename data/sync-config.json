@@ -10,8 +10,8 @@
     { "id": 64, "path": "us-spec" }
   ],
   "filter": {
-    "mode": "include",
-    "include": [5056, 4757, 4792, 5102, 5089, 5103, 5033],
+    "mode": "all",
+    "include": [],
     "exclude": []
   }
 }
