@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Divider bar
         ctx.fillStyle = GREEN;
-        ctx.fillRect(560, 235, 9, 480);
+        ctx.fillRect(560, 235, 9, 525);
 
         const LEFT = 615;
         ctx.textBaseline = 'alphabetic';
@@ -92,15 +92,16 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.font = '700 36px "Nanum Myeongjo", serif';
             ctx.fillText(value, LEFT + w + 24, y);
         }
-        row('Mobile', '010-7170-4513', 505);
-        row('WhatsApp', '+82-10-7170-4513', 562);
-        row('E-mail', 'flowerdudtlr@gmail.com', 619);
+        row('Mobile', '010-7170-4513', 490);
+        row('WhatsApp', '+82-10-7170-4513', 544);
+        row('E-mail', 'flowerdudtlr@gmail.com', 598);
+        row('Web', 'samanthausedcar.com', 652);
 
         // Address
         ctx.fillStyle = INK_SOFT;
         ctx.font = '400 27px "Nanum Myeongjo", serif';
-        ctx.fillText('186-3, Songhwa 2-gil, Paengseong-eup,', LEFT, 685);
-        ctx.fillText('Pyeongtaek-si, Gyeonggi-do, Republic of Korea', LEFT, 720);
+        ctx.fillText('186-3, Songhwa 2-gil, Paengseong-eup,', LEFT, 712);
+        ctx.fillText('Pyeongtaek-si, Gyeonggi-do, Republic of Korea', LEFT, 746);
 
         return canvas;
     }
