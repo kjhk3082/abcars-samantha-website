@@ -62,7 +62,7 @@ Samantha Used Car is a professional car dealership website targeting US Military
 │   └── sync_vehicles.py    # Scraper that refreshes data/vehicles.json
 │
 └── .github/workflows/
-    └── sync-vehicles.yml   # Daily cron (06:00 KST) + manual "Run workflow" sync
+    └── sync-vehicles.yml   # Cron every 3 hours + manual "Run workflow" sync
 ```
 
 ---
@@ -122,8 +122,9 @@ Samantha Used Car is a professional car dealership website targeting US Military
 
 ## 🔄 Live Inventory Sync
 
-`vehicles.html` renders `data/vehicles.json`, which a GitHub Action refreshes every morning
-(06:00 KST) from Samantha's cars on the Gorilla Motors site (gorillamotors.co.kr).
+`vehicles.html` renders `data/vehicles.json`, which a GitHub Action refreshes **every
+3 hours** from the Gorilla Motors site (gorillamotors.co.kr). Cars removed there (sold)
+disappear from this site on the next run; new listings appear with their full photo gallery.
 
 - **Change which cars appear**: edit `data/sync-config.json`
   - `source_categories` — Gorilla Motors category pages to scan (default: all categories = full inventory)

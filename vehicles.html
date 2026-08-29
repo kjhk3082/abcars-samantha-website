@@ -163,13 +163,23 @@
                 <button id="lightbox-close" type="button" class="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white font-mono text-xs md:text-sm tracking-widest px-3 py-2">CLOSE ✕</button>
                 <div class="relative flex items-center justify-center w-full max-w-4xl">
                     <button id="lightbox-prev" type="button" class="absolute left-0 md:-left-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">‹</button>
-                    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[62vh] md:max-h-[68vh] object-contain rounded-lg shadow-2xl transition-opacity duration-200">
+                    <div class="inline-block rounded-lg overflow-hidden shadow-2xl bg-[#2C4732]">
+                        <div class="px-4 md:px-6 py-2 md:py-2.5 text-left">
+                            <p class="font-display text-[#EFE3C8] text-xs sm:text-sm md:text-xl leading-tight">SAMANTHA USED CAR</p>
+                            <p class="font-mono text-[#D2A867] text-[8px] sm:text-[10px] md:text-xs mt-0.5">Samantha Kim · SOFA Vehicle Specialist · 010-7170-4513 · WhatsApp +82-10-7170-4513</p>
+                        </div>
+                        <img id="lightbox-img" src="" alt="" class="block max-w-full max-h-[58vh] md:max-h-[64vh] object-contain transition-opacity duration-200">
+                        <div class="py-1 md:py-1.5 text-center">
+                            <p class="font-mono text-[#D2A867] text-[8px] sm:text-[10px] md:text-xs tracking-widest">USED CARS BUY · SELL · JUNK</p>
+                        </div>
+                    </div>
                     <button id="lightbox-next" type="button" class="absolute right-0 md:-right-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">›</button>
                 </div>
                 <div class="mt-4 md:mt-5 text-center max-w-2xl px-2">
                     <p id="lightbox-count" class="font-mono text-white/50 text-[10px] md:text-xs mb-2"></p>
                     <h3 id="lightbox-title" class="font-display text-white text-sm md:text-lg mb-1"></h3>
-                    <p id="lightbox-meta" class="font-mono text-white/60 text-[10px] md:text-xs mb-4"></p>
+                    <p id="lightbox-meta" class="font-mono text-white/60 text-[10px] md:text-xs mb-2"></p>
+                    <p id="lightbox-desc" class="font-mono text-white/70 text-[10px] md:text-xs leading-relaxed mb-4 max-w-xl mx-auto"></p>
                     <div class="flex justify-center gap-3">
                         <a href="tel:01071704513" class="bg-white text-black px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">📞 CALL</a>
                         <a id="lightbox-wa" href="#" target="_blank" rel="noopener" class="bg-[#25D366] text-white px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">💬 WHATSAPP</a>
@@ -359,6 +369,7 @@
                 return '<button type="button" data-idx="' + i + '" class="block w-full text-left group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
                     + '<div class="relative overflow-hidden h-52 md:h-60">'
                     + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" decoding="async" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">'
+                    + '<div class="absolute bottom-0 left-0 right-0 bg-[#2C4732]/90 text-[#EFE3C8] font-mono text-[9px] md:text-[10px] tracking-wider px-3 py-1 flex justify-between"><span>SAMANTHA USED CAR</span><span>010-7170-4513</span></div>'
                     + (isUsSpec(car) ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
                     + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">📷 VIEW ' + photosOf(car).length + ' PHOTOS</span></div>'
                     + '</div>'
@@ -433,11 +444,24 @@
             const lbImg = document.getElementById('lightbox-img');
             const lbTitle = document.getElementById('lightbox-title');
             const lbMeta = document.getElementById('lightbox-meta');
+            const lbDesc = document.getElementById('lightbox-desc');
             const lbCount = document.getElementById('lightbox-count');
             const lbWa = document.getElementById('lightbox-wa');
             const lbPrev = document.getElementById('lightbox-prev');
             const lbNext = document.getElementById('lightbox-next');
             const gallery = { list: [], idx: 0 };
+
+            function carBlurb(car) {
+                const bits = [];
+                if (car.engine) bits.push(car.engine);
+                if (car.transmission) bits.push(/^auto/i.test(car.transmission) ? 'automatic transmission' : car.transmission);
+                const miles = String(car.miles || '').replace(/[^0-9]/g, '');
+                if (miles) bits.push(parseInt(miles, 10).toLocaleString('en-US') + ' miles');
+                let s = 'Well-maintained ' + displayTitle(car) + (bits.length ? ' — ' + bits.join(', ') + '.' : '.');
+                if (car.options) s += ' Features: ' + car.options + '.';
+                s += ' Ready-drive car with 1-month engine & transmission warranty, SOFA registration support, and free delivery to base. Contact Samantha to schedule a test drive!';
+                return s;
+            }
 
             function showPhoto() {
                 const src = gallery.list[gallery.idx];
@@ -462,7 +486,8 @@
                 lbImg.src = car.image;
                 lbImg.alt = title;
                 lbTitle.textContent = title;
-                lbMeta.textContent = [car.price, car.miles ? car.miles + ' MILES' : '', car.engine, car.transmission].filter(Boolean).join(' · ');
+                lbMeta.textContent = [car.price, car.miles ? car.miles + ' MILES' : ''].filter(Boolean).join(' · ');
+                lbDesc.textContent = carBlurb(car);
                 lbWa.href = 'https://api.whatsapp.com/send?phone=821071704513&text='
                     + encodeURIComponent('Hi Samantha! I am interested in: ' + title + (car.price ? ' (' + car.price + ')' : ''));
                 lightbox.classList.remove('hidden');
