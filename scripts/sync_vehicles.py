@@ -14,6 +14,7 @@ import html
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,6 +25,8 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
 
 def fetch(url):
+    # Percent-encode non-ASCII (Korean plate numbers appear in product URLs)
+    url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8", "replace")
@@ -64,6 +67,23 @@ def parse_listing(page_html, base, category=""):
     return cars
 
 
+def fetch_detail_images(url):
+    """Collect a product page's high-res photos: the big main image + extra gallery."""
+    try:
+        page = fetch(url)
+    except Exception:
+        return []
+    images = []
+    main = re.search(r'"(//[^"]+/web/product/big/[^"]+?)"', page)
+    if main:
+        images.append("https:" + html.unescape(main.group(1)))
+    for src in re.findall(r'"(//[^"]+/web/product/extra/small/[^"]+?)"', page):
+        big = "https:" + html.unescape(src).replace("/extra/small/", "/extra/big/")
+        if big not in images:
+            images.append(big)
+    return images[:15]
+
+
 def main():
     cfg = json.loads((ROOT / "data" / "sync-config.json").read_text("utf-8"))
     base = cfg["base"].rstrip("/")
@@ -89,6 +109,11 @@ def main():
         # Never clobber the last good inventory with an empty one (site change, outage, ...)
         print("No vehicles parsed - keeping existing data/vehicles.json", file=sys.stderr)
         return 1
+
+    for n, car in enumerate(cars, 1):
+        car["images"] = fetch_detail_images(car["url"])
+        if n % 20 == 0:
+            print(f"  gallery photos: {n}/{len(cars)} products")
 
     cars.sort(key=lambda c: c["id"], reverse=True)
     out = {

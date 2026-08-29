@@ -155,7 +155,26 @@
                     </div>
                 </div>
                 <div id="inventory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8"></div>
-                <p class="font-mono text-[10px] md:text-xs text-gray-400 mt-4 md:mt-6">Samantha's cars at Gorilla Motors · updated daily · click a car for full details & photos</p>
+                <p class="font-mono text-[10px] md:text-xs text-gray-400 mt-4 md:mt-6">Gorilla Motors live inventory · updated daily · click a car to view photos</p>
+            </div>
+
+            <!-- Photo lightbox -->
+            <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/95 flex-col items-center justify-center p-4 md:p-8">
+                <button id="lightbox-close" type="button" class="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white font-mono text-xs md:text-sm tracking-widest px-3 py-2">CLOSE ✕</button>
+                <div class="relative flex items-center justify-center w-full max-w-4xl">
+                    <button id="lightbox-prev" type="button" class="absolute left-0 md:-left-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">‹</button>
+                    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[62vh] md:max-h-[68vh] object-contain rounded-lg shadow-2xl transition-opacity duration-200">
+                    <button id="lightbox-next" type="button" class="absolute right-0 md:-right-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">›</button>
+                </div>
+                <div class="mt-4 md:mt-5 text-center max-w-2xl px-2">
+                    <p id="lightbox-count" class="font-mono text-white/50 text-[10px] md:text-xs mb-2"></p>
+                    <h3 id="lightbox-title" class="font-display text-white text-sm md:text-lg mb-1"></h3>
+                    <p id="lightbox-meta" class="font-mono text-white/60 text-[10px] md:text-xs mb-4"></p>
+                    <div class="flex justify-center gap-3">
+                        <a href="tel:01071704513" class="bg-white text-black px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">📞 CALL</a>
+                        <a id="lightbox-wa" href="#" target="_blank" rel="noopener" class="bg-[#25D366] text-white px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">💬 WHATSAPP</a>
+                    </div>
+                </div>
             </div>
 
             <!-- Services Banner -->
@@ -304,6 +323,15 @@
                 const digits = String(car.price || '').replace(/[^0-9]/g, '');
                 return digits ? parseInt(digits, 10) : null;
             };
+            const displayTitle = function(car) {
+                return (car.title || '')
+                    .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
+                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
+                    .trim();
+            };
+            const photosOf = function(car) {
+                return (car.images && car.images.length) ? car.images : [car.image];
+            };
 
             const CHIPS = [
                 { key: 'all', label: 'ALL', match: function() { return true; } },
@@ -318,29 +346,27 @@
 
             let cars = [];
             let updated = '';
+            let rendered = [];
             const state = { chip: 'all', q: '', sort: 'newest' };
 
             function cardHtml(car, i) {
-                const title = esc((car.title || '')
-                    .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
-                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
-                    .trim());
+                const title = esc(displayTitle(car));
                 const specs = [
                     car.miles ? esc(car.miles) + ' MILES' : '',
                     esc(car.engine || ''),
                     esc(car.transmission || '')
                 ].filter(Boolean).join(' · ');
-                return '<a href="' + esc(car.url) + '" target="_blank" rel="noopener noreferrer" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
+                return '<button type="button" data-idx="' + i + '" class="block w-full text-left group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
                     + '<div class="relative overflow-hidden h-52 md:h-60">'
                     + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" decoding="async" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">'
                     + (isUsSpec(car) ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
-                    + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS →</span></div>'
+                    + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">📷 VIEW ' + photosOf(car).length + ' PHOTOS</span></div>'
                     + '</div>'
                     + '<div class="p-4 md:p-5">'
                     + '<div class="flex items-start justify-between gap-3 mb-2"><h3 class="font-display text-sm md:text-base leading-snug">' + title + '</h3><span class="font-mono text-[#0047FF] text-xs md:text-sm shrink-0">' + String(i + 1).padStart(2, '0') + '</span></div>'
                     + (car.price ? '<p class="font-display text-lg md:text-xl mb-1">' + esc(car.price) + '</p>' : '')
                     + (specs ? '<p class="font-mono text-[10px] md:text-xs text-gray-500">' + specs + '</p>' : '')
-                    + '</div></a>';
+                    + '</div></button>';
             }
 
             function currentList() {
@@ -367,6 +393,7 @@
 
             function render() {
                 const list = currentList();
+                rendered = list;
                 grid.innerHTML = list.length
                     ? list.map(cardHtml).join('')
                     : '<p class="font-mono text-xs text-gray-500 col-span-full py-10 text-center">NO VEHICLES MATCH — TRY ANOTHER FILTER</p>';
@@ -400,6 +427,76 @@
                 controls.classList.remove('hidden');
                 controls.classList.add('flex');
             }
+
+            // Photo lightbox
+            const lightbox = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            const lbTitle = document.getElementById('lightbox-title');
+            const lbMeta = document.getElementById('lightbox-meta');
+            const lbCount = document.getElementById('lightbox-count');
+            const lbWa = document.getElementById('lightbox-wa');
+            const lbPrev = document.getElementById('lightbox-prev');
+            const lbNext = document.getElementById('lightbox-next');
+            const gallery = { list: [], idx: 0 };
+
+            function showPhoto() {
+                const src = gallery.list[gallery.idx];
+                lbImg.style.opacity = '0.35';
+                const img = new Image();
+                img.onload = function() { lbImg.src = src; lbImg.style.opacity = '1'; };
+                img.onerror = function() { lbImg.style.opacity = '1'; };
+                img.src = src;
+                lbCount.textContent = 'PHOTO ' + (gallery.idx + 1) + ' / ' + gallery.list.length;
+                lbPrev.style.visibility = gallery.list.length > 1 ? 'visible' : 'hidden';
+                lbNext.style.visibility = gallery.list.length > 1 ? 'visible' : 'hidden';
+            }
+            function stepPhoto(dir) {
+                gallery.idx = (gallery.idx + dir + gallery.list.length) % gallery.list.length;
+                showPhoto();
+            }
+            function openLightbox(car) {
+                if (!car) return;
+                gallery.list = photosOf(car);
+                gallery.idx = 0;
+                const title = displayTitle(car);
+                lbImg.src = car.image;
+                lbImg.alt = title;
+                lbTitle.textContent = title;
+                lbMeta.textContent = [car.price, car.miles ? car.miles + ' MILES' : '', car.engine, car.transmission].filter(Boolean).join(' · ');
+                lbWa.href = 'https://api.whatsapp.com/send?phone=821071704513&text='
+                    + encodeURIComponent('Hi Samantha! I am interested in: ' + title + (car.price ? ' (' + car.price + ')' : ''));
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+                showPhoto();
+            }
+            function closeLightbox() {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+            grid.addEventListener('click', function(e) {
+                const btn = e.target.closest('button[data-idx]');
+                if (btn) openLightbox(rendered[parseInt(btn.dataset.idx, 10)]);
+            });
+            document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+            lbPrev.addEventListener('click', function() { stepPhoto(-1); });
+            lbNext.addEventListener('click', function() { stepPhoto(1); });
+            lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', function(e) {
+                if (lightbox.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') stepPhoto(-1);
+                if (e.key === 'ArrowRight') stepPhoto(1);
+            });
+            let touchX = null;
+            lightbox.addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, { passive: true });
+            lightbox.addEventListener('touchend', function(e) {
+                if (touchX == null) return;
+                const dx = e.changedTouches[0].clientX - touchX;
+                if (Math.abs(dx) > 40) stepPhoto(dx > 0 ? -1 : 1);
+                touchX = null;
+            }, { passive: true });
 
             fetch('data/vehicles.json', { cache: 'no-cache' })
                 .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
