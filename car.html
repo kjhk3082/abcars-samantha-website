@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle - Samantha Used Car</title>
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts - Load directly in HTML for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/tailwind.css?v=2">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF1YRTLKDW');
+    </script>
+
+    <style>
+        .cursor-dot, .cursor-outline {
+            display: none;
+        }
+        @media (min-width: 1024px) and (pointer: fine) {
+            .cursor-dot, .cursor-outline {
+                display: block;
+            }
+            body {
+                cursor: none;
+            }
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">Samantha<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Used Car</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="vehicles.html" class="text-[#0047FF]">Inventory</a>
+            <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="toggleMobileMenu()">
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine1"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine2"></span>
+            <span class="w-6 h-0.5 bg-current transition-all" id="menuLine3"></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
+        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="vehicles.html" class="text-[#0047FF] text-2xl font-display">INVENTORY</a>
+        <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
+        <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
+    </div>
+
+    <main class="pt-24 md:pt-32 pb-28 md:pb-32 px-4 md:px-6">
+        <div class="container mx-auto max-w-3xl">
+            <a href="vehicles.html" class="inline-flex items-center gap-2 font-mono text-xs md:text-sm font-bold border-b border-black hover:text-[#0047FF] hover:border-[#0047FF] transition-colors pb-1 mb-6 md:mb-8">← ALL INVENTORY</a>
+
+            <div id="car-loading" class="font-mono text-xs text-gray-500 py-20 text-center animate-pulse">LOADING VEHICLE…</div>
+
+            <div id="car-notfound" class="hidden text-center py-16">
+                <h1 class="font-display text-3xl md:text-5xl mb-4">SOLD<span class="text-[#0047FF]">.</span></h1>
+                <p class="font-mono text-xs md:text-sm text-gray-500 mb-8">This vehicle is no longer listed — it may have just been sold.<br>Ask Samantha, she'll find you a similar one!</p>
+                <a href="vehicles.html" class="inline-block bg-black text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-[#0047FF] transition-colors">BROWSE ALL VEHICLES →</a>
+            </div>
+
+            <div id="car-content" class="hidden">
+                <div class="border-b-2 border-black pb-4 md:pb-6 mb-4 md:mb-6">
+                    <h1 id="car-title" class="font-display text-2xl sm:text-3xl md:text-5xl leading-tight"></h1>
+                </div>
+                <div class="flex items-baseline justify-between flex-wrap gap-2 mb-5 md:mb-6">
+                    <p id="car-price" class="font-display text-3xl md:text-4xl text-[#0047FF]"></p>
+                    <p id="car-meta" class="font-mono text-xs md:text-sm text-gray-500"></p>
+                </div>
+                <p id="car-desc" class="font-mono text-xs md:text-sm leading-relaxed text-gray-700 mb-6 md:mb-8"></p>
+                <div id="car-specs" class="grid grid-cols-2 gap-3 mb-8 md:mb-10 font-mono text-xs md:text-sm"></div>
+
+                <!-- Samantha-framed photo gallery -->
+                <div class="bg-[#2C4732] rounded-t-lg px-4 md:px-6 py-2.5 flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+                    <p class="font-display text-[#EFE3C8] text-xs md:text-base">SAMANTHA USED CAR</p>
+                    <p class="font-mono text-[#D2A867] text-[9px] md:text-xs">Samantha Kim · 010-7170-4513 · WhatsApp +82-10-7170-4513</p>
+                </div>
+                <div id="car-gallery" class="space-y-2 bg-[#2C4732] p-2 rounded-b-lg"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sticky contact bar -->
+    <div id="car-actions" class="hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 border-t border-black/10 px-4 py-3">
+        <div class="container mx-auto max-w-3xl flex gap-3">
+            <a href="tel:01071704513" class="flex-1 bg-black text-white text-center py-3 rounded-full font-bold text-sm hover:bg-[#0047FF] transition-colors">📞 CALL</a>
+            <a id="car-wa" href="https://api.whatsapp.com/send?phone=821071704513" target="_blank" rel="noopener" class="flex-1 bg-[#25D366] text-white text-center py-3 rounded-full font-bold text-sm">💬 WHATSAPP</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const line1 = document.getElementById('menuLine1');
+            const line2 = document.getElementById('menuLine2');
+            const line3 = document.getElementById('menuLine3');
+
+            menu.classList.toggle('active');
+
+            if (menu.classList.contains('active')) {
+                line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+            } else {
+                line1.style.transform = '';
+                line2.style.opacity = '1';
+                line3.style.transform = '';
+            }
+        }
+
+        // Optimized Custom Cursor - Desktop only
+        if (window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+
+            let mouseX = 0, mouseY = 0;
+            let outlineX = 0, outlineY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%, -50%)';
+            }, { passive: true });
+
+            function animateCursor() {
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+                cursorOutline.style.transform = 'translate3d(' + outlineX + 'px,' + outlineY + 'px,0) translate(-50%, -50%)';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+        }
+
+        // Vehicle detail - rendered from data/vehicles.json by ?id=
+        (function() {
+            const id = parseInt(new URLSearchParams(location.search).get('id'), 10);
+            const loading = document.getElementById('car-loading');
+            const notfound = document.getElementById('car-notfound');
+            const content = document.getElementById('car-content');
+            const actions = document.getElementById('car-actions');
+
+            const esc = function(s) {
+                return String(s == null ? '' : s).replace(/[&<>"']/g, function(c) {
+                    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+                });
+            };
+            const displayTitle = function(car) {
+                return (car.title || '')
+                    .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
+                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
+                    .trim();
+            };
+            const carBlurb = function(car) {
+                const bits = [];
+                if (car.engine) bits.push(car.engine);
+                if (car.transmission) bits.push(/^auto/i.test(car.transmission) ? 'automatic transmission' : car.transmission);
+                const miles = String(car.miles || '').replace(/[^0-9]/g, '');
+                if (miles) bits.push(parseInt(miles, 10).toLocaleString('en-US') + ' miles');
+                let s = 'Well-maintained ' + displayTitle(car) + (bits.length ? ' — ' + bits.join(', ') + '.' : '.');
+                if (car.options) s += ' Features: ' + car.options + '.';
+                s += ' Ready-drive car with 1-month engine & transmission warranty, SOFA registration support, and free delivery to base. Contact Samantha to schedule a test drive!';
+                return s;
+            };
+
+            function fail() {
+                loading.classList.add('hidden');
+                notfound.classList.remove('hidden');
+            }
+
+            if (!id) { fail(); return; }
+
+            fetch('data/vehicles.json', { cache: 'no-cache' })
+                .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+                .then(function(data) {
+                    const car = ((data && data.vehicles) || []).find(function(c) { return c.id === id; });
+                    loading.classList.add('hidden');
+                    if (!car) { notfound.classList.remove('hidden'); return; }
+
+                    const title = displayTitle(car);
+                    document.title = title + ' - Samantha Used Car';
+                    document.getElementById('car-title').textContent = title;
+                    document.getElementById('car-price').textContent = car.price || '';
+                    document.getElementById('car-meta').textContent = [
+                        car.miles ? car.miles + ' MILES' : '',
+                        car.engine || '',
+                        car.transmission || ''
+                    ].filter(Boolean).join(' · ');
+                    document.getElementById('car-desc').textContent = carBlurb(car);
+
+                    const specs = [
+                        ['PRICE', car.price],
+                        ['MILEAGE', car.miles],
+                        ['ENGINE', car.engine],
+                        ['TRANSMISSION', car.transmission],
+                        ['OPTIONS', car.options]
+                    ].filter(function(row) { return row[1]; });
+                    document.getElementById('car-specs').innerHTML = specs.map(function(row) {
+                        const wide = row[0] === 'OPTIONS' ? ' col-span-2' : '';
+                        return '<div class="bg-white rounded-lg p-3 md:p-4 border border-black/5' + wide + '">'
+                            + '<p class="text-[9px] md:text-[10px] text-gray-400 tracking-widest mb-1">' + row[0] + '</p>'
+                            + '<p class="font-bold">' + esc(row[1]) + '</p></div>';
+                    }).join('');
+
+                    const photos = (car.images && car.images.length) ? car.images : [car.image];
+                    document.getElementById('car-gallery').innerHTML = photos.map(function(src, i) {
+                        return '<img src="' + esc(src) + '" alt="' + esc(title) + ' photo ' + (i + 1) + '"'
+                            + (i === 0 ? '' : ' loading="lazy"') + ' decoding="async" class="w-full rounded">';
+                    }).join('');
+
+                    document.getElementById('car-wa').href =
+                        'https://api.whatsapp.com/send?phone=821071704513&text='
+                        + encodeURIComponent('Hi Samantha! I am interested in: ' + title + (car.price ? ' (' + car.price + ')' : ''));
+
+                    content.classList.remove('hidden');
+                    actions.classList.remove('hidden');
+                })
+                .catch(fail);
+        })();
+    </script>
+</body>
+</html>

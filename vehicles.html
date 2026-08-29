@@ -155,38 +155,7 @@
                     </div>
                 </div>
                 <div id="inventory-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8"></div>
-                <p class="font-mono text-[10px] md:text-xs text-gray-400 mt-4 md:mt-6">Gorilla Motors live inventory · updated daily · click a car to view photos</p>
-            </div>
-
-            <!-- Photo lightbox -->
-            <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/95 overflow-y-auto p-4 pt-14 md:p-8 md:pt-16">
-                <button id="lightbox-close" type="button" style="position:fixed;top:12px;right:12px;z-index:20" class="fixed top-3 right-3 md:top-5 md:right-6 z-20 text-white/80 hover:text-white font-mono text-xs md:text-sm tracking-widest px-3 py-2 bg-black/50 rounded-full">CLOSE ✕</button>
-                <div class="min-h-full flex flex-col items-center justify-center">
-                <div class="relative flex items-center justify-center w-full max-w-4xl">
-                    <button id="lightbox-prev" type="button" class="absolute left-0 md:-left-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">‹</button>
-                    <div class="inline-block rounded-lg overflow-hidden shadow-2xl bg-[#2C4732]">
-                        <div class="px-4 md:px-6 py-2 md:py-2.5 text-left">
-                            <p class="font-display text-[#EFE3C8] text-xs sm:text-sm md:text-xl leading-tight">SAMANTHA USED CAR</p>
-                            <p class="font-mono text-[#D2A867] text-[8px] sm:text-[10px] md:text-xs mt-0.5">Samantha Kim · SOFA Vehicle Specialist · 010-7170-4513 · WhatsApp +82-10-7170-4513</p>
-                        </div>
-                        <img id="lightbox-img" src="" alt="" class="block max-w-full max-h-[58vh] md:max-h-[64vh] object-contain transition-opacity duration-200">
-                        <div class="py-1 md:py-1.5 text-center">
-                            <p class="font-mono text-[#D2A867] text-[8px] sm:text-[10px] md:text-xs tracking-widest">USED CARS BUY · SELL · JUNK</p>
-                        </div>
-                    </div>
-                    <button id="lightbox-next" type="button" class="absolute right-0 md:-right-2 z-10 text-white/60 hover:text-white text-3xl md:text-5xl px-2 md:px-4 py-6 select-none">›</button>
-                </div>
-                <div class="mt-4 md:mt-5 text-center max-w-2xl px-2">
-                    <p id="lightbox-count" class="font-mono text-white/50 text-[10px] md:text-xs mb-2"></p>
-                    <h3 id="lightbox-title" class="font-display text-white text-sm md:text-lg mb-1"></h3>
-                    <p id="lightbox-meta" class="font-mono text-white/60 text-[10px] md:text-xs mb-2"></p>
-                    <p id="lightbox-desc" class="font-mono text-white/70 text-[10px] md:text-xs leading-relaxed mb-4 max-w-xl mx-auto"></p>
-                    <div class="flex justify-center gap-3">
-                        <a href="tel:01071704513" class="bg-white text-black px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">📞 CALL</a>
-                        <a id="lightbox-wa" href="#" target="_blank" rel="noopener" class="bg-[#25D366] text-white px-5 md:px-6 py-2.5 rounded-full font-bold text-xs md:text-sm">💬 WHATSAPP</a>
-                    </div>
-                </div>
-                </div>
+                <p class="font-mono text-[10px] md:text-xs text-gray-400 mt-4 md:mt-6">Gorilla Motors live inventory · updated every 3 hours · tap a car for photos & details</p>
             </div>
 
             <!-- Services Banner -->
@@ -358,7 +327,6 @@
 
             let cars = [];
             let updated = '';
-            let rendered = [];
             const state = { chip: 'all', q: '', sort: 'newest' };
 
             function cardHtml(car, i) {
@@ -368,18 +336,18 @@
                     esc(car.engine || ''),
                     esc(car.transmission || '')
                 ].filter(Boolean).join(' · ');
-                return '<button type="button" data-idx="' + i + '" class="block w-full text-left group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
+                return '<a href="car.html?id=' + car.id + '" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
                     + '<div class="relative overflow-hidden h-52 md:h-60">'
                     + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" decoding="async" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">'
                     + '<div class="absolute bottom-0 left-0 right-0 bg-[#2C4732]/90 text-[#EFE3C8] font-mono text-[9px] md:text-[10px] tracking-wider px-3 py-1 flex justify-between"><span>SAMANTHA USED CAR</span><span>010-7170-4513</span></div>'
                     + (isUsSpec(car) ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
-                    + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">📷 VIEW ' + photosOf(car).length + ' PHOTOS</span></div>'
+                    + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS · ' + photosOf(car).length + ' PHOTOS</span></div>'
                     + '</div>'
                     + '<div class="p-4 md:p-5">'
                     + '<div class="flex items-start justify-between gap-3 mb-2"><h3 class="font-display text-sm md:text-base leading-snug">' + title + '</h3><span class="font-mono text-[#0047FF] text-xs md:text-sm shrink-0">' + String(i + 1).padStart(2, '0') + '</span></div>'
                     + (car.price ? '<p class="font-display text-lg md:text-xl mb-1">' + esc(car.price) + '</p>' : '')
                     + (specs ? '<p class="font-mono text-[10px] md:text-xs text-gray-500">' + specs + '</p>' : '')
-                    + '</div></button>';
+                    + '</div></a>';
             }
 
             function currentList() {
@@ -406,7 +374,6 @@
 
             function render() {
                 const list = currentList();
-                rendered = list;
                 grid.innerHTML = list.length
                     ? list.map(cardHtml).join('')
                     : '<p class="font-mono text-xs text-gray-500 col-span-full py-10 text-center">NO VEHICLES MATCH — TRY ANOTHER FILTER</p>';
@@ -440,89 +407,6 @@
                 controls.classList.remove('hidden');
                 controls.classList.add('flex');
             }
-
-            // Photo lightbox
-            const lightbox = document.getElementById('lightbox');
-            const lbImg = document.getElementById('lightbox-img');
-            const lbTitle = document.getElementById('lightbox-title');
-            const lbMeta = document.getElementById('lightbox-meta');
-            const lbDesc = document.getElementById('lightbox-desc');
-            const lbCount = document.getElementById('lightbox-count');
-            const lbWa = document.getElementById('lightbox-wa');
-            const lbPrev = document.getElementById('lightbox-prev');
-            const lbNext = document.getElementById('lightbox-next');
-            const gallery = { list: [], idx: 0 };
-
-            function carBlurb(car) {
-                const bits = [];
-                if (car.engine) bits.push(car.engine);
-                if (car.transmission) bits.push(/^auto/i.test(car.transmission) ? 'automatic transmission' : car.transmission);
-                const miles = String(car.miles || '').replace(/[^0-9]/g, '');
-                if (miles) bits.push(parseInt(miles, 10).toLocaleString('en-US') + ' miles');
-                let s = 'Well-maintained ' + displayTitle(car) + (bits.length ? ' — ' + bits.join(', ') + '.' : '.');
-                if (car.options) s += ' Features: ' + car.options + '.';
-                s += ' Ready-drive car with 1-month engine & transmission warranty, SOFA registration support, and free delivery to base. Contact Samantha to schedule a test drive!';
-                return s;
-            }
-
-            function showPhoto() {
-                const src = gallery.list[gallery.idx];
-                lbImg.style.opacity = '0.35';
-                const img = new Image();
-                img.onload = function() { lbImg.src = src; lbImg.style.opacity = '1'; };
-                img.onerror = function() { lbImg.style.opacity = '1'; };
-                img.src = src;
-                lbCount.textContent = 'PHOTO ' + (gallery.idx + 1) + ' / ' + gallery.list.length;
-                lbPrev.style.visibility = gallery.list.length > 1 ? 'visible' : 'hidden';
-                lbNext.style.visibility = gallery.list.length > 1 ? 'visible' : 'hidden';
-            }
-            function stepPhoto(dir) {
-                gallery.idx = (gallery.idx + dir + gallery.list.length) % gallery.list.length;
-                showPhoto();
-            }
-            function openLightbox(car) {
-                if (!car) return;
-                gallery.list = photosOf(car);
-                gallery.idx = 0;
-                const title = displayTitle(car);
-                lbImg.src = car.image;
-                lbImg.alt = title;
-                lbTitle.textContent = title;
-                lbMeta.textContent = [car.price, car.miles ? car.miles + ' MILES' : ''].filter(Boolean).join(' · ');
-                lbDesc.textContent = carBlurb(car);
-                lbWa.href = 'https://api.whatsapp.com/send?phone=821071704513&text='
-                    + encodeURIComponent('Hi Samantha! I am interested in: ' + title + (car.price ? ' (' + car.price + ')' : ''));
-                lightbox.classList.remove('hidden');
-                lightbox.scrollTop = 0;
-                document.body.style.overflow = 'hidden';
-                showPhoto();
-            }
-            function closeLightbox() {
-                lightbox.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-            grid.addEventListener('click', function(e) {
-                const btn = e.target.closest('button[data-idx]');
-                if (btn) openLightbox(rendered[parseInt(btn.dataset.idx, 10)]);
-            });
-            document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-            lbPrev.addEventListener('click', function() { stepPhoto(-1); });
-            lbNext.addEventListener('click', function() { stepPhoto(1); });
-            lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
-            document.addEventListener('keydown', function(e) {
-                if (lightbox.classList.contains('hidden')) return;
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') stepPhoto(-1);
-                if (e.key === 'ArrowRight') stepPhoto(1);
-            });
-            let touchX = null;
-            lightbox.addEventListener('touchstart', function(e) { touchX = e.touches[0].clientX; }, { passive: true });
-            lightbox.addEventListener('touchend', function(e) {
-                if (touchX == null) return;
-                const dx = e.changedTouches[0].clientX - touchX;
-                if (Math.abs(dx) > 40) stepPhoto(dx > 0 ? -1 : 1);
-                touchX = null;
-            }, { passive: true });
 
             fetch('data/vehicles.json', { cache: 'no-cache' })
                 .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })

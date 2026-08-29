@@ -16,7 +16,8 @@ Samantha Used Car is a professional car dealership website targeting US Military
 | Page | File | Description |
 |------|------|-------------|
 | **Home** | `index.html` | Hero section with animated car illustration, services overview, footer |
-| **Inventory** | `vehicles.html` | Vehicle listings (Sedan, SUV, Compact, Sports) with real photos |
+| **Inventory** | `vehicles.html` | Live inventory synced from Gorilla Motors (filter chips, search, sort) |
+| **Vehicle Detail** | `car.html?id=<productId>` | Per-car page: photo gallery, specs, blurb, sticky CALL/WhatsApp — shareable link |
 | **Digital Card** | `business-card.html` | Interactive 3D business card with Three.js |
 | **Contact** | `contact.html` | Contact info, business hours, Google Maps, services list |
 
