@@ -1,7 +1,88 @@
 {
-  "updated": "2026-09-02T02:54:43+00:00",
+  "updated": "2026-09-02T07:40:53+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5132,
+      "title": "* US SPEC * 2015 HYUNDAI GENESIS AWD(49루4636)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2015-hyundai-genesis-awd49루4636/5132/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/75a6dd067afd0ada8624d63643198f0e.jpg",
+      "price": "$11,900",
+      "engine": "V6",
+      "miles": "40000",
+      "transmission": "AUTO",
+      "options": "ADAPTIVE CRUISE CONTROL, BLIND SPOT MONITOR, PANORAMIC SUNROOF, LANE KEEPING ASSIST, LEXICON SOUND & MORE",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/b4a716273456bba0a359160a6b7ad910.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4d21a8813aafd02c28c73ddde5e6aea2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/74126a042f3c4969ea44a06a0ee6875e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/090933e07cebcd0316f6921e62b2020d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fbed438cc2f8dcf9ee190ae4ec176a70.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f711e8e88fc3737e5517b9cceb5fddd5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/906af2fa4be45bf183bea21a480eb509.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/665151e33bfd3e342b6f954d1d9ce98d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4436813ac822a1d2ca4e52039fabfb7b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/66eca23f64b2fc491c6bde2cedde1c37.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/38d2b0ebab8de4b1913694b10aee8f34.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c118598840a2383c753084a56027955.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/eb24db9d64c5cd52f736a0c6b4ceaf1c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9a15622d4efcfb9f398e9fa499243fc5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1bb4a97b84ff8100c2991a61458ed4e2.jpg"
+      ]
+    },
+    {
+      "id": 5131,
+      "title": "*US SPEC* 2008 HONDA ACCORD COUPE V6(30저1168)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2008-honda-accord-coupe-v630저1168/5131/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/1fa2c1a382ca47d4823373da09d9dbab.jpg",
+      "price": "$5,900",
+      "engine": "V6",
+      "miles": "78000",
+      "transmission": "AUTO",
+      "options": "SUNROOF, US SPEC, ISO FIX, PARKING SENSORS, EXTRA CLEAN",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/3c588543f63b719b07732043dbd03481.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d8c4b001f7d70ed90bc471b6cae7b1af.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e99236891240267e5b87c8ac65f030fb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/29777f3b345be6d4a9191b15d2c9dd9d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2c30bb00edf0d0d4f7a5047abcc996f3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a48b06b30109c3941b73a0564d9fcacc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5b8453397a87abcdfc8ad25a774720ab.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5e46a1a5759d6a0c0c152dfeb626e8bc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b2f496a9bf1881f34446a8ae1c044e72.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d830b553e6f85c2b9bac3458eff70d15.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/57954b9483d98d2742ca9e2ead77e831.jpg"
+      ]
+    },
+    {
+      "id": 5130,
+      "title": "LOW MILES! 2015 KIA K5(11도2937)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2015-kia-k511도2937/5130/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/a57e69cc60062f3369ceff5219f37450.jpg",
+      "price": "$5,600",
+      "engine": "4 CYLINDER",
+      "miles": "57000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/70de235db3ca4fc847dee62f0e78df69.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/aa715d1683b457dd5a2ce41a9e1e6dc5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e8d92fe8c2ec809b8c7e35d7b4a8f6d8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b027fb594f74e004261aa97186f8b74c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3e0bce74d94ad454d1de97e26252c2f6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3559eb6733c82c2bbcc9260b55113d54.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5caa379e775915ef3c6f86a9cd000e2f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/dad12bedfe47f9f14cf29125132d848c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2221c281a44d9ec44427a67745dcd588.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f3b41c3b478b1c220e9d825708f172f4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/111e9148b7342307a52282155ad79a0e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/adcf879710334c4f126a2584f565436e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/82f67ccc1c7e409c5151cb32c3d5f089.jpg"
+      ]
+    },
     {
       "id": 5128,
       "title": "LOW MILES! 2018 CHEVY TRAX TURBO(25나5243)",
@@ -2811,32 +2892,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202601/b8400f0b2c9029ec7e1e76967e7acb8c.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202601/a6630ee8418de7bc41a6a4d1553a9466.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202601/053ee1a0a17319af0a36b1e93ae54df6.jpg"
-      ]
-    },
-    {
-      "id": 4732,
-      "title": "2009 RENAULT SM5(46로8785)",
-      "url": "https://www.gorillamotors.co.kr/product/2009-renault-sm546로8785/4732/category/55/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202605/045a80f33bff0b7b4d167bc13fa8aaae.jpg",
-      "price": "$2,300",
-      "engine": "4 CYLINDER",
-      "miles": "119000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats, Sunroof",
-      "category": "renault-samsung",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202605/0386d93aaa8738a4ad23d26abbf79c66.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/3308d10d492fc5bab4d6f977018c864c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/ae9d02685f3034eb55b4375a7349e1be.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/4d4abafcf06bff1d942b563541c3d751.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/c908ac542f2e47a3eaddb0add40e4f53.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202601/b35e7a0fbd41786e1faef13ea638e01d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202601/db758a62dd4a64115fab9ad8772d1454.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202601/c9b62cfad2fe65ef6d8dc7339226a076.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202601/20cb679449aa4b0a862e3834a93f7106.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/d0900fd6371e723ee21ad6438ec854c8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202601/0c476a111afa75c47481369a212af52b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202601/089a0743af39a63c38c2ebca68e622ab.jpg"
       ]
     },
     {
