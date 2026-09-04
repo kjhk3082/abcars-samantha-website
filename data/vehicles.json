@@ -1,7 +1,63 @@
 {
-  "updated": "2026-09-04T02:58:03+00:00",
+  "updated": "2026-09-04T07:45:50+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5137,
+      "title": "* US SPEC * 2013 HYUNDAI GENESIS(11수1723)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2013-hyundai-genesis11수1723/5137/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/9fe23d34ef099bc3e32a607b48ddf929.jpg",
+      "price": "$6,200",
+      "engine": "V6",
+      "miles": "77000",
+      "transmission": "AUTO",
+      "options": "BLUETOOTH, BACK UP CAMERA, ISO FIX, ONE OWNER, ALL GOOD TIRES & MORE",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/28a3bcac2948a3cbaba3a193c42942a0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/15f5b814d32037470c96a70c65eaa6d9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/01970129df69f29103779b397be2efb0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f41b73dfea41fda9ac2f559dfeef19ab.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/83cb6147cb4f67e841799f1579b2e121.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7f03e2b6654b2b2a763e471cce1e1a7a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/47c1b341589f77f14ea9dc13ca57a395.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b30d7bebad914df3479fe25edd69b279.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/67341fabd0f58102ef741a3cb2c087ef.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e4727fa3814dc82e98889d5fb271ce37.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a5f9e2ba56e0b5d894fee283e63824c6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8a3e6ddc45af9122dee18abf2289bae9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f1f2380b09fb47f823344cc9a7a3ca3c.jpg"
+      ]
+    },
+    {
+      "id": 5136,
+      "title": "2013 HYUNDAI SANTAFE 4WD / 7 SEATER (66더1063)",
+      "url": "https://www.gorillamotors.co.kr/product/2013-hyundai-santafe-4wd-7-seater-66더1063/5136/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/8913a460bbe59c864897f7af661c545e.jpg",
+      "price": "$6,700",
+      "engine": "4 CYLINDER",
+      "miles": "78000",
+      "transmission": "AUTO",
+      "options": "PANORAMIC SUNROOF.COOLED SEATS.SMART KEY",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/a0820da0872dcfb3db842f7de71ff884.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/34b263678b71e1d6af4b59f3d9d6129b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/67bbb82562bd3bab879eb7dd3f90c91d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4aaf476683831d76a25fe16a853522fc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ec13e0882df442fbc697e9632b372b08.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/25e8804afc9bfbcfed00802e75aee136.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d790d2a8520502d867109408440207fa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4ee84644c191539b8af868c543071c19.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d50d3b769f2a0bf2a0cba7f045526b32.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/657e48eb58367fca744f5ee7eed3545a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7f21eaa395ca943b20264f5e8d7fcba9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c8a81f9104fb8e48bd21c8114ddd40c5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/20055858e69a7177d53d5f9354c759d1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5f28fba610552b75f91c8d33db980ef9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7296aff2dff865eab6f102ba750d72b2.jpg"
+      ]
+    },
     {
       "id": 5135,
       "title": "2007 RENAULT SM7(49나5029)",
@@ -467,33 +523,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/52750034f7a276a58d7c08e912fe82f6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/822b776102198d5b166b4dacbe0fd74e.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c9c63a44720aa8b66faf3cc9ce8f6fc2.jpg"
-      ]
-    },
-    {
-      "id": 5117,
-      "title": "4WD! 2011 SUBARU FORESTER(47라3048)",
-      "url": "https://www.gorillamotors.co.kr/product/4wd-2011-subaru-forester47라3048/5117/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/252ef3ad7d7704bfd298b7a262301cd0.jpg",
-      "price": "$4,900",
-      "engine": "4 CYLINDER",
-      "miles": "98000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Android/Caplay, Heated seats, Sunroof",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/b1857a83320198ffc31b327fdf995981.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/1541fa4f81d40d093e26b26a5c9318e5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7fc72b35bb650e2d4aa058112604b554.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/af62d58a04168303c4616ce630fd3390.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c05ee8d1081e15cf5828fd86917a8b9e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/af128c8e6d98d1c2cba507cea660e0b6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/0c4f724378c2020bba0e0854fa055d85.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7db1df05208c6c836ec39988bd55ad31.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/0f1a46bd2da917bb5336194910f41c0b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/265dfd91a42be558d73d289f95d4e6a1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/4d126b188973ce4e36f629487d311e74.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/599197f30cbaaad994911858bbf40b15.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e6e6782f86330030909ad4e1df918d01.jpg"
       ]
     },
     {
@@ -1039,31 +1068,6 @@
       ]
     },
     {
-      "id": 5083,
-      "title": "LOW MILES! 2012 HYUNDAI VELOSTER(19누9397)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2012-hyundai-veloster19누9397/5083/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/9fe05b06fddf754b86cdc93fb25db8a1.jpg",
-      "price": "$3,800",
-      "engine": "",
-      "miles": "",
-      "transmission": "",
-      "options": "",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/43a0581f59a0be4fea3519126dd291da.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e8357c586860eb52563e81c8f476f95e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/6325b5103059372d3b090bd4309db19c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/6d2c34c6c0486d37bee03609945d6438.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7e4e7e8e8a86c9e09706127e4e432f60.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/4f777c7b930aee414bdae384404ee7f4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/44547bf111ea1a889e2a0dd52f56024c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/1614aea9bba9109ae234f437c809fdb5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2f6b9bd9aa90739db3664792427526ef.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/091474d64a1651304cba0904491620de.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7ebd8925449136d052a352757a0f7863.jpg"
-      ]
-    },
-    {
       "id": 5082,
       "title": "7SEATS! 2010 KIA SORENTO(24거8631)",
       "url": "https://www.gorillamotors.co.kr/product/7seats-2010-kia-sorento24거8631/5082/category/52/display/1/",
@@ -1087,32 +1091,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/5f8871e7fbfeeb6ed93ef8ae3c612f4d.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7af5333332156288f37a83f75bdafb83.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ea2477400bf61911949443d978581dbc.jpg"
-      ]
-    },
-    {
-      "id": 5081,
-      "title": "9SEATS! 2011 KIA CARNIVAL(20다2178)",
-      "url": "https://www.gorillamotors.co.kr/product/9seats-2011-kia-carnival20다2178/5081/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/bb9f1f84a7df6d06f4377367b869c207.jpg",
-      "price": "$3,300",
-      "engine": "4 CYLINDER",
-      "miles": "98000",
-      "transmission": "AUTO",
-      "options": "Backup cam, 9seats",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/6aa8f01591ab69056f7f723bb810c9ef.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/9ebe6b04cbb6e94f23b0814d6f3d619f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e378b3e1137bf7e98bc1ebccf9a6edc6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/54fa703ccefb89c302006a61a2332e65.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/62f5d0d7e947a023dd4852f0bc74f264.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/fd8e60bebd28fd7d0d7306221d15c146.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/54cbde234306829b7f34ab3286882d1d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d60be8c0b0d07ea205c2b6b9aea1b6a4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2e449d7e776ce1b1b8d2e7b0925dbcfc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c1214d5cb71554d2cc08d726d7703391.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/bf25cab2b6e07049cb3f7e717be3bba4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/cc2048a095d144023638a076014673f7.jpg"
       ]
     },
     {
@@ -3077,35 +3055,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202511/319c8a8e59953f0bab6ac2d7e4430d72.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202511/f8a7434a01d308f9a066b62baae8642b.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202511/f34e2611a31e929bf303b57931ccfafb.jpg"
-      ]
-    },
-    {
-      "id": 4644,
-      "title": "2011 INFINITI M37(19너2873)",
-      "url": "https://www.gorillamotors.co.kr/product/2011-infiniti-m3719너2873/4644/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/b25672c88f61cdcc2a14d6469121d79b.jpg",
-      "price": "$3,500",
-      "engine": "V6",
-      "miles": "104000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated/Cooling seats, Sunroof, HI-pass",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/bf9f8be7d72a751e2ea69236f4e8decf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/dee5d61adeb412610321b1bdb60437ee.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/d5e9dbaefce9c227857dc2ee1a00e831.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/cd4c1d02eb1a559c1bc576beb415a822.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/47ee0b94a3e05f6d479e359f708074e8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/9effd204944bc1efaaf767479a50e406.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/e3147ea69878b7c4d591fbb7e317c978.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/8638f84fc8bbdfcb08e44ca0f67e2654.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/b61b85caae647ffeb39493c576fd9f4f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/1990dd9f552ee7c7109800e4e3089197.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/69698522d07a1b74054386e2acbf600c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/39fec9cd5d743ad68f639ef5a3190db7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/bd37b3b32dd87771cb9460374da527cb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/8be147c9d1efeb494d7546ccc7323679.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202511/82418c13c95d73e6c4a6f54f57df8ee1.jpg"
       ]
     },
     {
