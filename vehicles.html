@@ -400,7 +400,7 @@
                     + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" decoding="async" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">'
                     + '<div class="absolute bottom-0 left-0 right-0 bg-[#2C4732]/90 text-[#EFE3C8] font-mono text-[9px] md:text-[10px] tracking-wider px-3 py-1 flex justify-between"><span>SAMANTHA USED CAR</span><span>010-7170-4513</span></div>'
                     + (isUsSpec(car) ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
-                    + (v ? '<div class="absolute top-3 right-3 bg-black/70 text-white px-2.5 py-1 rounded-full font-mono text-[9px] font-bold tracking-wider">👁 ' + v.toLocaleString('en-US') + '</div>' : '')
+                    + (v ? '<div class="absolute top-3 right-3 bg-black/70 text-white px-2.5 py-1 rounded-full font-mono text-[9px] font-bold tracking-wider">' + v.toLocaleString('en-US') + (v === 1 ? ' VIEW' : ' VIEWS') + '</div>' : '')
                     + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS · ' + photosOf(car).length + ' PHOTOS</span></div>'
                     + '</div>'
                     + '<div class="p-4 md:p-5">'
