@@ -209,6 +209,34 @@ function logLead(handoff, messages) {
             body: JSON.stringify(lead),
         }).catch((e) => console.error('lead webhook', e && e.message));
     }
+    whatsappNotify(lead);
+}
+
+// Server-side WhatsApp alert to Samantha via Meta Cloud API. Dormant until
+// WHATSAPP_TOKEN + WHATSAPP_PHONE_ID env vars exist. Free-form text works
+// inside a 24h session; outside one, Meta requires an approved template —
+// the error is logged with the code so it's easy to see which case hit.
+function whatsappNotify(lead) {
+    const token = process.env.WHATSAPP_TOKEN;
+    const phoneId = process.env.WHATSAPP_PHONE_ID;
+    const to = process.env.WHATSAPP_NOTIFY_TO || '821071704513';
+    if (!token || !phoneId) return;
+    const text = [
+        '🚗 New lead from samanthausedcar.com',
+        `Name: ${lead.name}` + (lead.phone ? ` (call/text: ${lead.phone})` : ''),
+        `Preferred time: ${lead.time}`,
+        lead.budget ? `Budget: ${lead.budget}` : null,
+        ...lead.cars.map((c) => `Car: ${c}`),
+        lead.note ? `Note: ${lead.note}` : null,
+    ].filter(Boolean).join('\n');
+    fetch(`https://graph.facebook.com/v21.0/${phoneId}/messages`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messaging_product: 'whatsapp', to: to, type: 'text', text: { body: text } }),
+    }).then(async (r) => {
+        if (!r.ok) console.error('wa notify', r.status, (await r.text()).slice(0, 250));
+        else console.log('wa notify sent to', to);
+    }).catch((e) => console.error('wa notify', e && e.message));
 }
 
 // --- naive per-instance rate limit ---
