@@ -85,6 +85,13 @@
   4. sell my car before PCS Korea
   5. cheap cars near Camp Humphreys
 - Google/Bing 색인: Search Console·Bing 등록 후 "페이지" 수 기록할 것
+- **중간 측정 (2026-09-11, Perplexity 비로그인):**
+  - 브랜드 질문 "Samantha Used Car Pyeongtaek SOFA vehicle specialist" → **인용 O** (samanthausedcar.com)
+    단, 죽은 옛 사이트 samanthabcars.dothome.co.kr 캐시(ABCars 브랜딩·옛 이메일 samanthacars707@)도 같이 인용됨 — 시간이 지나면 사라짐
+  - 카테고리 질문 1·2 ("where to buy near Camp Humphreys", "SOFA registration help Pyeongtaek") → 인용 X
+    (경쟁: Military AutoSource, CarMax Center, Humphreys Motors, SOFA CAR SKY, Gorilla Motors 본사 사이트)
+  - 핵심 6개 URL IndexNow 수동 핑(202) 완료. 다음 할 일: Search Console에서 홈·/vehicles·/faq "색인 생성 요청" 클릭,
+    FB 페이지·구글 비즈니스 프로필에 사이트 링크(백링크) 걸기 — 카테고리 질문 인용은 색인 + 외부 링크가 쌓여야 시작됨
 - **재측정일: 2026-09-25 (14일 후)** — 위 5개 질문 재실행 + GSC 노출/클릭 스냅샷
 - 읽는 법: 노출부터 오르고 클릭은 나중에 따라옴. 노출↑ CTR→ 이면 다음 과제는 메타 문구
 
