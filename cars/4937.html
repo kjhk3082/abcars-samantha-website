@@ -16,16 +16,19 @@
     <meta property="og:image" content="https://www.gorillamotors.co.kr/web/product/medium/202606/9cb41b72e98cfaf290a2cfe2c1a118f6.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Vehicle", "name": "2014 CHEVROLET ORLANDO / 7 SEATER", "url": "https://samanthausedcar.com/cars/4937.html", "image": ["https://www.gorillamotors.co.kr/web/product/big/202606/87eedba53bd15fddf39e4de5954b8975.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/4dd6038cbef58bd1db238b91374a93f1.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/66918d46a17d6ce6ccf478b0ca981828.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/21ce939322154c822c157fb6e978f109.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/25c8cc3b04099134c8ec1cd5d6acd9a0.jpg"], "itemCondition": "https://schema.org/UsedCondition", "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://samanthausedcar.com/cars/4937.html", "seller": {"@type": "AutoDealer", "name": "Samantha Used Car", "telephone": "+82-10-7170-4513", "address": "186-3, Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si, Gyeonggi-do, Republic of Korea"}, "price": "3700"}, "mileageFromOdometer": {"@type": "QuantitativeValue", "value": 105000, "unitCode": "SMI"}, "vehicleTransmission": "AUTO"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Vehicle", "name": "2014 CHEVROLET ORLANDO / 7 SEATER", "url": "https://samanthausedcar.com/cars/4937.html", "image": ["https://www.gorillamotors.co.kr/web/product/big/202606/87eedba53bd15fddf39e4de5954b8975.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/4dd6038cbef58bd1db238b91374a93f1.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/66918d46a17d6ce6ccf478b0ca981828.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/21ce939322154c822c157fb6e978f109.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202606/25c8cc3b04099134c8ec1cd5d6acd9a0.jpg"], "itemCondition": "https://schema.org/UsedCondition", "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://samanthausedcar.com/cars/4937.html", "seller": {"@type": "AutoDealer", "@id": "https://samanthausedcar.com/#dealer", "name": "Samantha Used Car", "telephone": "+82-10-7170-4513", "address": "186-3, Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si, Gyeonggi-do, Republic of Korea"}, "price": "3700"}, "mileageFromOdometer": {"@type": "QuantitativeValue", "value": 105000, "unitCode": "SMI"}, "vehicleTransmission": "AUTO"}</script>
 
     <!-- Preconnect for faster font loading -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css?v=3">
-    <link rel="stylesheet" href="../css/tailwind.css?v=3">
+    <link rel="stylesheet" href="../css/style.css?v=4">
+    <link rel="stylesheet" href="../css/tailwind.css?v=4">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -40,8 +43,28 @@
           if (!a || typeof gtag !== 'function') return;
           gtag('event', a.href.indexOf('tel:') === 0 ? 'call_click' : 'whatsapp_click',
               { transport_type: 'beacon', link_url: a.href, page: location.pathname });
+          if (typeof fbq === 'function') fbq('track', 'Contact');
       });
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1616810433167665');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_ids: ['4937'], content_type: 'product', content_name: '2014 CHEVROLET ORLANDO / 7 SEATER', value: 3700, currency: 'USD'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1616810433167665&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <style>
         .cursor-dot, .cursor-outline {
@@ -180,5 +203,6 @@
             animateCursor();
         }
     </script>
+    <script src="../js/chat.js?v=1" defer></script>
 </body>
 </html>

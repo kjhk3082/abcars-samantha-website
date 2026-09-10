@@ -16,16 +16,19 @@
     <meta property="og:image" content="https://www.gorillamotors.co.kr/web/product/medium/202609/75a6dd067afd0ada8624d63643198f0e.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Vehicle", "name": "2015 HYUNDAI GENESIS AWD", "url": "https://samanthausedcar.com/cars/5132.html", "image": ["https://www.gorillamotors.co.kr/web/product/big/202609/b4a716273456bba0a359160a6b7ad910.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4d21a8813aafd02c28c73ddde5e6aea2.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/74126a042f3c4969ea44a06a0ee6875e.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/090933e07cebcd0316f6921e62b2020d.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fbed438cc2f8dcf9ee190ae4ec176a70.jpg"], "itemCondition": "https://schema.org/UsedCondition", "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://samanthausedcar.com/cars/5132.html", "seller": {"@type": "AutoDealer", "name": "Samantha Used Car", "telephone": "+82-10-7170-4513", "address": "186-3, Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si, Gyeonggi-do, Republic of Korea"}, "price": "11900"}, "mileageFromOdometer": {"@type": "QuantitativeValue", "value": 40000, "unitCode": "SMI"}, "vehicleTransmission": "AUTO"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Vehicle", "name": "2015 HYUNDAI GENESIS AWD", "url": "https://samanthausedcar.com/cars/5132.html", "image": ["https://www.gorillamotors.co.kr/web/product/big/202609/b4a716273456bba0a359160a6b7ad910.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4d21a8813aafd02c28c73ddde5e6aea2.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/74126a042f3c4969ea44a06a0ee6875e.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/090933e07cebcd0316f6921e62b2020d.jpg", "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fbed438cc2f8dcf9ee190ae4ec176a70.jpg"], "itemCondition": "https://schema.org/UsedCondition", "offers": {"@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://samanthausedcar.com/cars/5132.html", "seller": {"@type": "AutoDealer", "@id": "https://samanthausedcar.com/#dealer", "name": "Samantha Used Car", "telephone": "+82-10-7170-4513", "address": "186-3, Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si, Gyeonggi-do, Republic of Korea"}, "price": "11900"}, "mileageFromOdometer": {"@type": "QuantitativeValue", "value": 40000, "unitCode": "SMI"}, "vehicleTransmission": "AUTO"}</script>
 
     <!-- Preconnect for faster font loading -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css?v=3">
-    <link rel="stylesheet" href="../css/tailwind.css?v=3">
+    <link rel="stylesheet" href="../css/style.css?v=4">
+    <link rel="stylesheet" href="../css/tailwind.css?v=4">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -40,8 +43,28 @@
           if (!a || typeof gtag !== 'function') return;
           gtag('event', a.href.indexOf('tel:') === 0 ? 'call_click' : 'whatsapp_click',
               { transport_type: 'beacon', link_url: a.href, page: location.pathname });
+          if (typeof fbq === 'function') fbq('track', 'Contact');
       });
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1616810433167665');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_ids: ['5132'], content_type: 'product', content_name: '2015 HYUNDAI GENESIS AWD', value: 11900, currency: 'USD'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1616810433167665&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <style>
         .cursor-dot, .cursor-outline {
@@ -180,5 +203,6 @@
             animateCursor();
         }
     </script>
+    <script src="../js/chat.js?v=1" defer></script>
 </body>
 </html>

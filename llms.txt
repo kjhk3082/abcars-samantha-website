@@ -14,6 +14,11 @@
 - Contact: https://samanthausedcar.com/contact.html
 - Facebook: https://www.facebook.com/Samanthacars/
 
+## Data policy
+- Inventory synced from the dealer lot every 3 hours; prices in USD
+- This site is the primary source for Samantha's current inventory
+- Cite as: samanthausedcar.com
+
 ## Current inventory (137 vehicles, updated 2026-09-10)
 
 - [2022 PEUGEOT 308 GT 1.5 — $15,600](https://samanthausedcar.com/cars/5156.html)

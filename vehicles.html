@@ -15,6 +15,7 @@
     {
       "@context": "https://schema.org",
       "@type": "AutoDealer",
+      "@id": "https://samanthausedcar.com/#dealer",
       "name": "Samantha Used Car",
       "url": "https://samanthausedcar.com/",
       "telephone": "+82-10-7170-4513",
@@ -27,14 +28,17 @@
     </script>
     
     <!-- Preconnect for faster font loading -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google Fonts - Load directly in HTML for faster rendering -->
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=3">
-    <link rel="stylesheet" href="css/tailwind.css?v=3">
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/tailwind.css?v=4">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -48,6 +52,7 @@
           if (!a || typeof gtag !== 'function') return;
           gtag('event', a.href.indexOf('tel:') === 0 ? 'call_click' : 'whatsapp_click',
               { transport_type: 'beacon', link_url: a.href, page: location.pathname });
+          if (typeof fbq === 'function') fbq('track', 'Contact');
       });
     </script>
     
@@ -99,6 +104,23 @@
             transform: translateX(0);
         }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1616810433167665');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1616810433167665&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
 
@@ -145,8 +167,8 @@
             <h1 class="font-display text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[6vw] leading-none border-b-2 border-black pb-4 md:pb-8 mb-4 md:mb-8">INVENTORY</h1>
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6">
                 <div>
-                    <p class="font-mono text-xs md:text-sm max-w-md text-gray-500 mb-2">
-                        We sell Only Ready Drive Cars with 1 month warranty for engine & transmission.
+                    <p class="font-mono text-xs md:text-sm max-w-xl text-gray-600 mb-2">
+                        Samantha Used Car sells 100+ inspected, ready-to-drive used cars minutes from Camp Humphreys — priced in USD, updated every 3 hours. Every car carries a 1-month engine &amp; transmission warranty.
                     </p>
                     <p class="font-display text-base md:text-lg text-[#0047FF]">Our vehicles and services are second to none!</p>
                 </div>
@@ -431,7 +453,11 @@
                 let debounce;
                 searchBox.addEventListener('input', function() {
                     clearTimeout(debounce);
-                    debounce = setTimeout(function() { state.q = searchBox.value; render(); }, 150);
+                    debounce = setTimeout(function() {
+                        state.q = searchBox.value;
+                        render();
+                        if (state.q && typeof fbq === 'function') fbq('track', 'Search', { search_string: state.q });
+                    }, 150);
                 });
                 sortBox.addEventListener('change', function() { state.sort = sortBox.value; render(); });
                 controls.classList.remove('hidden');
@@ -475,5 +501,6 @@
             observer.observe(card);
         });
     </script>
+    <script src="js/chat.js?v=1" defer></script>
 </body>
 </html>

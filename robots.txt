@@ -1,31 +1,49 @@
 # Samantha Used Car — samanthausedcar.com
-# All crawlers welcome, including AI/answer engines.
+# All crawlers welcome, including AI training, AI search-index and AI live-fetch bots.
 
 User-agent: *
 Allow: /
 
+# --- AI training crawlers ---
 User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: anthropic-ai
+Allow: /
+
+# --- AI search-index crawlers ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Bingbot
 Allow: /
 
-User-agent: Bingbot
+# --- AI live-fetch (at answer time) ---
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 Sitemap: https://samanthausedcar.com/sitemap.xml

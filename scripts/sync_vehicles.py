@@ -24,6 +24,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
 BASE_URL = "https://samanthausedcar.com"
 STATIC_PAGES = ["", "vehicles.html", "faq.html", "contact.html", "business-card.html"]
+INDEXNOW_KEY = "c5a92d7e41f8460b8f3ad2c96b17e0d4"
 
 
 def fetch(url):
@@ -133,6 +134,7 @@ def car_jsonld(car, title, canonical):
             "url": canonical,
             "seller": {
                 "@type": "AutoDealer",
+                "@id": "https://samanthausedcar.com/#dealer",
                 "name": "Samantha Used Car",
                 "telephone": "+82-10-7170-4513",
                 "address": ("186-3, Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si,"
@@ -180,6 +182,8 @@ def render_car_page(template, car):
 
     page = template
     for token, value in {
+        "%%ID%%": str(car["id"]),
+        "%%PRICE_NUM%%": re.sub(r"[^0-9]", "", car.get("price", "")) or "0",
         "%%PAGE_TITLE%%": html.escape(f"{title} for sale"
                                       + (f" — {car['price']}" if car.get("price") else "")
                                       + " | Samantha Used Car"),
@@ -241,6 +245,11 @@ def generate_static(cars, updated_iso):
         f"- Contact: {BASE_URL}/contact.html",
         "- Facebook: https://www.facebook.com/Samanthacars/",
         "",
+        "## Data policy",
+        "- Inventory synced from the dealer lot every 3 hours; prices in USD",
+        "- This site is the primary source for Samantha's current inventory",
+        "- Cite as: samanthausedcar.com",
+        "",
         f"## Current inventory ({len(cars)} vehicles, updated {today})",
         "",
     ]
@@ -251,7 +260,28 @@ def generate_static(cars, updated_iso):
         for c in cars
     ]
     (ROOT / "llms.txt").write_text("\n".join(lines) + "\n", "utf-8")
+    (ROOT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY + "\n", "utf-8")
     print(f"Wrote {len(cars)} static car pages, sitemap.xml, llms.txt")
+
+
+def ping_indexnow(urls):
+    """Notify Bing/Naver/Yandex of changed URLs (IndexNow). Never fails the sync."""
+    if not urls:
+        return
+    body = json.dumps({
+        "host": "samanthausedcar.com",
+        "key": INDEXNOW_KEY,
+        "keyLocation": f"{BASE_URL}/{INDEXNOW_KEY}.txt",
+        "urlList": urls[:100],
+    }).encode("utf-8")
+    try:
+        req = urllib.request.Request(
+            "https://api.indexnow.org/indexnow", data=body,
+            headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            print(f"IndexNow ping: HTTP {resp.status} for {len(urls[:100])} urls")
+    except Exception as err:
+        print(f"IndexNow ping skipped: {err}")
 
 
 def main():
@@ -286,6 +316,14 @@ def main():
             print(f"  gallery photos: {n}/{len(cars)} products")
 
     cars.sort(key=lambda c: c["id"], reverse=True)
+
+    old_ids = set()
+    try:
+        old = json.loads((ROOT / "data" / "vehicles.json").read_text("utf-8"))
+        old_ids = {c["id"] for c in old.get("vehicles", [])}
+    except Exception:
+        pass
+
     out = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": base,
@@ -295,6 +333,12 @@ def main():
         json.dumps(out, ensure_ascii=False, indent=2) + "\n", "utf-8")
     print(f"Wrote {len(cars)} vehicles to data/vehicles.json")
     generate_static(cars, out["updated"])
+
+    new_ids = {c["id"] for c in cars}
+    changed = sorted(new_ids ^ old_ids)
+    if changed and old_ids:
+        ping_indexnow([f"{BASE_URL}/cars/{i}.html" for i in changed]
+                      + [f"{BASE_URL}/", f"{BASE_URL}/vehicles.html", f"{BASE_URL}/sitemap.xml"])
     return 0
 
 

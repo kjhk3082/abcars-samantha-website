@@ -51,9 +51,37 @@
 - **FB 게시물 부스트**: 잘 나가는 차량 포스트에 $10–20, 타깃 = Pyeongtaek 반경 15km, 영어 사용자, 20–45세
 - 판단 기준: 전화+왓츠앱 클릭 1건당 $5 이하면 합격
 
-## 6. 월간 점검 루틴 (5분)
+## 6. AI 챗봇 운영 (Samantha AI)
 
-- GA4: 방문자 수, call_click / whatsapp_click 횟수
-- Search Console: 노출·클릭 상위 검색어
+- 두뇌: OpenRouter (`anthropic/claude-haiku-4.5`) — 키는 **Vercel 프로젝트
+  abcars-samantha-website → Settings → Environment Variables → `OPENROUTER_API_KEY`**
+  (키 등록/변경 후에는 Deployments에서 Redeploy 한 번, 또는 다음 git push 때 자동 반영)
+- 비용 확인: openrouter.ai/activity — 대화 1턴 ≈ $0.005. 이상 급증 시 키에 한도 설정
+- 리드는 구매자 본인의 왓츠앱으로 이모님(010-7170-4513)에게 도착 — 이름·관심차량 링크·예산·희망시간 포함
+- 이벤트: 챗봇 열기 `chat_open`(GA4), 왓츠앱 전송 `Lead`(Pixel) + `chat_lead`(GA4)
+
+## 7. 네이버 (선택 — 고객이 미군이라 후순위)
+
+- searchadvisor.naver.com 에 사이트 등록 + 소유 확인 → sitemap.xml 제출 (Yeti 크롤러는 robots.txt에서 이미 허용됨)
+- 한국인 고객(수출/도매 문의)이 생기면 네이버 블로그 투트랙(블로그 글 → 사이트 링크)을 그때 시작
+
+## 8. 측정 루프 — "고쳤다"가 아니라 "숫자가 움직였다"까지
+
+**기준선 (2026-09-11 기록):**
+- AI 인용: Perplexity/ChatGPT에 아래 5개 질문 → 인용 0/5 (배포 직후라 당연)
+  1. where to buy a used car near Camp Humphreys
+  2. SOFA vehicle registration help Pyeongtaek
+  3. used car dealer for US military in Korea
+  4. sell my car before PCS Korea
+  5. cheap cars near Camp Humphreys
+- Google/Bing 색인: Search Console·Bing 등록 후 "페이지" 수 기록할 것
+- **재측정일: 2026-09-25 (14일 후)** — 위 5개 질문 재실행 + GSC 노출/클릭 스냅샷
+- 읽는 법: 노출부터 오르고 클릭은 나중에 따라옴. 노출↑ CTR→ 이면 다음 과제는 메타 문구
+
+## 9. 월간 점검 루틴 (5분)
+
+- GA4: 방문자 수, call_click / whatsapp_click / chat_open / chat_lead 횟수
+- Meta Events Manager: PageView / ViewContent / Contact / Lead 수신 확인
+- Search Console + Bing: 노출·클릭 상위 검색어 (상위 질문에 전용 페이지 없으면 그게 다음 만들 페이지)
 - 구글 리뷰 개수 / 별점
-- Perplexity·ChatGPT에 "where to buy a used car near Camp Humphreys" 물어보고 인용되는지 확인
+- Perplexity·ChatGPT에 위 5개 질문 → 인용 O/X 기록
