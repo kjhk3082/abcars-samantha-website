@@ -177,6 +177,28 @@ const priceNum = (car) => {
     return d ? parseInt(d, 10) : null;
 };
 
+// "LOW MILES! 4WD! 2017 HONDA PILOT" -> "2017 honda pilot" (what the model tends to write)
+const coreTitle = (t) => displayTitle(t)
+    .replace(/^(?:[^!]{1,20}!\s*)+/, '')
+    .replace(/\s{2,}/g, ' ').trim().toLowerCase();
+
+// Inventory cars whose title appears in the reply, in order of appearance.
+// When several cars share a core title, prefer the one whose price is quoted.
+function namedCarIds(reply, cars) {
+    const low = reply.toLowerCase();
+    const hits = [];
+    for (const car of cars) {
+        const core = coreTitle(car.title);
+        if (core.length < 7) continue;
+        const at = low.indexOf(core);
+        if (at < 0) continue;
+        hits.push({ id: car.id, core: core, at: at, priced: !!(car.price && reply.indexOf(car.price) >= 0) });
+    }
+    hits.sort((a, b) => a.at - b.at || (b.priced - a.priced));
+    const seen = new Set();
+    return hits.filter((h) => !seen.has(h.core) && seen.add(h.core)).map((h) => h.id);
+}
+
 // Hard cap: drop cards more than 20% over the stated budget, and keep at most
 // one card above the budget (the "stretch pick").
 function enforceBudget(ids, cars, budget) {
@@ -371,22 +393,14 @@ module.exports = async (req, res) => {
         const handoff = buildHandoff(parsed.handoff, cars);
         if (handoff) logLead(handoff, messages);
         const replyText = String(parsed.reply || "Sorry — could you say that again?").slice(0, 2000);
-        // Guardrail: if the model named inventory cars but forgot card_ids,
-        // attach cards for the titles it mentioned (in order of appearance).
-        let cardIds = (Array.isArray(parsed.card_ids) ? parsed.card_ids : []).map(Number).filter(Boolean);
-        if (!cardIds.length) {
-            const low = replyText.toLowerCase();
-            cardIds = cars
-                .map((c) => {
-                    const t = displayTitle(c.title).toLowerCase();
-                    return { id: c.id, at: t.length > 6 ? low.indexOf(t) : -1 };
-                })
-                .filter((x) => x.at >= 0)
-                .sort((a, b) => a.at - b.at)
-                .slice(0, 4)
-                .map((x) => x.id);
+        // Guardrail: models drop or mistype ids, so union the ids they sent with
+        // every inventory car whose title they actually named in the reply.
+        let cardIds = (Array.isArray(parsed.card_ids) ? parsed.card_ids : [])
+            .map(Number).filter((id) => cars.some((c) => c.id === id));
+        for (const id of namedCarIds(replyText, cars)) {
+            if (!cardIds.includes(id)) cardIds.push(id);
         }
-        cardIds = enforceBudget(cardIds, cars, statedBudget(messages));
+        cardIds = enforceBudget(cardIds, cars, statedBudget(messages)).slice(0, 4);
         // Conversation record for the admin dashboard (aggregates + rolling log)
         const lastUser = messages[messages.length - 1];
         await redisPipeline([
