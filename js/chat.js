@@ -1,13 +1,17 @@
-// Samantha AI — floating chat widget (vanilla JS + site Tailwind + scoped keyframes)
-// Talks to the serverless brain (chatbot/api/chat.js on Vercel), renders car cards,
-// and hands interested buyers off to Samantha's WhatsApp with a prefilled summary.
+// Samantha AI — vehicle concierge widget
+// Dark-forest glass UI with gold accents (self-contained CSS, no Tailwind dependency).
+// Talks to /api/chat (Vercel), renders car cards, hands leads to Samantha's WhatsApp.
 (function () {
     const API = window.SAMANTHA_CHAT_API || 'https://abcars-samantha-website.vercel.app/api/chat';
     const IN_CARS = location.pathname.indexOf('/cars/') !== -1;
     const WA_DIRECT = 'https://api.whatsapp.com/send?phone=821071704513';
-    const GREETING = "Hi, I'm Samantha's AI 👋 Tell me your budget and what you need the car for — I'll match you with cars sitting on our lot right now.";
-    const STARTERS = ['🚙 SUV under $6,000', '👨‍👩‍👧 Family minivan', '🇺🇸 US-spec sedan', '💰 Cheap first car'];
     const TIME_CHIPS = ['Today PM', 'Tomorrow AM', 'Tomorrow PM', 'This weekend'];
+    const TILES = [
+        ['🚙', 'SUV under $6,000'],
+        ['👨‍👩‍👧', '7-seater family van'],
+        ['🦅', 'US-spec sedan'],
+        ['💰', 'First car, cheap & solid'],
+    ];
 
     let msgs = [];
     try { msgs = JSON.parse(sessionStorage.getItem('samantha_chat') || '[]'); } catch (e) { msgs = []; }
@@ -23,64 +27,163 @@
         try { if (ga && typeof gtag === 'function') gtag('event', ga, { page: location.pathname }); } catch (e) {}
     };
 
-    // --- scoped styles (animations & bits Tailwind build doesn't carry) ---
+    // ---------- styles ----------
     const style = document.createElement('style');
-    style.textContent = [
-        '@keyframes sc-pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}',
-        '@keyframes sc-msg{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}',
-        '@keyframes sc-dot{0%,60%,100%{transform:translateY(0);opacity:.35}30%{transform:translateY(-4px);opacity:1}}',
-        '@keyframes sc-ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.2);opacity:0}}',
-        '#sc-panel{animation:sc-pop .28s cubic-bezier(.22,1,.36,1)}',
-        '.sc-anim{animation:sc-msg .25s ease-out}',
-        '.sc-dot{width:6px;height:6px;border-radius:9999px;background:#2C4732;display:inline-block;animation:sc-dot 1.2s infinite}',
-        '.sc-dot:nth-child(2){animation-delay:.15s}.sc-dot:nth-child(3){animation-delay:.3s}',
-        '#sc-msgs{scroll-behavior:smooth}',
-        '#sc-msgs::-webkit-scrollbar{width:5px}#sc-msgs::-webkit-scrollbar-thumb{background:#c9c9c2;border-radius:3px}',
-        '.sc-cards{scroll-snap-type:x mandatory}.sc-cards>a{scroll-snap-align:start}',
-        '.sc-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12)}',
-        '.sc-card{transition:transform .2s ease, box-shadow .2s ease}',
-        '@media (max-width:639px){#sc-panel{left:0!important;right:0!important;bottom:0!important;width:100%!important;max-height:88vh!important;height:88vh!important;border-radius:1.5rem 1.5rem 0 0!important}}',
-    ].join('');
+    style.textContent = `
+:root{--scg1:#0E1B12;--scg2:#1E3325;--scGold:#D2A867;--scGold2:#B98F52;--scCream:#EFE9DA;--scLine:rgba(239,233,218,.10)}
+#sc-fab{position:fixed;right:20px;bottom:${IN_CARS ? '84px' : '20px'};z-index:90;width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;
+  background:radial-gradient(120% 120% at 30% 20%,#2E4B36 0%,#16281C 70%);
+  box-shadow:0 6px 24px rgba(10,20,13,.45),inset 0 0 0 1.5px rgba(210,168,103,.55);
+  display:flex;align-items:center;justify-content:center;transition:transform .2s ease,box-shadow .2s ease}
+#sc-fab:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(10,20,13,.55),inset 0 0 0 1.5px rgba(210,168,103,.9)}
+#sc-fab::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(210,168,103,.35);animation:sc-halo 2.6s ease-out infinite}
+#sc-fab .sc-fab-s{font-family:'Syncopate',sans-serif;font-weight:700;font-size:19px;color:var(--scCream);line-height:1}
+#sc-fab .sc-fab-dot{position:absolute;top:5px;right:6px;width:11px;height:11px;border-radius:50%;background:#25D366;border:2.5px solid #16281C}
+#sc-fab .sc-fab-label{position:absolute;right:72px;top:50%;transform:translateY(-50%) translateX(6px);opacity:0;pointer-events:none;
+  background:#0E1B12;color:var(--scGold);font-family:'Space Grotesk',monospace;font-size:10px;letter-spacing:.14em;font-weight:700;
+  padding:8px 12px;border-radius:999px;border:1px solid rgba(210,168,103,.4);white-space:nowrap;transition:all .2s ease}
+#sc-fab:hover .sc-fab-label{opacity:1;transform:translateY(-50%) translateX(0)}
+@keyframes sc-halo{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.45);opacity:0}}
+
+#sc-panel{position:fixed;right:20px;bottom:20px;z-index:95;width:400px;max-width:calc(100vw - 24px);height:640px;max-height:calc(100vh - 40px);
+  display:none;flex-direction:column;overflow:hidden;border-radius:26px;
+  background:linear-gradient(160deg,var(--scg2) 0%,var(--scg1) 55%,#0B150E 100%);
+  border:1px solid rgba(239,233,218,.12);box-shadow:0 30px 80px rgba(5,12,8,.6),0 4px 18px rgba(5,12,8,.4);
+  animation:sc-pop .32s cubic-bezier(.22,1.2,.36,1)}
+#sc-panel.sc-on{display:flex}
+#sc-panel::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(420px 260px at 85% -5%,rgba(210,168,103,.14),transparent 60%),
+             radial-gradient(360px 240px at -10% 110%,rgba(37,211,102,.08),transparent 60%)}
+@keyframes sc-pop{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+@media (max-width:639px){#sc-panel{right:0;left:0;bottom:0;width:100%;max-width:100%;height:90vh;border-radius:26px 26px 0 0}}
+
+.sc-head{position:relative;display:flex;align-items:center;gap:12px;padding:16px 16px 14px;border-bottom:1px solid var(--scLine)}
+.sc-ava{position:relative;width:42px;height:42px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 32% 28%,#33523D,#152619);box-shadow:inset 0 0 0 1.5px rgba(210,168,103,.55)}
+.sc-ava span{font-family:'Syncopate',sans-serif;font-weight:700;font-size:15px;color:var(--scCream)}
+.sc-ava i{position:absolute;bottom:0;right:0;width:11px;height:11px;border-radius:50%;background:#25D366;border:2px solid #14231A}
+.sc-head-name{font-family:'Syncopate',sans-serif;font-weight:700;font-size:13px;letter-spacing:.02em;color:var(--scCream)}
+.sc-head-name b{color:var(--scGold);font-weight:700}
+.sc-head-sub{font-family:'Space Grotesk',monospace;font-size:9px;letter-spacing:.18em;color:rgba(239,233,218,.5);margin-top:3px}
+.sc-head-sub em{color:#3fd97c;font-style:normal}
+.sc-hbtn{background:none;border:1px solid var(--scLine);color:rgba(239,233,218,.55);border-radius:999px;cursor:pointer;
+  font-family:'Space Grotesk',monospace;transition:all .15s ease}
+.sc-hbtn:hover{color:var(--scCream);border-color:rgba(210,168,103,.5)}
+.sc-hbtn.sc-reset{font-size:9px;letter-spacing:.12em;padding:7px 11px}
+.sc-hbtn.sc-x{font-size:13px;width:30px;height:30px;padding:0}
+
+#sc-msgs{position:relative;flex:1;overflow-y:auto;padding:18px 14px 10px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+#sc-msgs::-webkit-scrollbar{width:4px}
+#sc-msgs::-webkit-scrollbar-thumb{background:rgba(210,168,103,.35);border-radius:2px}
+
+.sc-hero{margin:auto 0;text-align:center;padding:12px 10px 4px;animation:sc-rise .4s ease-out}
+.sc-orb{position:relative;width:76px;height:76px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 32% 26%,#395843,#16281C);box-shadow:inset 0 0 0 1.5px rgba(210,168,103,.6),0 0 44px rgba(63,217,124,.22),0 0 90px rgba(210,168,103,.14)}
+.sc-orb span{font-family:'Syncopate',sans-serif;font-weight:700;font-size:27px;color:var(--scCream)}
+.sc-orb::after{content:'';position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(210,168,103,.28);animation:sc-halo 3s ease-out infinite}
+.sc-hero h3{font-family:'Syncopate',sans-serif;font-size:15px;font-weight:700;color:var(--scCream);margin:0 0 7px;letter-spacing:.01em}
+.sc-hero p{font-family:'Space Grotesk',sans-serif;font-size:11.5px;line-height:1.65;color:rgba(239,233,218,.55);margin:0 auto 18px;max-width:270px}
+.sc-tiles{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 4px}
+.sc-tile{display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:12px 13px;border-radius:16px;cursor:pointer;text-align:left;
+  background:rgba(239,233,218,.045);border:1px solid var(--scLine);transition:all .18s ease}
+.sc-tile:hover{background:rgba(210,168,103,.12);border-color:rgba(210,168,103,.45);transform:translateY(-2px)}
+.sc-tile b{font-size:17px;line-height:1}
+.sc-tile span{font-family:'Space Grotesk',sans-serif;font-size:10.5px;font-weight:600;color:var(--scCream);line-height:1.35}
+@keyframes sc-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.sc-row{display:flex;gap:9px;align-items:flex-end;animation:sc-rise .26s ease-out}
+.sc-row.sc-user{justify-content:flex-end}
+.sc-mava{width:28px;height:28px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 32% 28%,#33523D,#152619);box-shadow:inset 0 0 0 1px rgba(210,168,103,.5)}
+.sc-mava span{font-family:'Syncopate',sans-serif;font-weight:700;font-size:10px;color:var(--scCream)}
+.sc-bub{max-width:80%;padding:11px 14px;font-family:'Space Grotesk',sans-serif;font-size:12px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.sc-bub.sc-bot{background:rgba(239,233,218,.06);border:1px solid var(--scLine);color:var(--scCream);border-radius:16px 16px 16px 5px}
+.sc-bub.sc-usr{background:linear-gradient(135deg,var(--scGold),var(--scGold2));color:#182518;font-weight:600;border-radius:16px 16px 5px 16px;
+  box-shadow:0 4px 14px rgba(210,168,103,.25)}
+
+.sc-typing{display:flex;gap:5px;padding:13px 15px}
+.sc-typing i{width:6px;height:6px;border-radius:50%;background:var(--scGold);animation:sc-dot 1.15s infinite}
+.sc-typing i:nth-child(2){animation-delay:.14s}.sc-typing i:nth-child(3){animation-delay:.28s}
+@keyframes sc-dot{0%,60%,100%{transform:translateY(0);opacity:.3}30%{transform:translateY(-4px);opacity:1}}
+
+.sc-cards{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 8px 37px;scroll-snap-type:x mandatory;animation:sc-rise .3s ease-out}
+.sc-cards::-webkit-scrollbar{height:4px}
+.sc-cards::-webkit-scrollbar-thumb{background:rgba(210,168,103,.35);border-radius:2px}
+.sc-card{scroll-snap-align:start;flex:none;width:178px;border-radius:16px;overflow:hidden;text-decoration:none;background:#FBFAF6;
+  border:1px solid rgba(239,233,218,.2);transition:transform .2s ease,box-shadow .2s ease}
+.sc-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.45),0 0 0 1.5px var(--scGold)}
+.sc-card img{width:100%;height:96px;object-fit:cover;display:block}
+.sc-card .sc-ci{padding:10px 12px 11px}
+.sc-card .sc-ct{font-family:'Space Grotesk',sans-serif;font-size:10.5px;font-weight:700;color:#152017;line-height:1.35;margin:0 0 6px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sc-card .sc-cp{display:flex;align-items:baseline;justify-content:space-between;gap:6px}
+.sc-card .sc-cp b{font-family:'Syncopate',sans-serif;font-size:13px;color:#1F3A29}
+.sc-card .sc-cp span{font-family:'Space Grotesk',monospace;font-size:8.5px;letter-spacing:.06em;color:#8a8a80}
+.sc-card .sc-view{display:block;margin:0 12px 11px;text-align:center;font-family:'Space Grotesk',monospace;font-size:9px;font-weight:700;
+  letter-spacing:.14em;color:#1F3A29;border:1px solid rgba(31,58,41,.25);border-radius:999px;padding:6px 0}
+.sc-card:hover .sc-view{background:#1F3A29;color:#EFE9DA}
+
+.sc-handoff{margin-left:37px;border-radius:18px;padding:15px;animation:sc-rise .3s ease-out;
+  background:linear-gradient(135deg,rgba(210,168,103,.18),rgba(210,168,103,.08));border:1px solid rgba(210,168,103,.4)}
+.sc-handoff h4{font-family:'Syncopate',sans-serif;font-size:10.5px;color:var(--scGold);margin:0 0 6px;letter-spacing:.05em}
+.sc-handoff p{font-family:'Space Grotesk',sans-serif;font-size:10.5px;line-height:1.6;color:rgba(239,233,218,.7);margin:0 0 11px}
+.sc-wa{display:block;text-align:center;background:#25D366;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;
+  border-radius:999px;padding:12px 0;text-decoration:none;box-shadow:0 6px 18px rgba(37,211,102,.3);transition:filter .15s ease}
+.sc-wa:hover{filter:brightness(1.08)}
+.sc-handoff small{display:block;text-align:center;font-family:'Space Grotesk',monospace;font-size:7.5px;letter-spacing:.16em;color:rgba(210,168,103,.8);margin-top:9px}
+
+.sc-fallback{margin-left:37px;display:flex;gap:8px;animation:sc-rise .3s ease-out}
+.sc-fallback a{flex:1;text-align:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:10px;border-radius:999px;padding:10px 0;text-decoration:none}
+.sc-fallback .sc-call{background:var(--scCream);color:#15201a}
+.sc-fallback .sc-wa2{background:#25D366;color:#fff}
+
+#sc-chips{display:flex;flex-wrap:wrap;gap:7px;padding:4px 14px 8px}
+#sc-chips button{font-family:'Space Grotesk',monospace;font-size:10px;font-weight:600;color:var(--scGold);cursor:pointer;
+  background:rgba(210,168,103,.07);border:1px solid rgba(210,168,103,.35);border-radius:999px;padding:7px 13px;transition:all .15s ease}
+#sc-chips button:hover{background:var(--scGold);color:#182518}
+
+.sc-dock{display:flex;align-items:center;gap:9px;padding:11px 14px 15px}
+#sc-input{flex:1;background:rgba(239,233,218,.06);border:1px solid var(--scLine);border-radius:999px;padding:13px 18px;outline:none;
+  font-family:'Space Grotesk',sans-serif;font-size:12px;color:var(--scCream);transition:border-color .15s ease,background .15s ease}
+#sc-input::placeholder{color:rgba(239,233,218,.35)}
+#sc-input:focus{border-color:rgba(210,168,103,.6);background:rgba(239,233,218,.09)}
+#sc-send{width:46px;height:46px;flex:none;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--scGold),var(--scGold2));color:#182518;box-shadow:0 5px 16px rgba(210,168,103,.35);transition:transform .15s ease,filter .15s ease}
+#sc-send:hover{transform:scale(1.06);filter:brightness(1.05)}
+#sc-send:active{transform:scale(.96)}
+`;
     document.head.appendChild(style);
 
-    // --- DOM ---
-    const AVATAR = '<div class="w-8 h-8 shrink-0 rounded-full bg-[#2C4732] flex items-center justify-center"><span class="font-display text-[#EFE3C8] text-[11px] leading-none">S</span></div>';
+    // ---------- DOM ----------
     const root = document.createElement('div');
     root.innerHTML = ''
-        + '<button id="sc-open" type="button" aria-label="Chat with Samantha AI" class="fixed right-4 ' + (IN_CARS ? 'bottom-20 md:bottom-6' : 'bottom-5') + ' z-[90] flex items-center gap-2.5 bg-[#2C4732] text-[#EFE3C8] pl-2 pr-5 py-2 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all">'
-        + '  <span class="relative flex w-9 h-9 items-center justify-center rounded-full bg-[#EFE3C8]/10 border border-[#EFE3C8]/20">'
-        + '    <span class="font-display text-sm leading-none">S</span>'
-        + '    <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#25D366] border-2 border-[#2C4732]"></span>'
-        + '  </span>'
-        + '  <span class="text-left leading-tight"><span class="block font-display text-[11px]">ASK AI</span>'
-        + '  <span class="block font-mono text-[8px] text-[#D2A867] tracking-widest">FIND MY CAR</span></span>'
+        + '<button id="sc-fab" type="button" aria-label="Chat with Samantha AI">'
+        + '  <span class="sc-fab-s">S</span><span class="sc-fab-dot"></span>'
+        + '  <span class="sc-fab-label">FIND MY CAR · AI</span>'
         + '</button>'
-        + '<div id="sc-panel" class="hidden fixed right-4 bottom-5 z-[95] w-[392px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[76vh] bg-[#F7F6F2] rounded-3xl shadow-2xl border border-black/10 flex-col overflow-hidden">'
-        + '  <div class="relative bg-[#2C4732] px-4 py-3.5 flex items-center gap-3">'
-        + '    <div class="relative w-10 h-10 rounded-full bg-[#EFE3C8]/10 border border-[#EFE3C8]/25 flex items-center justify-center">'
-        + '      <span class="font-display text-[#EFE3C8] text-base leading-none">S</span>'
-        + '      <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#25D366] border-2 border-[#2C4732]"></span>'
+        + '<div id="sc-panel" role="dialog" aria-label="Samantha AI chat">'
+        + '  <div class="sc-head">'
+        + '    <div class="sc-ava"><span>S</span><i></i></div>'
+        + '    <div style="flex:1">'
+        + '      <div class="sc-head-name">SAMANTHA <b>AI</b></div>'
+        + '      <div class="sc-head-sub"><em>●</em> ONLINE · VEHICLE CONCIERGE · CAMP HUMPHREYS</div>'
         + '    </div>'
-        + '    <div class="flex-1">'
-        + '      <p class="font-display text-[#EFE3C8] text-sm leading-tight">SAMANTHA AI</p>'
-        + '      <p class="font-mono text-[#D2A867] text-[9px] tracking-widest mt-0.5">● ONLINE · CAR MATCHMAKER</p>'
-        + '    </div>'
-        + '    <button id="sc-clear" type="button" title="New chat" class="text-[#EFE3C8]/50 hover:text-white font-mono text-[10px] px-2 py-1 border border-[#EFE3C8]/20 rounded-full">RESET</button>'
-        + '    <button id="sc-close" type="button" aria-label="Close" class="text-[#EFE3C8]/70 hover:text-white text-lg leading-none px-1.5 py-1">✕</button>'
+        + '    <button id="sc-clear" type="button" class="sc-hbtn sc-reset" title="New chat">RESET</button>'
+        + '    <button id="sc-close" type="button" class="sc-hbtn sc-x" aria-label="Close">✕</button>'
         + '  </div>'
-        + '  <div id="sc-msgs" class="flex-1 overflow-y-auto px-3 py-4 space-y-3"></div>'
-        + '  <div id="sc-chips" class="flex flex-wrap gap-1.5 px-3 pt-2 pb-1 bg-white/80 border-t border-black/5"></div>'
-        + '  <div class="px-3 pb-3 pt-1 bg-white/80 flex items-center gap-2">'
-        + '    <input id="sc-input" type="text" maxlength="500" placeholder="e.g. SUV around $7k, low miles…" class="flex-1 bg-[#F2F2F2] border border-black/10 focus:border-[#2C4732] focus:bg-white rounded-full px-4 py-3 font-mono text-xs outline-none transition-colors">'
-        + '    <button id="sc-send" type="button" aria-label="Send" class="w-11 h-11 shrink-0 bg-[#2C4732] text-[#EFE3C8] rounded-full font-bold hover:bg-[#0047FF] hover:text-white transition-colors flex items-center justify-center">'
-        + '      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>'
+        + '  <div id="sc-msgs"></div>'
+        + '  <div id="sc-chips"></div>'
+        + '  <div class="sc-dock">'
+        + '    <input id="sc-input" type="text" maxlength="500" placeholder="Tell me budget, type, must-haves…">'
+        + '    <button id="sc-send" type="button" aria-label="Send">'
+        + '      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>'
         + '    </button>'
         + '  </div>'
         + '</div>';
     document.body.appendChild(root);
 
     const panel = document.getElementById('sc-panel');
-    const openBtn = document.getElementById('sc-open');
+    const fab = document.getElementById('sc-fab');
     const msgsBox = document.getElementById('sc-msgs');
     const chipsBox = document.getElementById('sc-chips');
     const input = document.getElementById('sc-input');
@@ -89,70 +192,74 @@
         try { sessionStorage.setItem('samantha_chat', JSON.stringify(msgs.slice(-30))); } catch (e) {}
     }
 
-    function bubble(role, html, anim) {
-        if (role === 'user') {
-            return '<div class="flex justify-end' + (anim ? ' sc-anim' : '') + '">'
-                + '<div class="bg-[#0047FF] text-white rounded-2xl rounded-br-md px-3.5 py-2.5 font-mono text-xs leading-relaxed max-w-[82%] whitespace-pre-wrap break-words shadow-sm">' + html + '</div></div>';
+    const AVA = '<div class="sc-mava"><span>S</span></div>';
+
+    function heroHtml() {
+        const h = new Date().getHours();
+        const hello = h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening';
+        return '<div class="sc-hero">'
+            + '<div class="sc-orb"><span>S</span></div>'
+            + '<h3>' + hello + ' 👋</h3>'
+            + '<p>I\'m Samantha\'s AI concierge. Tell me your budget and what you need — I\'ll match you with cars on our lot right now, then hand you to Samantha on WhatsApp.</p>'
+            + '<div class="sc-tiles">' + TILES.map(function (t) {
+                return '<button type="button" class="sc-tile" data-sc-chip="' + esc(t[1]) + '"><b>' + t[0] + '</b><span>' + esc(t[1]) + '</span></button>';
+            }).join('') + '</div>'
+            + '</div>';
+    }
+
+    function rowHtml(m) {
+        if (m.role === 'user') {
+            return '<div class="sc-row sc-user"><div class="sc-bub sc-usr">' + esc(m.content) + '</div></div>';
         }
-        return '<div class="flex items-end gap-2' + (anim ? ' sc-anim' : '') + '">' + AVATAR
-            + '<div class="bg-white text-[#111] border border-black/5 rounded-2xl rounded-bl-md px-3.5 py-2.5 font-mono text-xs leading-relaxed max-w-[82%] whitespace-pre-wrap break-words shadow-sm">' + html + '</div></div>';
+        return '<div class="sc-row">' + AVA + '<div class="sc-bub sc-bot">' + esc(m.content) + '</div></div>';
     }
 
     function cardsHtml(cards) {
-        if (!cards || !cards.length) return '';
-        return '<div class="sc-cards flex gap-2.5 overflow-x-auto pb-2 pl-10 sc-anim">' + cards.map(function (c) {
-            return '<a href="' + esc(c.url) + '" target="_blank" rel="noopener" class="sc-card w-44 shrink-0 bg-white rounded-xl border border-black/10 overflow-hidden">'
-                + '<div class="relative"><img src="' + esc(c.image) + '" alt="' + esc(c.title) + '" loading="lazy" class="w-full h-24 object-cover">'
-                + '<span class="absolute bottom-1.5 right-1.5 bg-[#2C4732]/90 text-[#EFE3C8] font-mono text-[8px] px-1.5 py-0.5 rounded-full">VIEW →</span></div>'
-                + '<div class="p-2.5">'
-                + '<p class="font-bold text-[10px] leading-snug mb-1">' + esc(c.title) + '</p>'
-                + '<div class="flex items-baseline justify-between gap-1">'
-                + '<p class="font-display text-sm text-[#0047FF]">' + esc(c.price) + '</p>'
-                + (c.miles ? '<p class="font-mono text-[8px] text-gray-500">' + esc(c.miles) + ' MI</p>' : '')
-                + '</div></div></a>';
+        return '<div class="sc-cards">' + cards.map(function (c) {
+            return '<a class="sc-card" href="' + esc(c.url) + '" target="_blank" rel="noopener">'
+                + '<img src="' + esc(c.image) + '" alt="' + esc(c.title) + '" loading="lazy">'
+                + '<div class="sc-ci"><p class="sc-ct">' + esc(c.title) + '</p>'
+                + '<div class="sc-cp"><b>' + esc(c.price) + '</b>' + (c.miles ? '<span>' + esc(c.miles) + ' MI</span>' : '') + '</div></div>'
+                + '<span class="sc-view">VIEW DETAILS →</span>'
+                + '</a>';
         }).join('') + '</div>';
     }
 
     function handoffHtml(h) {
-        if (!h || !h.ready) return '';
-        return '<div class="ml-10 bg-[#2C4732] rounded-2xl p-3.5 sc-anim">'
-            + '<p class="font-display text-[#EFE3C8] text-[11px] mb-1">READY FOR SAMANTHA 🤝</p>'
-            + '<p class="font-mono text-[#EFE3C8]/70 text-[10px] leading-relaxed mb-2.5">Your info & picks are packed into one message — tap, review, and hit send in WhatsApp.</p>'
-            + '<a href="' + esc(h.wa_url) + '" target="_blank" rel="noopener" data-sc-lead class="block bg-[#25D366] text-white text-center font-bold text-xs rounded-full py-3 hover:brightness-110 transition-all">💬 SEND TO SAMANTHA</a>'
-            + '<p class="font-mono text-[#D2A867] text-[8px] tracking-wider text-center mt-2">SHE REPLIES DURING BUSINESS HOURS · 7 DAYS</p>'
+        return '<div class="sc-handoff">'
+            + '<h4>✦ READY FOR SAMANTHA</h4>'
+            + '<p>Your picks, budget and time are packed into one message — tap below, review it, and hit send in WhatsApp.</p>'
+            + '<a class="sc-wa" href="' + esc(h.wa_url) + '" target="_blank" rel="noopener" data-sc-lead>💬 &nbsp;SEND TO SAMANTHA</a>'
+            + '<small>SHE REPLIES DURING BUSINESS HOURS · OPEN 7 DAYS</small>'
             + '</div>';
     }
 
     function fallbackHtml() {
-        return '<div class="ml-10 flex gap-2 sc-anim">'
-            + '<a href="tel:01071704513" class="flex-1 bg-black text-white text-center font-bold text-[10px] rounded-full py-2.5">📞 CALL</a>'
-            + '<a href="' + WA_DIRECT + '" target="_blank" rel="noopener" class="flex-1 bg-[#25D366] text-white text-center font-bold text-[10px] rounded-full py-2.5">💬 WHATSAPP</a>'
+        return '<div class="sc-fallback">'
+            + '<a class="sc-call" href="tel:01071704513">📞 CALL</a>'
+            + '<a class="sc-wa2" href="' + WA_DIRECT + '" target="_blank" rel="noopener">💬 WHATSAPP</a>'
             + '</div>';
     }
 
-    function typingHtml() {
-        return '<div class="flex items-end gap-2 sc-anim">' + AVATAR
-            + '<div class="bg-white border border-black/5 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm flex gap-1"><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-dot"></span></div></div>';
-    }
-
-    function render(extraChips, animateLast) {
-        let html = bubble('assistant', esc(GREETING));
-        msgs.forEach(function (m, i) {
-            const anim = animateLast && i === msgs.length - 1;
-            html += bubble(m.role, esc(m.content), anim);
-            if (m.cards && m.cards.length) html += cardsHtml(m.cards);
-            if (m.handoff) html += handoffHtml(m.handoff);
-            if (m.fallback) html += fallbackHtml();
-        });
-        if (busy) html += typingHtml();
+    function render(extraChips) {
+        let html = '';
+        if (!msgs.length && !busy) {
+            html = heroHtml();
+        } else {
+            msgs.forEach(function (m) {
+                html += rowHtml(m);
+                if (m.cards && m.cards.length) html += cardsHtml(m.cards);
+                if (m.handoff) html += handoffHtml(m.handoff);
+                if (m.fallback) html += fallbackHtml();
+            });
+            if (busy) html += '<div class="sc-row">' + AVA + '<div class="sc-bub sc-bot sc-typing"><i></i><i></i><i></i></div></div>';
+        }
         msgsBox.innerHTML = html;
         msgsBox.scrollTop = msgsBox.scrollHeight;
 
-        let chips = [];
-        if (!msgs.length) chips = STARTERS;
-        else if (extraChips) chips = extraChips;
+        const chips = (msgs.length && extraChips) ? extraChips : [];
         chipsBox.innerHTML = chips.map(function (c) {
-            return '<button type="button" data-sc-chip class="font-mono text-[10px] bg-white border border-black/15 hover:border-[#2C4732] hover:bg-[#2C4732] hover:text-[#EFE3C8] rounded-full px-3 py-1.5 transition-colors">' + esc(c) + '</button>';
+            return '<button type="button" data-sc-chip="' + esc(c) + '">' + esc(c) + '</button>';
         }).join('');
         chipsBox.style.display = chips.length ? '' : 'none';
     }
@@ -160,11 +267,11 @@
     async function send(text) {
         text = (text || '').trim();
         if (!text || busy) return;
-        msgs.push({ role: 'user', content: text.replace(/^[^\w$]+\s*/, '') || text });
+        msgs.push({ role: 'user', content: text });
         busy = true;
         input.value = '';
         save();
-        render(null, true);
+        render();
         try {
             const r = await fetch(API, {
                 method: 'POST',
@@ -180,7 +287,7 @@
                         : "I'm having a moment 😅 — you can reach Samantha directly while I recover:",
                     fallback: true,
                 });
-                save(); render(null, true);
+                save(); render();
                 return;
             }
             const data = await r.json();
@@ -190,27 +297,25 @@
             msgs.push(m);
             save();
             const askTime = !m.handoff && /\b(time|when|schedule|available)\b/i.test(m.content);
-            render(askTime ? TIME_CHIPS : null, true);
+            render(askTime ? TIME_CHIPS : null);
         } catch (e) {
             busy = false;
             msgs.push({ role: 'assistant', content: 'Connection hiccup — reach Samantha directly, or try again:', fallback: true });
-            save(); render(null, true);
+            save(); render();
         }
     }
 
-    // --- events ---
-    openBtn.addEventListener('click', function () {
-        panel.classList.remove('hidden');
-        panel.classList.add('flex');
-        openBtn.classList.add('hidden');
+    // ---------- events ----------
+    fab.addEventListener('click', function () {
+        panel.classList.add('sc-on');
+        fab.style.display = 'none';
         track(null, 'chat_open');
         render();
         if (window.matchMedia('(min-width: 640px)').matches) input.focus();
     });
     document.getElementById('sc-close').addEventListener('click', function () {
-        panel.classList.add('hidden');
-        panel.classList.remove('flex');
-        openBtn.classList.remove('hidden');
+        panel.classList.remove('sc-on');
+        fab.style.display = '';
     });
     document.getElementById('sc-clear').addEventListener('click', function () {
         msgs = [];
@@ -219,11 +324,9 @@
     });
     document.getElementById('sc-send').addEventListener('click', function () { send(input.value); });
     input.addEventListener('keydown', function (e) { if (e.key === 'Enter') send(input.value); });
-    chipsBox.addEventListener('click', function (e) {
+    panel.addEventListener('click', function (e) {
         const chip = e.target.closest('[data-sc-chip]');
-        if (chip) send(chip.textContent);
-    });
-    msgsBox.addEventListener('click', function (e) {
+        if (chip) send(chip.getAttribute('data-sc-chip'));
         if (e.target.closest('[data-sc-lead]')) track('Lead', 'chat_lead');
     });
 })();
