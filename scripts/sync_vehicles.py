@@ -23,7 +23,9 @@ ROOT = Path(__file__).resolve().parent.parent
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
 BASE_URL = "https://samanthausedcar.com"
-STATIC_PAGES = ["", "vehicles.html", "faq.html", "contact.html", "business-card.html"]
+# Clean URLs: GitHub Pages serves /vehicles from vehicles.html, /cars/123 from
+# cars/123.html (Vercel mirror does the same via "cleanUrls" in vercel.json).
+STATIC_PAGES = ["", "vehicles", "faq", "contact", "business-card", "privacy"]
 INDEXNOW_KEY = "c5a92d7e41f8460b8f3ad2c96b17e0d4"
 
 
@@ -154,7 +156,7 @@ def car_jsonld(car, title, canonical):
 
 def render_car_page(template, car):
     title = display_title(car["title"])
-    canonical = f"{BASE_URL}/cars/{car['id']}.html"
+    canonical = f"{BASE_URL}/cars/{car['id']}"
     blurb = car_blurb(car)
     meta_desc = blurb if len(blurb) <= 155 else blurb[:152].rsplit(" ", 1)[0] + "…"
     meta_line = " · ".join(x for x in [
@@ -221,7 +223,7 @@ def generate_static(cars, updated_iso):
             stale.unlink()
 
     urls = [f"{BASE_URL}/{p}" for p in STATIC_PAGES]
-    urls += [f"{BASE_URL}/cars/{car['id']}.html" for car in cars]
+    urls += [f"{BASE_URL}/cars/{car['id']}" for car in cars]
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     sitemap += [f"  <url><loc>{u}</loc><lastmod>{today}</lastmod></url>" for u in urls]
@@ -240,9 +242,9 @@ def generate_static(cars, updated_iso):
         "- Phone / WhatsApp: +82-10-7170-4513 (010-7170-4513)",
         "- Email: flowerdudtlr@gmail.com",
         "- Hours: Mon-Fri 9:00-18:00, Sat 9:00-17:00, Sun 9:00-16:00 (open 7 days)",
-        f"- Inventory: {BASE_URL}/vehicles.html",
-        f"- FAQ for SOFA buyers: {BASE_URL}/faq.html",
-        f"- Contact: {BASE_URL}/contact.html",
+        f"- Inventory: {BASE_URL}/vehicles",
+        f"- FAQ for SOFA buyers: {BASE_URL}/faq",
+        f"- Contact: {BASE_URL}/contact",
         "- Facebook: https://www.facebook.com/Samanthacars/",
         "",
         "## Data policy",
@@ -256,7 +258,7 @@ def generate_static(cars, updated_iso):
     lines += [
         f"- [{display_title(c['title'])}"
         + (f" — {c['price']}" if c.get("price") else "")
-        + f"]({BASE_URL}/cars/{c['id']}.html)"
+        + f"]({BASE_URL}/cars/{c['id']})"
         for c in cars
     ]
     (ROOT / "llms.txt").write_text("\n".join(lines) + "\n", "utf-8")
@@ -337,8 +339,8 @@ def main():
     new_ids = {c["id"] for c in cars}
     changed = sorted(new_ids ^ old_ids)
     if changed and old_ids:
-        ping_indexnow([f"{BASE_URL}/cars/{i}.html" for i in changed]
-                      + [f"{BASE_URL}/", f"{BASE_URL}/vehicles.html", f"{BASE_URL}/sitemap.xml"])
+        ping_indexnow([f"{BASE_URL}/cars/{i}" for i in changed]
+                      + [f"{BASE_URL}/", f"{BASE_URL}/vehicles", f"{BASE_URL}/sitemap.xml"])
     return 0
 
 

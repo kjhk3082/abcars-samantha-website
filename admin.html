@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Samantha Used Car</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=4">
+    <link rel="stylesheet" href="/css/tailwind.css?v=4">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+        .cursor-dot, .cursor-outline { display: none; }
+        .bar { background: #0047FF; width: 100%; border-radius: 2px 2px 0 0; min-height: 2px; }
+        .qa-q { border-left: 3px solid #111; }
+        .qa-a { border-left: 3px solid #0047FF; }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
+
+    <nav class="px-4 md:px-8 py-5 flex justify-between items-center border-b-2 border-black bg-white">
+        <div class="flex flex-col leading-none">
+            <span class="text-xl font-bold tracking-tighter uppercase font-display">Samantha Admin<span class="text-[#0047FF]">.</span></span>
+            <span class="text-[0.55rem] font-mono tracking-[0.25em] font-bold uppercase mt-1 text-gray-500">Private dashboard · authorized Google accounts only</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <span id="who" class="hidden sm:block font-mono text-[10px] text-gray-500"></span>
+            <button id="refresh" class="hidden font-mono text-[10px] font-bold tracking-widest border border-black/20 hover:bg-black hover:text-white rounded-full px-4 py-2 transition-colors">REFRESH</button>
+            <button id="reset" class="hidden font-mono text-[10px] font-bold tracking-widest border border-red-600 text-red-600 hover:bg-red-600 hover:text-white rounded-full px-4 py-2 transition-colors">RESET DATA</button>
+            <button id="logout" class="hidden font-mono text-[10px] font-bold tracking-widest border border-black/20 hover:bg-black hover:text-white rounded-full px-4 py-2 transition-colors">LOG OUT</button>
+        </div>
+    </nav>
+
+    <!-- Login gate -->
+    <section id="gate" class="min-h-[70vh] flex items-center justify-center px-4">
+        <div class="text-center w-full max-w-sm">
+            <p class="font-mono text-[10px] font-bold tracking-[0.25em] text-[#0047FF] mb-4">RESTRICTED AREA</p>
+            <h1 class="font-display text-3xl md:text-4xl mb-3">SIGN IN<span class="text-[#0047FF]">.</span></h1>
+            <p class="font-mono text-xs text-gray-500 leading-relaxed mb-8">Samantha's dashboard — visits, chat questions, leads and top cars. Authorized accounts only.</p>
+            <form id="pwform" class="hidden text-left space-y-3" autocomplete="on">
+                <label class="block font-mono text-[9px] font-bold tracking-[0.2em] text-gray-500">EMAIL
+                    <input id="f-email" type="email" required autocomplete="username" class="mt-1 w-full bg-white border border-black/15 focus:border-black rounded-full px-4 py-3 font-mono text-xs outline-none" placeholder="you@gmail.com">
+                </label>
+                <label class="block font-mono text-[9px] font-bold tracking-[0.2em] text-gray-500">PASSWORD
+                    <input id="f-pass" type="password" required autocomplete="current-password" class="mt-1 w-full bg-white border border-black/15 focus:border-black rounded-full px-4 py-3 font-mono text-xs outline-none" placeholder="••••••••">
+                </label>
+                <button type="submit" class="w-full bg-black text-white hover:bg-[#0047FF] rounded-full px-4 py-3 font-mono text-[10px] font-bold tracking-[0.2em] transition-colors">SIGN IN →</button>
+            </form>
+            <div id="gbtn" class="flex justify-center mt-5"></div>
+            <p id="gate-msg" class="font-mono text-[10px] text-red-600 mt-5"></p>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <main id="dash" class="hidden px-4 md:px-8 py-8 max-w-6xl mx-auto space-y-10">
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4" id="tiles"></div>
+
+        <section>
+            <div class="flex items-baseline justify-between border-b-2 border-black pb-2 mb-4">
+                <h2 class="font-display text-lg md:text-xl">VISITS — 30 DAYS</h2>
+                <span id="chart-note" class="font-mono text-[9px] text-gray-500"></span>
+            </div>
+            <div id="chart" class="flex gap-[3px] h-28 bg-white border border-black/10 rounded-lg p-3"></div>
+        </section>
+
+        <section>
+            <div class="border-b-2 border-black pb-2 mb-4 flex items-baseline justify-between">
+                <h2 class="font-display text-lg md:text-xl">LEADS<span class="text-[#0047FF]">.</span></h2>
+                <span class="font-mono text-[9px] text-gray-500">NAME · PHONE · TIME · CAR</span>
+            </div>
+            <div id="leads" class="space-y-2"></div>
+        </section>
+
+        <section>
+            <div class="border-b-2 border-black pb-2 mb-4">
+                <h2 class="font-display text-lg md:text-xl">RECENT CHAT Q&amp;A</h2>
+            </div>
+            <div id="convos" class="space-y-4"></div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <section>
+                <div class="border-b-2 border-black pb-2 mb-4">
+                    <h2 class="font-display text-lg md:text-xl">TOP CARS BY CLICKS</h2>
+                </div>
+                <div id="topcars" class="space-y-2"></div>
+            </section>
+            <section>
+                <div class="border-b-2 border-black pb-2 mb-4">
+                    <h2 class="font-display text-lg md:text-xl">VISITORS BY COUNTRY</h2>
+                </div>
+                <div id="geo" class="space-y-2"></div>
+            </section>
+        </div>
+
+        <p class="font-mono text-[9px] text-gray-400 pb-10">Aggregates only — no raw IP addresses stored · <a href="/privacy" class="underline">Privacy Policy</a></p>
+    </main>
+
+    <script>
+        const API = 'https://abcars-samantha-website.vercel.app/api/admin';
+        let TOKEN = null;
+
+        const $ = (id) => document.getElementById(id);
+        const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) =>
+            ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+        function tile(label, value, accent) {
+            return '<div class="bg-white border border-black/10 rounded-xl p-4 md:p-5">'
+                + '<p class="font-mono text-[8px] md:text-[9px] font-bold tracking-[0.2em] text-gray-500 mb-2">' + label + '</p>'
+                + '<p class="font-display text-2xl md:text-3xl ' + (accent ? 'text-[#0047FF]' : '') + '">' + value + '</p></div>';
+        }
+
+        function render(d) {
+            $('gate').classList.add('hidden');
+            $('dash').classList.remove('hidden');
+            ['refresh', 'reset', 'logout'].forEach((id) => $(id).classList.remove('hidden'));
+            $('who').textContent = d.email || '';
+
+            if (!d.storage) {
+                $('tiles').innerHTML = '<div class="col-span-2 lg:col-span-4 bg-white border border-black/10 rounded-xl p-6 font-mono text-xs text-gray-600">데이터 저장소(Upstash Redis)가 아직 연결되지 않았어요. Vercel → Storage에서 Upstash Redis를 연결하면 여기에 방문·질의·클릭 데이터가 쌓입니다.</div>';
+                return;
+            }
+            const s = d.stats;
+            $('tiles').innerHTML =
+                tile('VISITS TODAY', s.pv.today, true)
+                + tile('VISITS 7 DAYS', s.pv.d7)
+                + tile('CHAT TURNS 7 DAYS', s.chat.d7)
+                + tile('LEADS TOTAL', s.leads.total, true);
+
+            const max = Math.max(1, ...d.series.map((x) => x.pv));
+            $('chart').innerHTML = d.series.map((x) =>
+                '<div class="flex-1 h-full flex flex-col justify-end" title="' + x.d + ': ' + x.pv + ' visits, ' + x.chat + ' chat turns">'
+                + '<div class="bar" style="height:' + Math.max(2, Math.round((x.pv / max) * 100)) + '%"></div></div>').join('');
+            $('chart-note').textContent = 'MAX ' + max + '/DAY · HOVER FOR DETAIL';
+
+            $('leads').innerHTML = d.leads.length ? d.leads.map((l) =>
+                '<div class="bg-white border border-black/10 rounded-lg p-3 md:p-4 flex flex-wrap items-baseline gap-x-4 gap-y-1 font-mono text-xs">'
+                + '<span class="font-bold">' + esc(l.name) + '</span>'
+                + (l.phone ? '<span class="text-[#0047FF] font-bold">' + esc(l.phone) + '</span>' : '<span class="text-gray-400">no phone</span>')
+                + '<span>' + esc(l.time) + '</span>'
+                + '<span class="text-gray-500">' + esc((l.cars || []).join(' / ')) + '</span>'
+                + '<span class="text-gray-400 ml-auto">' + esc((l.ts || '').slice(0, 16).replace('T', ' ')) + '</span>'
+                + (l.note ? '<span class="w-full text-gray-500 text-[10px]">' + esc(l.note) + '</span>' : '')
+                + '</div>').join('')
+                : '<p class="font-mono text-xs text-gray-400">아직 리드가 없습니다.</p>';
+
+            $('convos').innerHTML = d.convos.length ? d.convos.slice(0, 40).map((c) =>
+                '<div class="bg-white border border-black/10 rounded-lg p-3 md:p-4 space-y-2">'
+                + '<p class="font-mono text-[9px] text-gray-400">' + esc((c.ts || '').slice(0, 16).replace('T', ' '))
+                + ' · ' + esc(c.country || '') + (c.city ? ' ' + esc(c.city) : '') + ' · session ' + esc((c.sid || '').slice(0, 8))
+                + (c.lead ? ' · <b class="text-[#0047FF]">LEAD ✓</b>' : '') + '</p>'
+                + '<p class="qa-q pl-3 font-mono text-xs">' + esc(c.q) + '</p>'
+                + '<p class="qa-a pl-3 font-mono text-xs text-gray-600 whitespace-pre-wrap">' + esc(c.a) + '</p>'
+                + '</div>').join('')
+                : '<p class="font-mono text-xs text-gray-400">아직 대화가 없습니다.</p>';
+
+            $('topcars').innerHTML = d.topCars.length ? d.topCars.map((c, i) =>
+                '<a href="' + esc(c.url) + '" target="_blank" class="flex items-baseline gap-3 bg-white border border-black/10 hover:border-[#0047FF] rounded-lg px-4 py-3 font-mono text-xs transition-colors">'
+                + '<span class="text-[#0047FF] font-bold">' + String(i + 1).padStart(2, '0') + '</span>'
+                + '<span class="font-bold flex-1">' + esc(c.title) + '</span>'
+                + '<span class="text-gray-500">' + esc(c.price) + '</span>'
+                + '<span class="font-bold">' + c.clicks + '</span></a>').join('')
+                : '<p class="font-mono text-xs text-gray-400">아직 클릭 데이터가 없습니다.</p>';
+
+            $('geo').innerHTML = d.geo.length ? d.geo.map((g) =>
+                '<div class="flex items-center gap-3 bg-white border border-black/10 rounded-lg px-4 py-3 font-mono text-xs">'
+                + '<span class="font-bold w-8">' + esc(g.country) + '</span>'
+                + '<div class="flex-1 bg-[#F2F2F2] rounded-full h-2"><div class="bg-[#0047FF] h-2 rounded-full" style="width:'
+                + Math.min(100, Math.round((g.count / Math.max(1, d.geo[0].count)) * 100)) + '%"></div></div>'
+                + '<span>' + g.count + '</span></div>').join('')
+                : '<p class="font-mono text-xs text-gray-400">아직 지역 데이터가 없습니다.</p>';
+        }
+
+        function setToken(t) {
+            TOKEN = t;
+            try { t ? sessionStorage.setItem('samantha_admin', t) : sessionStorage.removeItem('samantha_admin'); } catch (e) {}
+        }
+
+        async function load() {
+            if (!TOKEN) return;
+            const r = await fetch(API, { headers: { 'Authorization': 'Bearer ' + TOKEN } });
+            if (r.status === 401) {
+                $('gate-msg').textContent = '접근 권한이 없거나 세션이 만료됐습니다. 다시 로그인하세요.';
+                setToken(null);
+                return;
+            }
+            if (r.status === 503) {
+                $('gate-msg').textContent = '서버에 ADMIN_EMAILS / ADMIN_PASSWORD 환경변수가 아직 없습니다.';
+                return;
+            }
+            render(await r.json());
+        }
+
+        async function login(e) {
+            e.preventDefault();
+            $('gate-msg').textContent = '';
+            const r = await fetch(API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: $('f-email').value.trim(), password: $('f-pass').value }),
+            });
+            if (r.status === 429) { $('gate-msg').textContent = '시도가 너무 많습니다 — 1분 후 다시 시도하세요.'; return; }
+            if (!r.ok) { $('gate-msg').textContent = '이메일 또는 비밀번호가 맞지 않습니다.'; return; }
+            const d = await r.json();
+            $('f-pass').value = '';
+            setToken(d.token);
+            load();
+        }
+
+        async function resetData() {
+            if (!TOKEN) return;
+            if (!confirm('모든 방문·챗·리드·클릭 데이터를 삭제합니다. 되돌릴 수 없습니다. 계속할까요?')) return;
+            const r = await fetch(API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + TOKEN },
+                body: JSON.stringify({ action: 'reset' }),
+            });
+            if (!r.ok) { alert('삭제 실패 (' + r.status + ')'); return; }
+            const d = await r.json();
+            alert('삭제 완료 — ' + (d.deleted || 0) + '개 키 제거. 이제부터 깨끗하게 쌓입니다.');
+            load();
+        }
+
+        async function init() {
+            let cfg = { client_id: null, password: false };
+            try { cfg = await fetch(API + '?config=1').then((r) => r.json()); } catch (e) {}
+            if (cfg.password) $('pwform').classList.remove('hidden');
+            if (!cfg.password && !cfg.client_id) {
+                $('gate-msg').textContent = 'ADMIN_EMAILS / ADMIN_PASSWORD 환경변수가 아직 설정되지 않았습니다 — Vercel에 등록 후 새로고침하세요.';
+                return;
+            }
+            try { TOKEN = sessionStorage.getItem('samantha_admin'); } catch (e) {}
+            if (TOKEN) load();
+            if (cfg.client_id) {
+                const boot = () => {
+                    if (!window.google || !google.accounts) { setTimeout(boot, 200); return; }
+                    google.accounts.id.initialize({
+                        client_id: cfg.client_id,
+                        callback: (resp) => { setToken(resp.credential); load(); },
+                    });
+                    google.accounts.id.renderButton($('gbtn'), { theme: 'filled_black', size: 'large', shape: 'pill' });
+                };
+                boot();
+            }
+        }
+        $('pwform').addEventListener('submit', login);
+        $('refresh').addEventListener('click', load);
+        $('reset').addEventListener('click', resetData);
+        $('logout').addEventListener('click', () => { setToken(null); location.reload(); });
+        init();
+    </script>
+</body>
+</html>

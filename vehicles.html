@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory - Samantha Used Car</title>
     <meta name="description" content="Live used car inventory near Camp Humphreys — 100+ cars with real photos, USD prices and mileage, updated every 3 hours. US-spec and Korean-spec vehicles for SOFA personnel.">
-    <link rel="canonical" href="https://samanthausedcar.com/vehicles.html">
+    <link rel="canonical" href="https://samanthausedcar.com/vehicles">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Samantha Used Car">
     <meta property="og:title" content="Live Used Car Inventory near Camp Humphreys">
     <meta property="og:description" content="100+ used cars with photos and USD prices, updated every 3 hours. Free delivery to base & SOFA registration.">
-    <meta property="og:url" content="https://samanthausedcar.com/vehicles.html">
+    <meta property="og:url" content="https://samanthausedcar.com/vehicles">
+    <meta property="og:image" content="https://samanthausedcar.com/images/samantha-card.jpg">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,6 +57,7 @@
               { transport_type: 'beacon', link_url: a.href, page: location.pathname });
           if (typeof fbq === 'function') fbq('track', 'Contact');
       });
+      try { navigator.sendBeacon('https://abcars-samantha-website.vercel.app/api/track', new Blob([JSON.stringify({ t: 'pv', path: location.pathname })], { type: 'text/plain' })); } catch (e) {}
     </script>
     
     <style>
@@ -130,17 +134,17 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
-        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='/'">
             <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">Samantha<span class="text-[#0047FF] group-hover:text-white">.</span></span>
             <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Used Car</span>
         </div>
         
         <!-- Desktop Menu -->
         <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
-            <a href="vehicles.html" class="text-[#0047FF]">Inventory</a>
-            <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
-            <a href="faq.html" class="hover:text-[#0047FF] transition-colors">FAQ</a>
-            <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
+            <a href="/vehicles" class="text-[#0047FF]">Inventory</a>
+            <a href="/business-card" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="/faq" class="hover:text-[#0047FF] transition-colors">FAQ</a>
+            <a href="/contact" class="hover:text-[#0047FF] transition-colors">Contact</a>
         </div>
         
         <!-- Mobile Menu Button -->
@@ -153,11 +157,11 @@
     
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
-        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
-        <a href="vehicles.html" class="text-[#0047FF] text-2xl font-display">INVENTORY</a>
-        <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
-        <a href="faq.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
-        <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
+        <a href="/" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="/vehicles" class="text-[#0047FF] text-2xl font-display">INVENTORY</a>
+        <a href="/business-card" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="/faq" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
+        <a href="/contact" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
         <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
     </div>
 
@@ -200,6 +204,7 @@
                         <input id="inventory-search" type="search" placeholder="SEARCH MODEL…" class="flex-1 lg:w-56 bg-white border border-black/15 focus:border-black rounded-full px-4 py-2 font-mono text-[11px] md:text-xs outline-none">
                         <select id="inventory-sort" class="bg-white border border-black/15 rounded-full px-3 py-2 font-mono text-[11px] md:text-xs outline-none">
                             <option value="newest">NEWEST</option>
+                            <option value="views">MOST VIEWED</option>
                             <option value="price-asc">PRICE ↑</option>
                             <option value="price-desc">PRICE ↓</option>
                         </select>
@@ -283,7 +288,7 @@
                 </div>
             </div>
             <div class="border-t border-white/10 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
-                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED.</p>
+                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED. · <a href="/privacy" class="underline hover:text-white transition-colors">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -379,6 +384,7 @@
 
             let cars = [];
             let updated = '';
+            let views = {};
             const state = { chip: 'all', q: '', sort: 'newest' };
 
             function cardHtml(car, i) {
@@ -388,11 +394,13 @@
                     esc(car.engine || ''),
                     esc(car.transmission || '')
                 ].filter(Boolean).join(' · ');
-                return '<a href="cars/' + car.id + '.html" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
+                const v = views[String(car.id)] || 0;
+                return '<a href="cars/' + car.id + '" class="block group bg-white rounded-lg overflow-hidden border border-black/5 hover:border-[#0047FF] transition-colors">'
                     + '<div class="relative overflow-hidden h-52 md:h-60">'
                     + '<img src="' + esc(car.image) + '" alt="' + title + '" loading="lazy" decoding="async" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">'
                     + '<div class="absolute bottom-0 left-0 right-0 bg-[#2C4732]/90 text-[#EFE3C8] font-mono text-[9px] md:text-[10px] tracking-wider px-3 py-1 flex justify-between"><span>SAMANTHA USED CAR</span><span>010-7170-4513</span></div>'
                     + (isUsSpec(car) ? '<div class="absolute top-3 left-3 vehicle-badge text-white px-3 py-1.5 rounded-full font-mono text-[10px] font-bold">US SPEC</div>' : '')
+                    + (v ? '<div class="absolute top-3 right-3 bg-black/70 text-white px-2.5 py-1 rounded-full font-mono text-[9px] font-bold tracking-wider">👁 ' + v.toLocaleString('en-US') + '</div>' : '')
                     + '<div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"><span class="bg-[#0047FF] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-widest">VIEW DETAILS · ' + photosOf(car).length + ' PHOTOS</span></div>'
                     + '</div>'
                     + '<div class="p-4 md:p-5">'
@@ -419,6 +427,10 @@
                         if (pa == null) return 1;
                         if (pb == null) return -1;
                         return (pa - pb) * dir;
+                    });
+                } else if (state.sort === 'views') {
+                    list = list.slice().sort(function(a, b) {
+                        return (views[String(b.id)] || 0) - (views[String(a.id)] || 0);
                     });
                 }
                 return list;
@@ -463,6 +475,15 @@
                 controls.classList.remove('hidden');
                 controls.classList.add('flex');
             }
+
+            // Aggregate view counts (no personal data) — badges + "most viewed" sort
+            fetch('https://abcars-samantha-website.vercel.app/api/popular')
+                .then(function(r) { return r.ok ? r.json() : { views: {} }; })
+                .then(function(d) {
+                    views = (d && d.views) || {};
+                    if (cars.length && Object.keys(views).length) render();
+                })
+                .catch(function() {});
 
             fetch('data/vehicles.json', { cache: 'no-cache' })
                 .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })

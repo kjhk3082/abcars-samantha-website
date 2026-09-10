@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Card - Samantha Used Car</title>
     <meta name="description" content="Samantha Kim's interactive 3D business card — SOFA vehicle specialist near Camp Humphreys. Scan the QR to chat on WhatsApp: +82-10-7170-4513.">
-    <link rel="canonical" href="https://samanthausedcar.com/business-card.html">
+    <link rel="canonical" href="https://samanthausedcar.com/business-card">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Samantha Used Car">
     <meta property="og:title" content="Samantha's Digital Business Card">
     <meta property="og:description" content="SOFA Vehicle Specialist · 010-7170-4513 · WhatsApp +82-10-7170-4513 · samanthausedcar.com">
-    <meta property="og:url" content="https://samanthausedcar.com/business-card.html">
+    <meta property="og:url" content="https://samanthausedcar.com/business-card">
+    <meta property="og:image" content="https://samanthausedcar.com/images/samantha-card.jpg">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
     
     <!-- Preconnect for faster font loading -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -39,6 +42,7 @@
               { transport_type: 'beacon', link_url: a.href, page: location.pathname });
           if (typeof fbq === 'function') fbq('track', 'Contact');
       });
+      try { navigator.sendBeacon('https://abcars-samantha-website.vercel.app/api/track', new Blob([JSON.stringify({ t: 'pv', path: location.pathname })], { type: 'text/plain' })); } catch (e) {}
     </script>
     
     <style>
@@ -77,17 +81,17 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
-        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='/'">
             <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">Samantha<span class="text-[#0047FF] group-hover:text-white">.</span></span>
             <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Used Car</span>
         </div>
         
         <!-- Desktop Menu -->
         <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
-            <a href="vehicles.html" class="hover:text-[#0047FF] transition-colors">Inventory</a>
-            <a href="business-card.html" class="text-[#0047FF]">Digital Card</a>
-            <a href="faq.html" class="hover:text-[#0047FF] transition-colors">FAQ</a>
-            <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
+            <a href="/vehicles" class="hover:text-[#0047FF] transition-colors">Inventory</a>
+            <a href="/business-card" class="text-[#0047FF]">Digital Card</a>
+            <a href="/faq" class="hover:text-[#0047FF] transition-colors">FAQ</a>
+            <a href="/contact" class="hover:text-[#0047FF] transition-colors">Contact</a>
         </div>
         
         <!-- Mobile Menu Button -->
@@ -100,11 +104,11 @@
     
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
-        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
-        <a href="vehicles.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
-        <a href="business-card.html" class="text-[#0047FF] text-2xl font-display">DIGITAL CARD</a>
-        <a href="faq.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
-        <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
+        <a href="/" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="/vehicles" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
+        <a href="/business-card" class="text-[#0047FF] text-2xl font-display">DIGITAL CARD</a>
+        <a href="/faq" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
+        <a href="/contact" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
         <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
     </div>
 
@@ -131,6 +135,7 @@
                 💬 WHATSAPP
             </a>
         </div>
+        <a href="/privacy" class="absolute bottom-1.5 left-1/2 -translate-x-1/2 z-10 font-mono text-[8px] tracking-widest text-gray-400 hover:text-[#0047FF]">PRIVACY POLICY</a>
     </main>
 
     <!-- Three.js + QR Libraries -->

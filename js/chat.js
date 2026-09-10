@@ -8,9 +8,27 @@
     const TIME_CHIPS = ['TODAY PM', 'TOMORROW AM', 'TOMORROW PM', 'THIS WEEKEND'];
     const STARTERS = ['SUV UNDER $6,000', 'FAMILY MINIVAN', 'US-SPEC SEDAN', 'CHEAP FIRST CAR'];
 
+    // Conversation is shared across tabs/pages via localStorage (24h TTL),
+    // so opening a car card in a new tab keeps the chat history.
+    const TTL = 24 * 60 * 60 * 1000;
     let msgs = [];
-    try { msgs = JSON.parse(sessionStorage.getItem('samantha_chat') || '[]'); } catch (e) { msgs = []; }
+    try {
+        const ts = parseInt(localStorage.getItem('samantha_chat_ts') || '0', 10);
+        if (ts && Date.now() - ts > TTL) {
+            localStorage.removeItem('samantha_chat');
+            localStorage.removeItem('samantha_sid');
+        }
+        msgs = JSON.parse(localStorage.getItem('samantha_chat') || '[]');
+    } catch (e) { msgs = []; }
     let busy = false;
+    let sid = 'anon';
+    try {
+        sid = localStorage.getItem('samantha_sid') || '';
+        if (!sid) {
+            sid = Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+            localStorage.setItem('samantha_sid', sid);
+        }
+    } catch (e) { sid = 'anon'; }
 
     const esc = function (s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -25,17 +43,19 @@
     // ---------- styles ----------
     const style = document.createElement('style');
     style.textContent = `
-#sc-fab{position:fixed;right:20px;bottom:${IN_CARS ? '86px' : '20px'};z-index:90;display:flex;align-items:center;gap:11px;
-  background:#0047FF;color:#fff;border:none;cursor:pointer;border-radius:999px;padding:20px 30px;
-  font-family:'Space Grotesk',monospace;font-size:13.5px;font-weight:700;letter-spacing:.16em;
-  box-shadow:0 14px 42px rgba(0,71,255,.45);transition:background .18s ease,transform .18s ease}
+#sc-fab{position:fixed;right:20px;bottom:${IN_CARS ? '86px' : '20px'};z-index:90;display:flex;align-items:center;gap:13px;
+  background:#0047FF;color:#fff;border:none;cursor:pointer;border-radius:999px;padding:14px 34px 14px 16px;
+  font-family:'Space Grotesk',monospace;font-size:16.5px;font-weight:700;letter-spacing:.16em;
+  box-shadow:0 16px 48px rgba(0,71,255,.5);transition:background .18s ease,transform .18s ease}
 #sc-fab::after{content:'';position:absolute;inset:0;border-radius:999px;pointer-events:none;animation:sc-fab-ping 2.8s ease-out infinite}
 @keyframes sc-fab-ping{0%{box-shadow:0 0 0 0 rgba(0,71,255,.45)}70%{box-shadow:0 0 0 18px rgba(0,71,255,0)}100%{box-shadow:0 0 0 0 rgba(0,71,255,0)}}
 #sc-fab:hover{background:#111;transform:translateY(-2px)}
-#sc-fab .sc-dot{width:9px;height:9px;border-radius:50%;background:#fff}
-#sc-teaser{position:fixed;right:20px;bottom:${IN_CARS ? '158px' : '92px'};z-index:89;max-width:250px;background:#fff;
+#sc-fab .sc-mark{width:46px;height:46px;border-radius:50%;background:#fff;flex:none;display:block}
+#sc-teaser{position:fixed;right:20px;bottom:${IN_CARS ? '170px' : '104px'};z-index:89;max-width:250px;background:#fff;
   border:1px solid rgba(0,0,0,.15);border-radius:14px 14px 4px 14px;padding:13px 15px;cursor:pointer;
   box-shadow:0 14px 36px rgba(0,0,0,.18);animation:sc-teaser-in .4s cubic-bezier(.22,1,.36,1)}
+#sc-teaser .sc-t-in{display:flex;align-items:flex-start;gap:10px}
+#sc-teaser .sc-t-in img{width:30px;height:30px;border-radius:50%;border:1px solid rgba(0,0,0,.08);flex:none;display:block;margin-top:1px}
 #sc-teaser p{font-family:'Space Grotesk',monospace;font-size:10.5px;line-height:1.65;color:#111;margin:0}
 #sc-teaser b{color:#0047FF}
 #sc-teaser .sc-t-x{position:absolute;top:-9px;left:-9px;width:21px;height:21px;background:#111;color:#fff;
@@ -43,15 +63,17 @@
 #sc-teaser .sc-t-x:hover{background:#0047FF}
 @keyframes sc-teaser-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
-#sc-panel{position:fixed;right:20px;bottom:20px;z-index:95;width:396px;max-width:calc(100vw - 24px);height:632px;max-height:calc(100vh - 40px);
+#sc-panel{position:fixed;right:20px;bottom:20px;z-index:95;width:540px;max-width:calc(100vw - 24px);height:780px;max-height:calc(100vh - 40px);
   display:none;flex-direction:column;overflow:hidden;background:#F2F2F2;border:1px solid rgba(0,0,0,.15);border-radius:20px;
   box-shadow:0 32px 80px rgba(0,0,0,.28),0 4px 16px rgba(0,0,0,.12);animation:sc-pop .24s cubic-bezier(.22,1,.36,1)}
 #sc-panel.sc-on{display:flex}
 @keyframes sc-pop{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@media (max-width:639px){#sc-panel{right:0;left:0;bottom:0;width:100%;max-width:100%;height:90vh;border-radius:20px 20px 0 0;border-left:none;border-right:none;border-bottom:none}}
+@media (max-width:639px){#sc-panel{right:0;left:0;bottom:0;width:100%;max-width:100%;height:96vh;max-height:96vh;border-radius:20px 20px 0 0;border-left:none;border-right:none;border-bottom:none}}
 
 .sc-head{background:#fff;padding:18px 18px 0;flex:none}
 .sc-head-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.sc-brand{display:flex;align-items:center;gap:12px}
+.sc-brand img{width:38px;height:38px;border-radius:50%;border:1px solid rgba(0,0,0,.1);flex:none;display:block}
 .sc-title{font-family:'Syncopate',sans-serif;font-weight:700;font-size:17px;letter-spacing:-.02em;color:#111;text-transform:uppercase;line-height:1}
 .sc-title i{font-style:normal;color:#0047FF}
 .sc-meta{font-family:'Space Grotesk',monospace;font-size:8.5px;font-weight:700;letter-spacing:.22em;color:#8b8b85;margin-top:7px;text-transform:uppercase}
@@ -86,9 +108,13 @@
 
 .sc-row{display:flex;animation:sc-rise .2s ease-out}
 .sc-row.sc-user{justify-content:flex-end}
-.sc-bub{max-width:84%;padding:11px 14px;font-family:'Space Grotesk',sans-serif;font-size:12px;line-height:1.6;white-space:pre-wrap;word-break:break-word;border-radius:14px}
+.sc-bub{max-width:88%;padding:13px 16px;font-family:'Space Grotesk',sans-serif;font-size:13px;line-height:1.7;white-space:pre-wrap;word-break:break-word;border-radius:14px}
 .sc-bub.sc-bot{background:#fff;border:1px solid rgba(0,0,0,.08);color:#111;border-bottom-left-radius:4px}
 .sc-bub.sc-usr{background:#111;color:#fff;border-bottom-right-radius:4px}
+.sc-bub b{font-weight:700}
+.sc-price{color:#0047FF;font-weight:700}
+.sc-li{display:flex;gap:8px;align-items:flex-start;white-space:normal;margin:2px 0}
+.sc-li::before{content:'';width:5px;height:5px;border-radius:50%;background:#0047FF;flex:none;margin-top:7px}
 .sc-tag{font-family:'Space Grotesk',monospace;font-size:8px;font-weight:700;letter-spacing:.2em;color:#8b8b85;margin:2px 2px 4px;text-transform:uppercase}
 .sc-tag.sc-tr{text-align:right}
 
@@ -100,18 +126,18 @@
 .sc-cards{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x mandatory;animation:sc-rise .25s ease-out}
 .sc-cards::-webkit-scrollbar{height:4px}
 .sc-cards::-webkit-scrollbar-thumb{background:rgba(0,0,0,.2);border-radius:2px}
-.sc-card{scroll-snap-align:start;flex:none;width:176px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;overflow:hidden;
+.sc-card{scroll-snap-align:start;flex:none;width:210px;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;overflow:hidden;
   text-decoration:none;transition:border-color .15s ease,transform .15s ease}
 .sc-card:hover{border-color:#0047FF;transform:translateY(-2px)}
-.sc-card img{width:100%;height:94px;object-fit:cover;display:block}
-.sc-ci{padding:10px 12px 12px}
-.sc-ct-row{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px}
-.sc-ct{font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;color:#111;line-height:1.35;
+.sc-card img{width:100%;height:116px;object-fit:cover;display:block}
+.sc-ci{padding:11px 13px 12px;flex:1}
+.sc-ct-row{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.sc-ct{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:#111;line-height:1.35;min-height:29px;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sc-cn{font-family:'Space Grotesk',monospace;font-size:9px;font-weight:700;color:#0047FF;flex:none}
-.sc-cp{display:flex;align-items:baseline;justify-content:space-between;gap:6px}
-.sc-cp b{font-family:'Syncopate',sans-serif;font-size:12.5px;font-weight:700;color:#111}
-.sc-cp span{font-family:'Space Grotesk',monospace;font-size:8px;letter-spacing:.06em;color:#8b8b85}
+.sc-cp{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.sc-cp b{font-family:'Syncopate',sans-serif;font-size:13.5px;font-weight:700;color:#0047FF;white-space:nowrap;flex:none}
+.sc-cp span{font-family:'Space Grotesk',monospace;font-size:8.5px;letter-spacing:.06em;color:#8b8b85;white-space:nowrap}
 .sc-cv{display:block;border-top:1px solid rgba(0,0,0,.08);padding:8px 12px;font-family:'Space Grotesk',monospace;
   font-size:8.5px;font-weight:700;letter-spacing:.18em;color:#8b8b85;transition:color .15s ease}
 .sc-card:hover .sc-cv{color:#0047FF}
@@ -169,13 +195,16 @@
     // ---------- DOM ----------
     const root = document.createElement('div');
     root.innerHTML = ''
-        + '<button id="sc-fab" type="button" aria-label="Chat with Samantha AI"><span class="sc-dot"></span>ASK AI</button>'
+        + '<button id="sc-fab" type="button" aria-label="Chat with Samantha AI"><img class="sc-mark" src="/images/samantha-ai-mark.png" alt="">ASK AI</button>'
         + '<div id="sc-panel" role="dialog" aria-label="Samantha AI chat">'
         + '  <div class="sc-head">'
         + '    <div class="sc-head-top">'
-        + '      <div>'
-        + '        <div class="sc-title">Samantha AI<i>.</i></div>'
-        + '        <div class="sc-meta"><b>●</b> Live inventory · Camp Humphreys</div>'
+        + '      <div class="sc-brand">'
+        + '        <img src="/images/samantha-ai-mark.png" alt="">'
+        + '        <div>'
+        + '          <div class="sc-title">Samantha AI<i>.</i></div>'
+        + '          <div class="sc-meta"><b>●</b> Live inventory · Camp Humphreys</div>'
+        + '        </div>'
         + '      </div>'
         + '      <div class="sc-actions">'
         + '        <button id="sc-clear" type="button" class="sc-hbtn sc-reset" title="New chat">RESET</button>'
@@ -202,7 +231,26 @@
     const input = document.getElementById('sc-input');
 
     function save() {
-        try { sessionStorage.setItem('samantha_chat', JSON.stringify(msgs.slice(-30))); } catch (e) {}
+        try {
+            localStorage.setItem('samantha_chat', JSON.stringify(msgs.slice(-30)));
+            localStorage.setItem('samantha_chat_ts', String(Date.now()));
+        } catch (e) {}
+    }
+    function scrollBottom() { msgsBox.scrollTop = msgsBox.scrollHeight; }
+    // Card photos and webfonts arrive after render — keep the newest message in view
+    msgsBox.addEventListener('load', function (e) {
+        if (e.target && e.target.tagName === 'IMG'
+            && msgsBox.scrollHeight - msgsBox.scrollTop - msgsBox.clientHeight < 260) scrollBottom();
+    }, true);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(scrollBottom);
+    // Same-origin card links so the shared localStorage conversation follows
+    // the buyer onto car pages on whichever host they are browsing.
+    function cardHref(u) {
+        try {
+            const p = new URL(u).pathname;
+            if (p.indexOf('/cars/') === 0) return p;
+        } catch (e) { /* keep absolute */ }
+        return u;
     }
 
     function heroHtml() {
@@ -220,6 +268,19 @@
             + '</div>';
     }
 
+    // Light markdown for bot replies: **bold**, "- " bullets, blue $prices
+    function md(s) {
+        let h = esc(s);
+        h = h.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
+        h = h.replace(/\$\d[\d,]*/g, function (p) { return '<span class="sc-price">' + p + '</span>'; });
+        h = h.split('\n').map(function (line) {
+            const t = line.trim();
+            if (/^[•\-]\s+/.test(t)) return '<span class="sc-li"><span>' + t.replace(/^[•\-]\s+/, '') + '</span></span>';
+            return line;
+        }).join('\n');
+        return h;
+    }
+
     function rowHtml(m, i, arr) {
         const prev = arr[i - 1];
         const firstOfGroup = !prev || prev.role !== m.role;
@@ -229,18 +290,25 @@
             html += '<div class="sc-row sc-user"><div class="sc-bub sc-usr">' + esc(m.content) + '</div></div>';
         } else {
             if (firstOfGroup) html += '<div class="sc-tag">Samantha AI</div>';
-            html += '<div class="sc-row"><div class="sc-bub sc-bot">' + esc(m.content) + '</div></div>';
+            html += '<div class="sc-row"><div class="sc-bub sc-bot">' + md(m.content) + '</div></div>';
         }
         return html;
     }
 
+    function fmtMiles(m) {
+        const n = parseInt(String(m || '').replace(/[^0-9]/g, ''), 10);
+        if (!n) return '';
+        return n.toLocaleString('en-US') + ' MI';
+    }
+
     function cardsHtml(cards) {
         return '<div class="sc-cards">' + cards.map(function (c, i) {
-            return '<a class="sc-card" href="' + esc(c.url) + '" target="_blank" rel="noopener">'
+            const miles = fmtMiles(c.miles);
+            return '<a class="sc-card" href="' + esc(cardHref(c.url)) + '" target="_blank" rel="noopener">'
                 + '<img src="' + esc(c.image) + '" alt="' + esc(c.title) + '" loading="lazy">'
                 + '<div class="sc-ci">'
                 + '<div class="sc-ct-row"><span class="sc-ct">' + esc(c.title) + '</span><span class="sc-cn">0' + (i + 1) + '</span></div>'
-                + '<div class="sc-cp"><b>' + esc(c.price) + '</b>' + (c.miles ? '<span>' + esc(c.miles) + ' MILES</span>' : '') + '</div>'
+                + '<div class="sc-cp"><b>' + esc(c.price) + '</b>' + (miles ? '<span>' + esc(miles) + '</span>' : '') + '</div>'
                 + '</div>'
                 + '<span class="sc-cv">VIEW DETAILS →</span>'
                 + '</a>';
@@ -274,7 +342,7 @@
                 return '<button type="button" class="sc-ft" data-sc-time="' + esc(t) + '">' + esc(t) + '</button>';
             }).join('') + '</div>'
             + '<button type="button" class="sc-fsub" id="sc-f-sub">SEND MY INFO TO SAMANTHA →</button>'
-            + '<div class="sc-fnote">Goes only to Samantha — via your own WhatsApp message</div>'
+            + '<div class="sc-fnote">By sending you agree to the <a href="/privacy" target="_blank" style="color:#0047FF;text-decoration:underline">Privacy Policy</a> — goes only to Samantha</div>'
             + '</div>';
     }
 
@@ -309,7 +377,11 @@
             if (busy) html += '<div class="sc-row"><div class="sc-bub sc-bot sc-typing"><i></i><i></i><i></i></div></div>';
         }
         msgsBox.innerHTML = html;
-        msgsBox.scrollTop = msgsBox.scrollHeight;
+        // Pin to the bottom, and again after fonts/images settle (late layout
+        // growth otherwise hides the last card's price under the input dock).
+        scrollBottom();
+        setTimeout(scrollBottom, 150);
+        setTimeout(scrollBottom, 600);
 
         const chips = (msgs.length && extraChips) ? extraChips : [];
         chipsBox.innerHTML = chips.map(function (c) {
@@ -330,7 +402,7 @@
             const r = await fetch(API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ messages: msgs.map(function (m) { return { role: m.role, content: m.content }; }) }),
+                body: JSON.stringify({ sid: sid, messages: msgs.map(function (m) { return { role: m.role, content: m.content }; }) }),
             });
             busy = false;
             if (!r.ok) {
@@ -369,17 +441,18 @@
     function hideTeaser(remember) {
         if (teaser) { teaser.remove(); teaser = null; }
         if (remember) {
-            try { sessionStorage.setItem('samantha_chat_teaser', '1'); } catch (e) {}
+            try { localStorage.setItem('samantha_chat_teaser', '1'); } catch (e) {}
         }
     }
     function showTeaser() {
         let seen = null;
-        try { seen = sessionStorage.getItem('samantha_chat_teaser'); } catch (e) {}
+        try { seen = localStorage.getItem('samantha_chat_teaser'); } catch (e) {}
         if (seen || msgs.length || panel.classList.contains('sc-on')) return;
         teaser = document.createElement('div');
         teaser.id = 'sc-teaser';
         teaser.innerHTML = '<button type="button" class="sc-t-x" aria-label="Dismiss">✕</button>'
-            + '<p><b>Not sure which car?</b><br>Tell me your budget — I match you from the cars on the lot in seconds.</p>';
+            + '<div class="sc-t-in"><img src="/images/samantha-ai-mark.png" alt="">'
+            + '<p><b>Not sure which car?</b><br>Tell me your budget — I match you from the cars on the lot in seconds.</p></div>';
         document.body.appendChild(teaser);
         teaser.addEventListener('click', function (e) {
             if (e.target.closest('.sc-t-x')) { hideTeaser(true); return; }

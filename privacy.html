@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Samantha Used Car</title>
+    <meta name="description" content="Privacy policy of samanthausedcar.com: what we collect (chat messages, optional name/phone, analytics), why, how long we keep it, processors we use, and your rights.">
+    <link rel="canonical" href="https://samanthausedcar.com/privacy">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/tailwind.css?v=4">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VF1YRTLKDW');
+    </script>
+
+    <style>
+        .cursor-dot, .cursor-outline { display: none; }
+        @media (min-width: 1024px) and (pointer: fine) {
+            .cursor-dot, .cursor-outline { display: block; }
+            body { cursor: none; }
+        }
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-menu.active { transform: translateX(0); }
+        .pp h2 { font-family: 'Syncopate', sans-serif; font-size: 0.95rem; text-transform: uppercase; margin: 2rem 0 0.6rem; }
+        .pp p, .pp li { font-family: 'Space Grotesk', monospace; font-size: 0.72rem; line-height: 1.8; color: #444; }
+        .pp ul { list-style: none; padding-left: 0.2rem; }
+        .pp li::before { content: '·'; color: #0047FF; font-weight: 700; margin-right: 0.5rem; }
+        .pp table { width: 100%; border-collapse: collapse; font-family: 'Space Grotesk', monospace; font-size: 0.7rem; }
+        .pp th, .pp td { border: 1px solid rgba(0,0,0,0.12); padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+        .pp th { background: #fff; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] text-[#111] overflow-x-hidden selection:bg-[#0047FF] selection:text-white">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='/'">
+            <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">Samantha<span class="text-[#0047FF] group-hover:text-white">.</span></span>
+            <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Used Car</span>
+        </div>
+        <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
+            <a href="/vehicles" class="hover:text-[#0047FF] transition-colors">Inventory</a>
+            <a href="/business-card" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="/faq" class="hover:text-[#0047FF] transition-colors">FAQ</a>
+            <a href="/contact" class="hover:text-[#0047FF] transition-colors">Contact</a>
+        </div>
+        <button class="lg:hidden flex flex-col gap-1.5 p-2" onclick="document.getElementById('mobileMenu').classList.toggle('active')">
+            <span class="w-6 h-0.5 bg-current"></span><span class="w-6 h-0.5 bg-current"></span><span class="w-6 h-0.5 bg-current"></span>
+        </button>
+    </nav>
+    <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
+        <a href="/" class="text-white text-2xl font-display">HOME</a>
+        <a href="/vehicles" class="text-white text-2xl font-display">INVENTORY</a>
+        <a href="/faq" class="text-white text-2xl font-display">FAQ</a>
+        <a href="/contact" class="text-white text-2xl font-display">CONTACT</a>
+    </div>
+
+    <main class="pt-24 md:pt-32 pb-16 px-4 md:px-6">
+        <div class="container mx-auto max-w-3xl pp">
+            <p class="font-mono text-[10px] font-bold tracking-[0.25em] text-[#0047FF] mb-3">EFFECTIVE 2026-09-11 · V1.0</p>
+            <h1 class="font-display text-3xl md:text-5xl border-b-2 border-black pb-4 mb-2">PRIVACY POLICY<span class="text-[#0047FF]">.</span></h1>
+            <p>Samantha Used Car ("we") operates samanthausedcar.com. This policy explains what personal information we process, why, and your rights — as required by the Korean Personal Information Protection Act (개인정보보호법). 한국어 전문은 아래에 있습니다.</p>
+
+            <h2>1. What we collect &amp; why</h2>
+            <table>
+                <tr><th>Data</th><th>Required?</th><th>Purpose</th></tr>
+                <tr><td>Chat messages you type to the AI assistant</td><td>Required to use the chat</td><td>Generating answers, matching you with vehicles</td></tr>
+                <tr><td>Name, preferred visit time</td><td>Only if you submit the contact form</td><td>Connecting you with Samantha for a viewing/consultation</td></tr>
+                <tr><td>Phone number</td><td>Optional</td><td>Direct call/text follow-up you request</td></tr>
+                <tr><td>Country/city of access, page views, car-page clicks</td><td>Automatic (no raw IP stored by us)</td><td>Understanding visits and popular cars</td></tr>
+                <tr><td>Cookies &amp; identifiers via Google Analytics and Meta Pixel</td><td>Automatic</td><td>Traffic analytics and ad performance measurement</td></tr>
+            </table>
+
+            <h2>2. AI chatbot notice</h2>
+            <p>Messages you send to the chat are transmitted to our AI infrastructure providers solely to generate a response and to record the conversation for customer-service review. <b>We do not use your inputs to train AI models.</b></p>
+
+            <h2>3. Retention</h2>
+            <p>Chat records and leads: up to 1 year, then deleted; earlier upon your request. Aggregated statistics (counts by day/country) contain no personal identifiers and may be kept longer.</p>
+
+            <h2>4. Third-party provision</h2>
+            <p>We do not provide your personal information to third parties for their own use. (제3자 제공: 없음)</p>
+
+            <h2>5. Processors (처리 위탁)</h2>
+            <ul>
+                <li>Vercel Inc. — website/API hosting, request handling</li>
+                <li>Upstash — storage of chat/lead records and aggregate counters</li>
+                <li>Requesty &amp; underlying AI model providers — chat response generation</li>
+                <li>Google (Analytics) — traffic analytics</li>
+                <li>Meta Platforms (Pixel) — ad performance measurement</li>
+                <li>GitHub Pages — static site hosting (no personal data processed)</li>
+            </ul>
+
+            <h2>6. Destruction</h2>
+            <p>Electronic records are permanently deleted from our storage when the retention period ends or upon verified request.</p>
+
+            <h2>7. Your rights</h2>
+            <p>You may request access, correction, or deletion of your personal information at any time: email <a href="mailto:flowerdudtlr@gmail.com" class="underline">flowerdudtlr@gmail.com</a> or WhatsApp +82-10-7170-4513. We respond within 10 days.</p>
+
+            <h2>8. Security</h2>
+            <p>HTTPS everywhere; data access limited to authorized accounts (Google-authenticated allowlist); minimal collection by design; no raw IP addresses stored in our own records.</p>
+
+            <h2>9. Privacy officer (개인정보 보호책임자)</h2>
+            <p>Samantha Kim · Samantha Used Car (Gorilla Motors, 186-3 Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si) · flowerdudtlr@gmail.com · +82-10-7170-4513</p>
+
+            <h2>10. Changes</h2>
+            <p>Updates are posted on this page with a new effective date. History: v1.0 (2026-09-11) — first publication.</p>
+
+            <div class="border-t-2 border-black mt-10 pt-6"></div>
+            <h1 class="font-display text-2xl md:text-3xl mb-2">개인정보처리방침<span class="text-[#0047FF]">.</span></h1>
+            <p>Samantha Used Car(이하 "회사")는 samanthausedcar.com 운영과 관련하여 개인정보보호법 제30조에 따라 다음과 같이 개인정보를 처리합니다.</p>
+            <h2>1. 처리 목적 및 수집 항목</h2>
+            <ul>
+                <li>[필수] AI 챗봇 대화 내용 — 응답 생성, 차량 매칭, 상담 기록 확인</li>
+                <li>[선택] 이름·희망 상담 시간·전화번호(상담 연결 폼 제출 시) — Samantha와의 상담 연결 및 회신</li>
+                <li>[자동] 접속 국가·도시(원본 IP 미저장), 페이지 열람·차량 클릭 수 — 방문 통계</li>
+                <li>[자동] Google Analytics·Meta Pixel 쿠키/식별자 — 트래픽 분석·광고 성과 측정</li>
+            </ul>
+            <h2>2. AI 챗봇 고지</h2>
+            <p>대화 입력은 응답 생성 및 상담 기록 목적에 한해 AI 인프라 수탁사에 전송·이용되며, <b>회사는 이용자 입력을 AI 모델 재학습에 사용하지 않습니다.</b></p>
+            <h2>3. 보유·이용 기간</h2>
+            <p>대화 기록·상담(리드) 정보: 수집일로부터 1년 또는 삭제 요청 시까지. 개인 식별정보가 없는 통계값은 그 이후에도 보관될 수 있습니다.</p>
+            <h2>4. 제3자 제공</h2>
+            <p>제공하지 않습니다.</p>
+            <h2>5. 처리 위탁</h2>
+            <p>Vercel(호스팅·API), Upstash(기록 저장), Requesty 및 AI 모델 제공사(응답 생성), Google(방문 분석), Meta(광고 성과 측정), GitHub Pages(정적 호스팅).</p>
+            <h2>6. 파기 절차 및 방법</h2>
+            <p>보유 기간 경과 또는 처리 목적 달성 시 전자적 파일을 복구 불가능한 방법으로 영구 삭제합니다.</p>
+            <h2>7. 정보주체의 권리</h2>
+            <p>이용자는 언제든지 열람·정정·삭제·처리정지를 요구할 수 있습니다. (이메일 flowerdudtlr@gmail.com / WhatsApp +82-10-7170-4513, 접수 후 10일 이내 조치)</p>
+            <h2>8. 안전성 확보 조치</h2>
+            <p>전 구간 HTTPS 암호화, 관리자 접근 구글 계정 화이트리스트 제한, 최소 수집 원칙, 원본 IP 미저장.</p>
+            <h2>9. 개인정보 보호책임자</h2>
+            <p>김재희(Samantha Kim) · flowerdudtlr@gmail.com · +82-10-7170-4513 · 경기도 평택시 팽성읍 송화2길 186-3</p>
+            <h2>10. 방침 변경</h2>
+            <p>본 방침은 2026-09-11부터 시행되며, 변경 시 본 페이지에 개정 이력과 함께 공지합니다.</p>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-8 px-4 md:px-6">
+        <div class="container mx-auto text-center">
+            <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 SAMANTHA USED CAR. 186-3 Songhwa 2-gil, Paengseong-eup, Pyeongtaek-si · <a href="/privacy" class="underline text-gray-300">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

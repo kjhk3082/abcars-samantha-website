@@ -53,10 +53,13 @@
 
 ## 6. AI 챗봇 운영 (Samantha AI)
 
-- 두뇌: OpenRouter (`anthropic/claude-haiku-4.5`) — 키는 **Vercel 프로젝트
-  abcars-samantha-website → Settings → Environment Variables → `OPENROUTER_API_KEY`**
+- 두뇌: Requesty 게이트웨이 (`zai/glm-5.3-flash`, 실패 시 deepseek 폴백) — 키는 **Vercel 프로젝트
+  abcars-samantha-website → Settings → Environment Variables → `REQUESTY_API_KEY`**
   (키 등록/변경 후에는 Deployments에서 Redeploy 한 번, 또는 다음 git push 때 자동 반영)
-- 비용 확인: openrouter.ai/activity — 대화 1턴 ≈ $0.005. 이상 급증 시 키에 한도 설정
+- 비용 확인: app.requesty.ai 사용량 — 대화 1턴 ≈ $0.001 미만. 잔액 $10 기준 수천 턴
+- 시나리오: 구매(예산·차종 → 카드 3–4대 + 스트레치 픽 → 폼 → 왓츠앱), **판매/트레이드인**
+  (차량 연식·모델·주행·상태·PCS 일정만 수집, 시세는 절대 제시 안 함 → 폼 → 메모에 차량 정보 → 왓츠앱),
+  "요즘 인기 차" 질문은 실제 조회수 TOP10 기반으로 답변
 - 리드는 구매자 본인의 왓츠앱으로 이모님(010-7170-4513)에게 도착 — 이름·관심차량 링크·예산·희망시간 포함
 - 이벤트: 챗봇 열기 `chat_open`, 폼 제출 `lead_form_submit`(GA4), 왓츠앱 전송 `Lead`(Pixel) + `chat_lead`(GA4)
 - **구매의향 리드 데이터 보는 법**: 관심 고객이 폼(이름 필수·번호 옵션·희망시간)을 제출하면
@@ -85,7 +88,22 @@
 - **재측정일: 2026-09-25 (14일 후)** — 위 5개 질문 재실행 + GSC 노출/클릭 스냅샷
 - 읽는 법: 노출부터 오르고 클릭은 나중에 따라옴. 노출↑ CTR→ 이면 다음 과제는 메타 문구
 
-## 9. 월간 점검 루틴 (5분)
+## 9. 관리자 대시보드 & 개인정보
+
+- **관리자 페이지**: https://abcars-samantha-website.vercel.app/admin (북마크 권장, 검색 비노출)
+  - 로그인: 이메일 + 비밀번호 (Vercel env `ADMIN_EMAILS` 화이트리스트 + `ADMIN_PASSWORD`).
+    비밀번호는 레포에 절대 넣지 않음 — Vercel 환경변수에만 존재. 구글 로그인은 `GOOGLE_CLIENT_ID` 있을 때만 추가로 표시
+  - 보이는 것: 오늘·7일·30일 방문, 챗 질의응답 전문(국가·도시 포함), 리드(이름·번호·시간·차량), 차량 클릭 TOP10, 국가별 방문
+  - **RESET DATA** 버튼: 테스트 데이터 전부 삭제(되돌릴 수 없음) — 실사용 시작 전 한 번 누를 것
+- **1회 셋업 2가지** (안 하면 대시보드가 "저장소 미연결" 안내):
+  1. Vercel → Storage → **Upstash Redis** 무료 생성·연결 (env 자동 주입)
+  2. Vercel env `ADMIN_EMAILS=flowerdudtlr@gmail.com`, `ADMIN_PASSWORD=(비밀번호)` 등록 → 재배포(다음 푸시 또는 Redeploy)
+- **조회수**: 차량 페이지 열람이 `car:clicks`에 집계되어 인벤토리 카드에 👁 배지 + "MOST VIEWED" 정렬로 노출,
+  챗봇도 TOP10을 참고해 "인기 차" 추천. 비밀번호 유출 의심 시 Vercel에서 `ADMIN_PASSWORD`만 바꾸면 기존 세션 전부 무효화됨
+- **개인정보처리방침**: /privacy (전 페이지 푸터 링크). 수집·위탁 내용이 바뀌면
+  방침 §10 개정이력에 날짜와 함께 갱신할 것. 원본 IP는 저장하지 않음(국가·도시만)
+
+## 10. 월간 점검 루틴 (5분)
 
 - GA4: 방문자 수, call_click / whatsapp_click / chat_open / chat_lead 횟수
 - Meta Events Manager: PageView / ViewContent / Contact / Lead 수신 확인

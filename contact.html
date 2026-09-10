@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Samantha Used Car</title>
     <meta name="description" content="Contact Samantha Kim, SOFA vehicle specialist near Camp Humphreys: call or WhatsApp +82-10-7170-4513. Gorilla Motors, 186-3 Songhwa 2-gil, Paengseong-eup, Pyeongtaek. Open 7 days.">
-    <link rel="canonical" href="https://samanthausedcar.com/contact.html">
+    <link rel="canonical" href="https://samanthausedcar.com/contact">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Samantha Used Car">
     <meta property="og:title" content="Contact Samantha — Used Cars near Camp Humphreys">
     <meta property="og:description" content="Call or WhatsApp +82-10-7170-4513 · Open 7 days · Gorilla Motors, Songhwa 2-gil, Pyeongtaek.">
-    <meta property="og:url" content="https://samanthausedcar.com/contact.html">
+    <meta property="og:url" content="https://samanthausedcar.com/contact">
+    <meta property="og:image" content="https://samanthausedcar.com/images/samantha-card.jpg">
+    <meta property="og:image:width" content="1672">
+    <meta property="og:image:height" content="941">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -59,6 +62,7 @@
               { transport_type: 'beacon', link_url: a.href, page: location.pathname });
           if (typeof fbq === 'function') fbq('track', 'Contact');
       });
+      try { navigator.sendBeacon('https://abcars-samantha-website.vercel.app/api/track', new Blob([JSON.stringify({ t: 'pv', path: location.pathname })], { type: 'text/plain' })); } catch (e) {}
     </script>
 
     <style>
@@ -123,17 +127,17 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-between items-center mix-blend-difference text-white">
-        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='index.html'">
+        <div class="flex flex-col leading-none cursor-pointer group" onclick="window.location.href='/'">
             <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase font-display group-hover:text-[#0047FF] transition-colors">Samantha<span class="text-[#0047FF] group-hover:text-white">.</span></span>
             <span class="text-[0.55rem] md:text-[0.65rem] font-mono tracking-[0.2em] md:tracking-[0.3em] font-bold uppercase ml-1 opacity-80">Used Car</span>
         </div>
         
         <!-- Desktop Menu -->
         <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
-            <a href="vehicles.html" class="hover:text-[#0047FF] transition-colors">Inventory</a>
-            <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
-            <a href="faq.html" class="hover:text-[#0047FF] transition-colors">FAQ</a>
-            <a href="contact.html" class="text-[#0047FF]">Contact</a>
+            <a href="/vehicles" class="hover:text-[#0047FF] transition-colors">Inventory</a>
+            <a href="/business-card" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="/faq" class="hover:text-[#0047FF] transition-colors">FAQ</a>
+            <a href="/contact" class="text-[#0047FF]">Contact</a>
         </div>
         
         <!-- Mobile Menu Button -->
@@ -146,11 +150,11 @@
     
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8" id="mobileMenu">
-        <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
-        <a href="vehicles.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
-        <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
-        <a href="faq.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
-        <a href="contact.html" class="text-[#0047FF] text-2xl font-display">CONTACT</a>
+        <a href="/" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
+        <a href="/vehicles" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
+        <a href="/business-card" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="/faq" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
+        <a href="/contact" class="text-[#0047FF] text-2xl font-display">CONTACT</a>
         <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
     </div>
 
@@ -159,8 +163,11 @@
             <h1 class="font-display text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[6vw] leading-none mb-4 md:mb-8 border-b-2 border-black pb-4 md:pb-8">
                 CONTACT
             </h1>
-            <p class="font-display text-base md:text-xl text-[#0047FF] mb-8 md:mb-16">Our vehicles and services are second to none!</p>
-            
+            <p class="font-display text-base md:text-xl text-[#0047FF] mb-8 md:mb-12">Our vehicles and services are second to none!</p>
+
+            <!-- Samantha's contact card banner (save or share it) -->
+            <img src="images/samantha-card.jpg" alt="Samantha Kim — SOFA Vehicle Specialist. Call 010-7170-4513, WhatsApp +82-10-7170-4513, flowerdudtlr@gmail.com, samanthausedcar.com. Camp Humphreys · Pyeongtaek · Osan AB." decoding="async" class="w-full h-auto rounded-lg border border-black/5 mb-10 md:mb-16">
+
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">
                 <!-- Info Column -->
                 <div class="space-y-6 md:space-y-10 font-mono">
@@ -330,7 +337,7 @@
     </main>
 
     <footer class="bg-black text-white py-6 md:py-8 text-center font-mono text-[10px] md:text-xs px-4">
-        <p>© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED.</p>
+        <p>© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED. · <a href="/privacy" class="underline hover:text-white transition-colors">Privacy Policy</a></p>
     </footer>
 
     <script>
