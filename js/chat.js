@@ -18,7 +18,7 @@
         const d = new Date();
         return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
     };
-    const STARTERS = ['SUV UNDER $6,000', 'FAMILY MINIVAN', 'US-SPEC SEDAN', 'CHEAP FIRST CAR'];
+    const STARTERS = ['SUV UNDER $6,000', 'FAMILY MINIVAN', 'US-SPEC SEDAN', 'CHEAP FIRST CAR', 'SELL OR JUNK MY CAR'];
 
     // Conversation is shared across tabs/pages via localStorage (24h TTL),
     // so opening a car card in a new tab keeps the chat history.
