@@ -144,6 +144,7 @@
                 + '<span>' + esc(l.time) + '</span>'
                 + '<span class="text-gray-500">' + esc((l.cars || []).join(' / ')) + '</span>'
                 + '<span class="text-gray-400 ml-auto">' + esc((l.ts || '').slice(0, 16).replace('T', ' ')) + '</span>'
+                + (l.msg ? '<span class="w-full text-[#111] text-[11px]">💬 ' + esc(l.msg) + '</span>' : '')
                 + (l.note ? '<span class="w-full text-gray-500 text-[10px]">' + esc(l.note) + '</span>' : '')
                 + '</div>').join('')
                 : '<p class="font-mono text-xs text-gray-400">아직 리드가 없습니다.</p>';

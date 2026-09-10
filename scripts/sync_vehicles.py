@@ -92,7 +92,7 @@ def fetch_detail_images(url):
 def display_title(title):
     """Same cleanup the site JS applies: drop US-SPEC decorations and plate parens."""
     t = re.sub(r"^[\s*!]*US[\s.\-]?SPEC[\s*!]*", "", title or "", flags=re.I)
-    t = re.sub(r"[(（][^()（）]*[가-힣][^()（）]*[)）]", "", t)
+    t = re.sub(r"[(（][^()（）]*[가-힣ㄱ-ㅎㅏ-ㅣ][^()（）]*[)）]", "", t)
     return re.sub(r"\s{2,}", " ", t).strip()
 
 

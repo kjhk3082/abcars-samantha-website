@@ -77,7 +77,7 @@ async function loadCars() {
 
 const displayTitle = (t) => String(t || '')
     .replace(/^[\s*!]*US[\s.\-]?SPEC[\s*!]*/i, '')
-    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]/g, '')
+    .replace(/[(（][^()（）]*[가-힣ㄱ-ㅎㅏ-ㅣ][^()（）]*[)）]/g, '')
     .replace(/\s{2,}/g, ' ').trim();
 
 // Most-viewed car ids from the site's click counters (Redis zset written by
@@ -134,7 +134,7 @@ CONVERSATION FLOW (buying):
    - One clear next step: "Let me grab your details so Samantha can have it ready for your test drive" — and set "ask":"contact". Put its id in card_ids.
    The site then shows a contact form (name required, phone optional, preferred time). Don't collect name/phone in plain chat unless the buyer avoids the form.
    Example tone: "Solid call 👍 The Rexton W gives you real 4WD for Korean winters, 7 seats for the whole squad, and only 60k miles — for $5,200 that's serious truck for the money.\n\n- 1-month engine & transmission warranty, so the first month is on us\n- Samantha handles the SOFA registration paperwork\n- Free delivery to base and a free loaner if it ever needs a repair\n\nTrucks like this at this price don't sit long. Let me grab your details so Samantha can have it washed and ready for your test drive."
-4) A form submission arrives as a message like "CONTACT FORM → Name: … · Phone: … · Time: …". Use it (phone may be empty) to set handoff ready for the car(s) being discussed.
+4) A form submission arrives as a message like "CONTACT FORM → Name: … · Phone: … · Time: … · Cars: ids · Message: …". Set handoff ready for the car(s) being discussed (phone may be empty). If there is a Message, acknowledge it warmly in one line — it is passed to Samantha verbatim by the site.
 
 OUTPUT — strict JSON only, nothing outside the JSON object:
 {"reply":"message to the buyer","card_ids":[numbers, max 4, empty if none],"ask":null or "contact","handoff":null or {"ready":true,"name":"...","phone":"","time":"...","car_ids":[numbers],"budget":"...","note":"one-line summary — ALWAYS include sell/trade-in vehicle details here if any"}}
@@ -253,6 +253,32 @@ function cleanPhone(s) {
     return String(s || '').replace(/[^0-9+\-() ]/g, '').trim().slice(0, 24);
 }
 
+// The widget submits the contact form as one structured user message:
+// "CONTACT FORM → Name: … · Phone: … · Time: … · Cars: 1,2 · Message: …"
+// Parsed server-side so the handoff never depends on the model echoing it.
+function parseForm(messages) {
+    const last = messages[messages.length - 1];
+    if (!last || last.role !== 'user' || !/^CONTACT FORM\s*→/.test(last.content)) return null;
+    // Split only on separators that introduce a known label, so a "·" typed
+    // inside the free-text message stays part of the message.
+    const fields = {};
+    last.content.replace(/^CONTACT FORM\s*→\s*/, '')
+        .split(/\s*·\s*(?=(?:Name|Phone|Time|Cars|Message):)/)
+        .forEach((part) => {
+            const m = part.match(/^(Name|Phone|Time|Cars|Message):\s*([\s\S]*)$/);
+            if (m) fields[m[1]] = m[2].trim();
+        });
+    const field = (label) => fields[label] || '';
+    const phone = field('Phone');
+    return {
+        name: field('Name'),
+        phone: phone === '—' ? '' : phone,
+        time: field('Time') || 'Flexible',
+        cars: field('Cars').split(',').map((s) => Number(s.trim())).filter(Boolean),
+        message: field('Message'),
+    };
+}
+
 function buildHandoff(h, cars) {
     if (!h || !h.ready || !h.name || !h.time) return null;
     const name = clean(h.name, 60);
@@ -260,6 +286,7 @@ function buildHandoff(h, cars) {
     const phone = cleanPhone(h.phone);
     if (!name || !time) return null;
     const picked = buildCards(h.car_ids || [], cars);
+    const msg = clean(h.msg, 300);
     const lines = [
         `Hi Samantha! I'm ${name}. I talked with the AI assistant on samanthausedcar.com.`,
         picked.length ? 'Interested in:' : null,
@@ -267,6 +294,7 @@ function buildHandoff(h, cars) {
         clean(h.budget, 60) ? `Budget: ${clean(h.budget, 60)}` : null,
         `Preferred time: ${time}`,
         phone ? `Callback number: ${phone}` : null,
+        msg ? `My message: ${msg}` : null,
         clean(h.note, 200) ? `Notes: ${clean(h.note, 200)}` : null,
     ].filter(Boolean);
     return {
@@ -276,6 +304,7 @@ function buildHandoff(h, cars) {
         time: time,
         budget: clean(h.budget, 60),
         note: clean(h.note, 200),
+        msg: msg,
         cars: picked,
         wa_url: `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(lines.join('\n'))}`,
     };
@@ -292,6 +321,7 @@ function logLead(handoff, messages) {
         budget: handoff.budget || null,
         cars: handoff.cars.map((c) => `${c.id} ${c.title} ${c.price}`),
         note: handoff.note || null,
+        msg: handoff.msg || null,
         transcript: messages.map((m) => `${m.role === 'user' ? 'U' : 'A'}: ${m.content.slice(0, 300)}`),
     };
     console.log('LEAD', JSON.stringify(lead));
@@ -325,6 +355,7 @@ function whatsappNotify(lead) {
         `Preferred time: ${lead.time}`,
         lead.budget ? `Budget: ${lead.budget}` : null,
         ...lead.cars.map((c) => `Car: ${c}`),
+        lead.msg ? `Buyer says: ${lead.msg}` : null,
         lead.note ? `Note: ${lead.note}` : null,
     ].filter(Boolean).join('\n');
     fetch(`https://graph.facebook.com/v21.0/${phoneId}/messages`, {
@@ -397,7 +428,20 @@ module.exports = async (req, res) => {
         const raw = data.choices && data.choices[0] && data.choices[0].message
             ? data.choices[0].message.content : '';
         const parsed = parseModelJson(raw);
-        const handoff = buildHandoff(parsed.handoff, cars);
+        // Form fields win over whatever the model echoed back
+        const form = parseForm(messages);
+        let handoffInput = parsed.handoff;
+        if (form && form.name) {
+            const h = Object.assign({}, parsed.handoff || {});
+            h.ready = true;
+            h.name = form.name;
+            h.phone = form.phone;
+            h.time = form.time;
+            if (!(Array.isArray(h.car_ids) && h.car_ids.length)) h.car_ids = form.cars;
+            if (form.message) h.msg = form.message;
+            handoffInput = h;
+        }
+        const handoff = buildHandoff(handoffInput, cars);
         if (handoff) logLead(handoff, messages);
         const replyText = String(parsed.reply || "Sorry — could you say that again?").slice(0, 2000);
         // Guardrail: models drop or mistype ids, so union the ids they sent with

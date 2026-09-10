@@ -6,6 +6,18 @@
     const IN_CARS = location.pathname.indexOf('/cars/') !== -1;
     const WA_DIRECT = 'https://api.whatsapp.com/send?phone=821071704513';
     const TIME_CHIPS = ['TODAY PM', 'TOMORROW AM', 'TOMORROW PM', 'THIS WEEKEND'];
+    // Lot hours: Mon-Fri 9-6, Sat 9-5, Sun 9-4 — offer hourly slots inside the widest window
+    const HOURS = ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'];
+    // Buyers are mostly US military: Korean phones by default, US numbers common
+    const COUNTRY_CODES = [
+        ['+82', '🇰🇷 +82'], ['+1', '🇺🇸 +1'], ['+81', '🇯🇵 +81'], ['+63', '🇵🇭 +63'], ['+44', '🇬🇧 +44'],
+        ['+61', '🇦🇺 +61'], ['+49', '🇩🇪 +49'], ['+39', '🇮🇹 +39'], ['+34', '🇪🇸 +34'], ['+52', '🇲🇽 +52'], ['', '🌐 Other'],
+    ];
+    const PHONE_HINT = { '+82': '010-1234-5678', '+1': '(210) 555-0199', '': 'Full number with country code' };
+    const todayIso = function () {
+        const d = new Date();
+        return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    };
     const STARTERS = ['SUV UNDER $6,000', 'FAMILY MINIVAN', 'US-SPEC SEDAN', 'CHEAP FIRST CAR'];
 
     // Conversation is shared across tabs/pages via localStorage (24h TTL),
@@ -177,6 +189,15 @@
   border:1px solid rgba(0,0,0,.2);border-radius:999px;padding:7px 12px;cursor:pointer;transition:all .15s ease}
 .sc-ft:hover{border-color:#111}
 .sc-ft.sc-onft{background:#111;color:#fff;border-color:#111}
+.sc-ft-pick{border-style:dashed;color:#0047FF;border-color:rgba(0,71,255,.5)}
+.sc-ft-pick.sc-onft{background:#0047FF;border-color:#0047FF;color:#fff;border-style:solid}
+.sc-fdate{display:grid;grid-template-columns:1.4fr 1fr;gap:6px;margin-top:8px}
+.sc-fdate[hidden]{display:none}
+.sc-fdate .sc-fi{padding:10px 12px;font-size:11.5px;appearance:auto;-webkit-appearance:auto;min-width:0}
+.sc-fta{resize:none;line-height:1.5;border-radius:12px;font-family:'Space Grotesk',sans-serif}
+.sc-fphone{display:grid;grid-template-columns:auto 1fr;gap:6px}
+.sc-fphone select.sc-fi{width:auto;min-width:96px}
+.sc-form select.sc-fi{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,#111 50%),linear-gradient(135deg,#111 50%,transparent 50%);background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:28px}
 .sc-fsub{width:100%;margin-top:14px;background:#111;color:#fff;border:none;border-radius:999px;padding:13px 0;
   font-family:'Space Grotesk',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;cursor:pointer;transition:background .15s ease}
 .sc-fsub:hover{background:#0047FF}
@@ -337,11 +358,25 @@
             + '<div class="sc-fl"><b>01</b> NAME <i>*</i></div>'
             + '<input class="sc-fi" id="sc-f-name" type="text" maxlength="40" placeholder="Your first name" autocomplete="name">'
             + '<div class="sc-fl"><b>02</b> PHONE — OPTIONAL, FOR A DIRECT CALL / TEXT</div>'
-            + '<input class="sc-fi" id="sc-f-phone" type="tel" maxlength="20" placeholder="010-1234-5678" autocomplete="tel">'
+            + '<div class="sc-fphone">'
+            + '<select class="sc-fi" id="sc-f-cc" aria-label="Country code">' + COUNTRY_CODES.map(function (c) {
+                return '<option value="' + esc(c[0]) + '"' + (c[0] === '+82' ? ' selected' : '') + '>' + esc(c[1]) + '</option>';
+            }).join('') + '</select>'
+            + '<input class="sc-fi" id="sc-f-phone" type="tel" maxlength="20" placeholder="010-1234-5678" autocomplete="tel-national">'
+            + '</div>'
             + '<div class="sc-fl"><b>03</b> WHEN WORKS FOR YOU?</div>'
             + '<div class="sc-ftimes">' + TIME_CHIPS.map(function (t) {
                 return '<button type="button" class="sc-ft" data-sc-time="' + esc(t) + '">' + esc(t) + '</button>';
-            }).join('') + '</div>'
+            }).join('')
+            + '<button type="button" class="sc-ft sc-ft-pick" id="sc-f-pick">📅 PICK DATE &amp; TIME</button></div>'
+            + '<div class="sc-fdate" id="sc-f-date" hidden>'
+            + '<input class="sc-fi" id="sc-f-day" type="date" min="' + todayIso() + '" aria-label="Date">'
+            + '<select class="sc-fi" id="sc-f-hour" aria-label="Time">' + HOURS.map(function (h) {
+                return '<option value="' + esc(h) + '">' + esc(h) + '</option>';
+            }).join('') + '</select>'
+            + '</div>'
+            + '<div class="sc-fl"><b>04</b> ANYTHING FOR SAMANTHA? — OPTIONAL</div>'
+            + '<textarea class="sc-fi sc-fta" id="sc-f-msg" rows="2" maxlength="300" placeholder="e.g. I PCS in 3 weeks · Can you check the AC? · Trading in a 2015 Sonata"></textarea>'
             + '<button type="button" class="sc-fsub" id="sc-f-sub">SEND MY INFO TO SAMANTHA →</button>'
             + '<div class="sc-fnote">By sending you agree to the <a href="/privacy" target="_blank" style="color:#0047FF;text-decoration:underline">Privacy Policy</a> — goes only to Samantha</div>'
             + '</div>';
@@ -356,11 +391,42 @@
             nameEl.focus();
             return;
         }
-        const phone = (document.getElementById('sc-f-phone').value || '').replace(/[^0-9+\-() ]/g, '').trim();
+        let phone = (document.getElementById('sc-f-phone').value || '').replace(/[^0-9+\-() ]/g, '').trim();
+        const cc = (document.getElementById('sc-f-cc') || {}).value || '';
+        if (phone && cc && phone.indexOf('+') !== 0) {
+            // International form: +82 drops the Korean trunk 0 (010 → 10)
+            if (cc === '+82') phone = phone.replace(/^0/, '');
+            phone = cc + ' ' + phone;
+        }
         const timeEl = document.querySelector('.sc-ft.sc-onft');
-        const time = timeEl ? timeEl.getAttribute('data-sc-time') : 'Flexible';
+        let time = timeEl ? timeEl.getAttribute('data-sc-time') : 'Flexible';
+        if (timeEl && timeEl.id === 'sc-f-pick') {
+            const dayEl = document.getElementById('sc-f-day');
+            const hourEl = document.getElementById('sc-f-hour');
+            if (!dayEl.value) {
+                dayEl.classList.add('sc-err');
+                dayEl.focus();
+                return;
+            }
+            const d = new Date(dayEl.value + 'T12:00:00');
+            const nice = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            time = nice + ' ' + hourEl.value + ' (' + dayEl.value + ')';
+        }
+        const msgEl = document.getElementById('sc-f-msg');
+        const note = msgEl ? msgEl.value.replace(/\s+/g, ' ').trim().slice(0, 300) : '';
+        // Cars currently on screen (last assistant message with cards) so the
+        // server can build the handoff without relying on the model
+        let carIds = [];
+        for (let i = msgs.length - 1; i >= 0; i--) {
+            if (msgs[i].role === 'assistant' && msgs[i].cards && msgs[i].cards.length) {
+                carIds = msgs[i].cards.map(function (c) { return c.id; });
+                break;
+            }
+        }
         track(null, 'lead_form_submit');
-        send('CONTACT FORM → Name: ' + name + ' · Phone: ' + (phone || '—') + ' · Time: ' + time);
+        send('CONTACT FORM → Name: ' + name + ' · Phone: ' + (phone || '—') + ' · Time: ' + time
+            + (carIds.length ? ' · Cars: ' + carIds.join(',') : '')
+            + (note ? ' · Message: ' + note : ''));
     }
 
     function render(extraChips) {
@@ -491,11 +557,27 @@
         if (ft) {
             document.querySelectorAll('.sc-ft').forEach(function (b) { b.classList.remove('sc-onft'); });
             ft.classList.add('sc-onft');
+            const dateBox = document.getElementById('sc-f-date');
+            if (dateBox) {
+                dateBox.hidden = ft.id !== 'sc-f-pick';
+                if (!dateBox.hidden) {
+                    const dayEl = document.getElementById('sc-f-day');
+                    dayEl.classList.remove('sc-err');
+                    try { dayEl.showPicker && dayEl.showPicker(); } catch (err) { /* needs a gesture on some browsers */ }
+                }
+            }
         }
         if (e.target.closest('#sc-f-sub')) submitForm();
         if (e.target.id === 'sc-f-name') e.target.classList.remove('sc-err');
     });
     panel.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('sc-fi')) submitForm();
+        if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('sc-fi')
+            && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'SELECT') submitForm();
+    });
+    panel.addEventListener('change', function (e) {
+        if (e.target.id === 'sc-f-cc') {
+            const ph = document.getElementById('sc-f-phone');
+            if (ph) ph.placeholder = PHONE_HINT[e.target.value] || 'Local number';
+        }
     });
 })();

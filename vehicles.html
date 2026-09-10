@@ -363,7 +363,7 @@
             const displayTitle = function(car) {
                 return (car.title || '')
                     .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
-                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]/g, '')
+                    .replace(/[(（][^()（）]*[가-힣ㄱ-ㅎㅏ-ㅣ][^()（）]*[)）]/g, '')
                     .replace(/\s{2,}/g, ' ')
                     .trim();
             };
