@@ -477,13 +477,21 @@
             }
 
             // Aggregate view counts (no personal data) — badges + "most viewed" sort
-            fetch('https://abcars-samantha-website.vercel.app/api/popular?t=' + Math.floor(Date.now() / 30000), { cache: 'no-store' })
-                .then(function(r) { return r.ok ? r.json() : { views: {} }; })
-                .then(function(d) {
-                    views = (d && d.views) || {};
-                    if (cars.length && Object.keys(views).length) render();
-                })
-                .catch(function() {});
+            function loadViews() {
+                fetch('https://abcars-samantha-website.vercel.app/api/popular?t=' + Date.now(), { cache: 'no-store' })
+                    .then(function(r) { return r.ok ? r.json() : { views: {} }; })
+                    .then(function(d) {
+                        const next = (d && d.views) || {};
+                        const changed = JSON.stringify(next) !== JSON.stringify(views);
+                        views = next;
+                        if (cars.length && changed) render();
+                    })
+                    .catch(function() {});
+            }
+            loadViews();
+            // Coming back from a car page (back button / other tab) — refresh the counts
+            window.addEventListener('pageshow', function(e) { if (e.persisted) loadViews(); });
+            document.addEventListener('visibilitychange', function() { if (!document.hidden) loadViews(); });
 
             fetch('data/vehicles.json', { cache: 'no-cache' })
                 .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
