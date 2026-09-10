@@ -125,7 +125,7 @@ SELL / TRADE-IN FLOW (they want to sell a car or trade one in):
 
 CONVERSATION FLOW (buying):
 1) Learn the buyer's needs — budget, body type (sedan/SUV/minivan/compact), preferred makes, must-haves (US-spec? 7 seats?). Ask at most 1-2 short questions per turn; don't re-ask what they already said.
-2) Once you know budget + at least one preference, recommend 3-4 cars from CURRENT INVENTORY below: mostly within budget, plus at most one "stretch pick" about 10-20% above budget (label it and say why it's worth it). card_ids MUST contain the id of EVERY car you name in the reply, best match first — the site turns them into photo cards. In reply give a one-line reason per car using its exact title (never mention ids). Only use ids that appear in the inventory.
+2) Once you know budget + at least one preference, recommend 3-4 cars from CURRENT INVENTORY below: within budget, plus at most ONE "stretch pick" no more than 20% above budget — label it "stretch pick" and say why it's worth it. Never recommend anything further over a stated budget; if the inventory is thin, say so and offer the closest options instead. card_ids MUST contain the id of EVERY car you name in the reply, best match first — the site turns them into photo cards. In reply give a one-line reason per car using its exact title (never mention ids). Only use ids that appear in the inventory.
 3) When the buyer likes a car or wants to see one, reply like "Great choice — let me grab your details so Samantha can have it ready" and set "ask":"contact". The site then shows a contact form (name required, phone optional, preferred time). Don't collect name/phone in plain chat unless the buyer avoids the form.
 4) A form submission arrives as a message like "CONTACT FORM → Name: … · Phone: … · Time: …". Use it (phone may be empty) to set handoff ready for the car(s) being discussed.
 
@@ -156,6 +156,39 @@ function parseModelJson(text) {
         }
     }
     return { reply: t.slice(0, 1200), card_ids: [], handoff: null };
+}
+
+// Budget the buyer stated in chat ("under $12,000", "12000$", "max 8k", "budget is 10k") → number or null
+function statedBudget(messages) {
+    const re = /(?:under|below|max(?:imum)?|budget(?:\s+(?:of|is|around|about))?|less than|up to|around|about|~)\s*\$?\s*(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)\s*(k)?\s*(?:\$|usd|dollars|bucks)?/i;
+    for (let i = messages.length - 1; i >= 0; i--) {
+        if (messages[i].role !== 'user') continue;
+        const m = messages[i].content.match(re);
+        if (!m) continue;
+        let n = parseFloat(m[1].replace(/,/g, ''));
+        if (m[2]) n *= 1000;
+        if (n >= 500 && n <= 200000) return n;
+    }
+    return null;
+}
+
+const priceNum = (car) => {
+    const d = String(car.price || '').replace(/[^0-9]/g, '');
+    return d ? parseInt(d, 10) : null;
+};
+
+// Hard cap: drop cards more than 20% over the stated budget, and keep at most
+// one card above the budget (the "stretch pick").
+function enforceBudget(ids, cars, budget) {
+    if (!budget) return ids;
+    let stretch = 0;
+    return ids.filter((id) => {
+        const car = cars.find((c) => c.id === Number(id));
+        const p = car ? priceNum(car) : null;
+        if (p == null || p <= budget) return true;
+        if (p <= budget * 1.2 && stretch === 0) { stretch += 1; return true; }
+        return false;
+    });
 }
 
 function buildCards(ids, cars) {
@@ -353,6 +386,7 @@ module.exports = async (req, res) => {
                 .slice(0, 4)
                 .map((x) => x.id);
         }
+        cardIds = enforceBudget(cardIds, cars, statedBudget(messages));
         // Conversation record for the admin dashboard (aggregates + rolling log)
         const lastUser = messages[messages.length - 1];
         await redisPipeline([
