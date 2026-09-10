@@ -288,7 +288,7 @@
                 </div>
             </div>
             <div class="border-t border-white/10 mt-6 md:mt-8 pt-6 md:pt-8 text-center">
-                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED. · <a href="/privacy" class="underline hover:text-white transition-colors">Privacy Policy</a></p>
+                <p class="font-mono text-[10px] md:text-xs text-gray-500">© 2026 SAMANTHA USED CAR. ALL RIGHTS RESERVED. · <a href="/privacy" class="underline hover:text-white transition-colors">Privacy Policy</a> · <a href="https://abcars-samantha-website.vercel.app/admin" class="underline hover:text-white transition-colors" rel="nofollow">Admin</a></p>
             </div>
         </div>
     </footer>
@@ -477,7 +477,7 @@
             }
 
             // Aggregate view counts (no personal data) — badges + "most viewed" sort
-            fetch('https://abcars-samantha-website.vercel.app/api/popular')
+            fetch('https://abcars-samantha-website.vercel.app/api/popular?t=' + Math.floor(Date.now() / 30000), { cache: 'no-store' })
                 .then(function(r) { return r.ok ? r.json() : { views: {} }; })
                 .then(function(d) {
                     views = (d && d.views) || {};

@@ -7,11 +7,11 @@ let cache = { at: 0, body: null };
 
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Cache-Control', 's-maxage=120, stale-while-revalidate=600');
+    res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=20, stale-while-revalidate=40');
     if (req.method !== 'GET') return res.status(405).json({ error: 'method' });
     if (!enabled) return res.status(200).json({ views: {} });
     try {
-        if (!cache.body || Date.now() - cache.at > 60 * 1000) {
+        if (!cache.body || Date.now() - cache.at > 15 * 1000) {
             const flat = await redis('ZRANGE', 'car:clicks', 0, 199, 'REV', 'WITHSCORES');
             const views = {};
             if (Array.isArray(flat)) {
