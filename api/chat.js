@@ -12,7 +12,7 @@ const ALLOWED_ORIGINS = [
     'https://kjhk3082.github.io',
     'http://localhost:8123',
 ];
-const MODEL = process.env.MODEL || 'anthropic/claude-haiku-4.5';
+const MODEL = process.env.MODEL || 'deepseek/deepseek-v4.1-flash';
 
 // --- live inventory (10 min module cache) ---
 let invCache = { at: 0, cars: [] };
