@@ -33,7 +33,7 @@ const displayTitle = (t) => String(t || '')
 
 function systemPrompt(cars) {
     const digest = cars.map((c) =>
-        `${c.id}|${displayTitle(c.title)}|${c.price || '$?'}|${c.miles || '?'}mi|${c.category || ''}|${c.transmission || ''}`
+        `${c.id}|${displayTitle(c.title)}|${c.price || '$?'}|${c.miles || '?'}mi|${c.category || ''}|${c.transmission || ''}|${c.engine || ''}|${String(c.options || '').slice(0, 70)}`
     ).join('\n');
     return `You are "Samantha AI", the assistant on samanthausedcar.com — the site of Samantha Kim, a SOFA vehicle specialist selling used cars at Gorilla Motors, minutes from Camp Humphreys, Pyeongtaek, Korea. Buyers are mostly US military / SOFA personnel. Be warm, concise (2-4 sentences), and practical. Reply in English unless the buyer writes Korean.
 
@@ -56,7 +56,7 @@ OUTPUT — strict JSON only, nothing outside the JSON object:
 
 Off-topic (not about buying/selling a car with Samantha): steer back politely in one sentence, card_ids [].
 
-CURRENT INVENTORY (id|title|price|miles|category|transmission):
+CURRENT INVENTORY (id|title|price|miles|category|transmission|engine|options):
 ${digest}`;
 }
 
