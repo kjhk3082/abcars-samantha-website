@@ -183,7 +183,8 @@
             const displayTitle = function(car) {
                 return (car.title || '')
                     .replace(/^[\s*!]*US[\s.-]?SPEC[\s*!]*/i, '')
-                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]\s*$/, '')
+                    .replace(/[(（][^()（）]*[가-힣][^()（）]*[)）]/g, '')
+                    .replace(/\s{2,}/g, ' ')
                     .trim();
             };
             const carBlurb = function(car) {
