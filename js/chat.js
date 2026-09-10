@@ -25,13 +25,22 @@
     // ---------- styles ----------
     const style = document.createElement('style');
     style.textContent = `
-#sc-fab{position:fixed;right:20px;bottom:${IN_CARS ? '86px' : '20px'};z-index:90;display:flex;align-items:center;gap:10px;
-  background:#111;color:#fff;border:none;cursor:pointer;border-radius:999px;padding:15px 22px;
-  font-family:'Space Grotesk',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;
-  box-shadow:0 10px 30px rgba(0,0,0,.22);transition:background .18s ease,transform .18s ease}
+#sc-fab{position:fixed;right:20px;bottom:${IN_CARS ? '86px' : '20px'};z-index:90;display:flex;align-items:center;gap:11px;
+  background:#111;color:#fff;border:none;cursor:pointer;border-radius:999px;padding:18px 26px;
+  font-family:'Space Grotesk',monospace;font-size:12.5px;font-weight:700;letter-spacing:.14em;
+  box-shadow:0 12px 34px rgba(0,0,0,.26);transition:background .18s ease,transform .18s ease}
 #sc-fab:hover{background:#0047FF;transform:translateY(-2px)}
-#sc-fab .sc-dot{width:7px;height:7px;border-radius:50%;background:#0047FF;transition:background .18s ease}
+#sc-fab .sc-dot{width:8px;height:8px;border-radius:50%;background:#0047FF;transition:background .18s ease}
 #sc-fab:hover .sc-dot{background:#fff}
+#sc-teaser{position:fixed;right:20px;bottom:${IN_CARS ? '158px' : '92px'};z-index:89;max-width:250px;background:#fff;
+  border:1px solid rgba(0,0,0,.15);border-radius:14px 14px 4px 14px;padding:13px 15px;cursor:pointer;
+  box-shadow:0 14px 36px rgba(0,0,0,.18);animation:sc-teaser-in .4s cubic-bezier(.22,1,.36,1)}
+#sc-teaser p{font-family:'Space Grotesk',monospace;font-size:10.5px;line-height:1.65;color:#111;margin:0}
+#sc-teaser b{color:#0047FF}
+#sc-teaser .sc-t-x{position:absolute;top:-9px;left:-9px;width:21px;height:21px;background:#111;color:#fff;
+  border-radius:50%;border:none;font-size:9px;font-weight:700;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+#sc-teaser .sc-t-x:hover{background:#0047FF}
+@keyframes sc-teaser-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
 #sc-panel{position:fixed;right:20px;bottom:20px;z-index:95;width:396px;max-width:calc(100vw - 24px);height:632px;max-height:calc(100vh - 40px);
   display:none;flex-direction:column;overflow:hidden;background:#F2F2F2;border:1px solid rgba(0,0,0,.15);border-radius:20px;
@@ -354,8 +363,34 @@
         }
     }
 
+    // ---------- teaser bubble (once per session) ----------
+    let teaser = null;
+    function hideTeaser(remember) {
+        if (teaser) { teaser.remove(); teaser = null; }
+        if (remember) {
+            try { sessionStorage.setItem('samantha_chat_teaser', '1'); } catch (e) {}
+        }
+    }
+    function showTeaser() {
+        let seen = null;
+        try { seen = sessionStorage.getItem('samantha_chat_teaser'); } catch (e) {}
+        if (seen || msgs.length || panel.classList.contains('sc-on')) return;
+        teaser = document.createElement('div');
+        teaser.id = 'sc-teaser';
+        teaser.innerHTML = '<button type="button" class="sc-t-x" aria-label="Dismiss">✕</button>'
+            + '<p><b>Not sure which car?</b><br>Tell me your budget — I match you from the cars on the lot in seconds.</p>';
+        document.body.appendChild(teaser);
+        teaser.addEventListener('click', function (e) {
+            if (e.target.closest('.sc-t-x')) { hideTeaser(true); return; }
+            hideTeaser(true);
+            fab.click();
+        });
+    }
+    setTimeout(showTeaser, 1200);
+
     // ---------- events ----------
     fab.addEventListener('click', function () {
+        hideTeaser(true);
         panel.classList.add('sc-on');
         fab.style.display = 'none';
         track(null, 'chat_open');

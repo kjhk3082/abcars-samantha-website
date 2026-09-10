@@ -12,7 +12,7 @@ const ALLOWED_ORIGINS = [
     'https://kjhk3082.github.io',
     'http://localhost:8123',
 ];
-const MODEL = process.env.MODEL || 'deepseek/deepseek-v4.1-flash';
+const MODEL = process.env.MODEL || 'zai/glm-5.3-flash';
 
 // LLM gateway: Requesty preferred when its key exists (any spelling), else OpenRouter.
 const REQUESTY_KEY = process.env.REQUESTY_API_KEY || process.env.requesty_api_key
@@ -21,6 +21,45 @@ const LLM_KEY = REQUESTY_KEY || process.env.OPENROUTER_API_KEY || null;
 const LLM_URL = REQUESTY_KEY
     ? 'https://router.requesty.ai/v1/chat/completions'
     : 'https://openrouter.ai/api/v1/chat/completions';
+
+// Model id spelling differs between gateways — walk candidates once, then stick
+// with whichever the gateway accepts.
+const MODEL_CANDIDATES = [MODEL, 'zai/glm-5.3-flash', 'glm-5.3-flash',
+    'deepseek/deepseek-v4.1-flash'].filter((v, i, a) => a.indexOf(v) === i);
+let workingModel = null;
+
+async function callLLM(chatMessages) {
+    const tries = workingModel ? [workingModel] : MODEL_CANDIDATES;
+    let lastStatus = 0;
+    for (const model of tries) {
+        const r = await fetch(LLM_URL, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${LLM_KEY}`,
+                'Content-Type': 'application/json',
+                'HTTP-Referer': SITE,
+                'X-Title': 'Samantha Used Car AI',
+            },
+            body: JSON.stringify({
+                model: model,
+                messages: chatMessages,
+                max_tokens: 1100,
+                temperature: 0.6,
+            }),
+        });
+        if (r.ok) {
+            if (workingModel !== model) console.log('llm model in use:', model);
+            workingModel = model;
+            return r.json();
+        }
+        const detail = await r.text();
+        console.error('llm', model, r.status, detail.slice(0, 200));
+        lastStatus = r.status;
+        // Only walk the chain on "bad model id"-type errors
+        if (r.status !== 400 && r.status !== 404 && r.status !== 422) break;
+    }
+    throw new Error('llm_failed_' + lastStatus);
+}
 
 // --- live inventory (10 min module cache) ---
 let invCache = { at: 0, cars: [] };
@@ -70,10 +109,22 @@ ${digest}`;
 
 // --- helpers ---
 function parseModelJson(text) {
-    try { return JSON.parse(text); } catch (e) { /* fall through */ }
-    const m = String(text || '').match(/\{[\s\S]*\}/);
+    let t = String(text || '').trim();
+    const fence = t.match(/```(?:json)?\s*([\s\S]*?)```/i);
+    if (fence) t = fence[1].trim();
+    try { return JSON.parse(t); } catch (e) { /* fall through */ }
+    const m = t.match(/\{[\s\S]*\}/);
     if (m) { try { return JSON.parse(m[0]); } catch (e) { /* fall through */ } }
-    return { reply: String(text || '').slice(0, 1200), card_ids: [], handoff: null };
+    // Truncated/malformed JSON: salvage the reply text so the buyer never sees raw JSON
+    const rm = t.match(/"reply"\s*:\s*"((?:[^"\\]|\\.)*)/);
+    if (rm) {
+        try {
+            return { reply: JSON.parse('"' + rm[1] + '"'), card_ids: [], handoff: null };
+        } catch (e) {
+            return { reply: rm[1].replace(/\\n/g, '\n').slice(0, 1200), card_ids: [], handoff: null };
+        }
+    }
+    return { reply: t.slice(0, 1200), card_ids: [], handoff: null };
 }
 
 function buildCards(ids, cars) {
@@ -207,27 +258,13 @@ module.exports = async (req, res) => {
 
     try {
         const cars = await loadCars();
-        const r = await fetch(LLM_URL, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${LLM_KEY}`,
-                'Content-Type': 'application/json',
-                'HTTP-Referer': SITE,
-                'X-Title': 'Samantha Used Car AI',
-            },
-            body: JSON.stringify({
-                model: MODEL,
-                messages: [{ role: 'system', content: systemPrompt(cars) }, ...messages],
-                max_tokens: 700,
-                temperature: 0.6,
-            }),
-        });
-        if (!r.ok) {
-            const detail = await r.text();
-            console.error('llm', LLM_URL, r.status, detail.slice(0, 300));
+        let data;
+        try {
+            data = await callLLM([{ role: 'system', content: systemPrompt(cars) }, ...messages]);
+        } catch (err) {
+            console.error('llm chain failed:', err && err.message);
             return res.status(502).json({ error: 'llm_error' });
         }
-        const data = await r.json();
         const raw = data.choices && data.choices[0] && data.choices[0].message
             ? data.choices[0].message.content : '';
         const parsed = parseModelJson(raw);
