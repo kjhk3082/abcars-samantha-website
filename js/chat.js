@@ -86,7 +86,8 @@
 .sc-x{font-size:12px;width:28px;height:28px;padding:0;line-height:1}
 .sc-rule{border-bottom:2px solid #111;margin-top:14px}
 
-#sc-msgs{flex:1;overflow-y:auto;padding:16px 14px 8px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+#sc-msgs{flex:1;min-height:0;overflow-y:auto;padding:16px 14px 8px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+#sc-msgs>*{flex:none}
 #sc-msgs::-webkit-scrollbar{width:4px}
 #sc-msgs::-webkit-scrollbar-thumb{background:rgba(0,0,0,.2);border-radius:2px}
 
