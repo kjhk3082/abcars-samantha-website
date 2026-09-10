@@ -126,6 +126,24 @@
   background:#fff;border:1px solid rgba(0,0,0,.2);border-radius:999px;padding:8px 13px;transition:all .15s ease}
 #sc-chips button:hover{background:#111;color:#fff;border-color:#111}
 
+.sc-form{background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:4px 14px 14px;animation:sc-rise .25s ease-out}
+.sc-fl{font-family:'Space Grotesk',monospace;font-size:8px;font-weight:700;letter-spacing:.18em;color:#8b8b85;margin:12px 2px 6px;display:flex;align-items:center;gap:7px;text-transform:uppercase}
+.sc-fl b{color:#0047FF}
+.sc-fl i{color:#e03131;font-style:normal}
+.sc-fi{width:100%;box-sizing:border-box;background:#F2F2F2;border:1px solid rgba(0,0,0,.12);border-radius:10px;padding:11px 13px;outline:none;
+  font-family:'Space Grotesk',monospace;font-size:11.5px;color:#111;transition:border-color .15s ease,background .15s ease}
+.sc-fi::placeholder{color:#a3a39d}
+.sc-fi:focus{border-color:#111;background:#fff}
+.sc-fi.sc-err{border-color:#e03131}
+.sc-ftimes{display:flex;flex-wrap:wrap;gap:6px}
+.sc-ft{font-family:'Space Grotesk',monospace;font-size:9px;font-weight:700;letter-spacing:.08em;background:#fff;color:#111;
+  border:1px solid rgba(0,0,0,.2);border-radius:999px;padding:7px 12px;cursor:pointer;transition:all .15s ease}
+.sc-ft:hover{border-color:#111}
+.sc-ft.sc-onft{background:#111;color:#fff;border-color:#111}
+.sc-fsub{width:100%;margin-top:14px;background:#111;color:#fff;border:none;border-radius:999px;padding:13px 0;
+  font-family:'Space Grotesk',monospace;font-size:10px;font-weight:700;letter-spacing:.16em;cursor:pointer;transition:background .15s ease}
+.sc-fsub:hover{background:#0047FF}
+.sc-fnote{font-family:'Space Grotesk',monospace;font-size:7.5px;letter-spacing:.14em;color:#a3a39d;text-align:center;margin-top:9px;text-transform:uppercase}
 .sc-dock{flex:none;background:#fff;border-top:1px solid rgba(0,0,0,.1);padding:12px 14px;display:flex;align-items:center;gap:9px}
 #sc-input{flex:1;background:#F2F2F2;border:1px solid rgba(0,0,0,.12);border-radius:999px;padding:13px 18px;outline:none;
   font-family:'Space Grotesk',monospace;font-size:11.5px;color:#111;transition:border-color .15s ease,background .15s ease}
@@ -235,6 +253,37 @@
             + '</div>';
     }
 
+    function formHtml() {
+        return '<div class="sc-form">'
+            + '<div class="sc-fl"><b>01</b> NAME <i>*</i></div>'
+            + '<input class="sc-fi" id="sc-f-name" type="text" maxlength="40" placeholder="Your first name" autocomplete="name">'
+            + '<div class="sc-fl"><b>02</b> PHONE — OPTIONAL, FOR A DIRECT CALL / TEXT</div>'
+            + '<input class="sc-fi" id="sc-f-phone" type="tel" maxlength="20" placeholder="010-1234-5678" autocomplete="tel">'
+            + '<div class="sc-fl"><b>03</b> WHEN WORKS FOR YOU?</div>'
+            + '<div class="sc-ftimes">' + TIME_CHIPS.map(function (t) {
+                return '<button type="button" class="sc-ft" data-sc-time="' + esc(t) + '">' + esc(t) + '</button>';
+            }).join('') + '</div>'
+            + '<button type="button" class="sc-fsub" id="sc-f-sub">SEND MY INFO TO SAMANTHA →</button>'
+            + '<div class="sc-fnote">Goes only to Samantha — via your own WhatsApp message</div>'
+            + '</div>';
+    }
+
+    function submitForm() {
+        const nameEl = document.getElementById('sc-f-name');
+        if (!nameEl) return;
+        const name = nameEl.value.trim();
+        if (!name) {
+            nameEl.classList.add('sc-err');
+            nameEl.focus();
+            return;
+        }
+        const phone = (document.getElementById('sc-f-phone').value || '').replace(/[^0-9+\-() ]/g, '').trim();
+        const timeEl = document.querySelector('.sc-ft.sc-onft');
+        const time = timeEl ? timeEl.getAttribute('data-sc-time') : 'Flexible';
+        track(null, 'lead_form_submit');
+        send('CONTACT FORM → Name: ' + name + ' · Phone: ' + (phone || '—') + ' · Time: ' + time);
+    }
+
     function render(extraChips) {
         let html = '';
         if (!msgs.length && !busy) {
@@ -245,6 +294,7 @@
                 if (m.cards && m.cards.length) html += cardsHtml(m.cards);
                 if (m.handoff) html += handoffHtml(m.handoff);
                 if (m.fallback) html += fallbackHtml();
+                if (m.ask === 'contact' && i === arr.length - 1 && !busy) html += formHtml();
             });
             if (busy) html += '<div class="sc-row"><div class="sc-bub sc-bot sc-typing"><i></i><i></i><i></i></div></div>';
         }
@@ -288,10 +338,15 @@
             const m = { role: 'assistant', content: data.reply || '…' };
             if (data.cards && data.cards.length) m.cards = data.cards;
             if (data.handoff && data.handoff.ready) m.handoff = data.handoff;
+            if (data.ask === 'contact' && !m.handoff) m.ask = 'contact';
             msgs.push(m);
             save();
-            const askTime = !m.handoff && /\b(time|when|schedule|available)\b/i.test(m.content);
+            const askTime = !m.handoff && !m.ask && /\b(time|when|schedule|available)\b/i.test(m.content);
             render(askTime ? TIME_CHIPS : null);
+            if (m.ask) {
+                const nameEl = document.getElementById('sc-f-name');
+                if (nameEl && window.matchMedia('(min-width: 640px)').matches) nameEl.focus();
+            }
         } catch (e) {
             busy = false;
             msgs.push({ role: 'assistant', content: 'Connection hiccup — reach Samantha directly, or try again:', fallback: true });
@@ -322,5 +377,15 @@
         const chip = e.target.closest('[data-sc-chip]');
         if (chip) send(chip.getAttribute('data-sc-chip'));
         if (e.target.closest('[data-sc-lead]')) track('Lead', 'chat_lead');
+        const ft = e.target.closest('.sc-ft');
+        if (ft) {
+            document.querySelectorAll('.sc-ft').forEach(function (b) { b.classList.remove('sc-onft'); });
+            ft.classList.add('sc-onft');
+        }
+        if (e.target.closest('#sc-f-sub')) submitForm();
+        if (e.target.id === 'sc-f-name') e.target.classList.remove('sc-err');
+    });
+    panel.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('sc-fi')) submitForm();
     });
 })();

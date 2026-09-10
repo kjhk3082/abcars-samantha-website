@@ -58,7 +58,14 @@
   (키 등록/변경 후에는 Deployments에서 Redeploy 한 번, 또는 다음 git push 때 자동 반영)
 - 비용 확인: openrouter.ai/activity — 대화 1턴 ≈ $0.005. 이상 급증 시 키에 한도 설정
 - 리드는 구매자 본인의 왓츠앱으로 이모님(010-7170-4513)에게 도착 — 이름·관심차량 링크·예산·희망시간 포함
-- 이벤트: 챗봇 열기 `chat_open`(GA4), 왓츠앱 전송 `Lead`(Pixel) + `chat_lead`(GA4)
+- 이벤트: 챗봇 열기 `chat_open`, 폼 제출 `lead_form_submit`(GA4), 왓츠앱 전송 `Lead`(Pixel) + `chat_lead`(GA4)
+- **구매의향 리드 데이터 보는 법**: 관심 고객이 폼(이름 필수·번호 옵션·희망시간)을 제출하면
+  서버가 `LEAD {json}` 로그를 남김 — [Vercel → abcars-samantha-website → Logs](https://vercel.com/kjhk3082s-projects/abcars-samantha-website/logs)에서
+  `LEAD` 검색 (이름·번호·희망시간·예산·관심차량·대화 전문 포함). 개인정보라 공개 레포에는 절대 저장 안 함.
+- **영구 저장 원하면**: 구글 시트 Apps Script 웹앱(doPost로 시트에 append) 만들어 URL을
+  Vercel 환경변수 `LEADS_WEBHOOK_URL`로 등록 → 리드가 시트에 자동 누적. (원하면 스크립트 코드 제공)
+- 프롬프트 인젝션 방어: 역할·규칙 변경/프롬프트 유출 요구 거절, 재고 텍스트도 데이터로 취급,
+  링크·전화번호·카드 전부 서버가 실데이터로만 생성(모델이 URL 출력 불가), 이름/번호 필드 새니타이즈
 
 ## 7. 네이버 (선택 — 고객이 미군이라 후순위)
 
