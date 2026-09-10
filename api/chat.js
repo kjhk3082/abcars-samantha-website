@@ -270,10 +270,18 @@ module.exports = async (req, res) => {
         const parsed = parseModelJson(raw);
         const handoff = buildHandoff(parsed.handoff, cars);
         if (handoff) logLead(handoff, messages);
+        const replyText = String(parsed.reply || "Sorry — could you say that again?").slice(0, 2000);
+        let ask = parsed.ask === 'contact' ? 'contact' : null;
+        // Guardrail: models sometimes announce collecting details but forget the
+        // ask field — surface the form whenever the reply clearly moves to collect.
+        if (!ask && !handoff
+            && /grab your details|your details|contact (info|details)|name and (a )?(phone|number)|your (name|info) (and|so)/i.test(replyText)) {
+            ask = 'contact';
+        }
         return res.status(200).json({
-            reply: String(parsed.reply || "Sorry — could you say that again?").slice(0, 2000),
+            reply: replyText,
             cards: buildCards(parsed.card_ids, cars),
-            ask: parsed.ask === 'contact' ? 'contact' : null,
+            ask: ask,
             handoff: handoff,
         });
     } catch (err) {
