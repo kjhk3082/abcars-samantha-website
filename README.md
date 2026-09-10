@@ -17,7 +17,8 @@ Samantha Used Car is a professional car dealership website targeting US Military
 |------|------|-------------|
 | **Home** | `index.html` | Hero section with animated car illustration, services overview, footer |
 | **Inventory** | `vehicles.html` | Live inventory synced from Gorilla Motors (filter chips, search, sort) |
-| **Vehicle Detail** | `car.html?id=<productId>` | Per-car page: photo gallery, specs, blurb, sticky CALL/WhatsApp — shareable link |
+| **Vehicle Detail** | `cars/<productId>.html` | Static per-car page (auto-generated): gallery, specs, Vehicle schema, OG preview — shareable link (`car.html?id=` redirects here) |
+| **FAQ** | `faq.html` | SOFA buyer questions, answer-first + FAQPage schema (GEO content) |
 | **Digital Card** | `business-card.html` | Interactive 3D business card with Three.js |
 | **Contact** | `contact.html` | Contact info, business hours, Google Maps, services list |
 
@@ -134,6 +135,20 @@ disappear from this site on the next run; new listings appear with their full ph
 - **Refresh immediately**: GitHub → Actions → "Sync vehicles from Gorilla Motors" → Run workflow
 - The scraper never overwrites the inventory with an empty list, so a Gorilla Motors outage
   or redesign leaves the last good data in place.
+
+## 🤖 SEO / GEO (AI search visibility)
+
+Every sync also regenerates the crawlable layer, so AI answer engines (ChatGPT, Perplexity,
+Claude, Google AI Overviews) can read the inventory without executing JavaScript:
+
+- `cars/<id>.html` — static page per vehicle (from `scripts/car_template.html`) with
+  per-car Open Graph tags (link previews on WhatsApp/Facebook) and `Vehicle` JSON-LD
+- `sitemap.xml` + `llms.txt` — regenerated every run; `robots.txt` explicitly welcomes
+  GPTBot / ClaudeBot / PerplexityBot / Bingbot
+- Static pages carry `AutoDealer` JSON-LD; `faq.html` carries `FAQPage` JSON-LD
+- GA4 fires `call_click` / `whatsapp_click` conversion events on every page
+- Human-side growth tasks (Google Business Profile, Search Console/Bing, Facebook playbook,
+  paid ads criteria) live in `MARKETING.md`
 
 ### Fully-automatic Facebook mode (optional)
 

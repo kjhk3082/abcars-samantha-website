@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle - Samantha Used Car</title>
+    <meta name="robots" content="noindex">
+    <script>
+        // Old shared links: redirect to the static per-car page (crawlable, with previews)
+        (function() {
+            const id = parseInt(new URLSearchParams(location.search).get('id'), 10);
+            if (id) location.replace('cars/' + id + '.html');
+        })();
+    </script>
 
     <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <link rel="stylesheet" href="css/tailwind.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/tailwind.css?v=3">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -22,6 +30,12 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-VF1YRTLKDW');
+      document.addEventListener('click', function(e) {
+          const a = e.target.closest('a[href^="tel:"], a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+          if (!a || typeof gtag !== 'function') return;
+          gtag('event', a.href.indexOf('tel:') === 0 ? 'call_click' : 'whatsapp_click',
+              { transport_type: 'beacon', link_url: a.href, page: location.pathname });
+      });
     </script>
 
     <style>
@@ -62,6 +76,7 @@
         <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
             <a href="vehicles.html" class="text-[#0047FF]">Inventory</a>
             <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="faq.html" class="hover:text-[#0047FF] transition-colors">FAQ</a>
             <a href="contact.html" class="hover:text-[#0047FF] transition-colors">Contact</a>
         </div>
 
@@ -78,6 +93,7 @@
         <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
         <a href="vehicles.html" class="text-[#0047FF] text-2xl font-display">INVENTORY</a>
         <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="faq.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
         <a href="contact.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">CONTACT</a>
         <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
     </div>

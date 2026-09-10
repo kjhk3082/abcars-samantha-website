@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Samantha Used Car</title>
+    <meta name="description" content="Contact Samantha Kim, SOFA vehicle specialist near Camp Humphreys: call or WhatsApp +82-10-7170-4513. Gorilla Motors, 186-3 Songhwa 2-gil, Paengseong-eup, Pyeongtaek. Open 7 days.">
+    <link rel="canonical" href="https://samanthausedcar.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Samantha Used Car">
+    <meta property="og:title" content="Contact Samantha — Used Cars near Camp Humphreys">
+    <meta property="og:description" content="Call or WhatsApp +82-10-7170-4513 · Open 7 days · Gorilla Motors, Songhwa 2-gil, Pyeongtaek.">
+    <meta property="og:url" content="https://samanthausedcar.com/contact.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "Samantha Used Car",
+      "url": "https://samanthausedcar.com/",
+      "telephone": "+82-10-7170-4513",
+      "email": "flowerdudtlr@gmail.com",
+      "priceRange": "$2,000 - $20,000",
+      "address": {"@type": "PostalAddress", "streetAddress": "186-3, Songhwa 2-gil, Paengseong-eup", "addressLocality": "Pyeongtaek-si", "addressRegion": "Gyeonggi-do", "addressCountry": "KR"},
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "16:00"}
+      ],
+      "areaServed": "Camp Humphreys, Pyeongtaek, South Korea",
+      "sameAs": ["https://www.facebook.com/Samanthacars/", "https://share.google/ijwjuQSWa4WooSU4q"]
+    }
+    </script>
     
     <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +38,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <link rel="stylesheet" href="css/tailwind.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/tailwind.css?v=3">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF1YRTLKDW"></script>
@@ -22,6 +48,12 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-VF1YRTLKDW');
+      document.addEventListener('click', function(e) {
+          const a = e.target.closest('a[href^="tel:"], a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+          if (!a || typeof gtag !== 'function') return;
+          gtag('event', a.href.indexOf('tel:') === 0 ? 'call_click' : 'whatsapp_click',
+              { transport_type: 'beacon', link_url: a.href, page: location.pathname });
+      });
     </script>
 
     <style>
@@ -78,6 +110,7 @@
         <div class="hidden lg:flex gap-10 text-xs font-mono tracking-widest uppercase font-bold">
             <a href="vehicles.html" class="hover:text-[#0047FF] transition-colors">Inventory</a>
             <a href="business-card.html" class="hover:text-[#0047FF] transition-colors">Digital Card</a>
+            <a href="faq.html" class="hover:text-[#0047FF] transition-colors">FAQ</a>
             <a href="contact.html" class="text-[#0047FF]">Contact</a>
         </div>
         
@@ -94,6 +127,7 @@
         <a href="index.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">HOME</a>
         <a href="vehicles.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">INVENTORY</a>
         <a href="business-card.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">DIGITAL CARD</a>
+        <a href="faq.html" class="text-white text-2xl font-display hover:text-[#0047FF] transition-colors">FAQ</a>
         <a href="contact.html" class="text-[#0047FF] text-2xl font-display">CONTACT</a>
         <a href="tel:01071704513" class="mt-8 text-[#0047FF] text-xl font-mono">010-7170-4513</a>
     </div>
