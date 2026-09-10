@@ -14,6 +14,14 @@ const ALLOWED_ORIGINS = [
 ];
 const MODEL = process.env.MODEL || 'deepseek/deepseek-v4.1-flash';
 
+// LLM gateway: Requesty preferred when its key exists (any spelling), else OpenRouter.
+const REQUESTY_KEY = process.env.REQUESTY_API_KEY || process.env.requesty_api_key
+    || process.env.requestry_api_key || null;
+const LLM_KEY = REQUESTY_KEY || process.env.OPENROUTER_API_KEY || null;
+const LLM_URL = REQUESTY_KEY
+    ? 'https://router.requesty.ai/v1/chat/completions'
+    : 'https://openrouter.ai/api/v1/chat/completions';
+
 // --- live inventory (10 min module cache) ---
 let invCache = { at: 0, cars: [] };
 
@@ -181,7 +189,7 @@ module.exports = async (req, res) => {
     if (req.method !== 'POST') return res.status(405).json({ error: 'method' });
     if (!originOk) return res.status(403).json({ error: 'origin' });
 
-    if (!process.env.OPENROUTER_API_KEY) {
+    if (!LLM_KEY) {
         return res.status(503).json({ error: 'not_configured' });
     }
 
@@ -199,10 +207,10 @@ module.exports = async (req, res) => {
 
     try {
         const cars = await loadCars();
-        const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        const r = await fetch(LLM_URL, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+                'Authorization': `Bearer ${LLM_KEY}`,
                 'Content-Type': 'application/json',
                 'HTTP-Referer': SITE,
                 'X-Title': 'Samantha Used Car AI',
@@ -216,7 +224,7 @@ module.exports = async (req, res) => {
         });
         if (!r.ok) {
             const detail = await r.text();
-            console.error('openrouter', r.status, detail.slice(0, 300));
+            console.error('llm', LLM_URL, r.status, detail.slice(0, 300));
             return res.status(502).json({ error: 'llm_error' });
         }
         const data = await r.json();
