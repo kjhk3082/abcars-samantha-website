@@ -1,7 +1,32 @@
 {
-  "updated": "2026-09-11T03:02:53+00:00",
+  "updated": "2026-09-11T08:01:15+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5157,
+      "title": "2012 KIA SORENTO TLX / 7 SEATER (30서8523)",
+      "url": "https://www.gorillamotors.co.kr/product/2012-kia-sorento-tlx-7-seater-30서8523/5157/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/80d4706cbb1b5aaa887351101a6ea02c.jpg",
+      "price": "$4,900",
+      "engine": "V4",
+      "miles": "72000",
+      "transmission": "AUTO",
+      "options": "ANDROID & APPLE CARPLAY  , HI PASS",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/d91a81f1d9bdc7741bd8b3fe3d7a10d7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f69384143c15181550fc9b59541b210f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/265a11551d6c7db810453fc468fe8435.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b659e01ad407cb97079759cd222dc446.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/91e7f7080f487ec514914cdd137b5315.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/329dff93153010292bd935d10c7ea326.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/13e603d5d51366273bd6e7f9a26ac83b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7a0a6a39557c769d3b4efdf1ee3ef77b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a734eaf789c1dbf4eca540930edb8c6f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f37a1d4965a9557c26e341f8b9f340ce.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/41e18e30bd17f9ab9aa1eed17acd8770.jpg"
+      ]
+    },
     {
       "id": 5156,
       "title": "2022 PEUGEOT 308 GT 1.5  (247도8906)",
@@ -2750,8 +2775,8 @@
     },
     {
       "id": 4875,
-      "title": "2006 MERCEDES E350(23너6093)",
-      "url": "https://www.gorillamotors.co.kr/product/2006-mercedes-e35023너6093/4875/category/62/display/1/",
+      "title": "2006 BENZ E350(23너6093)",
+      "url": "https://www.gorillamotors.co.kr/product/2006-benz-e35023너6093/4875/category/62/display/1/",
       "image": "https://www.gorillamotors.co.kr/web/product/medium/202605/28a747d17ddf3ae0ebaaa5cab8f58a68.jpg",
       "price": "$3,900",
       "engine": "V6",
