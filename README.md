@@ -4,7 +4,7 @@
 
 ## 🚗 Project Overview
 
-Samantha Used Car is a professional car dealership website targeting US Military personnel stationed in Korea. Samantha works at Gorilla Motors Main Office (Anjeong-ro, Paengseong-eup, Pyeongtaek — near Camp Humphreys). The site features a modern, responsive design with smooth animations and intuitive navigation.
+Samantha Used Car is a professional car dealership website targeting US Military personnel stationed in Korea. Samantha works at Gorilla Motors (186-3 Songhwa 2-gil, Paengseong-eup, Pyeongtaek — minutes from Camp Humphreys). The site features a modern, responsive design with smooth animations and intuitive navigation.
 
 **Slogan:** *"Our vehicles and services are second to none!"*
 
@@ -19,6 +19,9 @@ Samantha Used Car is a professional car dealership website targeting US Military
 | **Inventory** | `vehicles.html` | Live inventory synced from Gorilla Motors (filter chips, search, sort) |
 | **Vehicle Detail** | `cars/<productId>.html` | Static per-car page (auto-generated): gallery, specs, Vehicle schema, OG preview — shareable link (`car.html?id=` redirects here) |
 | **FAQ** | `faq.html` | SOFA buyer questions, answer-first + FAQPage schema (GEO content) |
+| **Guide: Buying** | `buy-used-car-camp-humphreys.html` | Intent landing: prices, steps, warranty — answer-first + FAQPage/Breadcrumb schema |
+| **Guide: SOFA registration** | `sofa-car-registration.html` | Intent landing: what SOFA registration is, who handles it |
+| **Guide: Sell before PCS** | `sell-car-pcs.html` | Intent landing: sell / resale / junk options with paperwork handled |
 | **Digital Card** | `business-card.html` | Interactive 3D business card with Three.js |
 | **Contact** | `contact.html` | Contact info, business hours, Google Maps, services list |
 

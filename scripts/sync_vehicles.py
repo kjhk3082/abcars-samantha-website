@@ -25,7 +25,8 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 BASE_URL = "https://samanthausedcar.com"
 # Clean URLs: GitHub Pages serves /vehicles from vehicles.html, /cars/123 from
 # cars/123.html (Vercel mirror does the same via "cleanUrls" in vercel.json).
-STATIC_PAGES = ["", "vehicles", "faq", "contact", "business-card", "privacy"]
+STATIC_PAGES = ["", "vehicles", "faq", "contact", "business-card", "privacy",
+                "buy-used-car-camp-humphreys", "sofa-car-registration", "sell-car-pcs"]
 INDEXNOW_KEY = "c5a92d7e41f8460b8f3ad2c96b17e0d4"
 
 
@@ -154,6 +155,19 @@ def car_jsonld(car, title, canonical):
     return json.dumps(data, ensure_ascii=False)
 
 
+def breadcrumb_jsonld(title, canonical):
+    """BreadcrumbList matching the visible Home / Inventory / <car> breadcrumb."""
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Inventory", "item": BASE_URL + "/vehicles"},
+            {"@type": "ListItem", "position": 3, "name": title, "item": canonical},
+        ],
+    }, ensure_ascii=False)
+
+
 def render_car_page(template, car):
     title = display_title(car["title"])
     canonical = f"{BASE_URL}/cars/{car['id']}"
@@ -194,6 +208,7 @@ def render_car_page(template, car):
         "%%OG_TITLE%%": html.escape(title + (f" — {car['price']}" if car.get("price") else "")),
         "%%OG_IMAGE%%": html.escape(car["image"]),
         "%%JSONLD%%": car_jsonld(car, title, canonical),
+        "%%BREADCRUMB_LD%%": breadcrumb_jsonld(title, canonical),
         "%%TITLE%%": html.escape(title),
         "%%PRICE%%": html.escape(car.get("price", "")),
         "%%META_LINE%%": html.escape(meta_line),
@@ -244,6 +259,9 @@ def generate_static(cars, updated_iso):
         "- Hours: Mon-Fri 9:00-18:00, Sat 9:00-17:00, Sun 9:00-16:00 (open 7 days)",
         f"- Inventory: {BASE_URL}/vehicles",
         f"- FAQ for SOFA buyers: {BASE_URL}/faq",
+        f"- Guide — buying a used car near Camp Humphreys: {BASE_URL}/buy-used-car-camp-humphreys",
+        f"- Guide — SOFA vehicle registration in Korea: {BASE_URL}/sofa-car-registration",
+        f"- Guide — selling or junking your car before PCS: {BASE_URL}/sell-car-pcs",
         f"- Contact: {BASE_URL}/contact",
         "- Facebook: https://www.facebook.com/Samanthacars/",
         "",

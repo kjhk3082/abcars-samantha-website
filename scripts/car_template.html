@@ -17,6 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <script type="application/ld+json">%%JSONLD%%</script>
+    <script type="application/ld+json">%%BREADCRUMB_LD%%</script>
 
     <!-- Preconnect for faster font loading -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -129,6 +130,9 @@
 
     <main class="pt-24 md:pt-32 pb-28 md:pb-32 px-4 md:px-6">
         <div class="container mx-auto max-w-3xl">
+            <nav aria-label="Breadcrumb" class="font-mono text-[10px] md:text-xs text-gray-400 mb-4 md:mb-6">
+                <a href="/" class="underline hover:text-[#0047FF]">Home</a> <span aria-hidden="true">/</span> <a href="/vehicles" class="underline hover:text-[#0047FF]">Inventory</a> <span aria-hidden="true">/</span> <span>%%TITLE%%</span>
+            </nav>
             <a href="/vehicles" class="inline-flex items-center gap-2 font-mono text-xs md:text-sm font-bold border-b border-black hover:text-[#0047FF] hover:border-[#0047FF] transition-colors pb-1 mb-6 md:mb-8">← ALL INVENTORY</a>
 
             <div class="border-b-2 border-black pb-4 md:pb-6 mb-4 md:mb-6">
