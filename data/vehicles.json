@@ -1,7 +1,86 @@
 {
-  "updated": "2026-09-14T03:26:15+00:00",
+  "updated": "2026-09-14T11:50:53+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5164,
+      "title": "2010 KIA SORENTO TLX / 7 SEATER (23두7842)",
+      "url": "https://www.gorillamotors.co.kr/product/2010-kia-sorento-tlx-7-seater-23두7842/5164/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/da89d4f2955f08bdfebb7a76ac5f7a76.jpg",
+      "price": "$5,500",
+      "engine": "V4",
+      "miles": "53000",
+      "transmission": "AUTO",
+      "options": "ANDROID & APPLE CARPLAY, SUNROOF, HI PASS, 7 SEATER",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/a027aea21c7d6219e5a4b43a833f1354.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2b42b0491cd6723a1a48a57b6abba869.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/69696d4f459c1887df0e58cf06ffcb3e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/082413e548df3f3fe781be5da75f3d62.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d53fcf44da0c1ca3770400a609ac707a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/594796e9c1d11b51423a11a2ef1b43a6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ac42fdf622d8cf34f986af5876c54d0b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/efdc6f8d86f9f0ce526a8a3a818820bc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2b4aaf282ea2daf2c289c2db1e668355.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4ab16d17e9264dd5b2b5c2caf030f9cf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/628ee09fd44c42212e97d65953fe65ef.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cd4541183eae54e145c295e8e712b207.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fa14013acc25bb9ba090eca69a472c6a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f9f2f70d1ffd379b584572dd8d6f39db.jpg"
+      ]
+    },
+    {
+      "id": 5163,
+      "title": "LOW MILES! 2011 CHEVY CRUZE(280누5540)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2011-chevy-cruze280누5540/5163/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/9cf06eb259170c1800cc9c9b8443ca9a.jpg",
+      "price": "$2,300",
+      "engine": "4 CYLINDER",
+      "miles": "77000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Heated seats",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/a0f8dd102c35161f9ee4edf536701ca8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e205747d0708b1b92c7bfdacb7e282eb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7e72b755f9dbb6355f5fcbc02887217c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/873d159f2faab38d503b95edf2d56e50.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ba19edccb7f2d70fb8b4330f070ff4df.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7280e61d40f80ad4f25849fcffb856f1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0cce913c3e65fa4b003c7b496d9d8275.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/07d4dcb84128f188b1e47ba7a8492286.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bdabb4a3c841e1da6be5cd01a07935e7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7cfa7d7e2b3200def7c1bde99a809afa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/da5ce5038074f6f9fc512a24db79f10c.jpg"
+      ]
+    },
+    {
+      "id": 5162,
+      "title": "MANUAL! 1995 HYUNDAI GALLOPER(10로0809)",
+      "url": "https://www.gorillamotors.co.kr/product/manual-1995-hyundai-galloper10로0809/5162/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/30510f1dd3f989eaeba9afefa7caebff.jpg",
+      "price": "$7,900",
+      "engine": "4 CYLINDER",
+      "miles": "90000",
+      "transmission": "AUTO",
+      "options": "4X4, Dash cam",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/ee7c5acc747990f44daaa3149fabf4ac.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6ae1f9d8e819681065bcf9b7f2407e4c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8f04e46dacf425108ce7a48cd114eeae.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2f7d8bf28dcef05518416c95f0f71a45.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/24d48538aa412aee3179e5d58bb89dda.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fb0faf37524b9594eba1be3514f08820.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/abb51562d0ce9a0b27ee7645ae666e41.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/94d212207eede7dbd551fe451db3fc93.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b3bddb1e8f1adaab53ef9a654aaf7db1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/afdcc2cbcc051149c9641fb826b3b266.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f5d6b5a96e7e8cb4c10a58683abfa126.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4327021783bf4b7f747e832232100c64.jpg"
+      ]
+    },
     {
       "id": 5161,
       "title": "2010 DAEWOO MATIZ(46소4960)",
@@ -76,6 +155,32 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2056060433778e02873754ef162229f9.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/067601f29f928ba143dd830e13174e40.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/635f4c3c003ff8818b2051ff263b19fc.jpg"
+      ]
+    },
+    {
+      "id": 5158,
+      "title": "2016 HYUNDAI AVANTE AD (50도0153)",
+      "url": "https://www.gorillamotors.co.kr/product/2016-hyundai-avante-ad-50도0153/5158/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/d9a073d602901004808feea736d11de7.jpg",
+      "price": "$5,700",
+      "engine": "V4",
+      "miles": "",
+      "transmission": "AUTO",
+      "options": "",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/1ed2a46942b7c74107c7d29834ec6e14.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7a41681983c35c833b77556e2e76cc0f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0c3eb3854b1f8057d24a272fb98e45a1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/69fa7fedf735315109cfe863bc649c58.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3700da808c83676e993dc4858a3cd2dc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4cb941bbe16bde63489a23a354c3b42b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a9c3dadc409677c928918e1cbe201f8b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/57fead6a7edc41bf1cfd6f79a08e4d31.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c4ad4a2fb36ff376a5edd4c2eec4a607.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/beb322979507b1e340dd4d6ace3e4358.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/666a8f8521b23e3816b5cdc6df8b36b7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f59119928ce5ba55e6e95b2469d85228.jpg"
       ]
     },
     {
@@ -450,35 +555,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f84135fe0ff4a71f1cbed7183e040733.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6cc187ebc898d02b7bbb808b476539f2.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/10fd7088d3eea928dd15c7b04fba9847.jpg"
-      ]
-    },
-    {
-      "id": 5141,
-      "title": "US SPEC! 2012 HONDA ODYSSEY (15무5718 )",
-      "url": "https://www.gorillamotors.co.kr/product/us-spec-2012-honda-odyssey-15무5718/5141/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/b5732f1ed0a7a36f73b5a2498b39600d.jpg",
-      "price": "$9,800",
-      "engine": "V6",
-      "miles": "79000",
-      "transmission": "AUTO",
-      "options": "",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/c71c2e910bc93653971bd1d8ed42c4c6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/796275499801953606e6cf7c5150662e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e7efa451c1d8eaf7ca36150e8b43b876.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bf0128f7857d704fc047653cb00eb9d4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fcc2c4ff422485daac4659cdb6573129.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a63264d7590c64b6433468affcadd906.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/46c940b8f095573eaf68a213759e26f6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f37d0dd5554555c6bb08c10a9a748dd1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fe8021328002097a578733c8c6afcc28.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7817e88fc763cd385f59e87222c2f551.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3f578ef0bdc5fea1e24a6d7a7d027677.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ed9d20f097377be9755f1687c5ba6042.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4bf552398dc8e03f3d272e00df945cb2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6f146a5441ac87721fe913688d4441fd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6776b57bc4751c710b93875a3498d4fa.jpg"
       ]
     },
     {
@@ -1822,16 +1898,16 @@
       "id": 5044,
       "title": "2014 NISSAN ALTIMA 2.5 (49라6642)",
       "url": "https://www.gorillamotors.co.kr/product/2014-nissan-altima-25-49라6642/5044/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/d7c2d976d2f19e9939d55bc2db487b8f.jpg",
-      "price": "$4,900",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/b26d5fa9c352972642db1916d9639c39.jpg",
+      "price": "$4,500",
       "engine": "v6",
       "miles": "88000",
       "transmission": "AUTO",
       "options": "NO ACCIDENT / SUNROOF BLUETOOTH",
       "category": "others",
       "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/7fe02b75409edcc42e912211180e0629.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/4740da8335322de37aba184c37474d48.jpg",
+        "https://www.gorillamotors.co.kr/web/product/big/202609/61cab7bff7b69c08b0600c492b64c069.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5e106182e5eecd4830683c8e48dd7ebf.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/64b20acd8b0b1d494f49fc030fe823c6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/ecb996106c223ca84b4f9aa0983cd233.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/a5082a2bd41e8cc43b2a3ae657239769.jpg",
@@ -2364,29 +2440,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/9e037d1ca8f2503513c0c4552cc20af2.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/982472f5ffffac7c5033c9b3dc49bba8.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/4f775e9d350b5e40f32f37e5bf36df00.jpg"
-      ]
-    },
-    {
-      "id": 4949,
-      "title": "2010 HYUNDAI SANTA FE(29머7046)",
-      "url": "https://www.gorillamotors.co.kr/product/2010-hyundai-santa-fe29머7046/4949/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202606/63afa498ba7fd2bf515e843291830f24.jpg",
-      "price": "$4,000",
-      "engine": "V4",
-      "miles": "111000",
-      "transmission": "AUTO",
-      "options": "BACK UP CAMERA, BLUETOOTH, 7 SEATER & MORE",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202606/b4b35a32dda07f2a3075df225b5089cf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/0c1aebaecc4ff7dd88d9f4415cde858f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/9dcc15b7d19e0f62af1ca454a2c9cb97.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/36641364ba34cd58b93a56b8aec49fb4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/3bb9617b49aa8fb906637ffd17fca558.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/f7d56d3603355f721807a53b1d066dd2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/eda5d7b77d6be0a9ce0f194aed2212ac.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/46e7f730aa8a2606ba5ceb18917f91ca.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/3bcdf1bc61d1f7dd835570b4845c8d91.jpg"
       ]
     },
     {
