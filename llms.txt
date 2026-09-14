@@ -19,7 +19,7 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (141 vehicles, updated 2026-09-13)
+## Current inventory (139 vehicles, updated 2026-09-14)
 
 - [2010 DAEWOO MATIZ — $2,300](https://samanthausedcar.com/cars/5161)
 - [2009 GENESIS 3.3 — $3,900](https://samanthausedcar.com/cars/5160)
@@ -31,7 +31,6 @@
 - [2007 KIA SORENTO TLX — $2,900](https://samanthausedcar.com/cars/5152)
 - [LOW MILES! 2014 CHEVY AVEO — $2,800](https://samanthausedcar.com/cars/5151)
 - [LOW MILES! 2012 HYUNDAI VELOSTER — $3,900](https://samanthausedcar.com/cars/5150)
-- [2016 KIA SPORTAGE — $6,900](https://samanthausedcar.com/cars/5149)
 - [2016 KIA CARNIVAL — $8,400](https://samanthausedcar.com/cars/5148)
 - [2016 HONDA CRV EX SPORTS 4WD — $12,500](https://samanthausedcar.com/cars/5147)
 - [2014 RENAULT QM5 — $3,700](https://samanthausedcar.com/cars/5146)
@@ -107,7 +106,6 @@
 - [LOW MILES! 2008 SSNAGYONG ACTYON — $2,300](https://samanthausedcar.com/cars/4990)
 - [2015 HYUNDAI LF SONATA — $5,500](https://samanthausedcar.com/cars/4980)
 - [LOW MILES! 2017 CHEVY SPARK — $4,200](https://samanthausedcar.com/cars/4972)
-- [2015 HONDA ODYSSEY — $11,500](https://samanthausedcar.com/cars/4965)
 - [2013 HONDA CRV — $9,800](https://samanthausedcar.com/cars/4958)
 - [LOW MILES! 2013 LINCOLN MKZ — $4,900](https://samanthausedcar.com/cars/4956)
 - [2010 HYUNDAI SANTA FE — $4,000](https://samanthausedcar.com/cars/4949)

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T22:54:47+00:00",
+  "updated": "2026-09-14T03:26:15+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -264,33 +264,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e8258ceedb671f3ecbe50f8396d50015.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bd4ea50d7da5d97efaeaca52c5fefd5b.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f75ee6eace60207b533994a80deed56e.jpg"
-      ]
-    },
-    {
-      "id": 5149,
-      "title": "2016 KIA SPORTAGE(45어0938)",
-      "url": "https://www.gorillamotors.co.kr/product/2016-kia-sportage45어0938/5149/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/b652c2e0db7cf987ba6f5670ded4efaf.jpg",
-      "price": "$6,900",
-      "engine": "4 CYLINDER",
-      "miles": "6900",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/55c2d414864d2177d08190d7dd0e53db.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ff36efe509084b60a1a9cc5e1225bba0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9a3391fcee6b9bdb1ee111b7c9e55afc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/22a01e45072bea242790d5c5422310ff.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5da0a9c915a454b7ad5829c802ed737a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/34ac0f20258aff59c697ac545ba9d72d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ef2e2f4b70f54c22c8acf3ead3a9a953.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5af19591dd67b93de8f50463545ad58b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b8ae62711937a576efea06069e87d74a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3e297b502751c0474deaf1b36561ee80.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f5109e27d365fc54049d397669860146.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ea92baee1c647bd3dae2a1aaff681669.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f41155876147007f72199cced184d264.jpg"
       ]
     },
     {
@@ -2333,35 +2306,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/052521075ad250340dc4e7392963c178.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/1aaddb288fd6e8545c3e86ea033013da.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/45c66892fc412b3bbd9b1a89039c771c.jpg"
-      ]
-    },
-    {
-      "id": 4965,
-      "title": "US SPEC! 2015 HONDA ODYSSEY(29노1242)",
-      "url": "https://www.gorillamotors.co.kr/product/us-spec-2015-honda-odyssey29노1242/4965/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/6b71e50e1d2a9bbac95792080697d8c9.jpg",
-      "price": "$11,500",
-      "engine": "V6",
-      "miles": "101000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, Sunroof, HI-pass",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/242763a52da2f7c45f8d0722a1fd8bfc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/7311f62c0fb682f350e09e146bb4d9a1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/078337bbce2eae5e13d81ef6c2b9e2bd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/964ac9e8833b53c5701b0ee663110c4a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/8f1b548b1490d3234da0af03d09b10dd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/d39a0c63051014887f09d3f2674c8bed.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/f150652c66373417bad6cf5815745fdd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/8c49a2d9ade4dbfa06d8565c13ef4bc3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/704a8f02f8472bb86fba1a5642ed8211.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/3d4b196dfaaa97a6fcf20857a4d6b6d3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/f95e5c2968c3d674819b42f3547b652f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/b4cbc4afcbc02d610e693416dd842907.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/06a78b74f5efaa39631e94573d934210.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/3ba061881bc8ef3a91f4f4f84ec7cc33.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202606/7a3d33bbf48dec77954f82cc65b5e290.jpg"
       ]
     },
     {
