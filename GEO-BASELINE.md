@@ -15,6 +15,19 @@
 - AI 인용: 대상 질문(아래) 인용 여부 미측정 (0/N 가정)
 - 네이버: 미등록 — 고객이 미군·SOFA(영어권)라 우선순위 낮음. 필요 시 Search Advisor 등록.
 
+## 실측 (2026-09-15)
+
+- **Google `site:samanthausedcar.com` → 1건만 색인(홈페이지뿐).** 차량 139페이지·FAQ 미색인.
+  GSC 미등록 상태(구글 검색 결과에 "웹마스터이십니까?" 안내 노출). → 색인이 최우선 병목.
+- **Bing 일반어 검색 "used car dealer near Camp Humphreys SOFA military" → Samantha 0건.**
+  상위 노출 경쟁사: humphreyscars.com, sofacarsky.com, abcars.org, tayomotors.net,
+  carmaxcenter.com, resalelot.org. 지도 팩: Blue Ocean/SOFA CAR SKY/CarMax/KI MOTORS.
+  (KI MOTORS·SOFA CAR SKY가 같은 주소 186-3 Songhwa 2-gil — 같은 매장 부지의 별도 브랜드들)
+- **Perplexity**: 테스트 환경(무로그인 브라우저)에서 로그인 요구됨 — 재측정은 로그인된 환경에서.
+
+결론: 온사이트(콘텐츠·스키마)는 준비 완료. 현재 병목은 ① 검색엔진 색인(GSC·Bing WMT 등록)
+② 외부 corroboration(리뷰·커뮤니티 언급) ③ 시간(색인→인용까지 2~6주).
+
 ## 대상 질문 8개 (AI 인용 테스트용)
 
 1. Where can I buy a used car near Camp Humphreys?
