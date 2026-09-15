@@ -1,7 +1,63 @@
 {
-  "updated": "2026-09-14T21:31:00+00:00",
+  "updated": "2026-09-15T03:27:07+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5166,
+      "title": "2010 GENESIS COUPE(69어5329)",
+      "url": "https://www.gorillamotors.co.kr/product/2010-genesis-coupe69어5329/5166/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/cbd6bf8862933f2f9539ed399063b07a.jpg",
+      "price": "$3,900",
+      "engine": "4 CYLINDER",
+      "miles": "89000",
+      "transmission": "AUTO",
+      "options": "Dash cam, Heated seats, Sunroof, HI-pass",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/8cbb2681123be54ee5117878c142d4cd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a0a0c2193a68bd9c6f7f7a8476a5446f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8e1edcdb6a0b4b865151658f7d6e09c8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/036210f076c0912616f41d6e71f9f132.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/88c97aa07ecb5f6e54e5872479882948.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4a666f1d46a89ca08fcecd6f5c040083.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c278e1c60fe9dd982bd954500b093da0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/65b9ad610d0a211d9e7f128ecfe89e63.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/001f5a94d3f395b04439bd26255272a5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6426ba54bbe4454a2d3cfe46321f629b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/869b485af9bb3e3eb15a8cad87324068.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/40cae860c82dafa97d8d2ba0f0bcc024.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/29275ee91029c63fe358a252cc091a97.jpg"
+      ]
+    },
+    {
+      "id": 5165,
+      "title": "7SEATS! 2011 HYUNDAI SANTAFE(208누1351)",
+      "url": "https://www.gorillamotors.co.kr/product/7seats-2011-hyundai-santafe208누1351/5165/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/9eb369341a5e11d25f70574d49c31938.jpg",
+      "price": "$3,600",
+      "engine": "4 CYLINDER",
+      "miles": "114000",
+      "transmission": "AUTO",
+      "options": "Heated seats, HI-pass, 7seats",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/14d6ecf7f99153b41b078adc56d52acf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3e3860dc22e929d25375f55a71f334be.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fe1cbe4892d8be55c9092a6d7253bba2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/205448c5483a0991bb48c4be22afc945.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e9424fc6effd9fbbc973913051e17f34.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1612eaff2d3a56f271c9181859d1007c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f13e6ec5bedfe65a9d4941414ca2aa9c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cb96933f2430509d0c50db6df353254f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bde1d69e2e6106d2010ef37baa196673.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/87d159d465a54d0dcc884df583cc9974.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/63a8b814c2308dca289238d06e72484c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c1e9cdd97ed0401d6f2decaa2e8329ba.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/be58642ae0080f0c8559f5108bdfa736.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fd24db5f706c750e6420301c4f945520.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6258f775281b5c517a19eec2b68ffc3b.jpg"
+      ]
+    },
     {
       "id": 5164,
       "title": "2010 KIA SORENTO TLX / 7 SEATER (23두7842)",
@@ -1515,35 +1571,6 @@
       ]
     },
     {
-      "id": 5085,
-      "title": "7SEATS! 2011 HYUNDAI SANTAFE(25우7843)",
-      "url": "https://www.gorillamotors.co.kr/product/7seats-2011-hyundai-santafe25우7843/5085/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/62494b1cb1797261ab6e3b99ae779469.jpg",
-      "price": "$3,900",
-      "engine": "4 CYLINDER",
-      "miles": "113000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats, Sunroof, 7seats",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/3661498008b8b93a8781a77f37a815af.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f90891afc5675b2189634fbb8a156017.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7ed01fe7fce5694a58ebc992265f443d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/37959de738f86f9d620e34e8e5d396c1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/28d63a222e9ffe42c69723cab89b39ee.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/8028c1c1876d787c143cbed1fdb96add.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/a454c723266965cb0ba006ec06c0285e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/14617efc006c2cbe8c0fef3aead664d5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/af72fe4c2d55fda07a1a0a1b00a482cd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/35540971429d15a45de23db4f84c1e26.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/63a054aa48cdee8c757fae8366b0ab74.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/1520872c4b7451edfc93c45dff3646b4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/777a9c9a747877ff4af334ef98996ac2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d0e554b8707fc7688c46e4e666ad5956.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ca52597f7aac2b6f236f4ce9211c302f.jpg"
-      ]
-    },
-    {
       "id": 5082,
       "title": "7SEATS! 2010 KIA SORENTO(24거8631)",
       "url": "https://www.gorillamotors.co.kr/product/7seats-2010-kia-sorento24거8631/5082/category/52/display/1/",
@@ -2247,34 +2274,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/23cac9855334695b2fa07b7426adb5c4.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/d3a566518681049161037559f1bc93c7.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/a656d7cd622b4dd9fa29cb59c9a67b71.jpg"
-      ]
-    },
-    {
-      "id": 5000,
-      "title": "2015 KGM REXTON W 4x4 / 7 SEATER (56라2689)",
-      "url": "https://www.gorillamotors.co.kr/product/2015-kgm-rexton-w-4x4-7-seater-56라2689/5000/category/54/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/202f009586aa833fe71cf25c6a201f58.jpg",
-      "price": "$5,200",
-      "engine": "v6",
-      "miles": "60000",
-      "transmission": "AUTO",
-      "options": "NO ACCIDENT / SUNROOF/ONE OWNER VEHICLE",
-      "category": "ssangyong",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/d9dfc241f15af96202dadc374814ffa7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/e22e8d5bffd65aa335130ea615bd8a78.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/bfd79a9abe34f6124683e7569f2cd79e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/44d42eab55c66038e2273792832f4717.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/bdeaf529b4d2505a4d326493e62eef10.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/0ae42b83c47dc625b6cdc1bbc12d2c4e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/fe0030e0cf16d55059813dd3604d7177.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/4befebd9c1c2a865ad58e9a9184869e8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/d4eb4ef50d2765011b3587b9264529d6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/a0aa14c7ef9d641da6609e9c3dd9ed3f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/c5ca2d9f2db6a92b477214d14039c552.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/47e93e7ebde8f3dc6818bd3d5f3b0db3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/3083610006fb8448dccbf4c0d3c28a97.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/400bd19287d9ca35fe29277a8a513a4c.jpg"
       ]
     },
     {
