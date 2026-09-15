@@ -1,7 +1,58 @@
 {
-  "updated": "2026-09-15T03:27:07+00:00",
+  "updated": "2026-09-15T11:06:57+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5168,
+      "title": "2012 KIA RAY(23우5672)",
+      "url": "https://www.gorillamotors.co.kr/product/2012-kia-ray23우5672/5168/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/1cb985950d0f79f08e83b134e8e6b955.jpg",
+      "price": "$4,200",
+      "engine": "V4",
+      "miles": "66000",
+      "transmission": "AUTO",
+      "options": "BLUETOOTH, HI PASS, PARKING SENSORS, HEATED STEERING WHEEL, HEATED  & LEATHER SEATS & MORE",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/1aab4129c1001a9d4119cbfa4cc274de.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9a998d4d7d6ca6eabd144bc9aa86eb7f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c950e70daab203e3c86d3214e4e5e6e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/80b91270295c7bf447b0e8dc048db6f2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/75349f2f72aaa5e2a5d97812b71f175c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b4efb6b3579cfbdf45d53c13004136bf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/06e3bc59949bc94739ac27e126a34f3f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c68b100b583b0916c05303f9501f2ca.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f30798b054c5cb7eb32c3caee1bfe41f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/48dc63282593862010ae47fd6964d954.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d43bc9edb62ddbe0c45f56cafe8a394c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cb1e5edf23df6c569f3945ecf4b7866c.jpg"
+      ]
+    },
+    {
+      "id": 5167,
+      "title": "2011 NISSAN CUBE(13가1915)",
+      "url": "https://www.gorillamotors.co.kr/product/2011-nissan-cube13가1915/5167/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/5d6e5762c6b1c69717c8fea8c6a7cd17.jpg",
+      "price": "$4,500",
+      "engine": "V4",
+      "miles": "65000",
+      "transmission": "AUTO",
+      "options": "BACK UP CAMERA, CLEAN CARFAX, EXTRA CLEAN",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/2ae89a3a594ce0649655d9656e9f3658.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2331b9cb5185e421ff61e5c00317106a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0b424be37b391903446a5cb35755a442.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5583ac40d80f2ed635a7e6aeb4d30369.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e742621c9750ddab03d000604bc3e05e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7161ee8f46c99feec839201e6eb1377e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/21faa11bf4da70360bbdaae61073555e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/277aa7e107db138bbbe5529fd9297c16.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ff8e85370d07ea8a56c467c617ede6d2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3b4a232c88a2b99ea33e07d1fec9fd79.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0209863169f58115b18bf517872eb48e.jpg"
+      ]
+    },
     {
       "id": 5166,
       "title": "2010 GENESIS COUPE(69어5329)",
@@ -84,31 +135,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cd4541183eae54e145c295e8e712b207.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fa14013acc25bb9ba090eca69a472c6a.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f9f2f70d1ffd379b584572dd8d6f39db.jpg"
-      ]
-    },
-    {
-      "id": 5163,
-      "title": "LOW MILES! 2011 CHEVY CRUZE(280누5540)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2011-chevy-cruze280누5540/5163/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/9cf06eb259170c1800cc9c9b8443ca9a.jpg",
-      "price": "$2,300",
-      "engine": "4 CYLINDER",
-      "miles": "77000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/a0f8dd102c35161f9ee4edf536701ca8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e205747d0708b1b92c7bfdacb7e282eb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7e72b755f9dbb6355f5fcbc02887217c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/873d159f2faab38d503b95edf2d56e50.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ba19edccb7f2d70fb8b4330f070ff4df.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7280e61d40f80ad4f25849fcffb856f1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0cce913c3e65fa4b003c7b496d9d8275.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/07d4dcb84128f188b1e47ba7a8492286.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bdabb4a3c841e1da6be5cd01a07935e7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7cfa7d7e2b3200def7c1bde99a809afa.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/da5ce5038074f6f9fc512a24db79f10c.jpg"
       ]
     },
     {
@@ -1381,35 +1407,6 @@
       ]
     },
     {
-      "id": 5097,
-      "title": "7 SEATER !! 2013 KIA NEW SORENTO TLX(46소4790)",
-      "url": "https://www.gorillamotors.co.kr/product/7-seater-2013-kia-new-sorento-tlx46소4790/5097/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/1d68933dfdd929141381db6b5e838436.jpg",
-      "price": "$5,700",
-      "engine": "V4",
-      "miles": "69000",
-      "transmission": "AUTO",
-      "options": "BACK UP CAMERA, BLUETOOTH, ISO FIX, HI PASS, BACK UP SENSORS, SMART KEY & MORE",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/25851cffb80dbadfc144e1b5e1f1f0ce.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/386f3b69ea28fce5253ea47d1c37e04d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/0e15794104addb7cccc1daa5f37efb26.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/6e6712e15b272abd89e4f9992a4f5d23.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/b1a470fee9d4a49cdde16fdb8af5d057.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/0bcc33be1efc88e68207e9baf25010d6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d24e9c91a161e40a130125f9be577049.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/8c8f3f2dd2e8abae5bdf21b1a7a3d6e2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/1e32eb4e36a0aa00ca5c27ae93a1bd7a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d70fb132bfa4191ba6ea3c69ae0b90fa.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/66f08a2cbfde679306a0d8a167b546d0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7f25acda0da1679d9eddec71747a8d0b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e61b6734bfabb8badf28915a48790dce.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f6439df88adc7868e3831bf041bc6b81.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f01e580b8652894bf9784068af8f6b6c.jpg"
-      ]
-    },
-    {
       "id": 5096,
       "title": "2018 CHEVROLET SPARK LT(09누3672)",
       "url": "https://www.gorillamotors.co.kr/product/2018-chevrolet-spark-lt09누3672/5096/category/53/display/1/",
@@ -1511,34 +1508,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/9cf43e45c38a6128de2709b14a971e9c.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/0000634d8345bf646632b2d9228e95fb.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/a1777d571359d8034fdb70fca9739182.jpg"
-      ]
-    },
-    {
-      "id": 5091,
-      "title": "LOW MILES! 2014 RENAULT QM3(24도8317)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2014-renault-qm324도8317/5091/category/55/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/6717b6b9d2157ea4ba7df04173d3803b.jpg",
-      "price": "$4,300",
-      "engine": "4 CYLINDER",
-      "miles": "52000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats",
-      "category": "renault-samsung",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/165914c1a9e96d1499793a0e489d14cb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/53c5603bfa17611a7323f4f166da8007.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/a8b1bed93e5ea535d86aba3ba3b300b4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ef123f7c3d45db0ce2ac08a5b05060fb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d7c9179956992f9e1182f64ddbbea249.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/01338e1ad367beed118405a6a0a46679.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/fa2cdb71f678487de398d66f4383163e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/61d9cda8d49b8aac51a290fb04037629.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/a0def088c7c383a85cc0aa4aeafdcc56.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/5e7ece6ee0424eb3b6652e1b1ed2bfa2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/dde0175b855241747c6a065609f9fc7f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/b2c29651c0e401e1dabc4a7cebf77fea.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7111ff24482bbcf47af84a512add70d4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ccf7a2434461239201f560a9cf63be62.jpg"
       ]
     },
     {
@@ -2225,15 +2194,15 @@
       "id": 5011,
       "title": "2016 CHEVROLET SPARK  LTZ  (29버3747)",
       "url": "https://www.gorillamotors.co.kr/product/2016-chevrolet-spark-ltz-29버3747/5011/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/2e9e52eda1a59668dd6c603f18fe9b62.jpg",
-      "price": "$4,200",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/96d5b8ccaa1ebe0592fcf82cb82ad392.jpg",
+      "price": "$3,900",
       "engine": "4 CYLINDER",
       "miles": "66000",
       "transmission": "AUTO",
       "options": "SMART KEY / BLUETOOTH/HI PASS",
       "category": "chevrolet",
       "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/80ad29c443678449d8fbd48cbeaf5342.jpg",
+        "https://www.gorillamotors.co.kr/web/product/big/202609/350d4ed44f994eaf0c0d43596b278db7.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/45c15ca89bda5ef72fea9923caf62953.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/6875415a3ec3c4d657e7d98a3c648593.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/75b72679fb83d321cb04d2d19572c6aa.jpg",
@@ -3521,32 +3490,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202508/7797e530f0e8c3fe1efa0d05c0958fd5.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202508/f2330dc0f6db3454088381aefa4a2797.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202508/4ef08c658408bf81b89ccffc170f1eb5.jpg"
-      ]
-    },
-    {
-      "id": 4486,
-      "title": "2015 CHEVROLET AVEO 1.4 LT  (15저5514)",
-      "url": "https://www.gorillamotors.co.kr/product/2015-chevrolet-aveo-14-lt-15저5514/4486/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/7a6423c2116f4441f61bcf48a6c5a72f.jpg",
-      "price": "$3,400",
-      "engine": "4 CYLINDER",
-      "miles": "43000",
-      "transmission": "AUTO",
-      "options": "BACK UP CAMERA,LEATHER/HEATED SEATS",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/a8b9af6ffcff32f4c73f329ee3904916.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/a5dd5a24353d2200ea8ce0085396c8b1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/224494e6a11d38e91499a9739c876cec.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/1c9b752cdf90636c6fafbff1b0e63cc4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/3bfa7dd53c2699c53b010ad01d1f1037.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/ff782db99e474edf7fc22d8200509acb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/c1b0639318d121f0fcf6e84b7c3454c7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/77acd1a8b338f32bd2af04db54ac331f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/c5339fbdc3821c3ada5f5782853c3d3e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/980061c9132ddad9108f0e6aae849186.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/d9f47c3a34de8a26ca46362f6d0531a9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202508/233c6e2e3dd87a3033659dfb7b374724.jpg"
       ]
     },
     {
