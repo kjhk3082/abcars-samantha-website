@@ -1,7 +1,34 @@
 {
-  "updated": "2026-09-17T03:28:52+00:00",
+  "updated": "2026-09-17T11:00:21+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5173,
+      "title": "2012 CHEVROLET SPARK LT (30수6442)",
+      "url": "https://www.gorillamotors.co.kr/product/2012-chevrolet-spark-lt-30수6442/5173/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/4cba16f3f947a8f3630235290f918eed.jpg",
+      "price": "$2,900",
+      "engine": "4 CYLINDER",
+      "miles": "77000",
+      "transmission": "AUTO",
+      "options": "NO ACCIDENT/BACK UP CAMERA",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/d6ceb42465da2dfb2f28d1b3425dec8e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/eb41b5b6c8f490156678ef2c8f413443.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cb1d70b93206b1114541ac2826f9d0fe.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5969cc836581b1a202779c4be4795236.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ff9232d468d67aa68b60fa4c2bb134db.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/73e67fb089a270e8e92b3010e7176d6e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/24146661cc05149b6812753f943842ca.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5e847420dd524ff8400b81c8cca0baaf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c99e44b280ab8b8e8b737fb9266075a8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9890761c4d2cb048fe6786a7d888d036.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d155e58ec3f2f839e3f075cf5a4b5956.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2a687957d942b167246eb518fc60efb2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/973e74598b7c2a04eda02528bb085262.jpg"
+      ]
+    },
     {
       "id": 5172,
       "title": "2015 GENESIS COUPE 2.0  (24거1251 )",
