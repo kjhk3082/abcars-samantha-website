@@ -1,7 +1,58 @@
 {
-  "updated": "2026-09-17T23:28:57+00:00",
+  "updated": "2026-09-18T03:14:32+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5175,
+      "title": "2016 CHEVY SPARK(17거0804)",
+      "url": "https://www.gorillamotors.co.kr/product/2016-chevy-spark17거0804/5175/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/825493ec1e5da3c00ac534e76a032d24.jpg",
+      "price": "$3,400",
+      "engine": "3 CYLINDER",
+      "miles": "103000",
+      "transmission": "AUTO",
+      "options": "Backup camera",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/f88f00ce4b5d6eb12bcd909d33b19b06.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d6c9e36f3f314980f810a0464ae5fe73.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/061cb0cec9ce36101ce8b88b723427b2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7355355c4d90ebeb5f4a7c1355df915e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/605053295189518015035bb75f95752e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fd115299bed733e632369e16b6f68e09.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/891a1fac470a3366b2e84c7c20e1323a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8d56f1824933801b2908a5ddf8f0d77c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c216f9c6058fe8077005e0b6ef4114e7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8ad2b6470339633304fd2fabbff207e1.jpg"
+      ]
+    },
+    {
+      "id": 5174,
+      "title": "2013 HYUNDAI AVANTE(19서2183)",
+      "url": "https://www.gorillamotors.co.kr/product/2013-hyundai-avante19서2183/5174/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/3af3d96db0092a7c962ac07d9baea484.jpg",
+      "price": "$3,500",
+      "engine": "4 CYLINDER",
+      "miles": "93000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats, HI-pass",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/27707fb14b6fd925e0e391f6dc86bccf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c51bc60aae068e33adea2c557e8819f3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3b9bb9f716aed066ada3cd8f101c3efc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4df5135720d85c3ba205eace5159dfe6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/502e1db4160c2753b74eca6117b2702d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/15388258a96fe45571f176dd22a784f2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/14b213b2e1c6f868bdbc9dfc93889601.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2a9fcf084ec9b71d710981e5da17d86c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bf60eaf57566710c49546fa8631f8a52.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/352bdc2a0fe9704c808d4cb6a36da800.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b889abd5df15914814c995fea443c579.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1ec813d24385a085297310b34c28040d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e85f24f2ecfdafcbcc17d1a17eb2d4d1.jpg"
+      ]
+    },
     {
       "id": 5173,
       "title": "2012 CHEVROLET SPARK LT (30수6442)",

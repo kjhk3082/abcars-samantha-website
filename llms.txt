@@ -22,8 +22,10 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (143 vehicles, updated 2026-09-17)
+## Current inventory (145 vehicles, updated 2026-09-18)
 
+- [2016 CHEVY SPARK — $3,400](https://samanthausedcar.com/cars/5175)
+- [2013 HYUNDAI AVANTE — $3,500](https://samanthausedcar.com/cars/5174)
 - [2012 CHEVROLET SPARK LT — $2,900](https://samanthausedcar.com/cars/5173)
 - [2015 GENESIS COUPE 2.0 — $6,600](https://samanthausedcar.com/cars/5172)
 - [2016 NISSAN MAXIMA — $7,400](https://samanthausedcar.com/cars/5171)
