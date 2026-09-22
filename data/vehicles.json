@@ -1,7 +1,36 @@
 {
-  "updated": "2026-09-21T23:52:32+00:00",
+  "updated": "2026-09-22T03:21:31+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5179,
+      "title": "2021 CHEVY TRAILBLAZER(389소3272)",
+      "url": "https://www.gorillamotors.co.kr/product/2021-chevy-trailblazer389소3272/5179/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/d708b08120f60593c340bcc0f7191aae.jpg",
+      "price": "$8,900",
+      "engine": "3 CYLINDER",
+      "miles": "89000",
+      "transmission": "AUTO",
+      "options": "Backup/Dash cam, Android/Carplay, Heated seats, HI-pass",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/658ab998ec4f849b015dcffff62dd1fd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1caf0a01b6079139c9681f0218c6b04f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a9c47bf0e0d2719284d95807efaa50e8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6051d0c6fa09b66d0b29e7f942dcbf42.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/05df969e832fa59de47c898322b73621.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2023147e3ad793a58b3c8da026ec8330.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ff5877fbecbe9b994b8ec86ffcc3bac0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b8d8def0dc80b66fa4475a321f9e121b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c57505c7dd693dab226d39d07dfa1c1d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a0b3173c619374e6657be1cc39e29431.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/238840d45595d04f4b7723bf37bd5253.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ee8cec93383ecebc4e2eaebe075fe17c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/03cf22b7da08a516671a421d4219a3d6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/02f008ede52b6ad1088035c1a91abf2e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/30cc2951f47a1deee7734ffef195811e.jpg"
+      ]
+    },
     {
       "id": 5178,
       "title": "2015 RENAULT QM3 (36루4814)",
@@ -242,32 +271,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0ecf486a0bbd935c62bf2415ce65711f.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d6fa53ddc1c285732b6dcbb10f170d26.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e9d13e299a16446d78fc2d7de72e7084.jpg"
-      ]
-    },
-    {
-      "id": 5168,
-      "title": "2012 KIA RAY(23우5672)",
-      "url": "https://www.gorillamotors.co.kr/product/2012-kia-ray23우5672/5168/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/1cb985950d0f79f08e83b134e8e6b955.jpg",
-      "price": "$4,200",
-      "engine": "V4",
-      "miles": "66000",
-      "transmission": "AUTO",
-      "options": "BLUETOOTH, HI PASS, PARKING SENSORS, HEATED STEERING WHEEL, HEATED  & LEATHER SEATS & MORE",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/1aab4129c1001a9d4119cbfa4cc274de.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9a998d4d7d6ca6eabd144bc9aa86eb7f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c950e70daab203e3c86d3214e4e5e6e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/80b91270295c7bf447b0e8dc048db6f2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/75349f2f72aaa5e2a5d97812b71f175c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b4efb6b3579cfbdf45d53c13004136bf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/06e3bc59949bc94739ac27e126a34f3f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c68b100b583b0916c05303f9501f2ca.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f30798b054c5cb7eb32c3caee1bfe41f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/48dc63282593862010ae47fd6964d954.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d43bc9edb62ddbe0c45f56cafe8a394c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cb1e5edf23df6c569f3945ecf4b7866c.jpg"
       ]
     },
     {
@@ -1857,35 +1860,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/bbb92a52a3866370fafa4b6d46fab41f.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f42cc116dc2b466fc5d969278931c09f.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/76782f8ce76535ea48c91c0b2689a3d9.jpg"
-      ]
-    },
-    {
-      "id": 5059,
-      "title": "* US SPEC * 2016 MERCEDES BENZ C300 4MATIC (344구5452)",
-      "url": "https://www.gorillamotors.co.kr/product/us-spec-2016-mercedes-benz-c300-4matic-344구5452/5059/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/ce2d2c124c84a629c7714e69032453ae.jpg",
-      "price": "$12,500",
-      "engine": "4 CYLINDER",
-      "miles": "78000",
-      "transmission": "AUTO",
-      "options": "PANORAMIC SUNROOF",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/c61247a1f34c287f9a17d804562e5493.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/a33595fa1ba3f177f9848db3b63fee7b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/9dd4e08fff954c7992acc3a5b925049f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/f8ab94bfa9f9413b449d17355af8840c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/7dc284e84bacaba95d4df07fcfbead7e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/d7095e7a27b6f6db73d8e45faa30c728.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/3ffe5575d21ea49e807eedfb2a9d0476.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/df2a2f07d31132ac4a4aa6df84601daf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/70a8c11d533eaf92ec62ae8074630548.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/b38cc20412cd9fbe785203e58328126c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/a2ceb838891db02d81e2b919b138603b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/cfb76b94b7840bfe9c3702f1d12991d6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/ce83ced9db4db73568facb8afffa0e53.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/308f306c3d4a426f3de43d1a0e49abfa.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/e20b93c7130eeea622ab40d61775f960.jpg"
       ]
     },
     {

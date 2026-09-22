@@ -22,8 +22,9 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (140 vehicles, updated 2026-09-21)
+## Current inventory (139 vehicles, updated 2026-09-22)
 
+- [2021 CHEVY TRAILBLAZER — $8,900](https://samanthausedcar.com/cars/5179)
 - [2015 RENAULT QM3 — $4,500](https://samanthausedcar.com/cars/5178)
 - [LOW MILES! 2011 GENESIS COUPE — $4,000](https://samanthausedcar.com/cars/5177)
 - [7SEATS! 2010 KIA SORENTO — $3,900](https://samanthausedcar.com/cars/5176)
@@ -33,7 +34,6 @@
 - [2015 GENESIS COUPE 2.0 — $6,600](https://samanthausedcar.com/cars/5172)
 - [2016 NISSAN MAXIMA — $7,400](https://samanthausedcar.com/cars/5171)
 - [LOW MILES! 2009 KIA SOUL — $3,500](https://samanthausedcar.com/cars/5170)
-- [2012 KIA RAY — $4,200](https://samanthausedcar.com/cars/5168)
 - [2011 NISSAN CUBE — $4,500](https://samanthausedcar.com/cars/5167)
 - [2010 GENESIS COUPE — $3,900](https://samanthausedcar.com/cars/5166)
 - [7SEATS! 2011 HYUNDAI SANTAFE — $3,600](https://samanthausedcar.com/cars/5165)
@@ -93,7 +93,6 @@
 - [LOW MILES! 2017 NISSAN MAXIMA — $7,900](https://samanthausedcar.com/cars/5067)
 - [2014 CHEVROLET SPARK — $3,200](https://samanthausedcar.com/cars/5063)
 - [2012 HYUNDAI VELOSTER — $4,200](https://samanthausedcar.com/cars/5062)
-- [2016 MERCEDES BENZ C300 4MATIC — $12,500](https://samanthausedcar.com/cars/5059)
 - [2015 INFINITI QX60 AWD — $7,700](https://samanthausedcar.com/cars/5056)
 - [2014 NISSAN ALTIMA 2.5 — $4,500](https://samanthausedcar.com/cars/5044)
 - [2016 FORD EXPLORER LIMITED 4X4 — $8,900](https://samanthausedcar.com/cars/5043)
