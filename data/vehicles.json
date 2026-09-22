@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T03:21:31+00:00",
+  "updated": "2026-09-22T11:00:26+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -9,7 +9,7 @@
       "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/d708b08120f60593c340bcc0f7191aae.jpg",
       "price": "$8,900",
       "engine": "3 CYLINDER",
-      "miles": "89000",
+      "miles": "60000",
       "transmission": "AUTO",
       "options": "Backup/Dash cam, Android/Carplay, Heated seats, HI-pass",
       "category": "chevrolet",
@@ -78,35 +78,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6fcdc5d923e6f1a42ff4b048dea681fc.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/53bade7a75fadcc7c14ae6b17ebb1493.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/66c4794c2b48f6cd48a107cfbd342ac0.jpg"
-      ]
-    },
-    {
-      "id": 5176,
-      "title": "7SEATS! 2010 KIA SORENTO(12더8082)",
-      "url": "https://www.gorillamotors.co.kr/product/7seats-2010-kia-sorento12더8082/5176/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/d4de56813e1910fe86e650147b7a5f18.jpg",
-      "price": "$3,900",
-      "engine": "4 CYLINDER",
-      "miles": "90000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Android/Carplay, Heated seats, HI-pass",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/763dff99efca59135a85139b68c12dd9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bc6adb022808c9cdd2d1cade9f0bf76d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/958584aec690255ed8c7ca9af91c0f19.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9b9a4ff80d66e7d094ced1ba4f7bb5f1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/53b651cd82e0e202b1576cdebfe4b86f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2abf6de93cd261d27ce758adc1d415e4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/11d8440a7a7cb8d158e52daf4e083808.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/70ffde08a5e74616c2930064194446d4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/760808e5df99c3648fbe4e23e8894f01.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d90f09a2fd28e823973d922d62a547b9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/85a347647f3a8f0700e9636dac416798.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/33811858ccff43a6331a8530fba0abc9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/957520a27a823afc06a89e01f838237a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1766b741d051f0e99bf963a2b4a5eb74.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/88594864d06576082afb981597fdd120.jpg"
       ]
     },
     {
@@ -247,8 +218,8 @@
     },
     {
       "id": 5170,
-      "title": "LOW MILES! 2009 KIA SOUL(45로4177)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2009-kia-soul45로4177/5170/category/52/display/1/",
+      "title": "LOW MILES! 2009 KIA SOUL DIESEL(45로4177)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2009-kia-soul-diesel45로4177/5170/category/52/display/1/",
       "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/9b467802d7b3d9b576c43b7cc4e4bef1.jpg",
       "price": "$3,500",
       "engine": "4 CYLINDER",
@@ -380,32 +351,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cd4541183eae54e145c295e8e712b207.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fa14013acc25bb9ba090eca69a472c6a.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f9f2f70d1ffd379b584572dd8d6f39db.jpg"
-      ]
-    },
-    {
-      "id": 5162,
-      "title": "MANUAL! 1995 HYUNDAI GALLOPER(10로0809)",
-      "url": "https://www.gorillamotors.co.kr/product/manual-1995-hyundai-galloper10로0809/5162/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/30510f1dd3f989eaeba9afefa7caebff.jpg",
-      "price": "$7,900",
-      "engine": "4 CYLINDER",
-      "miles": "90000",
-      "transmission": "AUTO",
-      "options": "4X4, Dash cam",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/ee7c5acc747990f44daaa3149fabf4ac.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6ae1f9d8e819681065bcf9b7f2407e4c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8f04e46dacf425108ce7a48cd114eeae.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2f7d8bf28dcef05518416c95f0f71a45.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/24d48538aa412aee3179e5d58bb89dda.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fb0faf37524b9594eba1be3514f08820.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/abb51562d0ce9a0b27ee7645ae666e41.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/94d212207eede7dbd551fe451db3fc93.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b3bddb1e8f1adaab53ef9a654aaf7db1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/afdcc2cbcc051149c9641fb826b3b266.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f5d6b5a96e7e8cb4c10a58683abfa126.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4327021783bf4b7f747e832232100c64.jpg"
       ]
     },
     {
@@ -937,35 +882,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3be692b2dff7334a112ad9dd78da0cf7.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f5eb0976ac1d3b3c4af18f081f41f11a.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f3ef745407a4dac8c50a7cf7026051df.jpg"
-      ]
-    },
-    {
-      "id": 5136,
-      "title": "2013 HYUNDAI SANTAFE 4WD / 7 SEATER (66더1063)",
-      "url": "https://www.gorillamotors.co.kr/product/2013-hyundai-santafe-4wd-7-seater-66더1063/5136/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/8913a460bbe59c864897f7af661c545e.jpg",
-      "price": "$6,700",
-      "engine": "4 CYLINDER",
-      "miles": "78000",
-      "transmission": "AUTO",
-      "options": "PANORAMIC SUNROOF.COOLED SEATS.SMART KEY",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/a0820da0872dcfb3db842f7de71ff884.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/34b263678b71e1d6af4b59f3d9d6129b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/67bbb82562bd3bab879eb7dd3f90c91d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4aaf476683831d76a25fe16a853522fc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ec13e0882df442fbc697e9632b372b08.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/25e8804afc9bfbcfed00802e75aee136.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d790d2a8520502d867109408440207fa.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4ee84644c191539b8af868c543071c19.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d50d3b769f2a0bf2a0cba7f045526b32.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/657e48eb58367fca744f5ee7eed3545a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7f21eaa395ca943b20264f5e8d7fcba9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c8a81f9104fb8e48bd21c8114ddd40c5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/20055858e69a7177d53d5f9354c759d1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5f28fba610552b75f91c8d33db980ef9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7296aff2dff865eab6f102ba750d72b2.jpg"
       ]
     },
     {
