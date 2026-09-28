@@ -1,7 +1,36 @@
 {
-  "updated": "2026-09-28T03:42:07+00:00",
+  "updated": "2026-09-28T12:58:03+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5184,
+      "title": "2014 HYUNDAI VELOSTER TURBO (MANUAL TRANSMISSION) (33로7115)",
+      "url": "https://www.gorillamotors.co.kr/product/2014-hyundai-veloster-turbo-manual-transmission-33로7115/5184/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/5823fdc8b487910b53831b321b98baeb.jpg",
+      "price": "$5,900",
+      "engine": "4 CYLINDER",
+      "miles": "70000",
+      "transmission": "M/T",
+      "options": "FULLY LOADED",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/81ef485b897477bd591e1d172ae31268.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/26daeac6ef0f40df0d2a961e4c9d997a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5614dbc93e94a7241291afdc11e32ccc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0aed636762c4c021aa9fc7c73b7d7f60.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9559d9b4d41b83c04f0743765ade9154.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/893e40a5d0909e94b919f4fd0cc7ad3c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/41ec27c5ed74e537c855651592c757c3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/83ab91e1e09d42f6d000bc24e69480f0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0d0fe7d6574f2625f169a61ca230028e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0c5889d33c0b8edac007edc1ea8ddde6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/74a4109918aec788dc1139cba812e5bc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fa54dfaf546b20e1a9e6c9011996b15a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3102f4ec41c6b78660552e08fa32c942.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/153121290a2f1dbf081be9887a4403fa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d87e971fdbf381f154366d0eb4aa3dbe.jpg"
+      ]
+    },
     {
       "id": 5183,
       "title": "2016 KIA ALL NEW SORENTO (64머0968)",
@@ -54,35 +83,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0b1c2dd582685648fa2560675b9c8771.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/80217788dca81b99fdbd2215fb31a3e2.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/66d96fdb67e406bc5fd85e875a31475e.jpg"
-      ]
-    },
-    {
-      "id": 5181,
-      "title": "2015 KIA SOUL(69누2730)",
-      "url": "https://www.gorillamotors.co.kr/product/2015-kia-soul69누2730/5181/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/9f561a1edd1d99c808884bbf844845e9.jpg",
-      "price": "$4,900",
-      "engine": "4 CYLINDER",
-      "miles": "95000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, HI-pass",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/83672f4896e9b2c6118332f8f95c545b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d7fb8c1fa4a47977fd7325d2dd94c245.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/80083ddd29d26aa04fecb07fac50577e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7ecbaa6f35798acd85a37e35ff9d4411.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f82acfd700b891b533ca95d3d01aa63c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/46ffcbbb825553d6710e5f15c8697b56.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e51815ff0656e0706ab2386c4929e6a7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/eeb6cbea3c6e60f71b86b28eb88b8e64.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3e190a2bfd7cd76e4c64b3ecab51db42.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f7d835c7696ccb402779c103aea73935.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/158e5e0632d3817242435345c839c34b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4b4389dbd13d9c4709951708116fe11d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d633e7bddd95f436c39de3a1869b86a3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/27f72e1ccd7c658de5d8441813faec50.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/690d3ea5b75049d6ae0ca0c74ac16aa9.jpg"
       ]
     },
     {
@@ -860,34 +860,6 @@
       ]
     },
     {
-      "id": 5142,
-      "title": "2015 MINI COOPER S 2.0 (254오5498) (KOREAN SPEC)",
-      "url": "https://www.gorillamotors.co.kr/product/2015-mini-cooper-s-20-254오5498-korean-spec/5142/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/b91b463b35a7a795da5a7203932fb2d3.jpg",
-      "price": "$6,900",
-      "engine": "4 CYLINDER",
-      "miles": "74000",
-      "transmission": "AUTO",
-      "options": "NO ACCIDENT / CUSTOM EXHAUST",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/8be4f3b5ea17eb94149d3136ea1c4a39.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fcc72c8d3c881aaef9d2b863509c5c29.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bf23fc28aa0bdb7fcf5a232b91da8141.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ea44c86d6402ce9cdb9818630da8c2cd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fdb691214626e6594aca41f55317efd5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7e54f904e3cc43b42783317c30adcc9b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f410a9fd6cbe66ba96633aeec7735fa4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/88c60e55298c0b418bda40173e203670.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/964169b644ad6d87153c143bf37fd59a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3c8c2ed670d1bf3d432dca73c220d6d3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5872b213eab9536829660116921acc06.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f84135fe0ff4a71f1cbed7183e040733.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6cc187ebc898d02b7bbb808b476539f2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/10fd7088d3eea928dd15c7b04fba9847.jpg"
-      ]
-    },
-    {
       "id": 5140,
       "title": "LOW MILES! 2018 RENAULT QM6(50너5101)",
       "url": "https://www.gorillamotors.co.kr/product/low-miles-2018-renault-qm650너5101/5140/category/55/display/1/",
@@ -1076,33 +1048,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/442748f68b02b540d64cb88aa899bbe7.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/86f2a433055a467b7260cc7d8d2964eb.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5e9176aebd14a66683f852b905f08ee2.jpg"
-      ]
-    },
-    {
-      "id": 5124,
-      "title": "LOW MILES! 2012 HYUNDAI AVANTE(16무7508)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2012-hyundai-avante16무7508/5124/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/c0c923ca95768b0164bce478cc3b5ed2.jpg",
-      "price": "$3,500",
-      "engine": "4 CYLINDER",
-      "miles": "74000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Android/Carplay, Heated seats",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/4247fb0ec71501151ae77deaf30e3931.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1ad9c665aab89db230adfa061f243260.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b67963a4b85be8d0ad838a36be5cb94f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/7cc0c8e9ce26cc2ea27a71f3acab70b9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8e4162b4b71029db5dd1da734f10112f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/68611cef14b7047378581b956095b92b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/772e5bf599246a5287127bdd99cfece8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6125821406d59062eb167f7d6869895a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e6326eccc301bc751048b29534cca15d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e28d9f35cc2dfe0b638bd436825b4973.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/338223dbdaa153930e1dc917b1ed2f4f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1236e0170d7e0992b83ba33b4001537f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fdad631c1a1b4c5da82b839950a30277.jpg"
       ]
     },
     {
@@ -1301,32 +1246,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/1e74934e9f61d43126642dfb4093a338.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/57ad146bfad0a2d04cfba055eb4ad7de.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2ca0b016cd1b788b640dc1efb496a108.jpg"
-      ]
-    },
-    {
-      "id": 5113,
-      "title": "LOW MILES! 2010 DAEWOO LACETTI(40무9432)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2010-daewoo-lacetti40무9432/5113/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/5eb4f1e2b8d97412d5962e1813dd6a91.jpg",
-      "price": "$2,300",
-      "engine": "4 CYLINDER",
-      "miles": "73000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/5f68d8daabc373eda8579588311edd2d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ee051d83d51cf15085b25492697b2f4f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/8c898bded7712792f1ccfe42c275035d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e6d46a79fb351f6942bf6beebc684e13.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c481e99cc2420a03637bb74bc5681002.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/b3d0923eeab4754689e77bbfb18f9025.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/9ad5ea9641ce9ecfb6eeacf8db35817d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/bc90e48d2436c2bd2724e90cbf6f0e78.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/38199ab80d83a177a810e1b1d5cdf846.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/73d5de5d00d5667606a095fc9ece360e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e13a118bc6230a0877f6437bf6e62ba5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/4a66669d9f6c20342ffdc51e1a29627e.jpg"
       ]
     },
     {
