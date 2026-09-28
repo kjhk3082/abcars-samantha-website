@@ -22,7 +22,7 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (140 vehicles, updated 2026-09-27)
+## Current inventory (136 vehicles, updated 2026-09-28)
 
 - [2016 KIA ALL NEW SORENTO — $8,900](https://samanthausedcar.com/cars/5183)
 - [AWD! 7SEATS! 2017 INFINITI QX60 — $9,500](https://samanthausedcar.com/cars/5182)
@@ -43,7 +43,6 @@
 - [2010 KIA SORENTO TLX / 7 SEATER — $5,500](https://samanthausedcar.com/cars/5164)
 - [2010 DAEWOO MATIZ — $2,300](https://samanthausedcar.com/cars/5161)
 - [2009 GENESIS 3.3 — $3,900](https://samanthausedcar.com/cars/5160)
-- [LOW MILES! RENAULT SM7 — $2,700](https://samanthausedcar.com/cars/5159)
 - [2016 HYUNDAI AVANTE AD — $5,700](https://samanthausedcar.com/cars/5158)
 - [2012 KIA SORENTO TLX / 7 SEATER — $4,900](https://samanthausedcar.com/cars/5157)
 - [2022 PEUGEOT 308 GT 1.5 — $15,600](https://samanthausedcar.com/cars/5156)
@@ -51,7 +50,6 @@
 - [2018 MERCEDES BENZ E200 — $13,900](https://samanthausedcar.com/cars/5154)
 - [2007 KIA SORENTO TLX — $2,900](https://samanthausedcar.com/cars/5152)
 - [LOW MILES! 2014 CHEVY AVEO — $2,800](https://samanthausedcar.com/cars/5151)
-- [LOW MILES! 2012 HYUNDAI VELOSTER — $3,900](https://samanthausedcar.com/cars/5150)
 - [2016 KIA CARNIVAL — $8,400](https://samanthausedcar.com/cars/5148)
 - [2016 HONDA CRV EX SPORTS 4WD — $12,500](https://samanthausedcar.com/cars/5147)
 - [2014 RENAULT QM5 — $3,700](https://samanthausedcar.com/cars/5146)
@@ -67,7 +65,6 @@
 - [4WD! 2015 FORD EXPLORER — $6,900](https://samanthausedcar.com/cars/5126)
 - [2015 KIA SORENTO — $6,900](https://samanthausedcar.com/cars/5125)
 - [LOW MILES! 2012 HYUNDAI AVANTE — $3,500](https://samanthausedcar.com/cars/5124)
-- [2013 GENESIS 3.8 — $6,900](https://samanthausedcar.com/cars/5123)
 - [2013 HONDA ODYSSEY — $7,900](https://samanthausedcar.com/cars/5122)
 - [2011 KIA SPORTAGE TLX — $5,800](https://samanthausedcar.com/cars/5121)
 - [2010 GENESIS COUPE — $3,800](https://samanthausedcar.com/cars/5120)
@@ -75,6 +72,7 @@
 - [LOW MILES! 2018 RENAULT CLIO — $5,900](https://samanthausedcar.com/cars/5118)
 - [LOW MILES! 2016 KIA MORNING — $3,900](https://samanthausedcar.com/cars/5116)
 - [LOW MILES! 4WD! 2017 HONDA PILOT — $10,900](https://samanthausedcar.com/cars/5114)
+- [LOW MILES! 2010 DAEWOO LACETTI — $2,300](https://samanthausedcar.com/cars/5113)
 - [2012 CHEVY SPARK — $2,400](https://samanthausedcar.com/cars/5109)
 - [2008 DAEWOO MATIZ — $1,800](https://samanthausedcar.com/cars/5104)
 - [LOW MILES! 2015 AUDI Q3 quattro — $7,900](https://samanthausedcar.com/cars/5102)
@@ -83,7 +81,6 @@
 - [LOW MILES! 2010 RENAULT SM7 — $2,900](https://samanthausedcar.com/cars/5093)
 - [GAS! 2019 RENAULT QM6 — $7,900](https://samanthausedcar.com/cars/5092)
 - [2016 GENESIS COUPE 2.0 S — $9,800](https://samanthausedcar.com/cars/5089)
-- [7SEATS! 2010 KIA SORENTO — $3,900](https://samanthausedcar.com/cars/5082)
 - [2015 KGM TIVOLI GASOLINE — $4,200](https://samanthausedcar.com/cars/5080)
 - [2012 GENESIS 3.8 — $6,400](https://samanthausedcar.com/cars/5079)
 - [7SEATS! 2015 SSANGYONG REXTON — $4,200](https://samanthausedcar.com/cars/5075)
@@ -91,7 +88,6 @@
 - [2016 RENAULT SM6 2.0 — $5,200](https://samanthausedcar.com/cars/5071)
 - [2023 KIA CARNIVAL / 9 SEATER — $16,900](https://samanthausedcar.com/cars/5070)
 - [2009 GENESIS COUPE — $3,800](https://samanthausedcar.com/cars/5068)
-- [LOW MILES! 2017 NISSAN MAXIMA — $7,900](https://samanthausedcar.com/cars/5067)
 - [2014 CHEVROLET SPARK — $3,200](https://samanthausedcar.com/cars/5063)
 - [2012 HYUNDAI VELOSTER — $4,200](https://samanthausedcar.com/cars/5062)
 - [2015 INFINITI QX60 AWD — $7,700](https://samanthausedcar.com/cars/5056)
