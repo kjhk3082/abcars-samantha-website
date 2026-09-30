@@ -22,8 +22,13 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (133 vehicles, updated 2026-09-30)
+## Current inventory (134 vehicles, updated 2026-09-30)
 
+- [2009 HYUNDAI i30cw — $2,900](https://samanthausedcar.com/cars/5189)
+- [AWD! 2011 SUBARU FORESTER — $4,900](https://samanthausedcar.com/cars/5188)
+- [2010 RENAULT SM3 — $2,200](https://samanthausedcar.com/cars/5187)
+- [2013 KIA RAY — $4,300](https://samanthausedcar.com/cars/5186)
+- [LOW MILES! 2015 FORD EXPLORER — $6,900](https://samanthausedcar.com/cars/5185)
 - [2014 HYUNDAI VELOSTER TURBO (MANUAL TRANSMISSION) — $5,900](https://samanthausedcar.com/cars/5184)
 - [2016 KIA ALL NEW SORENTO — $8,900](https://samanthausedcar.com/cars/5183)
 - [AWD! 7SEATS! 2017 INFINITI QX60 — $9,500](https://samanthausedcar.com/cars/5182)
@@ -57,12 +62,10 @@
 - [2010 HYUNDAI TUCSON IX — $3,700](https://samanthausedcar.com/cars/5144)
 - [2011 HYUNDAI TUCSON IX — $3,600](https://samanthausedcar.com/cars/5143)
 - [LOW MILES! 2018 RENAULT QM6 — $7,900](https://samanthausedcar.com/cars/5140)
-- [LOW MILES! 2011 HYUNDAI GRANDEUR — $3,700](https://samanthausedcar.com/cars/5138)
 - [2008 HONDA ACCORD COUPE V6 — $5,900](https://samanthausedcar.com/cars/5131)
 - [LOW MILES! 2015 KIA K5 — $5,600](https://samanthausedcar.com/cars/5130)
 - [LOW MILES! 2018 CHEVY TRAX TURBO — $5,500](https://samanthausedcar.com/cars/5128)
 - [4WD! 2015 FORD EXPLORER — $6,900](https://samanthausedcar.com/cars/5126)
-- [2015 KIA SORENTO — $6,900](https://samanthausedcar.com/cars/5125)
 - [2013 HONDA ODYSSEY — $7,900](https://samanthausedcar.com/cars/5122)
 - [2011 KIA SPORTAGE TLX — $5,800](https://samanthausedcar.com/cars/5121)
 - [2010 GENESIS COUPE — $3,800](https://samanthausedcar.com/cars/5120)
@@ -93,7 +96,6 @@
 - [LOW MILES! 2016 CHEVY DAMAS — $5,500](https://samanthausedcar.com/cars/5041)
 - [HYUNDAI GENESIS 3.8 — $3,900](https://samanthausedcar.com/cars/5040)
 - [2016 RENAULT SM6 2.0 LE — $4,900](https://samanthausedcar.com/cars/5038)
-- [2018 JEEP SAHARA 3.6 4X4 — $26,000](https://samanthausedcar.com/cars/5037)
 - [2015 CHEVROLET CRUZE5 1.4 LTZ HATCHBACK — $4,200](https://samanthausedcar.com/cars/5032)
 - [2010 KIA FORTE COUPE — $3,900](https://samanthausedcar.com/cars/5025)
 - [LOW MILES! 2012 CHEVY AVEO — $2,800](https://samanthausedcar.com/cars/5021)
@@ -129,7 +131,6 @@
 - [LOW MILES! 2017 KIA MORNING — $5,200](https://samanthausedcar.com/cars/4840)
 - [2015 KIA K7 2.4 GDI PRESTIGE — $5,500](https://samanthausedcar.com/cars/4828)
 - [2008 HYUNDAI GENESIS BH330 — $3,900](https://samanthausedcar.com/cars/4823)
-- [2016 HONDA CRV EX SPORTS 4WD — $15,900](https://samanthausedcar.com/cars/4818)
 - [2019 RENAULT SM6 2.0 — $5,900](https://samanthausedcar.com/cars/4792)
 - [2015 CHEVROLET CRUZE LTZ — $4,500](https://samanthausedcar.com/cars/4782)
 - [2015 CHEVROLET CRUZE LTZ — $4,500](https://samanthausedcar.com/cars/4780)
