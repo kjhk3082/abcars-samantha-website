@@ -1,7 +1,36 @@
 {
-  "updated": "2026-10-01T04:11:45+00:00",
+  "updated": "2026-10-01T12:29:43+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5190,
+      "title": "US SPEC! 2014 HONDA CIVIC (59모7692）",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2014-honda-civic-59모7692）/5190/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/a9ae41cfda5e47c63c02492e873a7cc0.jpg",
+      "price": "$7,900",
+      "engine": "4 CYLINDER",
+      "miles": "73000",
+      "transmission": "AUTO",
+      "options": "",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/e32c5db95780baf8030d2f57f2792692.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7cd336c203846a3c0d5e3eb03e6a5f54.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ae777952175e404848aea641fb043e9c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/17fe1671e3aad60d418468d487f8b1c0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/65c5e9b04f87e9d9d9066c577d6c803f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/60772a5f2d65916c9daec57822471d0f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b5421ea006e3fa5af05f145b58f4c2c0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b35ad664763e62aff37b594c597ace37.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5052853c217b48c360bc4ba80ca794a1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7342936dc0a7b9dd6f659d4709448b36.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/322fca6b7f918fdb6da63e65f5a9908f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/63dbb5a47c286472826e90b17c74619e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4356a4428ab635c17dd601d54bd41bb9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/95ef75e3c6c1526b62491f131d3cb2f7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/947ec5ba077721c5cf9e1553913f372e.jpg"
+      ]
+    },
     {
       "id": 5189,
       "title": "2009 HYUNDAI i30cw(10더1572)",
@@ -104,35 +133,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e56be9d44d2ce7b4b25a8d347873a909.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b3de60c5588b4f49c422148d7872ce5d.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/19b2f2c28c897bb2a9d069673279d48d.jpg"
-      ]
-    },
-    {
-      "id": 5185,
-      "title": "LOW MILES! 2015 FORD EXPLORER(11소8023)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2015-ford-explorer11소8023/5185/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/aeac255794ce5a21bce86ed5f0a0bb21.jpg",
-      "price": "$6,900",
-      "engine": "4 CYLINDER",
-      "miles": "54000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, Sunroof, HI-pass, 7seats",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/3f9e8815b13a582c1c09c659d70bdf14.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/09e784dd6af008f32f1e8e1fa3ab0d0d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4db75eae4180e0aaf6e1c4041557627a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/784ac16406d23dee89783cfd880465ff.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/822210a5b1aefd23f9548510ac31c4f8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d966fe347927c3d1efbf517bb2ce3fd4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1adc1e28d08b5247143a6e0765dd95f7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/89119bb541b6b86e0d8b872033561435.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1b6ea1c317115718b64d8b9b495a649e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b8a3956efdb9d300c39e8c5fa1247f6d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0eeffd49129ee664f5df3d34936c9338.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/41f02ced2c49dcb4e8d24e3f6535e77a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e7a03e664717dd8d1159be81cb82974e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/643af1bbc2be8bb3691e9141d897ac83.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6b5d290c646e7b84e472e89b91c4588f.jpg"
       ]
     },
     {
