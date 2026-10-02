@@ -1,7 +1,34 @@
 {
-  "updated": "2026-10-02T00:33:40+00:00",
+  "updated": "2026-10-02T09:24:12+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5191,
+      "title": "2012 CHEVROLET SPARK (59너2509)",
+      "url": "https://www.gorillamotors.co.kr/product/2012-chevrolet-spark-59너2509/5191/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/d45d3fab45ee879d7c387804e294aa2e.jpg",
+      "price": "$2,800",
+      "engine": "V4",
+      "miles": "6,5000",
+      "transmission": "AUTO",
+      "options": "ISO FIX , BACK UP CAMERA",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/3617881f0c10c929137d3be0db600178.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0635de7a2b7232e2ad061a8227919edd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4451da6ff543b21eb9129d6aee4ca3bd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d24d4bd0369ec63fe82be509dba213ba.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/763d6969b5b154faab362e2bb9e995c9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d3645c1eaee944229f0904cb4fe44373.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3d693ae9d89c3292a8fd3a4ca47ce778.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/19f1fb911719d22c183c4796cbd17726.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6f5ec0dbf46722e8a6a0d3c9d366e959.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/32398e3466b6226532b2ce6c78070fe2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/48d4166c7cc36147d73de071d0905c60.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3c316711eb20ae6c22f71ea47df5ca8a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c988d137b716391e0a0bad87877801c9.jpg"
+      ]
+    },
     {
       "id": 5190,
       "title": "US SPEC! 2014 HONDA CIVIC (59모7692）",
@@ -430,35 +457,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f57f08d275e2d3c9ba8295c546c6f34a.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/14c348c54a3d8890b2d63a5eb65f21ec.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/0d9a9f114623c283e0cd45a884a5e334.jpg"
-      ]
-    },
-    {
-      "id": 5171,
-      "title": "2016 NISSAN MAXIMA(37너0926)",
-      "url": "https://www.gorillamotors.co.kr/product/2016-nissan-maxima37너0926/5171/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/95d8fafde4fda766343b1b3638e09a46.jpg",
-      "price": "$7,400",
-      "engine": "V6",
-      "miles": "83000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Andorid/Carplay, Heated/Cooling seats, Sunroof",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/1c056a2669d0000e84af244130bd75aa.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/eae8a65a2b5882edca541630a03bf040.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5a55e07e6d3d795d2a20f6714273d008.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c1ba731eef9324269bf56ee686112d77.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3c94ab6fec110afe23cf83a8e9c8229f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b53436ddd1f71151d446b7a59c95e61c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a09547d2abf666adc27261a2508aab9c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/176aa2709a2c4713ecbd6aa248635e45.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bab2d65e6f75cbbdab9d62acb766de11.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bccb66b194a290dafffe5458c4d023a0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/08b63f73148048a9d8401a500c7143d3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fe8636549ab3f062932194464cac39c3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/92203682e8c2f0e7dd02de5fff548ce3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/98674726c5ffad7b0c0f6d673b171c6a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8dd758a30abd34864f9194e06b79cb71.jpg"
       ]
     },
     {
@@ -1933,35 +1931,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/fe147456b8ff3ea97ffc6736bf769ab5.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/cdba6b3f18c7ec747dd17e345a9bcd76.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/3d16d12b59a158a1a01404725558465b.jpg"
-      ]
-    },
-    {
-      "id": 5025,
-      "title": "2010 KIA FORTE COUPE  (16모7864)",
-      "url": "https://www.gorillamotors.co.kr/product/2010-kia-forte-coupe-16모7864/5025/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/b1684567fb2100fb9723d447396b4d50.jpg",
-      "price": "$3,900",
-      "engine": "4 CYLINDER",
-      "miles": "45000",
-      "transmission": "AUTO",
-      "options": "BACK UP CAMERA, PUSH BUTTON START",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/3b68c6804c35827082537b53ba7aa1d0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/18c13cbe73e0084764eebf12a17c7345.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/69f3411269138f5201c35048c8479c67.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/692d0bb3732e10e180ace296229fec95.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/62654b805e5238584b7eeb85f327a028.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/9a442a0c9ce05576c5f8d92ace9ac1f5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/8417352f765d9705aeea3a64bd234387.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/488f9452ae2aa6e14bb597c1eb73c4ff.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/60ff67562fd637614c50aebdd673090f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/92496ea2bc12dd215fe02db89440d613.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/e38ddce572a04607648f6b3d4c54b0ce.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/aa2ba4d92322685be2f6744cf2aefbf2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/edae7e658eaf1c99d85b45ae57a252af.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/239bc17e786c269c8817a1060fafd1c7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202607/a9037f54161a18352f597ab355539d29.jpg"
       ]
     },
     {

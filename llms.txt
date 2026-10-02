@@ -22,8 +22,9 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (133 vehicles, updated 2026-10-02)
+## Current inventory (132 vehicles, updated 2026-10-02)
 
+- [2012 CHEVROLET SPARK — $2,800](https://samanthausedcar.com/cars/5191)
 - [2014 HONDA CIVIC — $7,900](https://samanthausedcar.com/cars/5190)
 - [2009 HYUNDAI i30cw — $2,900](https://samanthausedcar.com/cars/5189)
 - [AWD! 2011 SUBARU FORESTER — $4,900](https://samanthausedcar.com/cars/5188)
@@ -40,7 +41,6 @@
 - [2013 HYUNDAI AVANTE — $3,500](https://samanthausedcar.com/cars/5174)
 - [2012 CHEVROLET SPARK LT — $2,900](https://samanthausedcar.com/cars/5173)
 - [2015 GENESIS COUPE 2.0 — $6,600](https://samanthausedcar.com/cars/5172)
-- [2016 NISSAN MAXIMA — $7,400](https://samanthausedcar.com/cars/5171)
 - [LOW MILES! 2009 KIA SOUL DIESEL — $3,500](https://samanthausedcar.com/cars/5170)
 - [2011 NISSAN CUBE — $4,500](https://samanthausedcar.com/cars/5167)
 - [2010 GENESIS COUPE — $3,900](https://samanthausedcar.com/cars/5166)
@@ -96,7 +96,6 @@
 - [HYUNDAI GENESIS 3.8 — $3,900](https://samanthausedcar.com/cars/5040)
 - [2016 RENAULT SM6 2.0 LE — $4,900](https://samanthausedcar.com/cars/5038)
 - [2015 CHEVROLET CRUZE5 1.4 LTZ HATCHBACK — $4,200](https://samanthausedcar.com/cars/5032)
-- [2010 KIA FORTE COUPE — $3,900](https://samanthausedcar.com/cars/5025)
 - [LOW MILES! 2012 CHEVY AVEO — $2,800](https://samanthausedcar.com/cars/5021)
 - [2013 HONDA ODYSSEY 3.5 — $7,900](https://samanthausedcar.com/cars/5019)
 - [11SEATS! 2015 KIA CARNIVAL — $8,300](https://samanthausedcar.com/cars/5012)
