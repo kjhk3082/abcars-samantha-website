@@ -1,7 +1,33 @@
 {
-  "updated": "2026-10-02T21:52:34+00:00",
+  "updated": "2026-10-03T03:50:35+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5192,
+      "title": "2008 RENAULT SM7(22머2325)",
+      "url": "https://www.gorillamotors.co.kr/product/2008-renault-sm722머2325/5192/category/55/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/e27251501d67c3ceed17bb6d3ffbf766.jpg",
+      "price": "$2,500",
+      "engine": "V6",
+      "miles": "99000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Heated seats",
+      "category": "renault-samsung",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/c90b2c7924178b9076b18617feb04846.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/25497f33770b4f7a91119339b94b71d9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/62fb71f949189c5e4ff43bc0dc5a5d65.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3456bf0503973f9fceeb56b3f97f7b2c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/be196140c47a7ab99cca4da60f98749f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/fbbe87c53b38313dab26b2ca829694ea.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7ebe2fc454a3dcc7cc8d11024da6f2cb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ea2c9ec102dd43358e30863d39bd2987.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d9c76f0d333cebe60ab6a06613cba7ee.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d468d8378eae508221609fe9e66b31a0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d4b3f9db4cae53082febbfa921ddc902.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/eb2fd26e5cf8df8b20979d456db66c29.jpg"
+      ]
+    },
     {
       "id": 5191,
       "title": "2012 CHEVROLET SPARK (59너2509)",
