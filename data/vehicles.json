@@ -1,7 +1,36 @@
 {
-  "updated": "2026-10-05T21:51:36+00:00",
+  "updated": "2026-10-06T04:55:15+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5193,
+      "title": "2007 LEXUS IS250(06저9447)",
+      "url": "https://www.gorillamotors.co.kr/product/2007-lexus-is25006저9447/5193/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/dcf0496fa97b3388b8a89d72ae4866ec.jpg",
+      "price": "$2,900",
+      "engine": "V6",
+      "miles": "120000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated/Cooling seats, Sunroof",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/0dd1184e9494ccf65fd0c37eb0cbae1c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b03564213051108c5a46a08d2496a28d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5aec92b78984bd54d91fbfa86588461c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a3f41c577146e44b86e283ad742f5107.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b6e688b3cf72710213f4ba304e66c9e8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c5b88d60b1b27698b369c30312d1fe89.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/83476cd684edd056cf57da5a6238ced0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b794d12f5bb071e861752fc58c1ac020.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0f2e2704667565d5a134498d610be80b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/02e105c1f6972519be02016b987ec17b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c9953b87a38023f0bbde7ddbd4e470cd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f47ad4a5f3193edeb0dcfbd5eb899f03.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/de1b1bdb4f7585ce13b0ebf91b16c134.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/81a6de5329d4da6d6ec4e7052e7ba1ae.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/bc665e5d4a825797054e9fd3283335dd.jpg"
+      ]
+    },
     {
       "id": 5192,
       "title": "2008 RENAULT SM7(22머2325)",
@@ -134,32 +163,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/af32e5a39711374ce970ca327b4a87db.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c30acc063e6d8b28a9e318fae81a9431.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c8f8f6e6909125dfad87c45a2cb36c4.jpg"
-      ]
-    },
-    {
-      "id": 5187,
-      "title": "2010 RENAULT SM3(59루2491)",
-      "url": "https://www.gorillamotors.co.kr/product/2010-renault-sm359루2491/5187/category/55/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/d9c3bc9f431ffa08e63f94bb1c13a0ba.jpg",
-      "price": "$2,200",
-      "engine": "4 CYLINDER",
-      "miles": "85000",
-      "transmission": "AUTO",
-      "options": "Dash cam, Heated seats, Sunroof",
-      "category": "renault-samsung",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/673f8e68d2b929b9f0e65521bb90849e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6cdd00b37f7398fc91fee1956ac0a0d1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e1aa20e47297bd69e6aaa9844b44e789.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ccc15008292a6f28d053f9c0cb2ba311.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/55c3f5e65462f2fc3357e0231a5ec657.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/74ba88ad29dd75f7c6ddd84be0d5c4d1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cecafe62f0169cf7ad810f3729a06c0f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/91a8dc0171039615eb4072ac589b7861.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e045565d90fecfa830d4728cb0fe2ece.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/dbed0ca93581ae2abc13aef2e9bd6acb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/3c148617fe337add02be50aff3f3bac1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/8b83ee8f32f63e423dea643b93e74b3d.jpg"
       ]
     },
     {
@@ -1350,29 +1353,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/5ea458a45f85557b0037a6314fde3291.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/373495c8bb3fdd723e97fb426e7ac1f6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/4f633b7bcc026e12f331a1d434166223.jpg"
-      ]
-    },
-    {
-      "id": 5104,
-      "title": "2008 DAEWOO MATIZ(60라4362)",
-      "url": "https://www.gorillamotors.co.kr/product/2008-daewoo-matiz60라4362/5104/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/b582a8718911fb26d12ada1dcf37a3d7.jpg",
-      "price": "$1,800",
-      "engine": "3 CYLINDER",
-      "miles": "108000",
-      "transmission": "AUTO",
-      "options": "",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/9c91f5cd2ae91802e940bd4aaa70613c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/35a22dc798b67854e1dd5c1e901390a8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e2babae94dc9904d730526bb68f3bb3c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f0094b48aa299463a9d348b2c12f4f67.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d3393648663e10e699177e810eae30e7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/76e05f38dbba9c74c98365e718651fd1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/5274f74c295a34c942920c62e4532d35.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/db06cf794ae0c8d49d52e8cc5cf3b7fc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/263693794a35024a97fde8e86cf2001a.jpg"
       ]
     },
     {
