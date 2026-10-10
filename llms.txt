@@ -22,7 +22,7 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (137 vehicles, updated 2026-10-09)
+## Current inventory (135 vehicles, updated 2026-10-10)
 
 - [2009 GENESIS COUPE — $3,800](https://samanthausedcar.com/cars/5205)
 - [2014 KIA K9 — $5,900](https://samanthausedcar.com/cars/5204)
@@ -32,7 +32,6 @@
 - [LOW MILES! 2014 KIA MORNING — $3,300](https://samanthausedcar.com/cars/5198)
 - [2018 HYUNDAI AVANTE — $6,900](https://samanthausedcar.com/cars/5197)
 - [LOW MILES! 2010 RENAULT SM3 — $2,200](https://samanthausedcar.com/cars/5196)
-- [2008 HYUNDAI SONATA — $2,200](https://samanthausedcar.com/cars/5195)
 - [LOW MILES! 2014 CHEVY AVEO — $2,800](https://samanthausedcar.com/cars/5194)
 - [2007 LEXUS IS250 — $2,900](https://samanthausedcar.com/cars/5193)
 - [2008 RENAULT SM7 — $2,500](https://samanthausedcar.com/cars/5192)
@@ -137,7 +136,6 @@
 - [2008 HYUNDAI GENESIS BH330 — $3,900](https://samanthausedcar.com/cars/4823)
 - [2019 RENAULT SM6 2.0 — $5,900](https://samanthausedcar.com/cars/4792)
 - [2015 CHEVROLET CRUZE LTZ — $4,500](https://samanthausedcar.com/cars/4782)
-- [2015 CHEVROLET CRUZE LTZ — $4,500](https://samanthausedcar.com/cars/4780)
 - [2015 HYUNDAI GENESIS 3.3 — $7,600](https://samanthausedcar.com/cars/4757)
 - [2012 KIA SORENTO TLX PREMIUM 7SEATER — $4,500](https://samanthausedcar.com/cars/4694)
 - [2011 KIA K7 — $4,500](https://samanthausedcar.com/cars/4692)

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T22:30:03+00:00",
+  "updated": "2026-10-10T04:23:06+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -216,33 +216,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4afe1bf5c3d9124a8de277fc11eab672.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/88a729bd639b230552b76855ac54f801.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3e3032284b3d52e847dcf46838c3ee8b.jpg"
-      ]
-    },
-    {
-      "id": 5195,
-      "title": "2008 HYUNDAI SONATA(49나5116)",
-      "url": "https://www.gorillamotors.co.kr/product/2008-hyundai-sonata49나5116/5195/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/a33f0286270e0ea37d65201683a892e5.jpg",
-      "price": "$2,200",
-      "engine": "4 CYLINDER",
-      "miles": "92000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Android/Carplay, Heated seats",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/cef683db2804bcac06d2dccf7a697d11.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d0200cd2ec235ea92ed14b24f47be29d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f509a719c51d4c7e939fe1b4edeb18f1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/fa2a3415c6e2cecfc0ff5788a61bf14d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/1331fab1b2db1a2db3a296deade5689b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b4314307831b5a1a87475d8d332c7ab2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/41364539398cb4f960489ad73b7c5a90.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b2198eab87a5cc89a4ec6bc7176a33f4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f010e2d460024655403b82023304b220.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cf884c321824a3eabd2383f1a0c079c5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/53887e134a81444d545b383096b35fc9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/531562f0604f65fc7fe6ca5d1886e058.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/22dc34e0f592319a2279498b3cbed1d3.jpg"
       ]
     },
     {
@@ -3048,28 +3021,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202603/d56980cf8757a470517299228b937dab.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202603/ac2927373d491e37025a785e87332a42.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202603/425cb4c73e76798a458bac68b4b58227.jpg"
-      ]
-    },
-    {
-      "id": 4780,
-      "title": "2015 CHEVROLET CRUZE LTZ(62수8264)",
-      "url": "https://www.gorillamotors.co.kr/product/2015-chevrolet-cruze-ltz62수8264/4780/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202603/a69f03719300b1a6654be67d74158f45.jpg",
-      "price": "$4,500",
-      "engine": "V4",
-      "miles": "82000",
-      "transmission": "AUTO",
-      "options": "SMART KEY, BACK UP CAMERA, BLUETOOTH, HI PASS & MORE",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202603/98e940dcec09b68ec5fa973712acc3d7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/0138e20968a094edd6a2dad9187d3cb7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/c464c16315e98fe12b054027c88163e8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/18cc063b1f6dfac4e2701bc4b58a42c7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/1b2b72bc77626baf226b603312c94f0b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/0b46e926e13dd72110712ebe4c22667b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/4c06edc1b14ea5ba3aee6a0d3529aa5a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202603/aeeff5d96a29aeba1dfbcf0c152f949e.jpg"
       ]
     },
     {
