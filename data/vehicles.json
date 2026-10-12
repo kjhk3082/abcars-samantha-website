@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T10:16:23+00:00",
+  "updated": "2026-10-12T20:57:06+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -1170,16 +1170,16 @@
       "options": "ISO FIX, BACK UP CAMERA, PARKING SENSORS, EXTRA CLEAN",
       "category": "hyundai",
       "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/5354d4a4abaf24fdf7da09adcedf9622.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/49bde35bffb54e6ac4308faccc228895.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/dca74f744264303b31eda4167b9ef4a4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b91516fef4f1d85a3ec76121363f3363.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e876e66f18ea1611f2ad0083b698cfec.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d7cadcdd9d8ea611316721b5169fc7ed.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/38caa0033a1085acc6ae56b386b56b51.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f8d4c5a950fa95077b506cad4411c760.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a911db7bb5fb532bf212e613cbd4a789.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/a91abb47a1bf6e64847e0c7a353f0d07.jpg"
+        "https://gorillamotors.co.kr/web/product/big/202609/5354d4a4abaf24fdf7da09adcedf9622.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/49bde35bffb54e6ac4308faccc228895.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/dca74f744264303b31eda4167b9ef4a4.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/b91516fef4f1d85a3ec76121363f3363.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/e876e66f18ea1611f2ad0083b698cfec.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/d7cadcdd9d8ea611316721b5169fc7ed.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/38caa0033a1085acc6ae56b386b56b51.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/f8d4c5a950fa95077b506cad4411c760.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/a911db7bb5fb532bf212e613cbd4a789.jpg",
+        "https://gorillamotors.co.kr/web/product/extra/big/202609/a91abb47a1bf6e64847e0c7a353f0d07.jpg"
       ]
     },
     {
