@@ -1,7 +1,36 @@
 {
-  "updated": "2026-10-13T02:28:04+00:00",
+  "updated": "2026-10-13T10:09:09+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5213,
+      "title": "GASOLINE! 2015 RENAULT QM5  (12너0952)",
+      "url": "https://www.gorillamotors.co.kr/product/gasoline-2015-renault-qm5-12너0952/5213/category/55/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/a9af439150cf53e3cc0444d028cead05.jpg",
+      "price": "$4,800",
+      "engine": "4 CYLINDER",
+      "miles": "71000",
+      "transmission": "AUTO",
+      "options": "",
+      "category": "renault-samsung",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/1175d1312687fa95a95daf9a880e76b7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3f99b42b79e6eabf629284ba512289e5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7cd0874ed38f0076872e8a8e56a98733.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3b8a664252ebc9b02827006a5001fbfa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/338add4281aaf4e48d838a5d3d2892b4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/8f0a5fe1cdbae711d5ab03c5f89cbc7e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/104b57d9cf6b2fa27740a2a4dc87e519.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/86e1d75873ebf970ab39320b036b55c0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/291c4ae79194321c8d76070d16d5ec9d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/bf9e1487bfa37fbd15a95e18acbf56c2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/89a3eb4e5c219c148b7b60f5595dcee1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a4b847a3ef8b6d992371e7a2bc2a4f7e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/83e03cb1c1314d0d09d8aa9de084cbdc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/46b84e7a414c8bda0e1b7a6b9d49aefb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f209c7acccdcb3db38dba4c23fe0f83e.jpg"
+      ]
+    },
     {
       "id": 5212,
       "title": "LOW MILES! 2014 KIA PRIDE(301주9185)",
