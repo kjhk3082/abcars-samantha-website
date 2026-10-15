@@ -1,7 +1,36 @@
 {
-  "updated": "2026-10-15T03:14:51+00:00",
+  "updated": "2026-10-15T10:54:27+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5220,
+      "title": "2019 KIA THE CARNIVAL /  9 SEATER (383도3849)",
+      "url": "https://www.gorillamotors.co.kr/product/2019-kia-the-carnival-9-seater-383도3849/5220/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/d362d7a7b65f4491ae03d37bc27457f9.jpg",
+      "price": "$11,600",
+      "engine": "4 CYLINDER",
+      "miles": "68000",
+      "transmission": "AUTO",
+      "options": "ANDROID AUTO & APPLE CARPLAY/2KEYS / NEW ENGINE OIL",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/2b153177373dbd40321557bb470912e3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/29c250a929b83efccefbc211d02c840d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e9ec6c10b5af461a13b7e610a79f9f56.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/446288afee4e5ed8fe3de39c74b4ae1a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2b2c83a81f8c018d71f8d8a2cc96449c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/63d3e32093dc4a457790807ad257c616.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e03f3dbcf5e165b0e909063b9e28ab56.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2d82508061c4e7e2f35d2ffc2dc3df3d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e7376c6b14753393213688dbfb8d86b2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ba5cd7e77681cbed7a6287d3522321ba.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/82d950becb135b81330d062a197893f7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ad763e9e356bb43d71893d13e21163a9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b1f1055e1fc1381c8633a2d4a6f90d90.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a96c8c2cc5fa6c13ee79e142e31637cd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ed07ab59f2e09ad2d7f5b21136e5cc9c.jpg"
+      ]
+    },
     {
       "id": 5219,
       "title": "2009 RENAULT SM5(16서8418)",
@@ -1110,34 +1139,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/be58642ae0080f0c8559f5108bdfa736.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fd24db5f706c750e6420301c4f945520.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/6258f775281b5c517a19eec2b68ffc3b.jpg"
-      ]
-    },
-    {
-      "id": 5164,
-      "title": "2010 KIA SORENTO TLX / 7 SEATER (23두7842)",
-      "url": "https://www.gorillamotors.co.kr/product/2010-kia-sorento-tlx-7-seater-23두7842/5164/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/da89d4f2955f08bdfebb7a76ac5f7a76.jpg",
-      "price": "$5,500",
-      "engine": "V4",
-      "miles": "53000",
-      "transmission": "AUTO",
-      "options": "ANDROID & APPLE CARPLAY, SUNROOF, HI PASS, 7 SEATER",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/a027aea21c7d6219e5a4b43a833f1354.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2b42b0491cd6723a1a48a57b6abba869.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/69696d4f459c1887df0e58cf06ffcb3e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/082413e548df3f3fe781be5da75f3d62.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/d53fcf44da0c1ca3770400a609ac707a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/594796e9c1d11b51423a11a2ef1b43a6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ac42fdf622d8cf34f986af5876c54d0b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/efdc6f8d86f9f0ce526a8a3a818820bc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2b4aaf282ea2daf2c289c2db1e668355.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4ab16d17e9264dd5b2b5c2caf030f9cf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/628ee09fd44c42212e97d65953fe65ef.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/cd4541183eae54e145c295e8e712b207.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fa14013acc25bb9ba090eca69a472c6a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f9f2f70d1ffd379b584572dd8d6f39db.jpg"
       ]
     },
     {
