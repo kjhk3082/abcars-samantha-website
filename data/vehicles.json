@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T16:40:43+00:00",
+  "updated": "2026-10-21T21:17:51+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -761,7 +761,22 @@
       "transmission": "MANUAL",
       "options": "ONE OWNER / NO ACCIDENT / LOW MILES",
       "category": "hyundai",
-      "images": []
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/56d3976e3bc05046ca79b11bd16d7af3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/dd14662e26e0b7d16a274926034fa11e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/38464f2743b1b99fbcfba7f873ce388e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/409c78a9e98a0c6cd99eaf26f2934f3f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b67245c4136c1479b4e4b512e90c5c65.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d865179c049d1ae3075b24d44706e8c3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b1149da2108a8f5943665fe460263ca4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e4e53d20786547514dcad04089815865.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/052c0813f009c303900595c7364a98a7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/027f78c1a08070a369a65af0d99ca3d0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7e4bc92c8220792971d37b70fd5d3a8d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6cf1d373cdaff0430b4f61dd1c6453dc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4d14e3bec0e98a81bc9713fe697c83a0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/459dafcf045e172fe3c41a77c9944531.jpg"
+      ]
     },
     {
       "id": 5205,
