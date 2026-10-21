@@ -24,6 +24,9 @@
 
 ## Current inventory (151 vehicles, updated 2026-10-21)
 
+- [2016 KIA SEDONA — $12,700](https://samanthausedcar.com/cars/5236)
+- [2025 GM TRAX CROSSOVER ACTIVE — $14,800](https://samanthausedcar.com/cars/5235)
+- [2017 NISSAN JUKE 1.6 — $6,800](https://samanthausedcar.com/cars/5234)
 - [2016 KIA SPORTAGE — $8,600](https://samanthausedcar.com/cars/5233)
 - [7SEATS! 2015 CHEVY ORLANDO — $3,900](https://samanthausedcar.com/cars/5232)
 - [7SEATS! 4WD! 2014 FORD EXPLORER — $7,000](https://samanthausedcar.com/cars/5231)
@@ -78,7 +81,6 @@
 - [2009 GENESIS 3.3 — $3,900](https://samanthausedcar.com/cars/5160)
 - [2016 HYUNDAI AVANTE AD — $5,700](https://samanthausedcar.com/cars/5158)
 - [2012 KIA SORENTO TLX / 7 SEATER — $4,900](https://samanthausedcar.com/cars/5157)
-- [2022 PEUGEOT 308 GT 1.5 — $15,600](https://samanthausedcar.com/cars/5156)
 - [2023 MINI COUNTRYMAN 2.0 S ALL4 (KOREAN SPEC) — $19,600](https://samanthausedcar.com/cars/5155)
 - [2018 MERCEDES BENZ E200 — $13,900](https://samanthausedcar.com/cars/5154)
 - [2007 KIA SORENTO TLX — $2,900](https://samanthausedcar.com/cars/5152)
@@ -106,7 +108,6 @@
 - [2012 CHEVY SPARK — $2,400](https://samanthausedcar.com/cars/5094)
 - [LOW MILES! 2010 RENAULT SM7 — $2,900](https://samanthausedcar.com/cars/5093)
 - [GAS! 2019 RENAULT QM6 — $7,900](https://samanthausedcar.com/cars/5092)
-- [2016 GENESIS COUPE 2.0 S — $9,800](https://samanthausedcar.com/cars/5089)
 - [2015 KGM TIVOLI GASOLINE — $4,200](https://samanthausedcar.com/cars/5080)
 - [2012 GENESIS 3.8 — $6,400](https://samanthausedcar.com/cars/5079)
 - [7SEATS! 2015 SSANGYONG REXTON — $4,200](https://samanthausedcar.com/cars/5075)
@@ -123,7 +124,6 @@
 - [2016 RENAULT SM6 2.0 LE — $4,900](https://samanthausedcar.com/cars/5038)
 - [2015 CHEVROLET CRUZE5 1.4 LTZ HATCHBACK — $3,900](https://samanthausedcar.com/cars/5032)
 - [2013 HONDA ODYSSEY 3.5 — $7,900](https://samanthausedcar.com/cars/5019)
-- [2016 CHEVROLET SPARK LTZ — $3,900](https://samanthausedcar.com/cars/5011)
 - [LOW MILES! 2012 KIA SOUL — $4,500](https://samanthausedcar.com/cars/5003)
 - [2006 LEXUS ES330 — $3,300](https://samanthausedcar.com/cars/4998)
 - [LOW MILES! 2008 SSNAGYONG ACTYON — $2,300](https://samanthausedcar.com/cars/4990)
