@@ -1,7 +1,57 @@
 {
-  "updated": "2026-10-21T21:17:51+00:00",
+  "updated": "2026-10-22T03:21:15+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5238,
+      "title": "2019 CITROEN C3 1.5 (314가1642)",
+      "url": "https://www.gorillamotors.co.kr/product/2019-citroen-c3-15-314가1642/5238/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/a439f7f028ebaeb621708171dfeea367.jpg",
+      "price": "$8,800",
+      "engine": "4 CYLINDER",
+      "miles": "34000",
+      "transmission": "AUTO",
+      "options": "BACK UP CAMERA / BACK UP SENSORS",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/e8ea59ecd4291937a9730f7ea1d236c6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5821bbeae495de71ef3879f7075dba1b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/1f3cdf257a71ef56ad3b15cb5ff46108.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/346355b320fbf0e920517c05d92ee417.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a62c232b7c466192ac44a65effe283c3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/96e2c66655ec6089bb855350250b18eb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3bb470ed02fe804d48c4b9de7f9bc6ff.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7f4aa34862bbe8e29aadd41d0f08ec14.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/95092c8fa5fa48e92aad5566e0c2081f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/8d5520c2bb672faadae510e374e015f6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6e528bc2bcbf862753bb095364bae9c9.jpg"
+      ]
+    },
+    {
+      "id": 5237,
+      "title": "2021 CHEVROLET Real New Colorado 4WD Z71-X (86구0639)",
+      "url": "https://www.gorillamotors.co.kr/product/2021-chevrolet-real-new-colorado-4wd-z71-x-86구0639/5237/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/8738aa86b6efa8f71cb215e7207607a3.jpg",
+      "price": "$18,300",
+      "engine": "V6",
+      "miles": "67000",
+      "transmission": "AUTO",
+      "options": "ANDROID AUTO / APPLE CARPLAY",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/40226607e019b0fa210cc435b969aadd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/103f9c875dcb0d05161d5b3367e847ce.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/def27c5fa8e4f65c0fa8dc7f10e216b8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7b592f251eebfe056244b26ddd0dd0f5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4bb523675a9f14b63126c01cdbca956f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/bd2e5d84bcf5004b3dc6e9327ffb3276.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4f79c4ab1aa771d55f53884a94ca1c22.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ab04b29a5298a3a5361b0885dc5ec7cb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d27beb0a1fccf3e8924b0186b6d29be5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cc7354ecb3c9dc117153120652062faa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/17b1e0b0d3d23052bfd64a9577b098f0.jpg"
+      ]
+    },
     {
       "id": 5236,
       "title": "US SPEC! 2016 KIA SEDONA (36더2571)",
