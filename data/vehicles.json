@@ -1,7 +1,63 @@
 {
-  "updated": "2026-10-22T03:21:15+00:00",
+  "updated": "2026-10-22T11:12:15+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5240,
+      "title": "2024 VOLKSWAGEN GOLF 2.0 GTI (KOREAN SPEC) (141로3897)",
+      "url": "https://www.gorillamotors.co.kr/product/2024-volkswagen-golf-20-gti-korean-spec-141로3897/5240/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/8c343f1c60edcf8a83d254c468d396d5.jpg",
+      "price": "$26,900",
+      "engine": "4 CYLINDER",
+      "miles": "13000",
+      "transmission": "AUTO",
+      "options": "LIKE NEW CONDITION / MANUFACTUR'S WARRANTY",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/56f0a18256b45075349c36d1d9000756.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7bfd9ea4245e8ae1e3f3614278b11b87.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/8548cc0c38e740f755ee2697c9325f02.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c5be3ae743dc0f4805258519d1eef55f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/dbccbd442c89a35fef67d271ab102fd6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b96e4f9a2105c87eb43cfd15432797fa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/9254d2f3cba5f30e9c1f3334d13ae8d3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d6ac59ab5bba2428eaf5e41c67c11a06.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6502dc05057bccc76362570da58f5ade.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/faa3940ec97b3026207c71d2d544715e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/629b8ea89424e4d01760e263041486bf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/aaa6e32a75fd9a7c129338becf03477c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3a5642d257ed02abe4a46958b3efcc9e.jpg"
+      ]
+    },
+    {
+      "id": 5239,
+      "title": "2010 KIA MOHAVE  4WD / 7 SEATER (28저6776)",
+      "url": "https://www.gorillamotors.co.kr/product/2010-kia-mohave-4wd-7-seater-28저6776/5239/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/f3493a96e53a02ddc19b438325d8d208.jpg",
+      "price": "$5,900",
+      "engine": "V6",
+      "miles": "60,000",
+      "transmission": "AUTO",
+      "options": "",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/99d15df604ff6652f63fbb7e9319d0d3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/253c156367212074945fd4ac9b8cb270.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/8a1b29341aad87110f05e6e026528ef7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/53dde50be4205aba552f413653b2f45c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/103ac5873a524b6eff93b2b6fcf6568e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/14ebda712a86412704998c86db53982d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f5734dfba2fc76f9083caf7edd736b23.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b421e57e36ddffe0a3c0aeba4d4f610a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5abea2c2c56ad47e9be4e8d163e262b7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f1e47230c22202f339762396a8e9689e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0d29e335b3781e7eb8fdeffcf3170eb0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/858125c5c8785b33a375226182d1a5ef.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/61d36390ec3db195e83841799bb0f626.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ae4e1bd1ed4bef74eb236fb4e85d6ab7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2da3577cb4b7228efea7f0f0f8262883.jpg"
+      ]
+    },
     {
       "id": 5238,
       "title": "2019 CITROEN C3 1.5 (314가1642)",
@@ -2524,32 +2580,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/6eb81bab002e2d086822c5c094362290.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e1196ce5b4b4c2e4f911d15f975f814d.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2e9550db66aabbf33c77ec5cb2903d39.jpg"
-      ]
-    },
-    {
-      "id": 5062,
-      "title": "2012 HYUNDAI VELOSTER (27도7516)",
-      "url": "https://www.gorillamotors.co.kr/product/2012-hyundai-veloster-27도7516/5062/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/923bd6a6dc624ae15d21471ee3c9f7df.jpg",
-      "price": "$4,200",
-      "engine": "4 CYLINDER",
-      "miles": "65000",
-      "transmission": "AUTO",
-      "options": "ENGLISH NAVIGATGION, HEATED SEATS, PUSH BUTTON START & MORE",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/1ffd65f9aec8468253b9f3eed02cb32f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/47d05ad704d5fc308d8dd49af4c04856.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f8b96bd3ee4295887de7f5bdc0f6887c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d44df2ac5353871f71e4430b1a86ce3a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/9ba40134dfd503daa405dd2bf085c019.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d456b2c02f53b6293ee810b9f7c3715e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/89e7668547008951c79c69634cd38f1a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f944067fecd0787b8f517fd1dab6cf61.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/6706d74db6c63114980abe86505c77c5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/bbb92a52a3866370fafa4b6d46fab41f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f42cc116dc2b466fc5d969278931c09f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/76782f8ce76535ea48c91c0b2689a3d9.jpg"
       ]
     },
     {
