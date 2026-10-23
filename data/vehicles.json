@@ -1,7 +1,34 @@
 {
-  "updated": "2026-10-22T21:14:53+00:00",
+  "updated": "2026-10-23T03:25:56+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5241,
+      "title": "2016 RENAULT SM6 2.0 RE (05주5567)",
+      "url": "https://www.gorillamotors.co.kr/product/2016-renault-sm6-20-re-05주5567/5241/category/55/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/b5866a6bf2d9842f219a85ea701b0c9f.jpg",
+      "price": "$5,600",
+      "engine": "4 CYLINDER",
+      "miles": "94000",
+      "transmission": "AUTO",
+      "options": "HUD, TALISMAN FULL BODY KIT",
+      "category": "renault-samsung",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/3e59b2c0c702d893a25dfbb845db4374.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f420d2321f405b7bcb87faa4fc64ab47.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0602e5f026ebed074af5e80f8c8ddc00.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a2712d9fa3b108c5c9d86f6e6c840d78.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/51d86f0b86a00168fd0fe996c56258ae.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7de3dad1023c36e57a2f552d61e3fecb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/90161dc74bbd5a92e12257c94d45241b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/68fc69d703f6f1da055592121d7fb799.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/58eb0a083d7fb34df737a10003d1f875.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/83cbfbe2d85c33164513523fecf7a923.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ea735d444d048a147686d62900ebff01.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/30c55ef586f34a66dda25e397839e5ef.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6415c7751dbe633de0052c032997514a.jpg"
+      ]
+    },
     {
       "id": 5240,
       "title": "2024 VOLKSWAGEN GOLF 2.0 GTI (KOREAN SPEC) (141로3897)",
@@ -389,33 +416,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ca11cbf0c58f08a9e085995b6e736348.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cb42204920ac77ff66fb363691741dd5.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/99fa2f4dd82500cffbbb6da755c9e686.jpg"
-      ]
-    },
-    {
-      "id": 5225,
-      "title": "LOW MILES! GAS! 2015 CHEVY TRAX(186우4583)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-gas-2015-chevy-trax186우4583/5225/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/46a326642844c1b88dbd5ac809ebcc71.jpg",
-      "price": "$3,500",
-      "engine": "4 CYLINDER",
-      "miles": "71000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats, HI-pass",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/fdaa11c9fc7ff089109cf591ae4d7c7c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/9cb335454a3c1da69746ae4faa7a95a9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d3a63807e7fc6b43c5ac21fc10b6cfcc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0c6a5f225b38646a729dc3205ea2f185.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/1d7c0ed63c6891c840565cf79b31a48e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/59faa0b03acc49792636891872b4de1b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0df2dfa3ecb8fda5037df417e34fe64a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5ea30bbe81c8eb964502029c63f219f8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/809a780085c6caff89e18af44cae32cf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e13d700dad7cfc9f1392d409a1bab5bc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4ee11412ad91e0d50e413c4375275505.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/412010de9c51f28f9266d7f335943682.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4d1d0cdd0bb14c741c72bf763783345d.jpg"
       ]
     },
     {
