@@ -1,7 +1,56 @@
 {
-  "updated": "2026-10-27T00:16:56+00:00",
+  "updated": "2026-10-27T08:41:06+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5251,
+      "title": "LOW MILES! 2011 DAEWOO MATIZ(68우2903)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2011-daewoo-matiz68우2903/5251/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/bae3f406f3beb8eb3a1b3311d1f9ac05.jpg",
+      "price": "$2,300",
+      "engine": "4 CYLINDER",
+      "miles": "73000",
+      "transmission": "AUTO",
+      "options": "",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/dd38f93935549126b8992bd80e772004.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e2e8f1dda963fbdb22d4e1070fa4eacb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2ebab8b8273a9731ca641482a47732bf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/fea52b946b9adac5b7b61452d4582705.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6e77b21acaf81431ae2e6c6566c7c470.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/49c1f2bdb27ddc33a4620e3c89aa1c8a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/89d73e4868a55013acda6317b6f6103c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/008f3044cfc66b496459087f9b77f52b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c83e6b0498b5c638c504582480fcdc45.jpg"
+      ]
+    },
+    {
+      "id": 5250,
+      "title": "LOW MILES! 2014 HYUNDAI AVANTE(15머9745)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2014-hyundai-avante15머9745/5250/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/d04fb82652a1418825c21bb1606bf709.jpg",
+      "price": "$4,500",
+      "engine": "4 CYLINDER",
+      "miles": "67000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Heated seats",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/573ba65568b3eaa7befca26e6c43d9b2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ff42a63cf1239e3c3e74d0cf085c33a1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/df8b3154df498e69c456ff21c0dc255b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2a54949bfa444e981e2979a164869acf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/8f65290512b4516b92ad1ae6a07328f9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/dbd854d1c94ac524b6db48e26c89528d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/77591f2df6a94fb3b96a0f7b808c5139.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cc494e278ab74916adf74c0d0fb7be44.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/13ecd52bfb2c40cb214dbbaa550e1c3e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/163eb26a75ba478651274febe466bf32.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3f0a44fbf1ecb4088cde38feccf66f85.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ff8c31d466309d357896e1d7a8d3391c.jpg"
+      ]
+    },
     {
       "id": 5249,
       "title": "LOW MILES! 2015 CHEVY MALIBU(11로5056)",
@@ -1039,35 +1088,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/35822ce57bdff44d723134dc7fcfd49b.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ff22ae22f071b3da08b9603789d42a28.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f31e02646c6257030eb8b1c7f616ff48.jpg"
-      ]
-    },
-    {
-      "id": 5207,
-      "title": "LOW MILES! 2009 HYUNDAI SANTAFE(28무6460)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2009-hyundai-santafe28무6460/5207/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/43ceadbb9979c3bebaff8dc063eff201.jpg",
-      "price": "$3,600",
-      "engine": "4 CYLINDER",
-      "miles": "37000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, Sunroof, 7seats",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/d147b68525bf97d128f494eafccbb8f9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/42f48965f89956d2efb7643f212e3325.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b78c009f97f3b6b669cc78b493dfc0f8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/777d624b3a24f82f9cd595594a8fd6da.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/30e3117c5c48e2114ac5c447fd4465d5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/1a466d0027ec346d94a4d62dd01fc3b1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f50c223008b0fb0494098d0427d52eb5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/af3b331d19f6798a22e1c76b1491247f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3053d485022f3245cb6b025a5ebf421a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/73f3f6eb884b8e2dc9bd43c5ea3d4d1c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/46be81e7eb6f876347835209772ccebf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/738c67548529c584250eefdccdf74320.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/488161058ea524a5f067825b4e1fb792.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/81e4bc77d8d9a659ababcfe8c3d2f5b7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7d16af576a646db3ec8b213d375d2d9b.jpg"
       ]
     },
     {
