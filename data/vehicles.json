@@ -1,7 +1,36 @@
 {
-  "updated": "2026-10-26T20:20:42+00:00",
+  "updated": "2026-10-27T00:16:56+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5249,
+      "title": "LOW MILES! 2015 CHEVY MALIBU(11로5056)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2015-chevy-malibu11로5056/5249/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/a4f819aa7d00b5d7131ebc5da4641c2f.jpg",
+      "price": "$3,900",
+      "engine": "4 CYLINDER",
+      "miles": "51000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats, HI-pass",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202610/1d47ee92329e021d8ee1d65c349fae09.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7f93177fbf3717121423535aae2b1bdd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/608217fc3d5be8cc357b0ff9cc85445f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a918f250a3b7f6f2a1e33fdafcfb0f26.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/45403daa4040da5a03891799f95d8263.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d1b3a805099f7f28e98b697061c804f6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/be4a3a08ab1eb8353de99dacca5812c9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b28eafe67017b36cef5184af1ff23437.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f672c5c22b21d9ade933e7fb74a8c262.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/05de72cf2ab58001b75c4619c98fb245.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/efb8430b9b70755c7d50f0dc763c9667.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ad4dcb46e1cc0f45153f487b48d04107.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4916e397f03c7363f72b6123e30b058c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b88f2dbcc54996eb48092009977fef14.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/700c515f752a6148f6bdc39e9a0ca35b.jpg"
+      ]
+    },
     {
       "id": 5248,
       "title": "2012 CHEVROLET SPARK LT (50어7266)",
