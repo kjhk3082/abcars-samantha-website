@@ -1,7 +1,31 @@
 {
-  "updated": "2026-11-03T20:48:37+00:00",
+  "updated": "2026-11-04T01:05:01+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5265,
+      "title": "LOW MILES! 2012 CHEVY SPARK(22무2890)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2012-chevy-spark22무2890/5265/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/70a6008d6feb188242f479468ef3d835.jpg",
+      "price": "$2,500",
+      "engine": "4 CYLINDER",
+      "miles": "52000",
+      "transmission": "AUTO",
+      "options": "Heated seats",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/8bfadb892aeb3fa4b5d0c36250bcdf17.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/94d6e221751e372fba29e9cf5c3ab15f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/203170357cc5e9d0ff2230330c9d7a1e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5c4c09bb107a4867fdbaf582ea82ac14.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d9f2c6ef69d0a1044626941fe10ed2e9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a1ccf9d6d207b96e3136be464d3c1bfd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7239bb88a5e1b584663bcfd5d835a115.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/31b75fb0b871bd1e1bb9fbabebd5d4c5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5ac653a6186fe256da6e76b4ecdc64ba.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ae7dbed5c3fad4698d504344d1fcb37f.jpg"
+      ]
+    },
     {
       "id": 5264,
       "title": "2011 KGM REXTON AWD 4x4 7 SEATER (37머8679)",
