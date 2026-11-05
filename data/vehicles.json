@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T01:20:22+00:00",
+  "updated": "2026-11-05T10:23:30+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -81,31 +81,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b0c1060c9a888c1a36dd507709197d7c.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/73db9dc02108e1a45c8f38ae6e65eb8f.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c981ac225bf41780b2dadc6443419def.jpg"
-      ]
-    },
-    {
-      "id": 5262,
-      "title": "LOW MILES! 2010 KIA SOUL(259소3365)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2010-kia-soul259소3365/5262/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/7ca34da4c248d6a3496a14c109d846d9.jpg",
-      "price": "$3,900",
-      "engine": "4 CYLINDER",
-      "miles": "79000",
-      "transmission": "AUTO",
-      "options": "Dash cam, Heated seats",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202611/cce218043031fdce2527d70162b89dee.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/55716c711e46bbe686f7258258904138.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a8509b7e37bf4dceeed894bbee6687df.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/dca023e636e8068a14acaf94268b5565.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/49f2ff5b54f316c8339b8195bdefbaf9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b09e256a7b834f2f2ab89543bc207a4f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8876dbad9a87f793c104b3b3f9cc2bf0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/27a1278e0c8b4aa47721822539adc451.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/cad459c656e6a183108bf5bfe5ebfb0d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/210d99e1de7884e34541e58d9875b10f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/78c91f8af4754988573aa266fab3d740.jpg"
       ]
     },
     {
@@ -954,33 +929,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/fb6e2de4fecfcc2d0751e6ed78514f7f.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a925362cde112b66fa53935ace3ebc69.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b4cd4a0a2996b4bcc7369f559544d68b.jpg"
-      ]
-    },
-    {
-      "id": 5226,
-      "title": "LOW MILES! 2010 i30cw(15버8301)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2010-i30cw15버8301/5226/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/92e4600e0696562c650b9c9b41b2e89c.jpg",
-      "price": "$3,600",
-      "engine": "4 CYLINDER",
-      "miles": "67000",
-      "transmission": "AUTO",
-      "options": "Dash cam, Heated seats, Sunroof, HI-pass",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/9f66a242f697309bd74bbdff276229ed.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f713679450d72a8fed006f0d3de82b25.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cdf20233bae9b1bbf49b9acf7080a42e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6d02e111dceb7f3a5cb91503c43cf33e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c3578218c4ed4ee26525313a4633eb65.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/49a9e62b16d57dd87c11f1b1a25e6a8c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cf20b7ea2259a32a2dda6b22ab5611e8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2aa1f3f55c2172728b851be357a24777.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0e3e18026a03d85d16123a989e40261d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/57d03d216db1f7d2a75b369aab02b33a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ca11cbf0c58f08a9e085995b6e736348.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cb42204920ac77ff66fb363691741dd5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/99fa2f4dd82500cffbbb6da755c9e686.jpg"
       ]
     },
     {
@@ -2241,35 +2189,6 @@
       ]
     },
     {
-      "id": 5119,
-      "title": "2011 HYUNDAI GRANDEUR(56수7519)",
-      "url": "https://www.gorillamotors.co.kr/product/2011-hyundai-grandeur56수7519/5119/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/57979c1653bfaccfc221930160184c1e.jpg",
-      "price": "$3,900",
-      "engine": "V6",
-      "miles": "87000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, HI-pass",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/7136f5fd06f95513a2a007722583a41e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/91d291cd91234c80e053cfb8357ebd53.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/434bec49206d9bc7bf6e9426f4f75e04.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/9bf6e74001b9ceac42dfeaedf051d357.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/828366c182f5c3ba6387784bd4835564.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/83ac31748055711fd13fe3a95a346b01.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/14c131de9b770c89a62dd640d58661cd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f9e68b52d35cb257ef3a96a1853e8b25.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/d7b92be2d23a3152b9025e34ecd82a02.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/f454e1985a0c7f16904951e2986f784a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/662053bed517af7f556f9bd14e6f6788.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/cf222ae39b7a3e91e0e31674307fcfc5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ee467503fc36d0d3734f177b09ed9741.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2e6e4ff42e28c01a08554aeda0d661f1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c99f5e1fd6254f59ab29ce2c0f05206a.jpg"
-      ]
-    },
-    {
       "id": 5118,
       "title": "LOW MILES! 2018 RENAULT CLIO(36노7799)",
       "url": "https://www.gorillamotors.co.kr/product/low-miles-2018-renault-clio36노7799/5118/category/55/display/1/",
@@ -2728,15 +2647,15 @@
       "id": 5041,
       "title": "LOW MILES! 2016 CHEVY DAMAS(78루1989)",
       "url": "https://www.gorillamotors.co.kr/product/low-miles-2016-chevy-damas78루1989/5041/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202607/d602e65625064ffb4481927f661b0fd0.jpg",
-      "price": "$5,500",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/9c96c1691a17f0daa9325cd33631770a.jpg",
+      "price": "$4,600",
       "engine": "3 CYLINDER",
       "miles": "31000",
       "transmission": "MANUAL",
       "options": "Backup cam",
       "category": "chevrolet",
       "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202607/a1b20e35a75f5ca63de1b9ce4b99e4f0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/big/202611/9a1a0765dd7d12bb1586ffdec61ec5a7.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/c159af6bf5f60e0cf900e4920b7982d6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/408f082df648768ca709042c6b50a32c.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202607/bf6ce9f5c4a75770fe6a8e9fc46fb800.jpg",
