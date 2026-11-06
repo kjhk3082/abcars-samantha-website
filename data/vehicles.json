@@ -1,7 +1,36 @@
 {
-  "updated": "2026-11-05T19:32:08+00:00",
+  "updated": "2026-11-06T01:24:54+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5266,
+      "title": "11SEATS! 2013 KIA CARNIVAL(71버2138)",
+      "url": "https://www.gorillamotors.co.kr/product/11seats-2013-kia-carnival71버2138/5266/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/2306bed88389ca57268b0d3e4a04288a.jpg",
+      "price": "$3,800",
+      "engine": "4 CYLINDER",
+      "miles": "109000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats, Sunroof, HI-pass, Auto-sliding door",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/cec4e267a31cf14330b64a980ba47a81.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/0613d2f01e8936fa7bc76d2993480565.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7c3cc8e0c5cbba3f9fc31ecfb4194af4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8676ac4ce4e5c5cc0051ee9e6eba2b0a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ac7c6cd042bce7f592cc64105e6be1aa.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a53be8b372a21cc5967f890fd804cf1a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b3065c2d34a1c59a3c69d8bf9240ae6b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a1439e367b9c3cf37bef1bf59d690643.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8c41a5ea2584baae71e2694726695895.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ffe7cf2770acadda27e927aa4e10dbc8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a622177bec920c4e71cbcbe003cf1870.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b2288953761117a5fd140f34ead65686.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f09db0745a861601d81bc343416bdbb2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9998efb7053faf5499b44fb449ddac48.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/22b3cd858f8b73fe153a2d4f4178b3f8.jpg"
+      ]
+    },
     {
       "id": 5265,
       "title": "LOW MILES! 2012 CHEVY SPARK(22무2890)",
@@ -268,6 +297,7 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/498dd05a3e9a22f793d84af629a47392.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e2773eb38f4a27c32c79b90900b94efb.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/eec9cd499864d0ad14d97e86706fd0ce.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ec858e074561d3932ada336a1cdc8a05.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/18c1b237d126ca1ae63e80312b025982.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/cff34cd5a122a9c3ad055a4426c29b47.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ea5ab96193e3a6ce10b0bc9bf44d24e5.jpg",
@@ -440,8 +470,8 @@
     },
     {
       "id": 5246,
-      "title": "US SPEC !! 2012 HYUNDAI GENESIS (33우6983)",
-      "url": "https://www.gorillamotors.co.kr/product/us-spec-2012-hyundai-genesis-33우6983/5246/category/51/display/1/",
+      "title": "US SPEC !! 2012 HYUNDAI GENESIS (33우9683)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2012-hyundai-genesis-33우9683/5246/category/51/display/1/",
       "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/c9acc5c77e34d74863dd011507e9650b.jpg",
       "price": "$5,900",
       "engine": "V6",
