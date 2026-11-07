@@ -1,7 +1,31 @@
 {
-  "updated": "2026-11-07T00:39:29+00:00",
+  "updated": "2026-11-07T09:39:48+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5270,
+      "title": "2014  KIA  RAY  COMPACT SUV   (49저8938)",
+      "url": "https://www.gorillamotors.co.kr/product/2014-kia-ray-compact-suv-49저8938/5270/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/cea11080db88e5716b4d43585fa21847.jpg",
+      "price": "$4,300",
+      "engine": "1.0L",
+      "miles": "105000",
+      "transmission": "AUTO",
+      "options": "gasoline,  clean carfax,  dash cam, hipass, sliding door",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/5628a9a020406218b0b6448d2905e80b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/72df7a0bb8941852327aae923ba7adda.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a43eef174bc33d5b7ebfcae15961bd82.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/daf1a00316ed2de71f96f0f3b2b24063.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c03a236c0db994cf884cf91c634a3329.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2ee63cdb8a88c4d5bda13cd492a8bae0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/942fb475b2cfb79e85ff30dda493975d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a75c6f042de98b8b5de1b84f557769da.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8f8da54fba18698b3ebf19d02c35d64f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/3ad3477cda5a2c8bb8edff2459ccc77d.jpg"
+      ]
+    },
     {
       "id": 5269,
       "title": "2016 HYUNDAI TUCSON(53누0830)",
@@ -1952,35 +1976,6 @@
       ]
     },
     {
-      "id": 5147,
-      "title": "* US SPEC * 2016 HONDA CRV EX SPORTS 4WD(16도0316)",
-      "url": "https://www.gorillamotors.co.kr/product/us-spec-2016-honda-crv-ex-sports-4wd16도0316/5147/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/2f80e7aa570ff668ed7122c06e0207c7.jpg",
-      "price": "$12,500",
-      "engine": "V4",
-      "miles": "68000",
-      "transmission": "AUTO",
-      "options": "US SPEC , FULLY LOADED",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/83f27cd211f3508b6bc91af4cf431aa5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/05f86998a82e3478b740412794f9ef06.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/304334f6a4ac898acb808a52ef5c7379.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/70bb9cbc90a399c19ff2914c6ae9fad3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2a10f1a1de9d70c9284a0c5be89eec35.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2d20e16533d05b8a7298df22da7caa7c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/dbc7c2274c492fff8ca78be0b99f7973.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/c85009c23f8101ec6f625e5c73b279c4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2cfcdffe255beb16bfbb7a0401bb4cb2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f577cca486e3e12ad4fbbc5fb4030de1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/98977556420572a24415a6f3329c365f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/ba29796dc3c310071f6bd6ab7b37d6c6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f39125de4f62f79ba8c1d145567eb596.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/bdff51a15eb547ef6f5b51cdc5e4e672.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/2f083578e9bdaa40e34cfacec57bc8bf.jpg"
-      ]
-    },
-    {
       "id": 5146,
       "title": "2014 RENAULT QM5(25보3439)",
       "url": "https://www.gorillamotors.co.kr/product/2014-renault-qm525보3439/5146/category/55/display/1/",
@@ -2863,15 +2858,15 @@
       "id": 4937,
       "title": "2014 CHEVROLET ORLANDO / 7 SEATER (23가8500)",
       "url": "https://www.gorillamotors.co.kr/product/2014-chevrolet-orlando-7-seater-23가8500/4937/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202606/9cb41b72e98cfaf290a2cfe2c1a118f6.jpg",
-      "price": "$3,700",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/451642b729b12db1bc2f117d2ac404a6.jpg",
+      "price": "$3,400",
       "engine": "4 CYLINDER",
       "miles": "105000",
       "transmission": "AUTO",
       "options": "PUSH BUTTON START ,BACK UP CAMERA ,7 SEATER",
       "category": "chevrolet",
       "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202606/87eedba53bd15fddf39e4de5954b8975.jpg",
+        "https://www.gorillamotors.co.kr/web/product/big/202611/25129a0dbd7e1d202614042d2ae77c96.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/4dd6038cbef58bd1db238b91374a93f1.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/66918d46a17d6ce6ccf478b0ca981828.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202606/21ce939322154c822c157fb6e978f109.jpg",
