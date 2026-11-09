@@ -1,7 +1,86 @@
 {
-  "updated": "2026-11-09T00:34:54+00:00",
+  "updated": "2026-11-09T10:56:49+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5273,
+      "title": "GASOLINE !! 2015 CHEVROLET TRAX LTZ (23로4656)",
+      "url": "https://www.gorillamotors.co.kr/product/gasoline-2015-chevrolet-trax-ltz-23로4656/5273/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/5653c13aa804ff1319c3ddb268db777a.jpg",
+      "price": "$3,900",
+      "engine": "V4",
+      "miles": "58000",
+      "transmission": "AUTO",
+      "options": "BACK UP CAMERA , HI PASS",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/2172584345f5aab0d177e98695d2c333.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/832fad9fa3840514ace48270271d5331.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5cdcbf6742afbabcf36b740265d6f338.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/844038290a9c96120e5fa3e8bd014967.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/cf1d5e1e3ad77a2811a384cab9e02328.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9069e85767498c94b9f299d971cc767d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ff4ee72879b1ae0676d37e6e395eb8d1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4bfe41eacd96595a9c10e3054405ea9b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/77d1969ae516df15aa82af3d7ff22ef6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/77757615915ed933658084b3cc29f308.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/816eee1f7bb5182449c35e02dd4b9b73.jpg"
+      ]
+    },
+    {
+      "id": 5272,
+      "title": "2010 HYUNDAI TUCSON IX(171우2951)",
+      "url": "https://www.gorillamotors.co.kr/product/2010-hyundai-tucson-ix171우2951/5272/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/e31a79a3116eb4f482db3b3d33271101.jpg",
+      "price": "$3,900",
+      "engine": "V4",
+      "miles": "80000",
+      "transmission": "AUTO",
+      "options": "BACK UP CAMERA, ISO FIX, BLUETOOTH, HI PASS, HEATED SEATS & MORE",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/c79a5e052874bda53624ac97a2389066.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4b2f6cf77a6cc65c47ce6a0cdae94602.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bb8e9d0e2e4c2a05a5a6b512d7b0282c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a2a043748715a3aaaeed1049613ff9b1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/66f91cad433c9e49f9700189e92f1e19.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d2ba5fd4248c04d5b055f3f305a1bc1b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ca1d48740c25118113ac669c9443a17c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8b630a7b870f5bc9c0fef93fc9153662.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/cd25e9543515ae8d19bef27f24b2ee68.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/040639563b25261d9ad9f2c83794e348.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1fdb7869a831189708d2f15c3bbbae30.jpg"
+      ]
+    },
+    {
+      "id": 5271,
+      "title": "9 SEATS! 2016 KIA CARNIVAL(43우0830)",
+      "url": "https://www.gorillamotors.co.kr/product/9-seats-2016-kia-carnival43우0830/5271/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/74571624118e07ac734dd5b2aa0363ef.jpg",
+      "price": "$7,900",
+      "engine": "V4",
+      "miles": "91000",
+      "transmission": "AUTO",
+      "options": "AUTO SLIDING DOORS ,SMART KEYS , ISO FIX",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/f417ceec3bde5bc2695a45eac2180f96.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a9b4be8f92a2d764265c97ea33eb6177.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/619de1a56f8aa889e485b4f93d949e57.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7f54c5d31520ab79cccd1c4d2bceeaad.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c38042c0343bb904178a4d0536593a80.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4cdb01bd6ec656acb2bd7370d1e187c7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/110f7b7cd08d6b9565f9deb4438bec6a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/098d26570fc0a62b2eaceb33d2ac2947.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b38f10440206041faa968631a3706f03.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7326099e13a986654a58a1203f0382c3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/684440806a07baf2deb2183478a77b1a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ade6da663c4029dab21d02e595e307d3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5e53c877bb4a32a8ee6febb9cae4fa83.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2d2ef0e93d38d89bce0d8630105871f8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6c986b4c47730165b41b094e5bcbb9fe.jpg"
+      ]
+    },
     {
       "id": 5270,
       "title": "2014  KIA  RAY  COMPACT SUV   (49저8938)",
@@ -1974,30 +2053,6 @@
       ]
     },
     {
-      "id": 5144,
-      "title": "2010 HYUNDAI TUCSON IX(171우2951)",
-      "url": "https://www.gorillamotors.co.kr/product/2010-hyundai-tucson-ix171우2951/5144/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/8ed3488417ea4566450376b19f7de2dc.jpg",
-      "price": "$3,700",
-      "engine": "V4",
-      "miles": "80000",
-      "transmission": "AUTO",
-      "options": "GAS SAVER, ISO FIX, BACK UP CAMERA, PARKING SENSORS",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/0f62df15945ebe05dea693edd18c8341.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/77359496f1332d04c062129ecdd3d362.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/72bb58b2581beef1bcb9880c1d376fb4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b6717040d4e9b4103ed2a1066e8bcb1a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5d6f20e21d8634527440e8b3a31ff42d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/5e1b0e0bc3f37ca7f8522614219b5b5c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/b0cf9f83f591b07d65023d03b9b5ad8e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/13bd1fb14f63745fd5473edad6893be5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fc73459a4b9d0e933a1691040917c997.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/88633810228b24401aae74597e510280.jpg"
-      ]
-    },
-    {
       "id": 5131,
       "title": "*US SPEC* 2008 HONDA ACCORD COUPE V6(30저1168)",
       "url": "https://www.gorillamotors.co.kr/product/us-spec-2008-honda-accord-coupe-v630저1168/5131/category/62/display/1/",
@@ -2400,32 +2455,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ca0c6690afd93c023f469c4bd0f87937.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c46fd3fbe2dd8a8535cde18493326bef.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/28445d62205f9af098e3369eed2b2ea4.jpg"
-      ]
-    },
-    {
-      "id": 5068,
-      "title": "2009 GENESIS COUPE(38소1137)",
-      "url": "https://www.gorillamotors.co.kr/product/2009-genesis-coupe38소1137/5068/category/51/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/c2c11404d65543d2775a6cbc2ea0e093.jpg",
-      "price": "$3,500",
-      "engine": "4 CYLINDER",
-      "miles": "100000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats, Sunroof",
-      "category": "hyundai",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/961e106364f12241fb2546685503ccda.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/e1cdb1c53d83d298201eba5429be92e3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/842cfed1bc0ae9b6987257d379c4f3d3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/0ddfc79f0276ddd752cc81be00824033.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/c4d9caa4a688b563150c919290d71aa3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/71b2a40e9757d4399e2dcb32abf80c1f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/04a5546858d86b6ea6e257727ec78210.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2aeb5cc72d3cf8b9e9f002c90e645015.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/1322ae5d43d83230902e169020607c27.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/32ac52f79ddbe54e0826376be7d21ed8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/82b0032412479dc7e097d2fb30c8fdf0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/2223920cdf30d0d07ed7cc9627c35cc2.jpg"
       ]
     },
     {
@@ -2989,31 +3018,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202605/43183539264926eacb432fe4d52cdb66.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202605/7ecbef9536b157d802abee6937ba48c4.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202605/43be0d41e35c789d42267c93ad08b5ac.jpg"
-      ]
-    },
-    {
-      "id": 4907,
-      "title": "GASOLINE !! 2015 CHEVROLET TRAX LTZ(23로4656)",
-      "url": "https://www.gorillamotors.co.kr/product/gasoline-2015-chevrolet-trax-ltz23로4656/4907/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202605/d67157b89b919764e7f340c1b88f6c4e.jpg",
-      "price": "$4,500",
-      "engine": "V4",
-      "miles": "58000",
-      "transmission": "AUTO",
-      "options": "BLUETOOTH, BACK UP CAMERA, ISO FIX, HI PASS, DASHBOARD CAMERAS & MORE",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202605/774c14e6021ae137e00922bd894374d1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/3c2e0b6f669a65268f95517a447cded8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/a5bd6fd68e23bced8cb4cd31ac6a7257.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/24a761a25609e9fc7b4ca8d6e6815b29.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/8bbc53626e934a2341bcbf06be9f67df.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/dd14fc1e38047ed865c9ac5390f490cd.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/a13f997377a52920b466c6224cc2e911.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/36268c50290196ebef6765113b7dab60.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/f1ffa17605710aa468cc02c9ec288e87.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/bdeda4fac3ac74dbf350c8162217a6d9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202605/889b0bfbd99eb7dddfabf94c22ec166c.jpg"
       ]
     },
     {
