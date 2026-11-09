@@ -22,7 +22,7 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (145 vehicles, updated 2026-11-08)
+## Current inventory (141 vehicles, updated 2026-11-09)
 
 - [2014 KIA RAY COMPACT SUV — $4,300](https://samanthausedcar.com/cars/5270)
 - [2016 HYUNDAI TUCSON — $7,900](https://samanthausedcar.com/cars/5269)
@@ -94,10 +94,8 @@
 - [2012 KIA SORENTO TLX / 7 SEATER — $4,900](https://samanthausedcar.com/cars/5157)
 - [2023 MINI COUNTRYMAN 2.0 S ALL4 (KOREAN SPEC) — $19,600](https://samanthausedcar.com/cars/5155)
 - [2018 MERCEDES BENZ E200 — $13,900](https://samanthausedcar.com/cars/5154)
-- [2007 KIA SORENTO TLX — $2,900](https://samanthausedcar.com/cars/5152)
 - [LOW MILES! 2014 CHEVY AVEO — $2,800](https://samanthausedcar.com/cars/5151)
 - [7SEATS! 2016 KIA CARNIVAL — $8,400](https://samanthausedcar.com/cars/5148)
-- [2014 RENAULT QM5 — $3,700](https://samanthausedcar.com/cars/5146)
 - [2011 KIA K7 — $3,700](https://samanthausedcar.com/cars/5145)
 - [2010 HYUNDAI TUCSON IX — $3,700](https://samanthausedcar.com/cars/5144)
 - [2008 HONDA ACCORD COUPE V6 — $5,900](https://samanthausedcar.com/cars/5131)
@@ -112,7 +110,6 @@
 - [2012 CHEVY SPARK — $2,400](https://samanthausedcar.com/cars/5109)
 - [2018 CHEVROLET SPARK LT — $4,100](https://samanthausedcar.com/cars/5096)
 - [2012 CHEVY SPARK — $2,400](https://samanthausedcar.com/cars/5094)
-- [LOW MILES! 2010 RENAULT SM7 — $2,900](https://samanthausedcar.com/cars/5093)
 - [2012 GENESIS 3.8 — $6,400](https://samanthausedcar.com/cars/5079)
 - [7SEATS! 2015 SSANGYONG REXTON — $4,200](https://samanthausedcar.com/cars/5075)
 - [2016 RENAULT SM6 2.0 — $5,200](https://samanthausedcar.com/cars/5071)
@@ -136,7 +133,6 @@
 - [2021 HYUNDAI GENESIS G80 3.5 AWD — $18,900](https://samanthausedcar.com/cars/4930)
 - [2015 RENAULT SM3 NEO RE — $3,500](https://samanthausedcar.com/cars/4923)
 - [7 SEATER !! 2013 CHEVROLET ORLANDO LTZ — $3,700](https://samanthausedcar.com/cars/4922)
-- [2014 RENAULT QM5 — $4,500](https://samanthausedcar.com/cars/4915)
 - [11SEATS! 2012 HYUNDAI STAREX — $4,500](https://samanthausedcar.com/cars/4912)
 - [2019 KIA SOUL — $9,900](https://samanthausedcar.com/cars/4911)
 - [GASOLINE !! 2015 CHEVROLET TRAX LTZ — $4,500](https://samanthausedcar.com/cars/4907)
