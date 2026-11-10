@@ -1,7 +1,33 @@
 {
-  "updated": "2026-11-10T05:59:02+00:00",
+  "updated": "2026-11-10T14:31:01+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5274,
+      "title": "7 SEATER !! 2014 KIA MOHAVE  4WD (48저4466)",
+      "url": "https://www.gorillamotors.co.kr/product/7-seater-2014-kia-mohave-4wd-48저4466/5274/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/7a33c927dafc0b23fd9be45a19613f03.jpg",
+      "price": "$7,900",
+      "engine": "V6",
+      "miles": "88000",
+      "transmission": "AUTO",
+      "options": "",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/5a79bfa086d426457a1449c31b7959a3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4d0611ee06fd13081f6d03474eb414a5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/201da415d3f38bd7601d59c2508d8d6d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9e318a05440bc903d14fb885e43bbb89.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/da19efb279d764fc714e58803e229dc6.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2648e068a025bd3b674e96ba4e85ae9a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9e5b08f9b66df45311ebb2b3514e7ce3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f852a85b3173ff84d2a1c13ef51c7328.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/04f9ec981dce01fec64fbdbefa8799ca.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/63c063ea6e542d07dfd455852307e953.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2e912f4a64136a3af3fe5142727eee2f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a57617789966862d01af29359028cfa9.jpg"
+      ]
+    },
     {
       "id": 5273,
       "title": "GASOLINE !! 2015 CHEVROLET TRAX LTZ (23로4656)",
