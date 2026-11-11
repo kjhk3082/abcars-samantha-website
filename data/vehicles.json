@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T21:14:48+00:00",
+  "updated": "2026-11-11T04:45:29+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -519,29 +519,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/7b3ffc52280ca18c4dc902250da0de0e.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/331331e50b18647c22fc904f81bf25d6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3d2a43eb6661b346a646835521f1cac3.jpg"
-      ]
-    },
-    {
-      "id": 5251,
-      "title": "LOW MILES! 2011 DAEWOO MATIZ(68우2903)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2011-daewoo-matiz68우2903/5251/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/29fab482162e64de97b0ed0ab70d74b6.jpg",
-      "price": "$2,000",
-      "engine": "4 CYLINDER",
-      "miles": "73000",
-      "transmission": "AUTO",
-      "options": "",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/f50ee4bcc93f394dc705bb9e41536f41.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e2e8f1dda963fbdb22d4e1070fa4eacb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2ebab8b8273a9731ca641482a47732bf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/fea52b946b9adac5b7b61452d4582705.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6e77b21acaf81431ae2e6c6566c7c470.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/49c1f2bdb27ddc33a4620e3c89aa1c8a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/89d73e4868a55013acda6317b6f6103c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/008f3044cfc66b496459087f9b77f52b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c83e6b0498b5c638c504582480fcdc45.jpg"
       ]
     },
     {
@@ -1282,31 +1259,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ccd939e465f48c4cb24825a19525edb2.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2a29659f1193730d369fa5afdd5d6dae.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a6356a065c2a907e9db755879bf70b23.jpg"
-      ]
-    },
-    {
-      "id": 5211,
-      "title": "2008 RENAULT SM5(16러6775)",
-      "url": "https://www.gorillamotors.co.kr/product/2008-renault-sm516러6775/5211/category/55/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/0e5b558a55e0eb70be338a9ba1f11348.jpg",
-      "price": "$2,000",
-      "engine": "4 CYLINDER",
-      "miles": "112000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats",
-      "category": "renault-samsung",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/96bf935e3835921b9abf65e1871b2e43.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/714e96867862d6e305a5c7497f98311f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/803e38fea99fc9ff391ec641ee44d493.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2619c9494869f984f4178dd43ea22199.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0ed3c5e08b9947ffd1701e8bffcdb712.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3dc2ae9c699460398de0f51331d78e1b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f8b1c4e5c5acb322ea142706a00fe5ff.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0e9c21464c961cb4697024fdea6d9143.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/483de5efc86a779a2e86184ee194672d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d78cc95a2efa72d53e045a36100018ee.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/adf968e6e0bb36554e3188716bfc6e1f.jpg"
       ]
     },
     {
