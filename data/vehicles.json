@@ -1,7 +1,36 @@
 {
-  "updated": "2026-11-11T04:45:29+00:00",
+  "updated": "2026-11-11T13:36:08+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5275,
+      "title": "US SPEC! 2013 HYUNDAI EQUUS VS500 (26수1555)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2013-hyundai-equus-vs500-26수1555/5275/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/f7f9e4c857a8e2be0b0193c1d86a0920.jpg",
+      "price": "$8,200",
+      "engine": "V8",
+      "miles": "78000",
+      "transmission": "AUTO",
+      "options": "FULLY LOADED",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/e0c80714004a1770ee06dfd7110ea287.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a3abbf24549676ba7d859f995c7b3f9b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/29b382c89080c2647d233872c81ee396.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8a0be10696a41b30fbc6913e772c29cf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/dc12cf185f95a7b62fde0a77ed4bbcdd.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/245cf15e0b448475d400d4bbc9245dde.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8a0adb4dea6d62b087ccfe64a785d2ae.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/58c527eb3bf9293338b2e7a69270064e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9dd51137485494c61bc2acabcfb9740c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8534ce707bb187b8bafd7243c29bb987.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e93302125235966171456827a42b607f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/59ab2897d38a74843c04b58cc7b92499.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c421b938125c1c21f2e2dd36be090fc0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/89886e996a8ffcc461676e0fc9ef8ba5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/fe50f8b7493c8a18763986975003b45f.jpg"
+      ]
+    },
     {
       "id": 5274,
       "title": "7 SEATER !! 2014 KIA MOHAVE  4WD (48저4466)",
@@ -378,6 +407,35 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/83aab7c61310eee7179561f933265155.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a01c9be0d88630243796b0b668f3f486.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6a2f05c6ece0a94f1aacb51cc42a803f.jpg"
+      ]
+    },
+    {
+      "id": 5258,
+      "title": "US SPEC!! 2013 HONDA CR-V (37다1904)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2013-honda-cr-v-37다1904/5258/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/c2d07358137cab73a2d509174930dda3.jpg",
+      "price": "$8,800",
+      "engine": "4 CYLINDER",
+      "miles": "77000",
+      "transmission": "AUTO",
+      "options": "ONE OWNER / CLEAN CARFAX",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/4a05eb0e048736009327543b8193f666.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5de4930d127f397aac7ebbe138929497.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f688fa0a2031e8dbf084bb50ed20735b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9353b9cafd0ce89420fb67fae6d5ef0e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/56ab84c4a457fc6957cdc52ab3434f27.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/326eae85556d0d772f6984d9aa98d7a9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/449b39f57cf5e4d5cb83cf5878dd5d2b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6f326340d7215a628d35cb123672f4f4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/33478386829bc83fe7067562e4c1572f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bb732a7b463044c872efa00a98574281.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/623b1b11081b9935534e41447045b735.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/abce1bb891658d7791fcb09de5658bb9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2b5b111e16a019f444ed2ed070f5ee1f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c80ec02e61a85fecff194ed1e7f050a0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b18321c3da7f17f759bc93944742472f.jpg"
       ]
     },
     {
@@ -2028,6 +2086,35 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/e4b7105c4fda04ed4e103258ca3305bd.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1fad9b5800ca7b0656bf3064809fcc83.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202609/13fb25d0765eb5bfa290eb4ac32eb2ee.jpg"
+      ]
+    },
+    {
+      "id": 5132,
+      "title": "* US SPEC * 2015 HYUNDAI GENESIS AWD(49루4636)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2015-hyundai-genesis-awd49루4636/5132/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/75a6dd067afd0ada8624d63643198f0e.jpg",
+      "price": "$11,900",
+      "engine": "V6",
+      "miles": "40000",
+      "transmission": "AUTO",
+      "options": "ADAPTIVE CRUISE CONTROL, BLIND SPOT MONITOR, PANORAMIC SUNROOF, LANE KEEPING ASSIST, LEXICON SOUND & MORE",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202609/b4a716273456bba0a359160a6b7ad910.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4d21a8813aafd02c28c73ddde5e6aea2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/74126a042f3c4969ea44a06a0ee6875e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/090933e07cebcd0316f6921e62b2020d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/fbed438cc2f8dcf9ee190ae4ec176a70.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/f711e8e88fc3737e5517b9cceb5fddd5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/906af2fa4be45bf183bea21a480eb509.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/665151e33bfd3e342b6f954d1d9ce98d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/4436813ac822a1d2ca4e52039fabfb7b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/66eca23f64b2fc491c6bde2cedde1c37.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/38d2b0ebab8de4b1913694b10aee8f34.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9c118598840a2383c753084a56027955.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/eb24db9d64c5cd52f736a0c6b4ceaf1c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/9a15622d4efcfb9f398e9fa499243fc5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202609/1bb4a97b84ff8100c2991a61458ed4e2.jpg"
       ]
     },
     {
