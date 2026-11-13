@@ -1,7 +1,87 @@
 {
-  "updated": "2026-11-12T21:46:48+00:00",
+  "updated": "2026-11-13T05:06:44+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5280,
+      "title": "2008 CIVIC HYBRID(37도3851)",
+      "url": "https://www.gorillamotors.co.kr/product/2008-civic-hybrid37도3851/5280/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/e0b43def386665e3010659629f43fcc8.jpg",
+      "price": "$3,600",
+      "engine": "4 CYLINDER",
+      "miles": "91000",
+      "transmission": "AUTO",
+      "options": "Dash cam, Heated seats",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/435ab39b6c4502fe44c47ae54fb634e2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a8b47ea9b867a016c062ceb85f708ac9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/abc6e0822f3bab01eee815b9426cbc79.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4471ffb2545c35de3574b6f2891f1ae3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/33620a62db04c17260866b5cd54f678d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b01b303e272590ec9ce692596a2f015d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/aa78c049d1af1c8a406817643a50b66e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2f50198edabaea48c5840d87ab634ec8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9f304f4a136ae827b1dc777da52accb1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bdf3995f5205b2d96ce56841ba733ec0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9e74dcf90348637a17abd6a15ac1f882.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/522fe023d7720728b9aae263cb999065.jpg"
+      ]
+    },
+    {
+      "id": 5279,
+      "title": "LOW MILES! 2010 DAEWOO MATIZ(368모2935)",
+      "url": "https://www.gorillamotors.co.kr/product/low-miles-2010-daewoo-matiz368모2935/5279/category/53/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/e2ac3390b04938ffbf0588afeb62ae2d.jpg",
+      "price": "$2,300",
+      "engine": "4 CYLINDER",
+      "miles": "52000",
+      "transmission": "AUTO",
+      "options": "Dash cam, Heated seats, Android/Carplay",
+      "category": "chevrolet",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/faf702d56d5284cd8bf4d3b065730ab4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b9f47ec80779ad75582c62f13e718e49.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/58f1d475dacc7f57d03993c46a7af51c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d74cc4b71130a679a543a3c8a18dfb65.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c8f926df8b49afe628a43bccb930bd31.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/df919b3eea00dd4b52439b590a647781.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e6d4c88799718cb5f9c1ea7d2e50c53a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ab42b1b3742452d8f988905d44334501.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9283a77abc022cde40adeb9d8217588d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1173d917ee35ecec72dc081d5e716012.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d640c4f1b888fea3c3ae8c4fcbe085cf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9ef714c69c23d0706b1951185dfc049f.jpg"
+      ]
+    },
+    {
+      "id": 5278,
+      "title": "7SEATS! 2010 HYUNDAI SANTAFE(59로8984)",
+      "url": "https://www.gorillamotors.co.kr/product/7seats-2010-hyundai-santafe59로8984/5278/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/45995e6d5ded9f31f809bdc981ca38ad.jpg",
+      "price": "$3,600",
+      "engine": "4 CYLINDER",
+      "miles": "85000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats, 7seats",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/9633913640431eeef6b18c372d8f5044.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/392ee37933eb159ce4f49f4aafd7dca2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/894303f3f4e0e9b604b56071c9060a86.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5b09e09d64b39a00092e29dcac834a8c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/300fee6d757acf81aea8fa98659b1609.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/0697c4b47c4d050eab8b54869e0b8f66.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bcfdf622e99e5a12f3337e1c02f48042.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f9c2ef67f02c3bcd45e635d1962ed4cf.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/be32cbaa88fbea65ec35c682953603df.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d3e90c230f50fe1fa2e6fd219956e3ca.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9bacb081a74cd9d0e35fcfe8826963ac.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ad7c49109cab0f94e73c5e78a5acc8fb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/83c5083e1d6598d905d4721e89d4ff05.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/653870704d630a10bdc628a72448cd00.jpg"
+      ]
+    },
     {
       "id": 5277,
       "title": "2022 HYUNDAI VELOSTER N 2.0 MT (104구3063)",
@@ -214,34 +294,6 @@
       ]
     },
     {
-      "id": 5268,
-      "title": "LOW MILES! 2013 CHEVY MALIBU(50조3890)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2013-chevy-malibu50조3890/5268/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/8530bca1948d1af4d47f5fd7a8bf7ec8.jpg",
-      "price": "$3,500",
-      "engine": "4 CYLINDER",
-      "miles": "73000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, HI-pass",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202611/9b248abecdc86c6cb4564acaf3b81488.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/30632d5b9d55ea95cb65118e3ac9d15a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4fd1be588ee2e5c6c5214d3151724773.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a03fe59ea226b91df49d7b6892558e69.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6c3f8756d1b857df277d1db31bd603da.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/3d9c63e2cad047b092abd24f28aa6456.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bcf4faeb71cbbaca435960ab9b88a7be.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/221b7514ec6e050493a5a59f61aece96.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c6b3d23b3dc1369fd609ddddddfff2cc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e8c589f75fbdd72d111f96c7de419c8c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/03ea9439d47188182d088380648c1b0b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/5debd272a11e3d9ed678a90b6a493480.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f6b66be1cf00dd38e7a2fdaf175d77fc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/29ab4e19f841a5c4afc0b59171816077.jpg"
-      ]
-    },
-    {
       "id": 5267,
       "title": "LOW MILES! 2020 HYUNDAI AVNATE(267우4581)",
       "url": "https://www.gorillamotors.co.kr/product/low-miles-2020-hyundai-avnate267우4581/5267/category/51/display/1/",
@@ -348,35 +400,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e34e785a42b975d484babcaf40c3c2df.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/80634859ede16a61a2d6d50690bf9bf6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/da3688712c6634d7d90ec3f62519038a.jpg"
-      ]
-    },
-    {
-      "id": 5263,
-      "title": "LOW MILES! 2017 NISSAN MAXIMA(02루6355)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2017-nissan-maxima02루6355/5263/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/599eb1ac3003ca07e1eb04cb65a57e30.jpg",
-      "price": "$8,500",
-      "engine": "V6",
-      "miles": "60000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated/Cooling seats, Sunroof",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202611/c39af8a3a7b51c9b648392606256f1c6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ca7f20b7801eaf7b75e656f9ebe09f7b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/184950d78a2e4317c5da910ff6bb094e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/79bcc983020eb13823a7e81b82cc66d8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c407497f6a3139629d8610a095173b54.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9c7c2cf55911aeb302a782c1849a4489.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/0fb9455608e37b69d18cb578c329e276.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/74f1de1d4ce53939b29faa3677684cb5.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bbabd99b54674530254bf8e57ab2680a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a4e0a815ff1cc17acbf67f7cf8fb396a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/812913e00e39b377ec784c059f4978eb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1dfd77e5d70a1a868a2b4ceeb8efce11.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b0c1060c9a888c1a36dd507709197d7c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/73db9dc02108e1a45c8f38ae6e65eb8f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c981ac225bf41780b2dadc6443419def.jpg"
       ]
     },
     {
@@ -1071,35 +1094,6 @@
       ]
     },
     {
-      "id": 5231,
-      "title": "7SEATS! 4WD! 2014 FORD EXPLORER(65오1606)",
-      "url": "https://www.gorillamotors.co.kr/product/7seats-4wd-2014-ford-explorer65오1606/5231/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/c0fc05ca0b6db9f34dd4d444a968b19d.jpg",
-      "price": "$7,000",
-      "engine": "V6",
-      "miles": "99000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated/Cooling seats, Sunroof, 7seats, 4WD",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/4b401cf1c09be0011e322369edbd1095.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/693484e4c4822d2cc5737d99dc8cc02a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/de238158a0cb1d6c4eb206b66be6375b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4927f04cd46135797844a0cfc311b355.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2d424184c4c05f8ba20e2bfbf28d4163.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/099044fc013590c67602bffa52ebef9c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/881a6bc97cd5431d2f115a5ca4bbcf24.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/08b6157cc53b1e5080d137f24e1bb22a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/263580d6cdd9fe4bad0d49db4f570d25.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/f5c804a1ffa2b3026389212f1a59e159.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/1b75574d2239061f9aed718640a67ea2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0c025f55c47cca18df0d9a5fc7c39c34.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/02b7e798a5125a08ab86c74495cd6477.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/2e2e230e8563f3c7b4797275d98afa95.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0a89f80796967cd6465629b11d2cbb60.jpg"
-      ]
-    },
-    {
       "id": 5229,
       "title": "2019 KIA CARNIVAL 9 SEATER(108라9324)",
       "url": "https://www.gorillamotors.co.kr/product/2019-kia-carnival-9-seater108라9324/5229/category/52/display/1/",
@@ -1503,31 +1497,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5b14342e319bae059a7163ebc44e77b0.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/eb2a92fa2554c3d34ab7e7dd119bd9cb.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e3275a4057bd9c549f18128caf1083d6.jpg"
-      ]
-    },
-    {
-      "id": 5196,
-      "title": "LOW MILES! 2010 RENAULT SM3(186우4598)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2010-renault-sm3186우4598/5196/category/55/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/fcaa0efa0f89509dd6cc3297d467a48d.jpg",
-      "price": "$2,000",
-      "engine": "4 CYLINDER",
-      "miles": "81000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Heated seats",
-      "category": "renault-samsung",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/6173c9b9e90197333930eefcec29e5c1.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e688978a7fed095c0f0d9ebc66dbfca4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/bbbb7b09abfe2aca88b5f876f784d626.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/bf1f125d05fefb13209a603fe7cb57b8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/1cb42633d9e698b1ab57055034ba6e84.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c44358568a99320b66da9b798a37e76e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/0c8d3be2b4c90365959479100b2969de.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/a49eeb469c2be2290b1fbf3879fbfc25.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/4afe1bf5c3d9124a8de277fc11eab672.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/88a729bd639b230552b76855ac54f801.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/3e3032284b3d52e847dcf46838c3ee8b.jpg"
       ]
     },
     {
@@ -2438,34 +2407,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/275173642f9622aa6ee844614c27f7ba.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/5dd75c1a63e9c658c56ac479b172fe06.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202608/30b14f17565038f17531c6dfd32d9fdd.jpg"
-      ]
-    },
-    {
-      "id": 5075,
-      "title": "7SEATS! 2015 SSANGYONG REXTON(366가9864)",
-      "url": "https://www.gorillamotors.co.kr/product/7seats-2015-ssangyong-rexton366가9864/5075/category/54/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202608/967fce6f34ee17bc64ff08acc597c383.jpg",
-      "price": "$4,200",
-      "engine": "4 CYLINDER",
-      "miles": "89000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats",
-      "category": "ssangyong",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202608/0721a417afbce1b8ee51e9597bb9a64b.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/affbbc1aa2c3cd8a232ec3806ae6c8ef.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/8687a0e024f62d5c1756c4ff5fd1efbb.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/a35e210e99ea4e2b11a5f56161ff4211.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/5f7ee49a2dc9cfa216266fa08580e1a3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/fa81949db50136e6e8fbe8619168b3f2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/3f8cc1b32a37b48d6c80a6068c9116b8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/99a4c9aae4dff3fd4783bb6353c9515f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/7a5225a08b46315acf8bfec682ba3661.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/11bea3c4879d486ae3450153b34c2d9e.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/dd73626b5b3c0b38de026cb4cb1a990f.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/caa2ff8da18a56140a01c0dfa4bd1899.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/ccada7e5e4c0800c947aeb23d6835702.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202608/9045f5a30b90ce5d4e9f7b66861eed1a.jpg"
       ]
     },
     {
