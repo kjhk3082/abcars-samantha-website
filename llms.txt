@@ -22,7 +22,7 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (138 vehicles, updated 2026-11-16)
+## Current inventory (135 vehicles, updated 2026-11-16)
 
 - [2008 CIVIC HYBRID — $3,600](https://samanthausedcar.com/cars/5280)
 - [LOW MILES! 2010 DAEWOO MATIZ — $2,300](https://samanthausedcar.com/cars/5279)
@@ -47,7 +47,6 @@
 - [2011 KIA FORTE COUPE — $4,200](https://samanthausedcar.com/cars/5253)
 - [11 SEATER !! 2013 KIA CARNIVAL GLX — $4,700](https://samanthausedcar.com/cars/5252)
 - [LOW MILES! 2014 HYUNDAI AVANTE — $4,500](https://samanthausedcar.com/cars/5250)
-- [LOW MILES! 2015 CHEVY MALIBU — $3,900](https://samanthausedcar.com/cars/5249)
 - [2012 CHEVROLET SPARK LT — $2,900](https://samanthausedcar.com/cars/5248)
 - [2010 KIA SORENTO TLX / 7 SEATER — $4,900](https://samanthausedcar.com/cars/5247)
 - [2012 CHEVROLET AVEO 1.6 LT / 5DOOR — $2,500](https://samanthausedcar.com/cars/5245)
@@ -76,7 +75,6 @@
 - [2012 HYUNDAI VELOSTER 1.6 (6- SPEED MANUAL TRANSMISSION) — $4,900](https://samanthausedcar.com/cars/5206)
 - [2009 GENESIS COUPE — $3,500](https://samanthausedcar.com/cars/5205)
 - [2015 KIA K7 2.4 GDI PRESTIGE — $5,500](https://samanthausedcar.com/cars/5203)
-- [LOW MILES! 2014 KIA MORNING — $3,300](https://samanthausedcar.com/cars/5198)
 - [2018 HYUNDAI AVANTE — $6,900](https://samanthausedcar.com/cars/5197)
 - [2012 CHEVROLET SPARK — $2,800](https://samanthausedcar.com/cars/5191)
 - [2009 HYUNDAI i30cw — $2,900](https://samanthausedcar.com/cars/5189)
@@ -85,7 +83,6 @@
 - [2016 KIA ALL NEW SORENTO — $8,900](https://samanthausedcar.com/cars/5183)
 - [AWD! 7SEATS! 2017 INFINITI QX60 — $9,500](https://samanthausedcar.com/cars/5182)
 - [2017 KIA CARNIVAL LIMO — $10,500](https://samanthausedcar.com/cars/5180)
-- [LOW MILES! 2011 GENESIS COUPE — $3,700](https://samanthausedcar.com/cars/5177)
 - [2016 CHEVY SPARK — $3,400](https://samanthausedcar.com/cars/5175)
 - [2012 CHEVROLET SPARK LT — $2,900](https://samanthausedcar.com/cars/5173)
 - [LOW MILES! 2009 KIA SOUL DIESEL — $3,500](https://samanthausedcar.com/cars/5170)
