@@ -1,7 +1,62 @@
 {
-  "updated": "2026-11-16T21:41:28+00:00",
+  "updated": "2026-11-17T06:35:18+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5282,
+      "title": "2015 KIA SPORTAGE PRESTIGE (58마5883)",
+      "url": "https://www.gorillamotors.co.kr/product/2015-kia-sportage-prestige-58마5883/5282/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/ae1f9a9f58cb781857db411b55baedc6.jpg",
+      "price": "$5,700",
+      "engine": "V4",
+      "miles": "88000",
+      "transmission": "AUTO",
+      "options": "ENGLISH NAVIGATION / BLUETOOTH / BACK UP CAMERA",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/b87753abdd128444ae14a85a193b4f59.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c548df651fa43e64ee0868f8040fbecb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a26dc84c78b18b17444c4a7173af07c5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1e2afe0ae4bbd4cadc510a0b6110c354.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c9bb7d50d6924d8adf429d9886243420.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2b8af241b3e772be9aa64593b37224ea.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/03c1f9a05a5ba332190fcc99e4ab52f4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c44b03d94bbe9b078e54c4ae6b9c42fc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/cd4f2679e47ffadd8a1c7f340640693c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d1247431120f61246ec623dcf04ece6f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7dfd434460d899e175367034ad1897bb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/936d52949213623c29e8dd07e441cee5.jpg"
+      ]
+    },
+    {
+      "id": 5281,
+      "title": "2014 BMW 118d(57도2557)",
+      "url": "https://www.gorillamotors.co.kr/product/2014-bmw-118d57도2557/5281/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/90a07f601b0a919d7ddcd56e41cb380d.jpg",
+      "price": "$5,200",
+      "engine": "4 CYLINDER",
+      "miles": "100000",
+      "transmission": "AUTO",
+      "options": "Backup cam, Dash cam, Heated seats, Sunroof, HI-pass",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/be6146ff2ebbab8904a4b6f0a17edffc.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/dbed02f47739173dba504afb76d9043b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/43fd7896ff872ba4a7dd1882c0f11cd5.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b2d61f3be15aed860e5f8b61daa813b9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f23149351ca74dbd1b06d3d6c95547c4.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b676a0c10805c82d17b96ee5538f7a2e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d8564368020fb46ae5c748004bbb9f91.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2855f56305585182d18d9890dc93c46c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bd6341ed35918f5855cde3c6ff4dfaf3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e2367c8276ecbfe493096aa9b75d1a90.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/908b2866b94bc5b014bc85b662a05d92.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/00a56428a8adc96aaa87899dbbb78244.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d692f0742b51c25fdc89a9059279edd7.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/327d7441c193295be38b05cd9309d134.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6e3a8571dc192c8f4ddf0e6712555500.jpg"
+      ]
+    },
     {
       "id": 5280,
       "title": "2008 CIVIC HYBRID(37도3851)",
@@ -107,6 +162,31 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1ec1b66b86f52e2ea26e2e2ed75dc6af.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e08e931df521e13e3c2ba6ae00e6805f.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/fa95d4636b5180d20633fa3e86b5ede8.jpg"
+      ]
+    },
+    {
+      "id": 5276,
+      "title": "US SPEC! 2011 KIA OPTIMA (22오4691)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2011-kia-optima-22오4691/5276/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/4af450f298520ee2a9173f1a6a4420e2.jpg",
+      "price": "$5,500",
+      "engine": "V4",
+      "miles": "78000",
+      "transmission": "AUTO",
+      "options": "ANDROID & APPLE CARPLAY , BACK UP CAMERA",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/d9b8015503574920789fbb918ab285d0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b69104a0fa4e0178c99c229d3abffd68.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/dc5a3030fe380b569c3498114667f4f1.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6909f7a6c1216dd40373da3fb66e4620.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bcf95de7df6a84fbd814746a6cf42ef3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6210069133b01dde38d244ec42a86eff.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b56a3ec530eca3658b3f6f7d62791663.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/84b054373dcff438e37ab40a75d40c15.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/11866d66f3568f31a54f4d7edb5be548.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/24da8211c641f34acfe31bc92bf3e233.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/641b6afc542d90159b5de69ebaf53417.jpg"
       ]
     },
     {
@@ -3293,34 +3373,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202510/5fe68843ad4e3448896f5cf893dd6984.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202510/24aaa3a21dc19e822cbc0caad0cf58b2.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202510/67da2831b56afcfe799bdf5f61291b61.jpg"
-      ]
-    },
-    {
-      "id": 4563,
-      "title": "2011 INFINITI G25(58두6955)",
-      "url": "https://www.gorillamotors.co.kr/product/2011-infiniti-g2558두6955/4563/category/62/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202609/89a3add7075a100acb476600d9ad9e9d.jpg",
-      "price": "$3,500",
-      "engine": "V6",
-      "miles": "85000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, Sunroof",
-      "category": "others",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202609/60bc66ac8c51ff38f7200a36da867bfe.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/0683a9456f00b25c504cca3b63b1a2c2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/9222e18776d368dce8edb3301213bc13.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/d878a802cffd94f57a68200ba52366b8.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/8d9065f8808e90552c44d7415a2ea0c4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/d079b529edac269f617e7ed5737bcacc.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/952e987da06ed8784ee72feb67d543ab.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/14e44e24e5229786f08f1fe397410b48.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/420ef0ecd2983aedd41efce7121d72b6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/27e743408909e0add2dd40dc32333263.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/869f21c5314ff0d88e4c784638a9d230.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/1e834aa84857df229e343d4f04a12221.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/a248f5c595c98aee64508c8f8715c945.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202509/6e7735c0ee4cbde0da904b22b0bc5320.jpg"
       ]
     },
     {
