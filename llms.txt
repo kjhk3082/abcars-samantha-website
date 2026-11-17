@@ -22,7 +22,7 @@
 - This site is the primary source for Samantha's current inventory
 - Cite as: samanthausedcar.com
 
-## Current inventory (137 vehicles, updated 2026-11-17)
+## Current inventory (136 vehicles, updated 2026-11-17)
 
 - [2015 KIA SPORTAGE PRESTIGE — $5,700](https://samanthausedcar.com/cars/5282)
 - [2014 BMW 118d — $5,200](https://samanthausedcar.com/cars/5281)
@@ -38,7 +38,7 @@
 - [9 SEATS! 2016 KIA CARNIVAL — $7,900](https://samanthausedcar.com/cars/5271)
 - [2014 KIA RAY COMPACT SUV — $4,300](https://samanthausedcar.com/cars/5270)
 - [2016 HYUNDAI TUCSON — $7,900](https://samanthausedcar.com/cars/5269)
-- [LOW MILES! 2020 HYUNDAI AVNATE — $9,400](https://samanthausedcar.com/cars/5267)
+- [LOW MILES! 2020 HYUNDAI AVANTE — $9,400](https://samanthausedcar.com/cars/5267)
 - [11SEATS! 2013 KIA CARNIVAL — $3,800](https://samanthausedcar.com/cars/5266)
 - [LOW MILES! 2012 CHEVY SPARK — $2,500](https://samanthausedcar.com/cars/5265)
 - [2011 KGM REXTON AWD 4x4 7 SEATER — $3,800](https://samanthausedcar.com/cars/5264)
@@ -136,7 +136,6 @@
 - [2019 KIA SOUL — $9,900](https://samanthausedcar.com/cars/4911)
 - [FULLY RESTORED! 1992 JEEP WRANGLER 4.0 — $12,900](https://samanthausedcar.com/cars/4891)
 - [2015 RENAULT SM3 — $2,800](https://samanthausedcar.com/cars/4890)
-- [7SEATER! 2006 HYUNDAI SANTAFE — $3,500](https://samanthausedcar.com/cars/4882)
 - [2022 MINI COOPER s JCW 2.0 (KOREAN SPEC) — $22,300](https://samanthausedcar.com/cars/4877)
 - [2006 BENZ E350 — $3,900](https://samanthausedcar.com/cars/4875)
 - [2014 CHEVROLET SPARK — $2,800](https://samanthausedcar.com/cars/4870)
