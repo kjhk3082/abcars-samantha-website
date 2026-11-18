@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T02:46:18+00:00",
+  "updated": "2026-11-18T11:10:13+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
     {
@@ -81,32 +81,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bdf3995f5205b2d96ce56841ba733ec0.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9e74dcf90348637a17abd6a15ac1f882.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/522fe023d7720728b9aae263cb999065.jpg"
-      ]
-    },
-    {
-      "id": 5279,
-      "title": "LOW MILES! 2010 DAEWOO MATIZ(368모2935)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2010-daewoo-matiz368모2935/5279/category/53/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/e2ac3390b04938ffbf0588afeb62ae2d.jpg",
-      "price": "$2,300",
-      "engine": "4 CYLINDER",
-      "miles": "52000",
-      "transmission": "AUTO",
-      "options": "Dash cam, Heated seats, Android/Carplay",
-      "category": "chevrolet",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202611/faf702d56d5284cd8bf4d3b065730ab4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b9f47ec80779ad75582c62f13e718e49.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/58f1d475dacc7f57d03993c46a7af51c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d74cc4b71130a679a543a3c8a18dfb65.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c8f926df8b49afe628a43bccb930bd31.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/df919b3eea00dd4b52439b590a647781.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e6d4c88799718cb5f9c1ea7d2e50c53a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ab42b1b3742452d8f988905d44334501.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9283a77abc022cde40adeb9d8217588d.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1173d917ee35ecec72dc081d5e716012.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d640c4f1b888fea3c3ae8c4fcbe085cf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9ef714c69c23d0706b1951185dfc049f.jpg"
       ]
     },
     {
@@ -786,31 +760,6 @@
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/e8cef0bc87ad0538978f26f13423c923.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d2874950cf4faa253b76c28f09275706.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202610/576ec3dba1b95d08780df6278eacf3ea.jpg"
-      ]
-    },
-    {
-      "id": 5244,
-      "title": "LOW MILES! 2009 KIA MORNING(26머3325)",
-      "url": "https://www.gorillamotors.co.kr/product/low-miles-2009-kia-morning26머3325/5244/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202610/0534807a0f282416d6626fefb46a8800.jpg",
-      "price": "$2,300",
-      "engine": "4 CYLINDER",
-      "miles": "64000",
-      "transmission": "AUTO",
-      "options": "Dash cam, Heated seats",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202610/ca416930883b9e0e563bf9ee84423dd9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/d39ed89b735af61d4a01ed8b7f0b180c.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/595081228120af73da2ec8e9dec21555.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/9bb8698825a54e054d2412767b11c95a.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c9043ced9c6b7bbd7db1c94ac0402090.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/5746a8a658cb311dce3db07c1940bed6.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/6e577033b7752e450ac1c5d3b4406e72.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/806487339ff947335319957a8d5b56e9.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/c7c87d5305bf868e26b9974dfa95d997.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/b832f2049c26a4318d09bdbba4f50ab4.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202610/ee705101a45988aabda16a7dcd466d39.jpg"
       ]
     },
     {
