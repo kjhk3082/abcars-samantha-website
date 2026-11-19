@@ -1,7 +1,35 @@
 {
-  "updated": "2026-11-18T20:01:31+00:00",
+  "updated": "2026-11-19T02:18:17+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5283,
+      "title": "2019 KIA THE NEW CARNIVAL / 9 SEATER (197라4627)",
+      "url": "https://www.gorillamotors.co.kr/product/2019-kia-the-new-carnival-9-seater-197라4627/5283/category/52/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/4001bf07632a1baedbae33bf39456250.jpg",
+      "price": "$11,300",
+      "engine": "4 CYLINDER",
+      "miles": "80000",
+      "transmission": "AUTO",
+      "options": "SUNROOF / CRUISE CONTROL/ HIPASS",
+      "category": "kia",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/0411f41e495f11df5ea0b7cfae1000d8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7819f39bc2adfc1b883455b24a185287.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/84a6b10ea38cd290a9c9bb011545f85e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b27e64d451599efe32690f7d2da9680c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/b20ea934e7b13ed2a4862ce859aea31f.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ab46d4311b5a0070755d9f7ab39f47ae.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/10a9eaba5663b55dfb43dc3b0992013a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f975a2978d6d5e0decbd0ea5f5ca5abb.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8f70224796eefc524142b6ea5133478a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/0443bf75d0a8227be7df1481f01ce425.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/8fb04717aef0d9cc5b6bf657783ca124.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/56212f8a15c0e38ce01b52251d7a38a2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d1e3b0f32cee65080899ed091f4aacb2.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a59137d1e14c2bc541353a9ac54aca31.jpg"
+      ]
+    },
     {
       "id": 5282,
       "title": "2015 KIA SPORTAGE PRESTIGE (58마5883)",
