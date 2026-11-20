@@ -14,6 +14,8 @@ import html
 import json
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -23,6 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0 Safari/537.36")
 BASE_URL = "https://samanthausedcar.com"
+LISTING_RETRY_DELAY_SECONDS = 60
 # Clean URLs: GitHub Pages serves /vehicles from vehicles.html, /cars/123 from
 # cars/123.html (Vercel mirror does the same via "cleanUrls" in vercel.json).
 STATIC_PAGES = ["", "vehicles", "faq", "contact", "business-card", "privacy",
@@ -36,6 +39,21 @@ def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.read().decode("utf-8", "replace")
+
+
+def fetch_listing_page(url):
+    """Allow one delayed retry when the public catalog temporarily refuses a read."""
+    try:
+        return fetch(url)
+    except urllib.error.HTTPError as err:
+        if err.code != 403:
+            raise
+        err.close()
+
+    print(f"HTTP 403 for {url}. Retrying once in {LISTING_RETRY_DELAY_SECONDS}s.",
+          file=sys.stderr, flush=True)
+    time.sleep(LISTING_RETRY_DELAY_SECONDS)
+    return fetch(url)
 
 
 def parse_listing(page_html, base, category=""):
@@ -312,7 +330,8 @@ def main():
     for cat in cfg["source_categories"]:
         for page in range(1, 6):
             url = f"{base}/category/{cat['path']}/{cat['id']}/?page={page}"
-            found = [c for c in parse_listing(fetch(url), base, cat["path"]) if c["id"] not in seen]
+            listing = fetch_listing_page(url)
+            found = [c for c in parse_listing(listing, base, cat["path"]) if c["id"] not in seen]
             if not found:
                 break
             seen.update(c["id"] for c in found)

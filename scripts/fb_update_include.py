@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from sync_vehicles import fetch, parse_listing  # noqa: E402
+from sync_vehicles import fetch_listing_page, parse_listing  # noqa: E402
 
 # Words that don't identify a model
 STOPWORDS = {
@@ -89,9 +89,9 @@ def main():
     inventory, seen = [], set()
     for cat in cfg["source_categories"]:
         for page_no in range(1, 6):
-            found = [c for c in parse_listing(
-                fetch(f"{base}/category/{cat['path']}/{cat['id']}/?page={page_no}"), base)
-                if c["id"] not in seen]
+            url = f"{base}/category/{cat['path']}/{cat['id']}/?page={page_no}"
+            listing = fetch_listing_page(url)
+            found = [c for c in parse_listing(listing, base) if c["id"] not in seen]
             if not found:
                 break
             seen.update(c["id"] for c in found)
