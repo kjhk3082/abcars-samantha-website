@@ -1,7 +1,36 @@
 {
-  "updated": "2026-11-20T02:23:14+00:00",
+  "updated": "2026-11-20T10:57:36+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5289,
+      "title": "US SPEC !!! 2012 HYUNDAI GENESIS(37로5369)",
+      "url": "https://www.gorillamotors.co.kr/product/us-spec-2012-hyundai-genesis37로5369/5289/category/51/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/9c60a20f23aadb95c57f94e0a03d9734.jpg",
+      "price": "$6,200",
+      "engine": "V6",
+      "miles": "84000",
+      "transmission": "AUTO",
+      "options": "ADAPTIVE CRUISE CONTROL, LANE KEEPING ASSIST, BACK UP CAMERA, BLUETOOTH, LEXICON SOUND SYSTEM, PUSH BUTTON START, ONE OWNER & MORE",
+      "category": "hyundai",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/33220a433eb91801d70d14217e6c4bda.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/07925f8dc724c74de1760ed279b74f35.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/6b1019d43159a264a142f4f667190519.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c12b9bf54de2f9e76a33dceed1819e21.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/7c55fe7f8dd4ad39e4562c00a0765e4c.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1ef74cee9ec177c290db57055d6c7cee.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/812356f3440783e11e5e5d489f4199b3.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/f438f2b252ad30e27e7159118583deae.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/402baaaccd0cf70cdc1a3116553d8fa9.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9f077dba2ea88b9004dfb86fdf0d6f8a.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/dd7b0b3240916dff50c5ac20e0736a31.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/51556825ed3fa814cc9c37a110d400f8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e011a304ad6500a63d1995c37aa791ff.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/a01d5b8eae22f784385640d63a718153.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/19131cc335216a55b9d9a04e52aa969f.jpg"
+      ]
+    },
     {
       "id": 5288,
       "title": "LOW MILES! 2011 HYUNDAI VELOSTER(51마5389)",
