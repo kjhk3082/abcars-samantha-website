@@ -1,7 +1,32 @@
 {
-  "updated": "2026-11-23T23:25:51+00:00",
+  "updated": "2026-11-24T08:27:16+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
+    {
+      "id": 5290,
+      "title": "SUPER LOW MILES !! 2009 HONDA CIVIC(12무7321)",
+      "url": "https://www.gorillamotors.co.kr/product/super-low-miles-2009-honda-civic12무7321/5290/category/62/display/1/",
+      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/aff81c72092ad948e5979b43b510a3d0.jpg",
+      "price": "$4,500",
+      "engine": "V4",
+      "miles": "42000",
+      "transmission": "AUTO",
+      "options": "ONE OWNER, LOW MILES, NO ACCIDENT, ALL NEW TIRES & MORE",
+      "category": "others",
+      "images": [
+        "https://www.gorillamotors.co.kr/web/product/big/202611/265c4e85964b052c60f59f3d89bdf69b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/3b39c780da3113633fd450b10d3a7973.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/36fe1a65aaaf948f2298a369b7ca02e0.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/ff34ab132072870a9b60bb61ff99c190.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/bf91f33f0afaa0f3469606515412554e.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/876aec3b660ab4bc68b0030a7f399ee8.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/3a83de94aa6820c74102071b16336b9d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/789c403aa7e048f4b8a95226c495304b.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/3dc29266afbf177b3624fe6fe4b8c763.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/0fd61abd9f615d9ef9b7a5457d2d2e96.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c98b0487ccfd900f998bc9e127fa03ff.jpg"
+      ]
+    },
     {
       "id": 5289,
       "title": "US SPEC !!! 2012 HYUNDAI GENESIS(37로5369)",
@@ -396,8 +421,8 @@
       "category": "kia",
       "images": [
         "https://www.gorillamotors.co.kr/web/product/big/202611/5a79bfa086d426457a1449c31b7959a3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4d0611ee06fd13081f6d03474eb414a5.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/201da415d3f38bd7601d59c2508d8d6d.jpg",
+        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/4d0611ee06fd13081f6d03474eb414a5.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/9e318a05440bc903d14fb885e43bbb89.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/da19efb279d764fc714e58803e229dc6.jpg",
         "https://www.gorillamotors.co.kr/web/product/extra/big/202611/2648e068a025bd3b674e96ba4e85ae9a.jpg",
