@@ -1,36 +1,7 @@
 {
-  "updated": "2026-11-28T01:07:40+00:00",
+  "updated": "2026-11-28T11:24:01+00:00",
   "source": "https://www.gorillamotors.co.kr",
   "vehicles": [
-    {
-      "id": 5295,
-      "title": "7SEATS! 2011 KIA SORENTO(40부3710)",
-      "url": "https://www.gorillamotors.co.kr/product/7seats-2011-kia-sorento40부3710/5295/category/52/display/1/",
-      "image": "https://www.gorillamotors.co.kr/web/product/medium/202611/43c78605d24c080f02859a27f7e46f80.jpg",
-      "price": "$3,600",
-      "engine": "4 CYLINDER",
-      "miles": "97000",
-      "transmission": "AUTO",
-      "options": "Backup cam, Dash cam, Heated seats, HI-pass, 7seats",
-      "category": "kia",
-      "images": [
-        "https://www.gorillamotors.co.kr/web/product/big/202611/40ed46ba4d680689d6a90f1deb1292ea.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/e8dd9885c5f433648d7aeb75d64f4c51.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d5a8ec3009888ece691d90ddb31aea60.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/86125be15519950c9860f908cfa98704.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/57fb78380aabf26d750372424417b806.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/220ab6765342c145b0ad0f1241ca4305.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/42293b930f1984a536cd2c3919ada5b0.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/d92fe45226fdf374c547e9bce7148270.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/1d01e9d4cfdc8e61377876eb8b6f7af2.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/dbc19941c64337a40f375ef3fc834ab7.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/c449ad00e187ccd6f48c7fe0b12e98d3.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/eaef9ee50f57ed15716b4192a076c5cf.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/0d9e0dcc8897b07ae403164eb1879d78.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/17c1b7964bbf1cd000c3bab6f0453188.jpg",
-        "https://www.gorillamotors.co.kr/web/product/extra/big/202611/757f335854ce781665b7db3c28503fb6.jpg"
-      ]
-    },
     {
       "id": 5294,
       "title": "7SEATS! 2014 CHEVY ORLANDO(127부5535)",
